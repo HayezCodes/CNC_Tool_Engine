@@ -1,0 +1,198 @@
+You are an AI software engineer working inside my Streamlit-based CNC Tooling Engine.
+
+This is a production-style modular system. You must EXTEND it — not break it.
+
+---
+
+## CURRENT SYSTEM (DO NOT BREAK)
+
+The project includes:
+
+* Turning Insert Engine (FULLY WORKING)
+* Supplier Mapping (ISCAR, Sandvik, Kennametal, MSC)
+* Smart Supplier Link System
+* Tool Family Router
+* Material Groups:
+  P, M, K, N, S, H
+
+Core files:
+
+* app.py
+* engine.py
+* resolver.py
+* supplier_maps.py
+* router.py
+* enums.py
+
+---
+
+## GOAL
+
+Build and integrate:
+
+1. GROOVING INSERT ENGINE (v1)
+2. THREADING INSERT ENGINE (v1)
+3. DRILL ENGINE (v1)
+
+These must plug into the existing tool family router.
+
+---
+
+## RULES
+
+* DO NOT break turning insert engine
+* DO NOT delete existing features
+* FOLLOW existing architecture
+* Reuse logic patterns:
+  behavior → recommendation → supplier mapping → links
+* Keep code modular and clean
+* Return FULL files only (no snippets)
+
+---
+
+## TOOL FAMILY ROUTING
+
+Update app.py so:
+
+* Each tool family routes independently
+* TURNING_INSERT stays unchanged
+* GROOVING_INSERT, THREADING_INSERT, DRILL become active
+
+---
+
+## GROOVING ENGINE
+
+Inputs:
+
+* material_group
+* operation_type (OD / ID / part-off)
+* width (narrow / medium / wide)
+* stability (good / average / poor)
+
+Logic:
+
+* part-off → HIGH toughness
+* narrow → HIGH break risk → increase toughness
+* poor stability → toughness + PVD
+* wide → allow wear resistance
+
+Outputs:
+
+* insert style
+* toughness level
+* wear level
+* coating
+* chipbreaker direction
+* supplier queries
+
+---
+
+## THREADING ENGINE
+
+Inputs:
+
+* material_group
+* thread_type (internal / external)
+* pitch (fine / medium / coarse)
+* tolerance (standard / high)
+
+Logic:
+
+* fine pitch → wear
+* coarse → toughness
+* internal → slight toughness increase
+* high tolerance → wear
+
+Outputs:
+
+* laydown vs full profile
+* coating
+* toughness/wear balance
+* chip control
+* supplier queries
+
+---
+
+## DRILL ENGINE
+
+Inputs:
+
+* material_group
+* diameter (small / medium / large)
+* depth (shallow / medium / deep)
+* tolerance (standard / precision)
+
+Logic:
+
+* small → solid carbide
+* large → indexable
+* deep → coolant-through
+* stainless/super alloys → toughness
+* precision → wear
+
+Outputs:
+
+* drill type
+* coating
+* geometry style
+* supplier queries
+
+---
+
+## SUPPLIER LINKS
+
+Each tool family MUST build its own search logic.
+
+DO NOT reuse turning insert queries.
+
+Examples:
+
+Grooving:
+"parting insert steel narrow"
+
+Threading:
+"external threading insert metric stainless fine"
+
+Drilling:
+"solid carbide drill stainless deep coolant"
+
+---
+
+## UI RULES
+
+* Keep UI clean
+* Follow existing layout
+* No clutter
+* Use same sections:
+
+  * Recommendation
+  * Metrics
+  * Explanation
+  * Supplier Links
+
+---
+
+## OUTPUT
+
+Return FULL updated files:
+
+* app.py
+* new module files
+* modified files
+
+Everything must be copy-paste ready.
+
+---
+
+## FINAL RESULT
+
+System supports:
+
+* Turning inserts (existing)
+* Grooving (new)
+* Threading (new)
+* Drills (new)
+
+All clean, modular, scalable.
+
+This should feel like a real product — not a prototype.
