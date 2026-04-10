@@ -230,7 +230,7 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         ]
         supplier_seed = "threading insert laydown 60 degree"
         profile_style = "full profile" if "full-profile" in starter else "partial profile"
-        search_terms = ["threading insert", "laydown", "60 degree", "external", profile_style]
+        search_terms = ["laydown", "60 degree", "external", profile_style]
     elif tool_family == "DRILL":
         series = "3xD stub drill" if stability != "STABLE" else "5xD carbide drill"
         if input_data["material_group"] == "N":
@@ -299,7 +299,8 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "Do not oversize the face mill just because the machine can physically hold it.",
         ]
         supplier_seed = "face mill"
-        search_terms = ["face mill", starter, geometry]
+        cutter_style = starter.replace("face mill", "").replace("  ", " ").strip()
+        search_terms = [cutter_style, geometry]
     elif tool_family == "TAP":
         if input_data["material_group"] == "N":
             starter = "form tap"

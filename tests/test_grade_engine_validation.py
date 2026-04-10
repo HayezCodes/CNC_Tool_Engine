@@ -91,6 +91,23 @@ class InsertIdentityTests(unittest.TestCase):
         self.assertEqual(finishing["ansi_size"], "431")
         self.assertEqual(finishing["nose_radius"], "small")
 
+    def test_insert_identity_uses_dnmg_for_balanced_unstable_work(self):
+        balanced_unstable = build_insert_identity(
+            {
+                "application_zone": "BALANCED",
+                "finish_priority": "NORMAL",
+                "doc_band": "MEDIUM",
+                "interrupted_cut": "LIGHT",
+                "workholding": "AVERAGE",
+            },
+            {"geometry": "DNMG as a broad starting point"},
+            {"family": "MR / MF style"},
+        )
+
+        self.assertEqual(balanced_unstable["shape"], "DNMG")
+        self.assertEqual(balanced_unstable["ansi_size"], "432")
+        self.assertEqual(balanced_unstable["nose_radius"], "medium")
+
 
 class SupplierQueryTests(unittest.TestCase):
     def test_supplier_queries_keep_grade_context_and_drop_generic_breakers(self):
@@ -391,6 +408,72 @@ class ToolFamilyCoverageTests(unittest.TestCase):
             search_query = supplier_data["search_query"].lower()
             self.assertIn("spiral-flute tap", search_query)
             self.assertIn("blind hole", search_query)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_threading_insert_supplier_queries_stay_thread_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "THREADING_INSERT",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("threading insert", search_query)
+            self.assertIn("laydown", search_query)
+            self.assertEqual(search_query.count("threading insert"), 1)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_face_mill_supplier_queries_stay_family_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "FACE_MILL",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("face mill", search_query)
+            self.assertEqual(search_query.count("face mill"), 1)
+            self.assertNotIn("turning insert", search_query)
+
+    def test_reamer_supplier_queries_stay_family_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "REAMER",
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("reamer", search_query)
+            self.assertNotIn("turning insert", search_query)
             self.assertNotIn("cvd", search_query)
             self.assertNotIn("pvd", search_query)
 
