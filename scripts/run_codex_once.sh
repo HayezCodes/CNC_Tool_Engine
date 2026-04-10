@@ -20,7 +20,7 @@ cd "$REPO_ROOT"
 
 echo "[$(date)] Starting Codex exec run..." | tee -a "$LOG_FILE"
 
-codex exec --yolo "$(cat "$PROMPT_FILE")" 2>&1 | tee -a "$LOG_FILE"
+codex exec --skip-git-repo-check --yolo "$(cat "$PROMPT_FILE")" 2>&1 | tee -a "$LOG_FILE"
 
 EXIT_CODE=${PIPESTATUS[0]}
 

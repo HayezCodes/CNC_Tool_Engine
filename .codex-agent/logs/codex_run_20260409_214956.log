@@ -1,0 +1,2729 @@
+[Thu Apr  9 21:49:56 EDT 2026] Starting Codex exec run...
+OpenAI Codex v0.118.0 (research preview)
+--------
+workdir: /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+model: gpt-5.4
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019d7514-e2e7-7ad0-acf0-f69a23604594
+--------
+user
+You are working inside the GitHub repo: HayezCodes/CNC_Tool_Engine.
+
+This is an execution task, not a planning exercise.
+Do not stop for partial completion, cosmetic edits, placeholders, or “future-ready” scaffolding.
+Do not leave any visible tooling section unfinished.
+Do not ask me for choices unless the repo is fundamentally broken and literally cannot proceed.
+Bias toward action, implementation, testing, and verification.
+
+---
+
+# 🔥 SELF-HEALING AGENT LOOP SYSTEM (MANDATORY)
+
+You are NOT a single-pass agent.
+
+You are a **persistent multi-agent system that continuously improves the project until it is fully complete and stable.**
+
+You MUST:
+
+* run in loops
+* detect failures
+* fix them
+* re-run validation
+* repeat until stable
+
+---
+
+## 🧠 CORE LOOP (DO NOT BREAK THIS)
+
+Repeat the following cycle continuously:
+
+1. AUDIT CURRENT STATE
+2. IMPLEMENT IMPROVEMENTS
+3. RUN VALIDATION
+4. DETECT FAILURES OR WEAKNESS
+5. FIX ISSUES
+6. RE-RUN TESTS
+7. VERIFY AGAIN
+
+Then repeat the entire loop again.
+
+You do NOT exit after one success pass.
+
+You only stop when:
+
+* all success criteria are met
+* no regressions occur
+* no failures appear across multiple validation passes
+
+---
+
+## 🔁 SELF-HEALING BEHAVIOR
+
+If ANY of the following occur:
+
+* test failure
+* runtime error
+* broken UI
+* missing data
+* weak recommendation logic
+* invalid links
+* inconsistent structure
+
+You MUST:
+
+* trace root cause
+* fix the issue
+* re-run validation
+* confirm resolution
+
+DO NOT:
+
+* ignore errors
+* defer fixes
+* leave partial solutions
+
+---
+
+## 🧩 AGENT ROLES (RUN IN PARALLEL + LOOP)
+
+### TOOL_DATA_AGENT
+
+Continuously improves tooling dataset:
+
+* fills missing fields
+* replaces weak data
+* removes duplicates
+* improves normalization
+
+---
+
+### MACHINING_LOGIC_AGENT
+
+Continuously improves recommendation quality:
+
+* refines logic
+* improves clarity of explanations
+* ensures machinist usability
+* removes vague or generic outputs
+
+---
+
+### VALIDATION_AGENT
+
+Enforces correctness:
+
+* runs tests repeatedly
+* creates new tests when gaps found
+* stress-tests logic and UI
+* detects regressions
+
+---
+
+### UI_AGENT
+
+Continuously improves usability:
+
+* fixes broken layouts
+* removes dead controls
+* ensures consistency
+* validates interaction flows
+
+---
+
+### INTEGRATION_AGENT
+
+Maintains system integrity:
+
+* fixes imports
+* resolves broken dependencies
+* ensures modules communicate correctly
+
+---
+
+## ⚠️ LOOP INTELLIGENCE RULES
+
+* After each loop → compare results to previous state
+* If improvement is possible → continue looping
+* If instability is detected → prioritize fixing stability
+* If system regresses → rollback and correct
+
+You are expected to:
+
+* iterate multiple times
+* refine outputs
+* stabilize system behavior
+
+---
+
+## 🚫 STOP CONDITION (STRICT)
+
+You may ONLY stop when ALL are true:
+
+* multiple consecutive validation passes succeed
+* no test failures
+* no runtime errors
+* all tooling sections work
+* recommendation outputs are clear and practical
+* no broken UI or dead controls
+* no placeholder or incomplete sections remain
+
+If ANY doubt exists → continue looping.
+
+---
+
+# PRIMARY OBJECTIVE
+
+Finish this repo so every tooling section in the app is functional, populated, usable, and verified.
+I want this project actually working, not just improved-looking.
+
+---
+
+# NON-NEGOTIABLE SUCCESS CRITERIA
+
+1. The app launches cleanly
+2. Every visible tooling section works end-to-end
+3. Recommendation logic is sensible and readable
+4. Broken or fake catalog behavior is removed or repaired
+5. Tests are added/updated and actually run
+6. Docs are updated with exact run/test steps
+7. No dead buttons, placeholder cards, or incomplete sections remain
+8. All changes are committed cleanly
+
+---
+
+# OPERATING INSTRUCTIONS
+
+* Inspect → implement → test → fix → retest → repeat
+* Do not over-explain
+* Do not stop early
+* Do not fake completion
+* Favor real CNC usability over generic polish
+
+---
+
+# PHASES (EXECUTE INSIDE THE LOOP)
+
+## PHASE 1 — AUDIT
+
+Scan entire repo:
+
+* tooling sections
+* data sources
+* logic
+* UI
+* tests
+* failures
+
+---
+
+## PHASE 2 — DATA
+
+* normalize tooling data
+* ensure completeness
+* enforce structure
+* handle missing values
+
+---
+
+## PHASE 3 — LOGIC
+
+* implement robust machining recommendations
+* ensure readable outputs
+* refine based on validation feedback
+
+---
+
+## PHASE 4 — UI
+
+* ensure full usability
+* fix rendering and interaction issues
+* remove dead elements
+
+---
+
+## PHASE 5 — LINKS
+
+* repair catalog links
+* validate URLs
+* replace unreliable links
+
+---
+
+## PHASE 6 — TESTING
+
+* run all tests
+* add missing tests
+* validate app startup
+* fix and re-run until clean
+
+---
+
+## PHASE 7 — DOCUMENTATION
+
+* update setup + run instructions
+* create completion report
+
+---
+
+# FINAL OUTPUT REQUIREMENTS
+
+When (and ONLY when) the system is fully stable, output:
+
+1. summary
+2. files changed
+3. commands run
+4. results
+5. remaining limitations (if any)
+
+---
+
+# EXECUTION DIRECTIVE
+
+Start immediately.
+Activate all agents.
+Enter the self-healing loop.
+Do not stop until the project is fully complete and stable.
+codex
+I’m auditing the repo end-to-end now: app structure, tooling/data sections, tests, and launch path. In parallel I’ll inspect the major areas tied to tooling data, machining logic, UI, validation, and integration so I can start the fix/test loop immediately.
+exec
+/bin/bash -lc 'pwd && rg --files' in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+/mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+README.md
+COMPLETION_REPORT.md
+pytest.ini
+prompts.txt
+runtime.txt
+requirements.txt
+README_SETUP.txt
+README_SETUP.md
+README.txt
+run_grade_engine.bat
+workflow.md
+app.py
+agents.md
+bridge.config.json
+scripts/start_codex_agent_tmux.sh
+scripts/run_codex_once_optional_multi_pass.sh
+scripts/run_codex_once.sh
+scripts/start_prompt_bridge.ps1
+scripts/watch_codex_loop.sh
+codex_prompts/cnc_tool_engine_master_prompt.txt
+tests/test_app_startup_smoke.py
+tests/test_grade_engine_validation.py
+prompts/drill_notes.txt
+prompts/grooving_notes.txt
+prompts/master_build_v1.txt
+prompts/threading_notes.txt
+grade_engine/overlays.py
+grade_engine/modifiers.py
+grade_engine/insert_identity.py
+grade_engine/enums.py
+grade_engine/engine.py
+grade_engine/base_behavior.py
+grade_engine/supplier_maps.py
+grade_engine/router.py
+grade_engine/resolver.py
+grade_engine/tooling_advisor.py
+grade_engine/__init__.py
+prompts/inbox/example.md
+
+exec
+/bin/bash -lc "find . -maxdepth 2 -type f | sed 's#"'^./##'"' | sort" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+.git/COMMIT_EDITMSG
+.git/HEAD
+.git/config
+.git/description
+.git/index
+.gitignore
+.venv/pyvenv.cfg
+COMPLETION_REPORT.md
+README.md
+README.txt
+README_SETUP.md
+README_SETUP.txt
+__pycache__/app.cpython-312.pyc
+agents.md
+app.py
+bridge.config.json
+codex_prompts/cnc_tool_engine_master_prompt.txt
+grade_engine/__init__.py
+grade_engine/base_behavior.py
+grade_engine/engine.py
+grade_engine/enums.py
+grade_engine/insert_identity.py
+grade_engine/modifiers.py
+grade_engine/overlays.py
+grade_engine/resolver.py
+grade_engine/router.py
+grade_engine/supplier_maps.py
+grade_engine/tooling_advisor.py
+prompts.txt
+prompts/drill_notes.txt
+prompts/grooving_notes.txt
+prompts/master_build_v1.txt
+prompts/threading_notes.txt
+pytest.ini
+requirements.txt
+run_grade_engine.bat
+runtime.txt
+scripts/run_codex_once.sh
+scripts/run_codex_once_optional_multi_pass.sh
+scripts/start_codex_agent_tmux.sh
+scripts/start_prompt_bridge.ps1
+scripts/watch_codex_loop.sh
+tests/test_app_startup_smoke.py
+tests/test_grade_engine_validation.py
+workflow.md
+
+exec
+/bin/bash -lc 'git status --short' in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 107ms:
+ M .codex-agent/logs/codex_run_20260409_205212.log
+ M .codex-agent/logs/codex_run_20260409_205229.log
+ M .codex-agent/logs/codex_run_20260409_205248.log
+ M .codex-agent/logs/codex_run_20260409_205324.log
+ M .codex-agent/logs/codex_run_20260409_205400.log
+ M .codex-agent/logs/codex_run_20260409_205437.log
+ M .codex-agent/logs/codex_run_20260409_205514.log
+ M .codex-agent/logs/codex_run_20260409_205550.log
+ M codex_prompts/cnc_tool_engine_master_prompt.txt
+ M scripts/run_codex_once.sh
+?? .codex-agent/logs/codex_run_20260409_210548.log
+?? .codex-agent/logs/codex_run_20260409_210844.log
+?? .codex-agent/logs/codex_run_20260409_211748.log
+?? .codex-agent/logs/codex_run_20260409_212343.log
+?? .codex-agent/logs/codex_run_20260409_213007.log
+?? .codex-agent/logs/codex_run_20260409_213539.log
+?? .codex-agent/logs/codex_run_20260409_214048.log
+?? .codex-agent/logs/codex_run_20260409_214956.log
+?? .codex-agent/state/
+
+codex
+The repo is small and currently dirty in unrelated log/script areas, so I’m leaving those alone. I’m reading the app, engine, and tests now, and I’m sending parallel agents to inspect UI coverage, recommendation logic, and validation gaps so fixes can converge faster.
+collab: SpawnAgent
+collab: SpawnAgent
+collab: SpawnAgent
+exec
+/bin/bash -lc "sed -n '1,260p' app.py" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+import streamlit as st
+
+from grade_engine.enums import (
+    APPLICATION_ZONES,
+    CUTTING_SPEED_BAND,
+    DOC_BAND,
+    FINISH_PRIORITY,
+    INTERRUPTED_CUT,
+    MATERIAL_GROUPS,
+    STICKOUT,
+    TOOL_FAMILIES,
+    WORKHOLDING,
+)
+from grade_engine.router import get_tool_family_message
+from grade_engine.tooling_advisor import TOOL_FAMILY_LABELS, resolve_tooling_recommendation
+
+MATERIAL_GROUP_LABELS = {
+    "P": "P - Steel",
+    "M": "M - Stainless",
+    "K": "K - Cast Iron",
+    "N": "N - Non-Ferrous",
+    "S": "S - Super Alloy",
+    "H": "H - Hardened",
+}
+
+
+THREAD_PROFILE_OPTIONS = {
+    "UNIFIED_60": "60 degree UN / ISO",
+    "WHITWORTH_55": "55 degree Whitworth",
+    "ACME_29": "29 degree Acme / Trapezoidal",
+}
+
+THREAD_SIDE_OPTIONS = {
+    "EXTERNAL": "External",
+    "INTERNAL": "Internal",
+}
+
+HOLE_TYPE_OPTIONS = {
+    "THROUGH": "Through Hole",
+    "BLIND": "Blind Hole",
+}
+
+
+def render_supplier_matches(matches: dict) -> None:
+    st.subheader("Supplier Search")
+    for supplier, data in matches.items():
+        with st.container(border=True):
+            st.markdown(f"**{supplier}**")
+            recommended_label = data.get("recommended_label", "Recommended Grade")
+            fallback_label = data.get("fallback_label", "Fallback Grade")
+            st.write(f"{recommended_label}: {data['recommended_grade']}")
+            st.write(f"{fallback_label}: {data['fallback_grade']}")
+            st.write(f"Description: {data['description']}")
+            if data.get("search_query"):
+                st.code(data["search_query"], language="text")
+            links = data.get("links", {})
+            if links.get("Search"):
+                st.link_button(f"Search {supplier}", links["Search"])
+
+
+def collect_process_specific_inputs(tool_family: str) -> dict:
+    extra_inputs = {}
+
+    if tool_family == "THREADING_INSERT":
+        col_a, col_b = st.columns(2)
+        with col_a:
+            extra_inputs["thread_profile"] = st.selectbox(
+                "Thread Profile",
+                list(THREAD_PROFILE_OPTIONS),
+                index=0,
+                format_func=lambda item: THREAD_PROFILE_OPTIONS[item],
+            )
+        with col_b:
+            extra_inputs["thread_side"] = st.selectbox(
+                "Thread Orientation",
+                list(THREAD_SIDE_OPTIONS),
+                index=0,
+                format_func=lambda item: THREAD_SIDE_OPTIONS[item],
+            )
+
+    if tool_family in {"TAP", "REAMER"}:
+        extra_inputs["hole_type"] = st.selectbox(
+            "Hole Type",
+            list(HOLE_TYPE_OPTIONS),
+            index=0,
+            format_func=lambda item: HOLE_TYPE_OPTIONS[item],
+        )
+
+    return extra_inputs
+
+
+st.set_page_config(page_title="CNC Tool Engine", layout="wide")
+st.title("CNC Tool Engine")
+st.caption("Shop-floor starter recommendations across turning, grooving, threading, drilling, milling, tapping, and reaming.")
+
+tool_family = st.selectbox(
+    "Tool Family",
+    TOOL_FAMILIES,
+    index=0,
+    format_func=lambda item: TOOL_FAMILY_LABELS[item],
+)
+family_info = get_tool_family_message(tool_family)
+
+with st.container(border=True):
+    st.markdown(f"### {family_info['title']}")
+    st.write(family_info["message"])
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    material_group = st.selectbox(
+        "Material Group",
+        MATERIAL_GROUPS,
+        index=0,
+        format_func=lambda item: MATERIAL_GROUP_LABELS[item],
+    )
+    application_zone = st.selectbox("Application Zone", APPLICATION_ZONES, index=1)
+with col2:
+    interrupted_cut = st.selectbox("Interrupted Cut", INTERRUPTED_CUT, index=0)
+    stickout = st.selectbox("Stickout", STICKOUT, index=1)
+with col3:
+    workholding = st.selectbox("Workholding", WORKHOLDING, index=0)
+    cutting_speed_band = st.selectbox("Cutting Speed Band", CUTTING_SPEED_BAND, index=1)
+
+col4, col5 = st.columns(2)
+with col4:
+    doc_band = st.selectbox("DOC Band", DOC_BAND, index=1)
+with col5:
+    finish_priority = st.selectbox("Finish Priority", FINISH_PRIORITY, index=1)
+
+extra_inputs = collect_process_specific_inputs(tool_family)
+
+show_internal = st.checkbox("Show internal logic key", value=False)
+st.caption("Recommendations update automatically as inputs change.")
+
+input_data = {
+    "material_group": material_group,
+    "application_zone": application_zone,
+    "interrupted_cut": interrupted_cut,
+    "stickout": stickout,
+    "workholding": workholding,
+    "cutting_speed_band": cutting_speed_band,
+    "doc_band": doc_band,
+    "finish_priority": finish_priority,
+    **extra_inputs,
+}
+
+recommendation = resolve_tooling_recommendation(tool_family, input_data)
+behavior = recommendation["behavior"]
+
+st.subheader("Recommendation")
+with st.container(border=True):
+    st.markdown(f"### {behavior['recommendation_title']}")
+    st.write(behavior["recommendation_summary"])
+    st.write(behavior["recommendation_fit_sentence"])
+
+a, b, c = st.columns(3)
+a.metric("Required Toughness", behavior["required_toughness"])
+b.metric("Required Wear Resistance", behavior["required_wear_resistance"])
+c.metric("Preferred Coating", behavior["preferred_coating"])
+
+st.subheader("Starter Setup")
+s1, s2, s3 = st.columns(3)
+s1.info(f"**Start with**\n\n{recommendation['starter_platform']}")
+s2.info(f"**Geometry / style**\n\n{recommendation['geometry_focus']}")
+s3.info(f"**Holder / setup**\n\n{recommendation['holder_focus']}")
+
+if tool_family == "TURNING_INSERT":
+    st.subheader("Turning Insert Identity")
+    insert_identity = behavior["insert_identity"]
+    i1, i2, i3, i4 = st.columns(4)
+    i1.metric("Shape", insert_identity.get("shape", "-"))
+    i2.metric("ANSI Size", insert_identity.get("ansi_size", "-"))
+    i3.metric("ISO Size", insert_identity.get("iso_size", "-"))
+    i4.metric("Nose Radius", insert_identity.get("nose_radius", "-"))
+    st.info(insert_identity.get("identity_summary", ""))
+
+st.subheader("Why this was chosen")
+for step in recommendation["process_notes"]:
+    st.write(f"- {step}")
+
+st.subheader("What to watch")
+if recommendation["watch_items"]:
+    for item in recommendation["watch_items"]:
+        st.warning(item)
+else:
+    st.success("No major watch items from the current input mix.")
+
+st.subheader("Behavior Readout")
+st.write(f"**Toughness:** {behavior['toughness_explained']}")
+st.write(f"**Wear resistance:** {behavior['wear_explained']}")
+st.write(f"**Coating:** {behavior['coating_explained']}")
+
+if show_internal:
+    st.caption("Internal logic key")
+    st.code(behavior["grade_behavior_key"], language="text")
+
+render_supplier_matches(recommendation["supplier_matches"])
+
+exec
+/bin/bash -lc "sed -n '1,260p' grade_engine/tooling_advisor.py" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+from urllib.parse import quote_plus
+
+from .engine import resolve_grade_behavior
+from .overlays import MATERIAL_GROUP_OVERLAY
+from .resolver import SUPPLIER_SEARCH, map_behavior_to_supplier_grades
+
+TOOL_FAMILY_LABELS = {
+    "TURNING_INSERT": "Turning Insert",
+    "GROOVING_INSERT": "Grooving Insert",
+    "THREADING_INSERT": "Threading Insert",
+    "DRILL": "Drill",
+    "ENDMILL": "Endmill",
+    "FACE_MILL": "Face Mill",
+    "TAP": "Tap",
+    "REAMER": "Reamer",
+}
+
+MATERIAL_NAMES = {
+    "P": "steel",
+    "M": "stainless",
+    "K": "cast iron",
+    "N": "non-ferrous",
+    "S": "super alloy",
+    "H": "hardened steel",
+}
+
+SUPPLIERS = ("MSC", "SANDVIK", "KENNAMETAL", "ISCAR")
+
+NON_TURNING_SUPPLIER_TOKENS = {
+    "MSC": {
+        "GROOVING_INSERT": "grooving insert",
+        "THREADING_INSERT": "threading insert",
+        "DRILL": "carbide drill",
+        "ENDMILL": "carbide endmill",
+        "FACE_MILL": "face mill",
+        "TAP": "machine tap",
+        "REAMER": "chucking reamer",
+    },
+    "SANDVIK": {
+        "GROOVING_INSERT": "CoroCut grooving insert",
+        "THREADING_INSERT": "laydown threading insert",
+        "DRILL": "CoroDrill",
+        "ENDMILL": "CoroMill end mill",
+        "FACE_MILL": "CoroMill face mill",
+        "TAP": "CoroTap",
+        "REAMER": "reamer",
+    },
+    "KENNAMETAL": {
+        "GROOVING_INSERT": "Top Notch grooving insert",
+        "THREADING_INSERT": "laydown threading insert",
+        "DRILL": "HPX drill",
+        "ENDMILL": "Harvi end mill",
+        "FACE_MILL": "face mill",
+        "TAP": "machine tap",
+        "REAMER": "reamer",
+    },
+    "ISCAR": {
+        "GROOVING_INSERT": "Do-Grip grooving insert",
+        "THREADING_INSERT": "laydown threading insert",
+        "DRILL": "SumoCham drill",
+        "ENDMILL": "end mill",
+        "FACE_MILL": "face mill",
+        "TAP": "machine tap",
+        "REAMER": "reamer",
+    },
+}
+
+
+def compact_tokens(*tokens: str) -> str:
+    cleaned = []
+    seen = set()
+    for token in tokens:
+        value = " ".join((token or "").split()).strip()
+        if not value:
+            continue
+        key = value.upper()
+        if key in seen:
+            continue
+        seen.add(key)
+        cleaned.append(value)
+    return " ".join(cleaned)
+
+
+def compact_overlapping_terms(*tokens: str) -> str:
+    cleaned = []
+    for token in tokens:
+        value = " ".join((token or "").split()).strip()
+        if not value:
+            continue
+        value_upper = value.upper()
+        if any(value_upper == existing.upper() for existing in cleaned):
+            continue
+        if any(value_upper in existing.upper() for existing in cleaned):
+            continue
+        cleaned = [existing for existing in cleaned if existing.upper() not in value_upper]
+        cleaned.append(value)
+    return " ".join(cleaned)
+
+
+def get_stability_state(input_data: dict) -> str:
+    instability = 0
+    if input_data["interrupted_cut"] == "LIGHT":
+        instability += 1
+    elif input_data["interrupted_cut"] == "HEAVY":
+        instability += 2
+    if input_data["stickout"] == "LONG":
+        instability += 1
+    if input_data["workholding"] == "AVERAGE":
+        instability += 1
+    elif input_data["workholding"] == "POOR":
+        instability += 2
+    if instability >= 3:
+        return "UNSTABLE"
+    if instability >= 1:
+        return "MIXED"
+    return "STABLE"
+
+
+def get_doc_text(doc_band: str) -> str:
+    return {"LIGHT": "light", "MEDIUM": "medium", "HEAVY": "heavy"}[doc_band]
+
+
+def get_tap_notes(material_group: str) -> tuple[list, list]:
+    common_notes = [
+        "Use spiral-point for through holes, spiral-flute for blind holes, and form taps only in ductile materials.",
+        "Tap life is usually lost from poor hole size or alignment before coating becomes the main issue.",
+    ]
+    common_watch = [
+        "Choose the chamfer style around the real hole type before ordering production taps.",
+    ]
+
+    if material_group == "N":
+        return (
+            common_notes
+            + [
+                "Form taps work well in ductile aluminum when the hole size and lube package are controlled.",
+            ],
+            common_watch
+            + [
+                "Do not force form taps into brittle non-ferrous castings or thin-wall parts.",
+            ],
+        )
+    if material_group in {"M", "S"}:
+        return (
+            common_notes
+            + [
+                "Keep feed synchronized and use a sharp geometry so stainless and heat-resistant alloys do not work-harden ahead of the tap.",
+            ],
+            common_watch
+            + [
+                "Super alloy and stainless tapping need conservative first-pass speed and dependable lubricant delivery.",
+            ],
+        )
+    return (
+        common_notes
+        + [
+            "Rigid tapping still needs the correct chamfer count for the hole type.",
+        ],
+        common_watch
+        + [
+            "Do not treat form taps as a universal answer; chipless does not mean low torque.",
+        ],
+    )
+
+
+def build_generic_supplier_query(tool_family: str, supplier: str, family_plan: dict) -> str:
+    supplier_family_term = NON_TURNING_SUPPLIER_TOKENS.get(supplier, {}).get(tool_family, family_plan["supplier_seed"])
+    normalized_family_terms = compact_overlapping_terms(supplier_family_term, *family_plan["search_terms"])
+    return compact_tokens(normalized_family_terms, family_plan["material_focus"])
+
+
+def build_generic_supplier_matches(tool_family: str, result: dict, family_plan: dict) -> dict:
+    matches = {}
+    for supplier in SUPPLIERS:
+        query = build_generic_supplier_query(tool_family, supplier, family_plan)
+        search_url = SUPPLIER_SEARCH.get(supplier, "").format(query=quote_plus(query))
+        matches[supplier] = {
+            "recommended_grade": family_plan["starter_platform"],
+            "fallback_grade": family_plan["fallback_platform"],
+            "recommended_label": "Recommended Start",
+            "fallback_label": "Fallback Search",
+            "preferred_coating": result["preferred_coating"],
+            "description": family_plan["catalog_description"],
+            "search_query": query,
+            "links": {"Search": search_url} if search_url else {},
+        }
+    return matches
+
+
+def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dict) -> dict:
+    material_name = MATERIAL_NAMES[input_data["material_group"]]
+    stability = get_stability_state(input_data)
+    doc_text = get_doc_text(input_data["doc_band"])
+    finish_high = input_data["finish_priority"] == "HIGH"
+    wear_high = behavior["required_wear_resistance"] == "HIGH"
+    toughness_high = behavior["required_toughness"] == "HIGH"
+
+    if tool_family == "GROOVING_INSERT":
+        width = "2 mm" if finish_high or input_data["doc_band"] == "LIGHT" else "3 mm"
+        starter = "neutral hand grooving / part-off blade"
+        if toughness_high or stability != "STABLE":
+            starter = "rigid double-ended grooving insert system"
+        geometry = f"{width} width with supported edge"
+        holder = "short overhang blade with the insert on spindle centerline"
+        summary = f"Start with a {starter} for {doc_text} {material_name} work."
+        notes = [
+            "Use the narrowest blade that still clears the groove or cut-off width.",
+            "Keep the blade extension as short as the part allows before increasing speed.",
+            "If chips pack in the groove, widen slightly or add a freer-cutting chipformer.",
+        ]
+        watch = [
+            "Blade overhang is the first place chatter starts in grooving.",
+            "Part-off work gets unstable fast if coolant or chip evacuation falls behind.",
+        ]
+        supplier_seed = f"{width} grooving insert"
+        search_terms = ["grooving insert", width, "parting", "cutoff", "supported edge"]
+    elif tool_family == "THREADING_INSERT":
+        thread_profile = input_data.get("thread_profile", "UNIFIED_60")
+        thread_side = input_data.get("thread_side", "EXTERNAL")
+        profile_text = {
+            "UNIFIED_60": "60 degree",
+            "WHITWORTH_55": "55 degree",
+            "ACME_29": "29 degree Acme",
+        }[thread_profile]
+        side_text = "external" if thread_side == "EXTERNAL" else "internal"
+        starter = f"partial-profile {side_text} threading insert"
+        if finish_high and stability == "STABLE" and thread_profile == "UNIFIED_60":
+            starter = "full-profile laydown threading insert"
+        geometry = f"{profile_text} {side_text} threading style"
+        holder = (
+            "rigid laydown holder with minimum stickout and confirmed tip height"
+            if thread_side == "EXTERNAL"
+            else "shortest practical internal threading bar with solid support and confirmed tip height"
+        )
+        summary = f"Start with a {starter} in a {behavior['preferred_coating']} grade for {material_name} {side_text} threads."
+        notes = [
+            "Partial-profile gives faster coverage across pitch changes; full-profile gives better crest control when the thread form is standard 60 degree work.",
+            "Keep compound and infeed strategy consistent so the insert loads evenly.",
+            f"Confirm the insert form against the actual print requirement before buying production stock for {profile_text} threads.",
+            "For gummy stainless or super alloy work, lean positive and keep the insert sharp.",
+        ]
+        watch = [
+            "Threading punishes weak setup quickly, especially near shoulders.",
+            "Check the nose style against the required root form before buying inserts.",
+        ]
+        supplier_seed = f"laydown {side_text} threading insert {profile_text}"
+        profile_style = "full profile" if "full-profile" in starter else "partial profile"
+        search_terms = ["threading insert", "laydown", side_text, profile_text, profile_style]
+    elif tool_family == "DRILL":
+        series = "3xD stub drill" if stability != "STABLE" else "5xD carbide drill"
+        if input_data["material_group"] == "N":
+            starter = "polished aluminum drill"
+            geometry = "130 degree polished point"
+        elif input_data["material_group"] == "K":
+            starter = f"through-coolant {series}"
+            geometry = "140 degree strong-margin point"
+        elif input_data["material_group"] == "H":
+            starter = "solid carbide drill for hardened steel"
+            geometry = "140 degree split point"
+        else:
+
+exec
+/bin/bash -lc "sed -n '1,260p' tests/test_app_startup_smoke.py && printf '\\n===SPLIT===\\n' && sed -n '1,320p' tests/test_grade_engine_validation.py" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+import importlib.util
+import socket
+import subprocess
+import sys
+import time
+import unittest
+
+from grade_engine.enums import TOOL_FAMILIES
+
+try:
+    from streamlit.testing.v1 import AppTest
+except ImportError:  # pragma: no cover
+    AppTest = None
+
+
+def _get_free_port() -> int:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+        sock.bind(("127.0.0.1", 0))
+        return int(sock.getsockname()[1])
+
+
+class AppStartupSmokeTests(unittest.TestCase):
+    def test_streamlit_testing_module_is_available(self):
+        self.assertIsNotNone(importlib.util.find_spec("streamlit.testing.v1"))
+
+    def test_streamlit_headless_startup_uses_free_port(self):
+        port = _get_free_port()
+        process = subprocess.Popen(
+            [
+                sys.executable,
+                "-m",
+                "streamlit",
+                "run",
+                "app.py",
+                "--server.headless",
+                "true",
+                "--server.port",
+                str(port),
+                "--browser.gatherUsageStats",
+                "false",
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            text=True,
+            cwd=".",
+        )
+        output = ""
+
+        try:
+            deadline = time.time() + 20
+            while time.time() < deadline:
+                line = process.stdout.readline()
+                if not line:
+                    if process.poll() is not None:
+                        break
+                    time.sleep(0.1)
+                    continue
+                output += line
+                if f"http://localhost:{port}" in line:
+                    break
+        finally:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait(timeout=5)
+            if process.stdout is not None:
+                process.stdout.close()
+
+        self.assertIn(f"http://localhost:{port}", output)
+
+
+@unittest.skipIf(AppTest is None, "streamlit.testing.v1 is unavailable")
+class AppUiFlowTests(unittest.TestCase):
+    def _run_app_for_family(self, tool_family: str, show_internal: bool = False):
+        app = AppTest.from_file("app.py")
+        app.run()
+        app.selectbox[0].set_value(tool_family)
+        if show_internal:
+            app.checkbox[0].check()
+        app.run()
+        return app
+
+    def test_every_tool_family_builds_visible_recommendation_flow(self):
+        for tool_family in TOOL_FAMILIES:
+            with self.subTest(tool_family=tool_family):
+                app = self._run_app_for_family(tool_family)
+                subheaders = [item.value for item in app.subheader]
+                self.assertIn("Recommendation", subheaders)
+                self.assertIn("Starter Setup", subheaders)
+                self.assertIn("Why this was chosen", subheaders)
+                self.assertIn("What to watch", subheaders)
+                self.assertIn("Behavior Readout", subheaders)
+                self.assertIn("Supplier Search", subheaders)
+                if tool_family == "TURNING_INSERT":
+                    self.assertIn("Turning Insert Identity", subheaders)
+                else:
+                    self.assertNotIn("Turning Insert Identity", subheaders)
+
+                self.assertEqual(len(app.button), 0)
+                self.assertEqual(len(app.metric), 3 if tool_family != "TURNING_INSERT" else 7)
+                self.assertEqual(len(app.info), 3 if tool_family != "TURNING_INSERT" else 4)
+                self.assertEqual(len(app.get("link_button")), 4)
+                self.assertTrue(all(button.url for button in app.get("link_button")))
+                self.assertGreaterEqual(len(app.code), 4)
+
+    def test_family_specific_controls_render_when_needed(self):
+        threading_app = self._run_app_for_family("THREADING_INSERT")
+        tap_app = self._run_app_for_family("TAP")
+        reamer_app = self._run_app_for_family("REAMER")
+
+        threading_labels = [item.label for item in threading_app.selectbox]
+        tap_labels = [item.label for item in tap_app.selectbox]
+        reamer_labels = [item.label for item in reamer_app.selectbox]
+
+        self.assertIn("Thread Profile", threading_labels)
+        self.assertIn("Thread Orientation", threading_labels)
+        self.assertIn("Hole Type", tap_labels)
+        self.assertIn("Hole Type", reamer_labels)
+
+    def test_internal_logic_toggle_reveals_logic_key_code_block(self):
+        app = self._run_app_for_family("TURNING_INSERT", show_internal=True)
+
+        captions = [item.value for item in app.caption]
+        code_blocks = [item.value for item in app.code]
+
+        self.assertIn("Internal logic key", captions)
+        self.assertTrue(any(code_block.startswith("P_") and "_T_" in code_block for code_block in code_blocks))
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+===SPLIT===
+import unittest
+from urllib.parse import parse_qs, urlparse
+
+from grade_engine.engine import resolve_grade_behavior
+from grade_engine.insert_identity import build_insert_identity
+from grade_engine.resolver import build_supplier_query, map_behavior_to_supplier_grades
+from grade_engine.router import get_tool_family_message
+from grade_engine.tooling_advisor import resolve_tooling_recommendation
+
+try:
+    from streamlit.testing.v1 import AppTest
+except ImportError:  # pragma: no cover
+    AppTest = None
+
+
+def decode_search_query(url: str) -> str:
+    params = parse_qs(urlparse(url).query)
+    for key in ("q", "text", "searchterm"):
+        if key in params and params[key]:
+            return params[key][0]
+    return ""
+
+
+class BehaviorResolutionTests(unittest.TestCase):
+    def test_steel_roughing_bias_stays_tough(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "P",
+                "application_zone": "TOUGH",
+                "interrupted_cut": "LIGHT",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "HEAVY",
+                "finish_priority": "LOW",
+            }
+        )
+
+        self.assertEqual(result["required_toughness"], "HIGH")
+        self.assertEqual(result["preferred_coating"], "PVD")
+        self.assertEqual(result["insert_identity"]["shape"], "CNMG")
+
+    def test_stainless_finishing_stays_finish_oriented(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "M",
+                "application_zone": "WEAR",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "LIGHT",
+                "finish_priority": "HIGH",
+            }
+        )
+
+        self.assertEqual(result["required_wear_resistance"], "HIGH")
+        self.assertEqual(result["preferred_coating"], "CVD")
+        self.assertEqual(result["insert_identity"]["shape"], "VNMG")
+
+
+class InsertIdentityTests(unittest.TestCase):
+    def test_insert_identity_changes_with_roughing_vs_finishing(self):
+        roughing = build_insert_identity(
+            {
+                "application_zone": "TOUGH",
+                "finish_priority": "LOW",
+                "doc_band": "HEAVY",
+                "interrupted_cut": "HEAVY",
+                "workholding": "GOOD",
+            },
+            {"geometry": "DNMG / CNMG type direction"},
+            {"family": "MR / MRR style"},
+        )
+        finishing = build_insert_identity(
+            {
+                "application_zone": "WEAR",
+                "finish_priority": "HIGH",
+                "doc_band": "LIGHT",
+                "interrupted_cut": "NONE",
+                "workholding": "GOOD",
+            },
+            {"geometry": "VNMG / sharper finishing direction"},
+            {"family": "MF finishing style"},
+        )
+
+        self.assertEqual(roughing["shape"], "CNMG")
+        self.assertEqual(roughing["ansi_size"], "433")
+        self.assertEqual(roughing["nose_radius"], "large")
+        self.assertEqual(finishing["shape"], "VNMG")
+        self.assertEqual(finishing["ansi_size"], "431")
+        self.assertEqual(finishing["nose_radius"], "small")
+
+    def test_insert_identity_uses_dnmg_for_balanced_unstable_work(self):
+        balanced_unstable = build_insert_identity(
+            {
+                "application_zone": "BALANCED",
+                "finish_priority": "NORMAL",
+                "doc_band": "MEDIUM",
+                "interrupted_cut": "LIGHT",
+                "workholding": "AVERAGE",
+            },
+            {"geometry": "DNMG as a broad starting point"},
+            {"family": "MR / MF style"},
+        )
+
+        self.assertEqual(balanced_unstable["shape"], "DNMG")
+        self.assertEqual(balanced_unstable["ansi_size"], "432")
+        self.assertEqual(balanced_unstable["nose_radius"], "medium")
+
+
+class SupplierQueryTests(unittest.TestCase):
+    def test_supplier_queries_keep_grade_context_and_drop_generic_breakers(self):
+        query = build_supplier_query(
+            "KENNAMETAL",
+            "P",
+            "KCP25C",
+            "VNMG / sharper finishing direction",
+            "MF finishing style",
+            {"shape": "VNMG", "ansi_size": "431"},
+        )
+
+        self.assertIn("KCP25C", query)
+        self.assertIn("steel", query.lower())
+        self.assertNotIn("GENERAL-PURPOSE", query)
+
+    def test_msc_queries_use_iso_bucket_aliases_not_internal_keys(self):
+        query = build_supplier_query(
+            "MSC",
+            "N",
+            "MSC_ISO_N05",
+            "VNMG / sharper finishing direction",
+            "General-purpose family",
+            {"shape": "VNMG", "ansi_size": "431"},
+        )
+
+        self.assertIn("ISO N05", query)
+        self.assertNotIn("MSC_ISO_", query)
+        self.assertNotIn("GENERAL-PURPOSE", query)
+
+    def test_mapping_exposes_search_query_and_link_match(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "K",
+                "application_zone": "TOUGH",
+                "interrupted_cut": "NONE",
+                "stickout": "SHORT",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "HEAVY",
+                "finish_priority": "LOW",
+            }
+        )
+        matches = map_behavior_to_supplier_grades(
+            result["material_group"],
+            result["application_zone"],
+            result["preferred_coating"],
+            result["geometry_hint"],
+            result["chipbreaker_hint"],
+            result["insert_identity"],
+        )
+
+        self.assertIn("SANDVIK", matches)
+        sandvik = matches["SANDVIK"]
+        self.assertIn("search_query", sandvik)
+        self.assertEqual(list(sandvik["links"].keys()), ["Search"])
+        decoded_query = decode_search_query(sandvik["links"]["Search"])
+        self.assertEqual(decoded_query, sandvik["search_query"])
+        self.assertNotIn("GENERAL-PURPOSE", decoded_query)
+
+    def test_kennametal_links_use_live_search_path(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            }
+        )
+        matches = map_behavior_to_supplier_grades(
+            result["material_group"],
+            result["application_zone"],
+            result["preferred_coating"],
+            result["geometry_hint"],
+            result["chipbreaker_hint"],
+            result["insert_identity"],
+        )
+
+        kennametal_link = matches["KENNAMETAL"]["links"]["Search"]
+        self.assertIn("bing.com/search", kennametal_link)
+        self.assertIn("site%3Awww.kennametal.com%2Fus%2Fen%2Fproducts", kennametal_link)
+
+    def test_msc_and_iscar_links_use_live_search_paths(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            }
+        )
+        matches = map_behavior_to_supplier_grades(
+            result["material_group"],
+            result["application_zone"],
+            result["preferred_coating"],
+            result["geometry_hint"],
+            result["chipbreaker_hint"],
+            result["insert_identity"],
+        )
+
+        msc_link = matches["MSC"]["links"]["Search"]
+        iscar_link = matches["ISCAR"]["links"]["Search"]
+        self.assertIn("bing.com/search", msc_link)
+        self.assertIn("site%3Awww.mscdirect.com", msc_link)
+        self.assertIn("bing.com/search", iscar_link)
+        self.assertIn("site%3Awww.iscar.com%2FeCatalog", iscar_link)
+
+    def test_pvd_sandvik_mappings_keep_non_empty_description(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "HEAVY",
+                "stickout": "LONG",
+                "workholding": "POOR",
+                "cutting_speed_band": "LOW",
+                "doc_band": "HEAVY",
+                "finish_priority": "LOW",
+            }
+        )
+        self.assertEqual(result["preferred_coating"], "PVD")
+        matches = map_behavior_to_supplier_grades(
+            result["material_group"],
+            result["application_zone"],
+            result["preferred_coating"],
+            result["geometry_hint"],
+            result["chipbreaker_hint"],
+            result["insert_identity"],
+        )
+
+        self.assertEqual(matches["SANDVIK"]["recommended_grade"], "GC1115")
+        self.assertTrue(matches["SANDVIK"]["description"])
+
+
+class ToolFamilyCoverageTests(unittest.TestCase):
+    def test_every_family_resolves_to_live_message(self):
+        for tool_family in (
+            "TURNING_INSERT",
+            "GROOVING_INSERT",
+            "THREADING_INSERT",
+            "DRILL",
+            "ENDMILL",
+            "FACE_MILL",
+            "TAP",
+            "REAMER",
+        ):
+            message = get_tool_family_message(tool_family)
+            self.assertEqual(message["status"], "LIVE")
+
+    def test_every_family_returns_supplier_search(self):
+        input_data = {
+            "material_group": "P",
+            "application_zone": "BALANCED",
+            "interrupted_cut": "NONE",
+            "stickout": "NORMAL",
+            "workholding": "GOOD",
+            "cutting_speed_band": "NORMAL",
+            "doc_band": "MEDIUM",
+            "finish_priority": "NORMAL",
+        }
+        for tool_family in (
+            "TURNING_INSERT",
+            "GROOVING_INSERT",
+            "THREADING_INSERT",
+            "DRILL",
+            "ENDMILL",
+            "FACE_MILL",
+            "TAP",
+            "REAMER",
+        ):
+            recommendation = resolve_tooling_recommendation(tool_family, input_data)
+            self.assertTrue(recommendation["starter_platform"])
+            self.assertTrue(recommendation["geometry_focus"])
+            self.assertTrue(recommendation["holder_focus"])
+            self.assertGreater(len(recommendation["supplier_matches"]), 0)
+            for supplier_data in recommendation["supplier_matches"].values():
+                self.assertTrue(supplier_data["description"])
+                self.assertIn("Search", supplier_data["links"])
+                self.assertTrue(decode_search_query(supplier_data["links"]["Search"]))
+                self.assertNotIn("coming next", supplier_data["description"].lower())
+                self.assertNotIn("placeholder", supplier_data["description"].lower())
+
+    def test_cast_iron_drill_does_not_use_polished_aluminum_point(self):
+        recommendation = resolve_tooling_recommendation(
+            "DRILL",
+            {
+                "material_group": "K",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        self.assertIn("strong-margin", recommendation["geometry_focus"].lower())
+        self.assertNotIn("polished", recommendation["geometry_focus"].lower())
+
+    def test_non_ferrous_tap_watchouts_stay_material_relevant(self):
+        recommendation = resolve_tooling_recommendation(
+
+codex
+I’ve got the first pass loaded: the app is a single Streamlit surface with all tooling sections rendered from shared engine output. Next I’m reading the rest of the advisor/engine path and then running the actual validation commands to find concrete breakage before I patch anything.
+exec
+/bin/bash -lc "sed -n '261,520p' grade_engine/tooling_advisor.py" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+            starter = f"through-coolant {series}"
+            geometry = "140 degree split point"
+        holder = "short projection holder with runout checked at the drill margin"
+        summary = f"Start with a {starter} matched to {doc_text} feed pressure and setup rigidity."
+        notes = [
+            "Shorter drills win first when the machine or setup is not rigid.",
+            "Through-coolant matters most once chip evacuation becomes the limiting factor.",
+            "If the cut squeals, reduce overhang before chasing coating changes.",
+        ]
+        watch = [
+            "Long stickout and poor workholding usually show up as margin wear or drill walk first.",
+            "Cast iron and hardened work need firm entry conditions; avoid rubbing starts.",
+        ]
+        supplier_seed = "carbide drill"
+        drill_style = "polished aluminum" if input_data["material_group"] == "N" else "through coolant"
+        search_terms = ["carbide drill", series, geometry, drill_style]
+    elif tool_family == "ENDMILL":
+        if input_data["material_group"] == "N":
+            starter = "3 flute polished carbide endmill"
+        elif input_data["material_group"] == "H":
+            starter = "6 flute high-hard endmill"
+        elif input_data["material_group"] in {"M", "S"}:
+            starter = "5 flute variable-helix carbide endmill"
+        else:
+            starter = "4 flute variable-helix carbide endmill"
+        geometry = "corner radius" if input_data["doc_band"] == "HEAVY" else "square end"
+        holder = "shrink-fit or solid endmill holder with minimal gauge length"
+        summary = f"Start with a {starter} and a {geometry} edge for {material_name} milling."
+        notes = [
+            "Match flute count to chip space before chasing more coating or speed.",
+            "Variable helix is the safer first choice any time chatter is already on the table.",
+            "For aluminum and copper alloys, polished flutes matter more than generic TiAlN claims.",
+        ]
+        watch = [
+            "Heavy radial engagement and long stickout can break a good endmill recommendation fast.",
+            "If finish matters, step down cutter wear before increasing feed per tooth.",
+        ]
+        supplier_seed = "carbide endmill"
+        search_terms = ["carbide endmill", starter, geometry]
+    elif tool_family == "FACE_MILL":
+        starter = "45 degree positive face mill"
+        if toughness_high or stability != "STABLE":
+            starter = "positive lead-angle face mill with light entering force"
+        geometry = "positive insert pocket" if input_data["material_group"] in {"M", "S"} else "general face-mill body"
+        holder = "largest practical arbor or shell-mill mount the spindle will support"
+        summary = f"Start with a {starter} to keep cutting forces manageable in {material_name} facemilling."
+        notes = [
+            "Positive cutters are the safer first move on lighter machines and weaker workholding.",
+            "Keep cutter diameter just larger than the width of cut when possible.",
+            "If edge failure shows up on entry, reduce engagement shock before changing grade.",
+        ]
+        watch = [
+            "Interrupted milling plus weak workholding usually needs lighter radial engagement immediately.",
+            "Do not oversize the face mill just because the machine can physically hold it.",
+        ]
+        supplier_seed = "face mill"
+        cutter_style = starter.replace("face mill", "").replace("  ", " ").strip()
+        search_terms = [cutter_style, geometry]
+    elif tool_family == "TAP":
+        hole_type = input_data.get("hole_type", "THROUGH")
+        if input_data["material_group"] == "N" and hole_type == "THROUGH":
+            starter = "form tap"
+        elif hole_type == "BLIND" or input_data["material_group"] in {"M", "S"}:
+            starter = "spiral-flute tap"
+        else:
+            starter = "spiral-point gun tap"
+        geometry = "H-limit production style" if wear_high else "general-purpose thread limit"
+        holder = "tension-compression or rigid synchronous holder with minimal runout"
+        summary = f"Start with a {starter} and keep it simple on the first pass in {material_name}."
+        notes, watch = get_tap_notes(input_data["material_group"])
+        supplier_seed = "machine tap"
+        if hole_type == "BLIND":
+            hole_style = "blind hole"
+        elif hole_type == "THROUGH":
+            hole_style = "through hole"
+        else:
+            hole_style = "blind hole" if starter == "spiral-flute tap" else "through hole"
+        if starter == "form tap":
+            hole_style = "ductile material"
+            notes.append("Form tapping is strongest when the aluminum is ductile and the hole volume can accept displaced material.")
+        else:
+            notes.append(f"Selected around a {hole_style} path so the chamfer and flute style match the hole exit condition.")
+        search_terms = ["machine tap", starter, geometry, hole_style]
+    else:
+        hole_type = input_data.get("hole_type", "THROUGH")
+        if input_data["material_group"] in {"H", "K"}:
+            starter = "solid carbide chucking reamer"
+        else:
+            starter = "cobalt chucking reamer"
+        if hole_type == "BLIND" or input_data["material_group"] in {"M", "S"}:
+            geometry = "right-hand spiral"
+        else:
+            geometry = "straight flute"
+        holder = "true-running holder or floating reamer holder after the hole is prepped straight"
+        summary = f"Start with a {starter} in a {geometry} style for size control in {material_name}."
+        notes = [
+            "Reamers want a straight, clean pre-hole more than they want aggressive speed.",
+            "Leave consistent stock before the reamer or the result will not repeat.",
+            "If finish is poor, check the pre-hole and holder runout before blaming the reamer.",
+        ]
+        watch = [
+            "Too little stock can rub and bellmouth the hole just as easily as too much stock can chatter.",
+            "Blind-hole chips need a flute style that can actually evacuate them.",
+        ]
+        supplier_seed = "chucking reamer"
+        notes.append(f"Built around a {hole_type.lower()} hole so flute direction matches chip evacuation needs.")
+        search_terms = ["chucking reamer", starter, geometry, f"{hole_type.lower()} hole"]
+
+    material_focus = MATERIAL_GROUP_OVERLAY[input_data["material_group"]]["label"]
+    return {
+        "family_label": TOOL_FAMILY_LABELS[tool_family],
+        "recommendation_title": f"{TOOL_FAMILY_LABELS[tool_family]} starter for {material_name}",
+        "recommendation_summary": summary,
+        "recommendation_fit_sentence": behavior["recommendation_fit_sentence"],
+        "starter_platform": starter,
+        "fallback_platform": f"general-purpose {TOOL_FAMILY_LABELS[tool_family].lower()}",
+        "geometry_focus": geometry,
+        "holder_focus": holder,
+        "catalog_description": f"{starter.capitalize()} with {geometry.lower()} guidance for {material_name} work.",
+        "process_notes": notes,
+        "watch_items": watch,
+        "supplier_seed": supplier_seed,
+        "search_terms": search_terms,
+        "material_focus": material_focus,
+    }
+
+
+def resolve_tooling_recommendation(tool_family: str, input_data: dict) -> dict:
+    behavior = resolve_grade_behavior(input_data)
+    if tool_family == "TURNING_INSERT":
+        supplier_matches = map_behavior_to_supplier_grades(
+            behavior["material_group"],
+            behavior["application_zone"],
+            behavior["preferred_coating"],
+            behavior["geometry_hint"],
+            behavior["chipbreaker_hint"],
+            behavior["insert_identity"],
+        )
+        return {
+            "tool_family": tool_family,
+            "family_label": TOOL_FAMILY_LABELS[tool_family],
+            "behavior": behavior,
+            "supplier_matches": supplier_matches,
+            "starter_platform": behavior["insert_identity"]["identity_summary"],
+            "geometry_focus": behavior["geometry_hint"]["geometry"],
+            "holder_focus": "Use the most rigid holder and shortest stickout the part allows.",
+            "process_notes": behavior["explanation_steps"],
+            "watch_items": behavior["risk_flags"],
+        }
+
+    family_plan = resolve_non_turning_family(tool_family, input_data, behavior)
+    supplier_matches = build_generic_supplier_matches(tool_family, behavior, family_plan)
+    return {
+        "tool_family": tool_family,
+        "family_label": family_plan["family_label"],
+        "behavior": {
+            **behavior,
+            "recommendation_title": family_plan["recommendation_title"],
+            "recommendation_summary": family_plan["recommendation_summary"],
+            "recommendation_fit_sentence": family_plan["recommendation_fit_sentence"],
+        },
+        "supplier_matches": supplier_matches,
+        "starter_platform": family_plan["starter_platform"],
+        "geometry_focus": family_plan["geometry_focus"],
+        "holder_focus": family_plan["holder_focus"],
+        "process_notes": behavior["explanation_steps"] + family_plan["process_notes"],
+        "watch_items": behavior["risk_flags"] + family_plan["watch_items"],
+    }
+
+exec
+/bin/bash -lc "sed -n '1,260p' grade_engine/engine.py && printf '\\n===SPLIT===\\n' && sed -n '1,260p' grade_engine/resolver.py" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+from collections import Counter
+from .base_behavior import BASE_ZONE_BEHAVIOR
+from .overlays import MATERIAL_GROUP_OVERLAY
+from .modifiers import MODIFIER_RULES
+from .insert_identity import build_insert_identity
+
+SCORE_TO_LEVEL = {1:"LOW",2:"MEDIUM",3:"HIGH"}
+TOUGHNESS_MEANING = {
+    "HIGH":"Strong edge security for interruption, shock, and unstable setups",
+    "MEDIUM":"Balanced edge strength and tool life for normal work",
+    "LOW":"Sharper but less forgiving edge for stable finishing work",
+}
+WEAR_MEANING = {
+    "HIGH":"Better heat resistance and longer life in stable, faster cuts",
+    "MEDIUM":"General-purpose wear resistance",
+    "LOW":"Less heat-focused, usually chosen to keep a stronger edge",
+}
+COATING_MEANING = {
+    "CVD":"Leans toward heat resistance and wear life in stable conditions",
+    "PVD":"Leans toward edge strength and toughness in unstable conditions",
+}
+
+def clamp_score(value:int)->int:
+    return max(1,min(3,value))
+
+def get_chipbreaker_hint(material_group:str, application_zone:str)->dict:
+    if material_group == "P":
+        mapping = {
+            "TOUGH": ("MR / MRR style", "Heavier steel roughing usually wants a tougher breaker that keeps the edge supported."),
+            "BALANCED": ("MR / MF style", "General steel work usually wants a middle-ground breaker that balances chip control and edge strength."),
+            "WEAR": ("MF finishing style", "Stable finishing work usually benefits from a freer-cutting breaker with lower cutting forces."),
+        }
+        family, why = mapping[application_zone]
+        return {"family": family, "why": why}
+    if material_group == "M":
+        mapping = {
+            "TOUGH": ("SM roughing style", "Stainless roughing needs a breaker that stays positive but still supports the edge."),
+            "BALANCED": ("SM general-purpose style", "General stainless work needs chip control without letting the insert rub."),
+            "WEAR": ("SM finishing style", "Stainless finishing still needs a positive cutting action so the insert does not rub and work-harden the part."),
+        }
+        family, why = mapping[application_zone]
+        return {"family": family, "why": why}
+    generic = {
+        "K":"Use a stable, wear-focused breaker that controls chips without over-lightening the edge.",
+        "N":"Use a freer-cutting polished-style breaker with low cutting forces.",
+        "S":"Use a positive but supported breaker that keeps heat and edge failure under control.",
+        "H":"Use a stable wear-side breaker and avoid overly weak sharp geometries.",
+    }
+    return {"family":"General-purpose family","why":generic.get(material_group, "No chipbreaker hint available.")}
+
+def get_geometry_hint(application_zone:str, finish_priority:str, doc_band:str)->dict:
+    if application_zone == "TOUGH":
+        return {"geometry":"DNMG / CNMG type direction","why":"Rougher or less stable work usually benefits from a stronger shape with more edge support."}
+    if application_zone == "WEAR" or finish_priority == "HIGH" or doc_band == "LIGHT":
+        return {"geometry":"VNMG / sharper finishing direction","why":"Stable lighter finishing work usually benefits from a sharper geometry that lowers cutting force."}
+    return {"geometry":"DNMG as a broad starting point","why":"Balanced work can usually start with a versatile shape before narrowing into a more specialized geometry."}
+
+def get_risk_flags(input_data:dict, preferred_coating:str, toughness_level:str, wear_level:str)->list:
+    risks = []
+    if input_data["interrupted_cut"] == "HEAVY":
+        risks.append("High edge-chipping risk from interruption.")
+    if input_data["workholding"] == "POOR":
+        risks.append("Vibration risk from weak workholding.")
+    if input_data["stickout"] == "LONG":
+        risks.append("Deflection / chatter risk from long stickout.")
+    if input_data["cutting_speed_band"] == "HIGH" and wear_level != "HIGH":
+        risks.append("Speed may be too aggressive for the resolved wear level.")
+    if input_data["application_zone"] == "WEAR" and preferred_coating == "PVD":
+        risks.append("Wear-side cut resolved to PVD bias; watch tool life if the cut is very stable and hot.")
+    if input_data["material_group"] == "M" and input_data["doc_band"] == "LIGHT":
+        risks.append("Light-DOC stainless cut: keep feed honest so the edge keeps cutting instead of rubbing.")
+    return risks
+
+def get_shop_language_steps(input_data:dict)->list:
+    steps = []
+    zone = input_data["application_zone"]
+    if zone == "TOUGH":
+        steps.append("TOUGH zone selected -> engine starts by protecting edge strength over wear life.")
+    elif zone == "BALANCED":
+        steps.append("BALANCED zone selected -> engine starts from a middle-ground grade behavior.")
+    else:
+        steps.append("WEAR zone selected -> engine starts by favoring heat resistance and tool life.")
+    steps.append({
+        "P":"P material group -> steel baseline behavior.",
+        "M":"M material group -> stainless behavior adds toughness bias to fight heat and instability.",
+        "K":"K material group -> cast iron pushes toward wear resistance.",
+        "N":"N material group -> non-ferrous work usually allows freer cutting and wear-side bias.",
+        "S":"S material group -> super alloys push both heat resistance and toughness upward.",
+        "H":"H material group -> hardened work pushes strongly toward wear resistance.",
+    }[input_data["material_group"]])
+    if input_data["interrupted_cut"] == "LIGHT":
+        steps.append("Light interruption -> slight move toward a tougher grade.")
+    elif input_data["interrupted_cut"] == "HEAVY":
+        steps.append("Heavy interruption -> strong move toward a tougher, less fragile grade.")
+    if input_data["stickout"] == "LONG":
+        steps.append("Long stickout -> more vibration risk, so the engine adds toughness.")
+    if input_data["workholding"] == "AVERAGE":
+        steps.append("Average workholding -> small shift toward toughness.")
+    elif input_data["workholding"] == "POOR":
+        steps.append("Poor workholding -> strong shift toward toughness because the setup is less stable.")
+    if input_data["cutting_speed_band"] == "HIGH":
+        steps.append("High speed -> more heat, so the engine pushes harder toward wear resistance.")
+    elif input_data["cutting_speed_band"] == "LOW":
+        steps.append("Low speed -> heat matters less, so wear resistance becomes less critical.")
+    if input_data["doc_band"] == "LIGHT":
+        steps.append("Light DOC -> more finishing-like behavior, so wear resistance gets extra weight.")
+    elif input_data["doc_band"] == "HEAVY":
+        steps.append("Heavy DOC -> stronger edge needed, so toughness gets extra weight.")
+    if input_data["finish_priority"] == "HIGH":
+        steps.append("Finish priority high -> engine adds weight toward wear resistance and size control.")
+    return steps
+
+def build_recommendation_summary(material_group:str, application_zone:str, toughness_level:str, wear_level:str, preferred_coating:str)->dict:
+    material_labels = {"P":"steel","M":"stainless","K":"cast iron","N":"non-ferrous","S":"super alloy","H":"hardened"}
+    material_text = material_labels.get(material_group, "material")
+    if application_zone == "TOUGH":
+        title = f"Tougher {material_text} starting grade"
+        summary = "Best starting point when the cut is rougher, more interrupted, or less stable."
+    elif application_zone == "BALANCED":
+        title = f"Balanced {material_text} starting grade"
+        summary = "Best starting point for normal shop work where you need a mix of edge strength and tool life."
+    else:
+        title = f"Wear-oriented {material_text} starting grade"
+        summary = "Best starting point for stable work where heat resistance and longer life matter more."
+
+    fit = []
+    if toughness_level == "HIGH":
+        fit.append("prioritizes edge security")
+    elif toughness_level == "MEDIUM":
+        fit.append("keeps balanced edge strength")
+    else:
+        fit.append("leans toward a freer-cutting edge")
+    if wear_level == "HIGH":
+        fit.append("pushes toward longer tool life")
+    elif wear_level == "MEDIUM":
+        fit.append("keeps wear life general-purpose")
+    else:
+        fit.append("does not over-prioritize wear resistance")
+    fit.append(f"leans {preferred_coating} for coating strategy")
+
+    return {"title":title,"summary":summary,"fit_sentence":"; ".join(fit).capitalize() + "."}
+
+def resolve_grade_behavior(input_data:dict)->dict:
+    base = BASE_ZONE_BEHAVIOR[input_data["application_zone"]]
+    toughness = base["toughness"]
+    wear = base["wear"]
+    coating_votes = [base["preferred_coating"]]
+    overlay = MATERIAL_GROUP_OVERLAY[input_data["material_group"]]
+    toughness = clamp_score(toughness + overlay["toughness_bias"])
+    wear = clamp_score(wear + overlay["wear_bias"])
+    coating_votes.append(overlay["default_coating"])
+
+    for field, value in input_data.items():
+        if field in MODIFIER_RULES and value in MODIFIER_RULES[field]:
+            rule = MODIFIER_RULES[field][value]
+            toughness = clamp_score(toughness + rule["toughness"])
+            wear = clamp_score(wear + rule["wear"])
+            if rule["coating_bias"]:
+                coating_votes.append(rule["coating_bias"])
+
+    preferred_coating = Counter(coating_votes).most_common(1)[0][0]
+    toughness_level = SCORE_TO_LEVEL[toughness]
+    wear_level = SCORE_TO_LEVEL[wear]
+    recommendation = build_recommendation_summary(input_data["material_group"], input_data["application_zone"], toughness_level, wear_level, preferred_coating)
+    chipbreaker = get_chipbreaker_hint(input_data["material_group"], input_data["application_zone"])
+    geometry = get_geometry_hint(input_data["application_zone"], input_data["finish_priority"], input_data["doc_band"])
+    insert_identity = build_insert_identity(input_data, geometry, chipbreaker)
+
+    return {
+        "material_group": input_data["material_group"],
+        "application_zone": input_data["application_zone"],
+        "required_toughness": toughness_level,
+        "required_wear_resistance": wear_level,
+        "preferred_coating": preferred_coating,
+        "toughness_explained": TOUGHNESS_MEANING[toughness_level],
+        "wear_explained": WEAR_MEANING[wear_level],
+        "coating_explained": COATING_MEANING[preferred_coating],
+        "grade_behavior_key": f"{input_data['material_group']}_{toughness_level}_T_{wear_level}_W_{preferred_coating}",
+        "chipbreaker_hint": chipbreaker,
+        "geometry_hint": geometry,
+        "insert_identity": insert_identity,
+        "risk_flags": get_risk_flags(input_data, preferred_coating, toughness_level, wear_level),
+        "explanation_steps": get_shop_language_steps(input_data),
+        "recommendation_title": recommendation["title"],
+        "recommendation_summary": recommendation["summary"],
+        "recommendation_fit_sentence": recommendation["fit_sentence"],
+    }
+
+===SPLIT===
+from urllib.parse import quote_plus
+from .supplier_maps import SUPPLIER_MAPS_V1, GRADE_DESCRIPTIONS
+
+SUPPLIER_SEARCH = {
+    "MSC": "https://www.bing.com/search?q=site%3Awww.mscdirect.com+{query}",
+    "ISCAR": "https://www.bing.com/search?q=site%3Awww.iscar.com%2FeCatalog+{query}",
+    "SANDVIK": "https://www.sandvik.coromant.com/en-us/search?text={query}",
+    "KENNAMETAL": "https://www.bing.com/search?q=site%3Awww.kennametal.com%2Fus%2Fen%2Fproducts+{query}",
+}
+
+SUPPLIER_MATERIAL_FAMILIES = {
+    "ISCAR": {
+        "P": "steel",
+        "M": "stainless",
+        "K": "cast iron",
+        "N": "aluminum non-ferrous polished",
+        "S": "super alloy",
+        "H": "hardened steel",
+    },
+    "SANDVIK": {
+        "P": "steel",
+        "M": "stainless",
+        "K": "cast iron",
+        "N": "non-ferrous aluminum polished",
+        "S": "HRSA super alloy",
+        "H": "hardened steel CBN",
+    },
+    "KENNAMETAL": {
+        "P": "steel",
+        "M": "stainless",
+        "K": "cast iron",
+        "N": "aluminum polished",
+        "S": "super alloy",
+        "H": "hardened steel",
+    },
+    "MSC": {
+        "P": "ISO P steel",
+        "M": "ISO M stainless",
+        "K": "ISO K cast iron",
+        "N": "ISO N polished aluminum non-ferrous",
+        "S": "ISO S super alloy",
+        "H": "ISO H hardened steel",
+    },
+}
+
+# MSC bucket grades resolve through ISO-class aliases so catalog queries stay
+# human-readable instead of exposing internal application keys.
+MSC_GRADE_SEARCH_ALIASES = {
+    "MSC_ISO_P30": "ISO P30",
+    "MSC_ISO_P25": "ISO P25",
+    "MSC_ISO_P20": "ISO P20",
+    "MSC_ISO_P15": "ISO P15",
+    "MSC_ISO_M30": "ISO M30",
+    "MSC_ISO_M25": "ISO M25",
+    "MSC_ISO_M20": "ISO M20",
+    "MSC_ISO_M15": "ISO M15",
+    "MSC_ISO_K30": "ISO K30",
+    "MSC_ISO_K25": "ISO K25",
+    "MSC_ISO_K20": "ISO K20",
+    "MSC_ISO_K15": "ISO K15",
+    "MSC_ISO_N20": "ISO N20",
+    "MSC_ISO_N10": "ISO N10",
+    "MSC_ISO_N05": "ISO N05",
+    "MSC_ISO_S30": "ISO S30",
+    "MSC_ISO_S25": "ISO S25",
+    "MSC_ISO_S20": "ISO S20",
+    "MSC_ISO_S15": "ISO S15",
+    "MSC_ISO_H20": "ISO H20",
+    "MSC_ISO_H15": "ISO H15",
+    "MSC_ISO_H10": "ISO H10",
+}
+
+GENERIC_CHIPBREAKER_TERMS = {"GENERAL", "GENERAL-PURPOSE", "GENERALPURPOSE", "FAMILY"}
+
+def normalize_insert_code(geometry: str) -> str:
+    geo = (geometry or "").upper().strip()
+    if not geo:
+        return "CNMG"
+    for code in ["DNMG","CNMG","VNMG","WNMG","SNMG"]:
+        if code in geo:
+            return code
+    return geo.split()[0]
+
+def normalize_chipbreaker_family(chipbreaker: str) -> str:
+    text = (chipbreaker or "").upper().strip()
+    if not text:
+        return ""
+    compact = text.replace(" ", "")
+    if any(term in compact for term in GENERIC_CHIPBREAKER_TERMS):
+        return ""
+    for code in ["MRR","MR","MF","MN","MP","SM","SF","TF","QM","MM","XM"]:
+        if code in text:
+            return code
+    return ""
+
+def get_material_word(material_group: str) -> str:
+    return {
+        "P":"steel","M":"stainless","K":"cast iron","N":"aluminum","S":"super alloy","H":"hardened steel"
+    }.get(material_group, "turning")
+
+def get_supplier_grade_search_term(supplier: str, grade: str) -> str:
+    if supplier == "MSC":
+        return MSC_GRADE_SEARCH_ALIASES.get(grade, grade)
+    return grade
+
+def compact_query_tokens(*tokens: str) -> str:
+    cleaned = []
+    seen = set()
+    for token in tokens:
+        value = " ".join((token or "").split()).strip()
+        if not value:
+            continue
+        key = value.upper()
+        if key in seen:
+            continue
+        seen.add(key)
+        cleaned.append(value)
+    return " ".join(cleaned)
+
+def build_supplier_query(supplier: str, material_group: str, grade: str, geometry: str, chipbreaker: str, insert_identity: dict = None):
+    identity = insert_identity or {}
+    insert_code = identity.get("shape") or normalize_insert_code(geometry)
+    breaker = normalize_chipbreaker_family(chipbreaker)
+    material_word = get_material_word(material_group)
+    family_hint = SUPPLIER_MATERIAL_FAMILIES.get(supplier, {}).get(material_group, material_word)
+    size = identity.get("ansi_size", "432")
+    grade_term = get_supplier_grade_search_term(supplier, grade)
+
+    if supplier == "MSC":
+        return compact_query_tokens(insert_code, size, breaker, grade_term, family_hint, "turning insert")
+    if supplier == "SANDVIK":
+        return compact_query_tokens(grade_term, insert_code, size, breaker, family_hint, "turning insert")
+    if supplier == "KENNAMETAL":
+        return compact_query_tokens(grade_term, insert_code, size, breaker, family_hint, "turning insert")
+    if supplier == "ISCAR":
+        return compact_query_tokens(grade_term, insert_code, size, breaker, family_hint, "turning insert")
+    return compact_query_tokens(grade_term, insert_code, size, breaker, material_word, "turning insert")
+
+def build_supplier_links(supplier, material_group, grade, geometry, chipbreaker, insert_identity: dict = None):
+    query = build_supplier_query(supplier, material_group, grade, geometry, chipbreaker, insert_identity)
+    search_url = SUPPLIER_SEARCH.get(supplier, "").format(query=quote_plus(query))
+    if search_url:
+        return {"Search": search_url}
+    return {}
+
+def map_behavior_to_supplier_grades(material_group: str, application_zone: str, preferred_coating: str, geometry_hint: dict, chipbreaker_hint: dict, insert_identity: dict = None) -> dict:
+    if material_group not in ["P","M","K","N","S","H"]:
+        return {
+            "SYSTEM": {
+                "recommended_grade": "General turning insert search",
+                "fallback_grade": "Broad catalog search",
+                "preferred_coating": preferred_coating,
+                "description": "Use the resolved coating and geometry as a broad turning-insert catalog search.",
+                "search_query": "turning insert",
+                "links": {},
+            }
+        }
+
+    output = {}
+    for supplier, supplier_map in SUPPLIER_MAPS_V1.items():
+        zone_map = supplier_map.get(material_group, {}).get(application_zone)
+        if not zone_map:
+            continue
+        recommended = zone_map["alt_by_coating"].get(preferred_coating, zone_map["primary"])
+        search_query = build_supplier_query(
+            supplier,
+            material_group,
+            recommended,
+            geometry_hint.get("geometry", "CNMG"),
+            chipbreaker_hint.get("family", "MR"),
+            insert_identity,
+        )
+        output[supplier] = {
+            "recommended_grade": recommended,
+            "fallback_grade": zone_map["primary"],
+            "recommended_label": "Recommended Grade",
+            "fallback_label": "Fallback Grade",
+            "preferred_coating": preferred_coating,
+            "description": GRADE_DESCRIPTIONS.get(recommended, ""),
+            "search_query": search_query,
+            "links": build_supplier_links(
+                supplier,
+                material_group,
+                recommended,
+                geometry_hint.get("geometry", "CNMG"),
+                chipbreaker_hint.get("family", "MR"),
+                insert_identity,
+            ),
+        }
+    return output
+
+exec
+/bin/bash -lc 'python -m streamlit run app.py --server.headless true --server.port 8510 --browser.gatherUsageStats false' in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ exited 127 in 0ms:
+/bin/bash: line 1: python: command not found
+
+exec
+/bin/bash -lc 'pytest -q' in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 2373ms:
+................................                                         [100%]
+32 passed in 2.16s
+
+codex
+The first hard failure is environmental, not app logic: `python` is missing in this shell, so I’m switching validation to `python3`. I’m also polling the test run and then I’ll patch whichever logic/UI issues the first validation pass exposes.
+exec
+/bin/bash -lc "sed -n '1,260p' grade_engine/router.py && printf '\\n===SPLIT===\\n' && sed -n '1,260p' grade_engine/supplier_maps.py && printf '\\n===SPLIT===\\n' && sed -n '1,260p' README.md" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+from .tooling_advisor import TOOL_FAMILY_LABELS
+
+
+def get_tool_family_message(tool_family: str) -> dict:
+    label = TOOL_FAMILY_LABELS[tool_family]
+    if tool_family == "TURNING_INSERT":
+        message = "Turning inserts use mapped grade behavior, insert identity output, and supplier-specific search terms built from coating, geometry, and chipbreaker direction."
+    elif tool_family == "THREADING_INSERT":
+        message = "Threading guidance uses the shared behavior engine plus thread profile and internal or external direction so the starter insert and catalog search stay thread-specific."
+    elif tool_family in {"TAP", "REAMER"}:
+        message = "This section uses the shared behavior engine plus hole-type input so the starter callout and supplier search reflect through-hole versus blind-hole work."
+    else:
+        message = f"{label} uses the shared material and setup behavior engine to return a shop-floor starter platform, setup guidance, and supplier search terms."
+    return {
+        "status": "LIVE",
+        "title": f"{label} recommendations are active",
+        "message": message,
+    }
+
+===SPLIT===
+SUPPLIER_MAPS_V1 = {
+    "ISCAR": {
+        "P": {
+            "TOUGH": {"primary": "IC8250", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC807"}},
+            "BALANCED": {"primary": "IC8250", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC808"}},
+            "WEAR": {"primary": "IC8150", "alt_by_coating": {"CVD": "IC8150", "PVD": "IC806"}},
+        },
+        "M": {
+            "TOUGH": {"primary": "IC8250", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC807"}},
+            "BALANCED": {"primary": "IC8250", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC808"}},
+            "WEAR": {"primary": "IC8150", "alt_by_coating": {"CVD": "IC8150", "PVD": "IC806"}},
+        },
+        "K": {
+            "TOUGH": {"primary": "IC8250", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC807"}},
+            "BALANCED": {"primary": "IC8150", "alt_by_coating": {"CVD": "IC8150", "PVD": "IC808"}},
+            "WEAR": {"primary": "IC8150", "alt_by_coating": {"CVD": "IC8150", "PVD": "IC806"}},
+        },
+        "N": {
+            "TOUGH": {"primary": "IC20", "alt_by_coating": {"CVD": "IC20", "PVD": "IC20"}},
+            "BALANCED": {"primary": "IC20", "alt_by_coating": {"CVD": "IC20", "PVD": "IC20"}},
+            "WEAR": {"primary": "IC20", "alt_by_coating": {"CVD": "IC20", "PVD": "IC20"}},
+        },
+        "S": {
+            "TOUGH": {"primary": "IC807", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC807"}},
+            "BALANCED": {"primary": "IC808", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC808"}},
+            "WEAR": {"primary": "IC8150", "alt_by_coating": {"CVD": "IC8150", "PVD": "IC806"}},
+        },
+        "H": {
+            "TOUGH": {"primary": "IC808", "alt_by_coating": {"CVD": "IC8250", "PVD": "IC808"}},
+            "BALANCED": {"primary": "IC806", "alt_by_coating": {"CVD": "IC8150", "PVD": "IC806"}},
+            "WEAR": {"primary": "IC806", "alt_by_coating": {"CVD": "IC8150", "PVD": "IC806"}},
+        },
+    },
+    "SANDVIK": {
+        "P": {
+            "TOUGH": {"primary": "GC4425", "alt_by_coating": {"CVD": "GC4425", "PVD": "GC4415"}},
+            "BALANCED": {"primary": "GC4425", "alt_by_coating": {"CVD": "GC4425", "PVD": "GC4415"}},
+            "WEAR": {"primary": "GC4405", "alt_by_coating": {"CVD": "GC4405", "PVD": "GC4415"}},
+        },
+        "M": {
+            "TOUGH": {"primary": "GC2220", "alt_by_coating": {"CVD": "GC2220", "PVD": "GC1115"}},
+            "BALANCED": {"primary": "GC2025", "alt_by_coating": {"CVD": "GC2025", "PVD": "GC1115"}},
+            "WEAR": {"primary": "GC2015", "alt_by_coating": {"CVD": "GC2015", "PVD": "GC1115"}},
+        },
+        "K": {
+            "TOUGH": {"primary": "GC3210", "alt_by_coating": {"CVD": "GC3210", "PVD": "GC3115"}},
+            "BALANCED": {"primary": "GC3225", "alt_by_coating": {"CVD": "GC3225", "PVD": "GC3115"}},
+            "WEAR": {"primary": "GC3210", "alt_by_coating": {"CVD": "GC3210", "PVD": "GC3115"}},
+        },
+        "N": {
+            "TOUGH": {"primary": "H13A", "alt_by_coating": {"CVD": "H13A", "PVD": "H13A"}},
+            "BALANCED": {"primary": "H10", "alt_by_coating": {"CVD": "H10", "PVD": "H13A"}},
+            "WEAR": {"primary": "H10", "alt_by_coating": {"CVD": "H10", "PVD": "H13A"}},
+        },
+        "S": {
+            "TOUGH": {"primary": "S205", "alt_by_coating": {"CVD": "GC1205", "PVD": "S205"}},
+            "BALANCED": {"primary": "GC1205", "alt_by_coating": {"CVD": "GC1205", "PVD": "GC1115"}},
+            "WEAR": {"primary": "GC1210", "alt_by_coating": {"CVD": "GC1210", "PVD": "GC1115"}},
+        },
+        "H": {
+            "TOUGH": {"primary": "CB7015", "alt_by_coating": {"CVD": "CB7015", "PVD": "CB7015"}},
+            "BALANCED": {"primary": "CB7025", "alt_by_coating": {"CVD": "CB7025", "PVD": "CB7015"}},
+            "WEAR": {"primary": "CB7025", "alt_by_coating": {"CVD": "CB7025", "PVD": "CB7015"}},
+        },
+    },
+    "KENNAMETAL": {
+        "P": {
+            "TOUGH": {"primary": "KCU25B", "alt_by_coating": {"CVD": "KCP25C", "PVD": "KCU25B"}},
+            "BALANCED": {"primary": "KCP25C", "alt_by_coating": {"CVD": "KCP25C", "PVD": "KCU25B"}},
+            "WEAR": {"primary": "KCU10B", "alt_by_coating": {"CVD": "KCP25C", "PVD": "KCU10B"}},
+        },
+        "M": {
+            "TOUGH": {"primary": "KCS25B", "alt_by_coating": {"CVD": "KCS25B", "PVD": "KCU25B"}},
+            "BALANCED": {"primary": "KCS15B", "alt_by_coating": {"CVD": "KCS15B", "PVD": "KCU25B"}},
+            "WEAR": {"primary": "KCS10B", "alt_by_coating": {"CVD": "KCS10B", "PVD": "KCU10B"}},
+        },
+        "K": {
+            "TOUGH": {"primary": "KCK20B", "alt_by_coating": {"CVD": "KCK20B", "PVD": "KCU25B"}},
+            "BALANCED": {"primary": "KCK20B", "alt_by_coating": {"CVD": "KCK20B", "PVD": "KCU10B"}},
+            "WEAR": {"primary": "KCK10B", "alt_by_coating": {"CVD": "KCK10B", "PVD": "KCU10B"}},
+        },
+        "N": {
+            "TOUGH": {"primary": "KCU25B", "alt_by_coating": {"CVD": "KCU25B", "PVD": "KCU25B"}},
+            "BALANCED": {"primary": "KCU10B", "alt_by_coating": {"CVD": "KCU10B", "PVD": "KCU10B"}},
+            "WEAR": {"primary": "KCU10B", "alt_by_coating": {"CVD": "KCU10B", "PVD": "KCU10B"}},
+        },
+        "S": {
+            "TOUGH": {"primary": "KCU25B", "alt_by_coating": {"CVD": "KCS25B", "PVD": "KCU25B"}},
+            "BALANCED": {"primary": "KCS15B", "alt_by_coating": {"CVD": "KCS15B", "PVD": "KCU25B"}},
+            "WEAR": {"primary": "KCS10B", "alt_by_coating": {"CVD": "KCS10B", "PVD": "KCU10B"}},
+        },
+        "H": {
+            "TOUGH": {"primary": "KCU25B", "alt_by_coating": {"CVD": "KCS25B", "PVD": "KCU25B"}},
+            "BALANCED": {"primary": "KCU10B", "alt_by_coating": {"CVD": "KCS10B", "PVD": "KCU10B"}},
+            "WEAR": {"primary": "KCU10B", "alt_by_coating": {"CVD": "KCS10B", "PVD": "KCU10B"}},
+        },
+    },
+    "MSC": {
+        # MSC carries multi-brand insert catalogs, so these entries are intentionally ISO-bucket defaults.
+        "P": {
+            "TOUGH": {"primary": "MSC_ISO_P30", "alt_by_coating": {"CVD": "MSC_ISO_P30", "PVD": "MSC_ISO_P25"}},
+            "BALANCED": {"primary": "MSC_ISO_P25", "alt_by_coating": {"CVD": "MSC_ISO_P25", "PVD": "MSC_ISO_P25"}},
+            "WEAR": {"primary": "MSC_ISO_P15", "alt_by_coating": {"CVD": "MSC_ISO_P15", "PVD": "MSC_ISO_P20"}},
+        },
+        "M": {
+            "TOUGH": {"primary": "MSC_ISO_M30", "alt_by_coating": {"CVD": "MSC_ISO_M30", "PVD": "MSC_ISO_M25"}},
+            "BALANCED": {"primary": "MSC_ISO_M25", "alt_by_coating": {"CVD": "MSC_ISO_M25", "PVD": "MSC_ISO_M20"}},
+            "WEAR": {"primary": "MSC_ISO_M15", "alt_by_coating": {"CVD": "MSC_ISO_M15", "PVD": "MSC_ISO_M20"}},
+        },
+        "K": {
+            "TOUGH": {"primary": "MSC_ISO_K30", "alt_by_coating": {"CVD": "MSC_ISO_K30", "PVD": "MSC_ISO_K25"}},
+            "BALANCED": {"primary": "MSC_ISO_K25", "alt_by_coating": {"CVD": "MSC_ISO_K25", "PVD": "MSC_ISO_K20"}},
+            "WEAR": {"primary": "MSC_ISO_K15", "alt_by_coating": {"CVD": "MSC_ISO_K15", "PVD": "MSC_ISO_K20"}},
+        },
+        "N": {
+            "TOUGH": {"primary": "MSC_ISO_N20", "alt_by_coating": {"CVD": "MSC_ISO_N20", "PVD": "MSC_ISO_N20"}},
+            "BALANCED": {"primary": "MSC_ISO_N10", "alt_by_coating": {"CVD": "MSC_ISO_N10", "PVD": "MSC_ISO_N10"}},
+            "WEAR": {"primary": "MSC_ISO_N05", "alt_by_coating": {"CVD": "MSC_ISO_N05", "PVD": "MSC_ISO_N10"}},
+        },
+        "S": {
+            "TOUGH": {"primary": "MSC_ISO_S30", "alt_by_coating": {"CVD": "MSC_ISO_S30", "PVD": "MSC_ISO_S25"}},
+            "BALANCED": {"primary": "MSC_ISO_S25", "alt_by_coating": {"CVD": "MSC_ISO_S25", "PVD": "MSC_ISO_S20"}},
+            "WEAR": {"primary": "MSC_ISO_S15", "alt_by_coating": {"CVD": "MSC_ISO_S15", "PVD": "MSC_ISO_S20"}},
+        },
+        "H": {
+            "TOUGH": {"primary": "MSC_ISO_H20", "alt_by_coating": {"CVD": "MSC_ISO_H20", "PVD": "MSC_ISO_H20"}},
+            "BALANCED": {"primary": "MSC_ISO_H15", "alt_by_coating": {"CVD": "MSC_ISO_H15", "PVD": "MSC_ISO_H15"}},
+            "WEAR": {"primary": "MSC_ISO_H10", "alt_by_coating": {"CVD": "MSC_ISO_H10", "PVD": "MSC_ISO_H10"}},
+        },
+    },
+}
+
+GRADE_DESCRIPTIONS = {
+    "IC8250": "Tough CVD grade for general and less stable turning",
+    "IC8150": "Harder, wear-oriented CVD option for stable higher-speed cuts",
+    "IC808": "Balanced PVD option for mixed stability conditions",
+    "IC807": "Tougher PVD option for unstable or interrupted cuts",
+    "IC806": "Wear-side PVD option for stable cuts and finishing",
+    "IC20": "Uncoated carbide option often used as a baseline for non-ferrous turning",
+    "GC4425": "Strong all-around steel turning grade",
+    "GC4415": "Tougher Sandvik option when extra edge security is needed",
+    "GC4405": "Wear-oriented steel grade for stable high-productivity cuts",
+    "GC2220": "Tough stainless turning option for unstable conditions",
+    "GC2025": "Balanced stainless turning option",
+    "GC2015": "Wear-side stainless option for stable cuts",
+    "GC1115": "PVD Sandvik option for stainless and super-alloy work when lower cutting force and edge security matter.",
+    "GC3225": "General cast-iron turning option",
+    "GC3210": "Wear-focused cast-iron turning option",
+    "GC3115": "PVD-side cast-iron option for mixed stability",
+    "H13A": "Tough uncoated option for non-ferrous and gummy alloys",
+    "H10": "Wear-side option for non-ferrous turning",
+    "S205": "Tough super-alloy turning option",
+    "GC1205": "Balanced super-alloy turning grade",
+    "GC1210": "Wear-side super-alloy turning grade",
+    "CB7015": "CBN option leaning toward interrupted hardened turning",
+    "CB7025": "CBN option for hardened finishing and wear life",
+    "KCP25C": "Versatile CVD steel grade with solid toughness",
+    "KCU25B": "Tough universal PVD grade for mixed conditions",
+    "KCU10B": "Harder wear-oriented PVD grade for stable finishing conditions",
+    "KCS25B": "Tough stainless/super-alloy Kennametal option",
+    "KCS15B": "Balanced stainless/super-alloy Kennametal option",
+    "KCS10B": "Wear-side stainless/super-alloy Kennametal option",
+    "KCK20B": "Balanced cast-iron option",
+    "KCK10B": "Wear-focused cast-iron option",
+    "MSC_ISO_P30": "MSC multi-brand ISO P roughing bucket (toughness side)",
+    "MSC_ISO_P25": "MSC multi-brand ISO P general-purpose bucket",
+    "MSC_ISO_P20": "MSC multi-brand ISO P semi-finishing bucket",
+    "MSC_ISO_P15": "MSC multi-brand ISO P finishing bucket",
+    "MSC_ISO_M30": "MSC multi-brand ISO M roughing bucket",
+    "MSC_ISO_M25": "MSC multi-brand ISO M general-purpose bucket",
+    "MSC_ISO_M20": "MSC multi-brand ISO M semi-finishing bucket",
+    "MSC_ISO_M15": "MSC multi-brand ISO M finishing bucket",
+    "MSC_ISO_K30": "MSC multi-brand ISO K roughing bucket",
+    "MSC_ISO_K25": "MSC multi-brand ISO K general-purpose bucket",
+    "MSC_ISO_K20": "MSC multi-brand ISO K semi-finishing bucket",
+    "MSC_ISO_K15": "MSC multi-brand ISO K finishing bucket",
+    "MSC_ISO_N20": "MSC multi-brand ISO N roughing bucket",
+    "MSC_ISO_N10": "MSC multi-brand ISO N general-purpose bucket",
+    "MSC_ISO_N05": "MSC multi-brand ISO N finishing bucket",
+    "MSC_ISO_S30": "MSC multi-brand ISO S roughing bucket",
+    "MSC_ISO_S25": "MSC multi-brand ISO S general-purpose bucket",
+    "MSC_ISO_S20": "MSC multi-brand ISO S semi-finishing bucket",
+    "MSC_ISO_S15": "MSC multi-brand ISO S finishing bucket",
+    "MSC_ISO_H20": "MSC multi-brand ISO H roughing bucket",
+    "MSC_ISO_H15": "MSC multi-brand ISO H general-purpose bucket",
+    "MSC_ISO_H10": "MSC multi-brand ISO H finishing bucket",
+}
+
+===SPLIT===
+# CNC Tool Engine
+
+Streamlit app for shop-floor starter recommendations across turning inserts, grooving inserts, threading inserts, drills, endmills, face mills, taps, and reamers.
+
+The app now rebuilds recommendations live as inputs change. Threading adds thread profile and internal or external controls. Tap and reamer flows add hole-type control so the setup guidance and supplier search stay process-specific.
+
+## Install
+
+Windows PowerShell:
+
+```powershell
+py -m pip install -r requirements.txt
+```
+
+Linux / macOS:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+## Run
+
+Windows PowerShell:
+
+```powershell
+py -m streamlit run app.py
+```
+
+Linux / macOS:
+
+```bash
+python3 -m streamlit run app.py
+```
+
+## Test
+
+Windows PowerShell:
+
+```powershell
+py -m pytest -q
+py -m pytest -q tests/test_app_startup_smoke.py
+py -m compileall app.py grade_engine tests
+```
+
+Linux / macOS:
+
+```bash
+python3 -m pytest -q
+python3 -m pytest -q tests/test_app_startup_smoke.py
+python3 -m compileall app.py grade_engine tests
+```
+
+exec
+/bin/bash -lc 'python3 -m streamlit run app.py --server.headless true --server.port 8510 --browser.gatherUsageStats false' in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+codex
+The baseline is healthier than the prompt implied: tests pass and the app launches cleanly under `python3`. I’m still doing another audit pass for weak spots the current tests miss, especially duplicate watchouts, supplier-link behavior, and any process-specific gaps that would leave a visible tooling section half-real.
+collab: Wait
+exec
+/bin/bash -lc "sed -n '260,520p' tests/test_grade_engine_validation.py" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+            "ENDMILL",
+            "FACE_MILL",
+            "TAP",
+            "REAMER",
+        ):
+            message = get_tool_family_message(tool_family)
+            self.assertEqual(message["status"], "LIVE")
+
+    def test_every_family_returns_supplier_search(self):
+        input_data = {
+            "material_group": "P",
+            "application_zone": "BALANCED",
+            "interrupted_cut": "NONE",
+            "stickout": "NORMAL",
+            "workholding": "GOOD",
+            "cutting_speed_band": "NORMAL",
+            "doc_band": "MEDIUM",
+            "finish_priority": "NORMAL",
+        }
+        for tool_family in (
+            "TURNING_INSERT",
+            "GROOVING_INSERT",
+            "THREADING_INSERT",
+            "DRILL",
+            "ENDMILL",
+            "FACE_MILL",
+            "TAP",
+            "REAMER",
+        ):
+            recommendation = resolve_tooling_recommendation(tool_family, input_data)
+            self.assertTrue(recommendation["starter_platform"])
+            self.assertTrue(recommendation["geometry_focus"])
+            self.assertTrue(recommendation["holder_focus"])
+            self.assertGreater(len(recommendation["supplier_matches"]), 0)
+            for supplier_data in recommendation["supplier_matches"].values():
+                self.assertTrue(supplier_data["description"])
+                self.assertIn("Search", supplier_data["links"])
+                self.assertTrue(decode_search_query(supplier_data["links"]["Search"]))
+                self.assertNotIn("coming next", supplier_data["description"].lower())
+                self.assertNotIn("placeholder", supplier_data["description"].lower())
+
+    def test_cast_iron_drill_does_not_use_polished_aluminum_point(self):
+        recommendation = resolve_tooling_recommendation(
+            "DRILL",
+            {
+                "material_group": "K",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        self.assertIn("strong-margin", recommendation["geometry_focus"].lower())
+        self.assertNotIn("polished", recommendation["geometry_focus"].lower())
+
+    def test_non_ferrous_tap_watchouts_stay_material_relevant(self):
+        recommendation = resolve_tooling_recommendation(
+            "TAP",
+            {
+                "material_group": "N",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        watch_text = " ".join(recommendation["watch_items"]).lower()
+        notes_text = " ".join(recommendation["process_notes"]).lower()
+        self.assertIn("form tap", recommendation["starter_platform"].lower())
+        self.assertIn("ductile aluminum", notes_text)
+        self.assertNotIn("super alloy", watch_text)
+
+    def test_non_turning_supplier_queries_drop_turning_grade_jargon(self):
+        recommendation = resolve_tooling_recommendation(
+            "DRILL",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("drill", search_query)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_non_turning_supplier_queries_collapse_overlapping_family_terms(self):
+        drill = resolve_tooling_recommendation(
+            "DRILL",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+        grooving = resolve_tooling_recommendation(
+            "GROOVING_INSERT",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        self.assertEqual(drill["supplier_matches"]["SANDVIK"]["search_query"].lower().count("carbide drill"), 1)
+        self.assertEqual(grooving["supplier_matches"]["SANDVIK"]["search_query"].lower().count("grooving insert"), 1)
+
+    def test_tap_supplier_queries_include_hole_style_not_coating(self):
+        recommendation = resolve_tooling_recommendation(
+            "TAP",
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+                "hole_type": "BLIND",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("spiral-flute tap", search_query)
+            self.assertIn("blind hole", search_query)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_threading_insert_supplier_queries_stay_thread_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "THREADING_INSERT",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("threading insert", search_query)
+            self.assertIn("laydown", search_query)
+            self.assertEqual(search_query.count("threading insert"), 1)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_threading_insert_internal_whitworth_search_stays_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "THREADING_INSERT",
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+                "thread_profile": "WHITWORTH_55",
+                "thread_side": "INTERNAL",
+            },
+        )
+
+        self.assertIn("55 degree internal threading style", recommendation["geometry_focus"].lower())
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("55 degree", search_query)
+            self.assertIn("internal", search_query)
+
+    def test_face_mill_supplier_queries_stay_family_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "FACE_MILL",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("face mill", search_query)
+            self.assertEqual(search_query.count("face mill"), 1)
+            self.assertNotIn("turning insert", search_query)
+
+    def test_reamer_supplier_queries_stay_family_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "REAMER",
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("reamer", search_query)
+            self.assertNotIn("turning insert", search_query)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_blind_hole_reamer_uses_spiral_geometry(self):
+        recommendation = resolve_tooling_recommendation(
+            "REAMER",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+                "hole_type": "BLIND",
+            },
+        )
+
+        self.assertIn("right-hand spiral", recommendation["geometry_focus"].lower())
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+from grade_engine.enums import TOOL_FAMILIES, MATERIAL_GROUPS, APPLICATION_ZONES, INTERRUPTED_CUT, STICKOUT, WORKHOLDING, CUTTING_SPEED_BAND, DOC_BAND, FINISH_PRIORITY
+from grade_engine.tooling_advisor import resolve_tooling_recommendation
+
+base = {
+    'material_group':'P','application_zone':'BALANCED','interrupted_cut':'NONE','stickout':'NORMAL','workholding':'GOOD','cutting_speed_band':'NORMAL','doc_band':'MEDIUM','finish_priority':'NORMAL'
+}
+for family in TOOL_FAMILIES:
+    data = dict(base)
+    if family == 'THREADING_INSERT':
+        data['thread_profile'] = 'WHITWORTH_55'
+        data['thread_side'] = 'INTERNAL'
+    if family in {'TAP','REAMER'}:
+        data['hole_type'] = 'BLIND'
+    rec = resolve_tooling_recommendation(family, data)
+    print('\\n', family)
+    print(rec['starter_platform'])
+    print(rec['geometry_focus'])
+    print(rec['holder_focus'])
+    print('watch', len(rec['watch_items']))
+    for s, m in rec['supplier_matches'].items():
+        print(s, m['search_query'])
+PY" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+
+ TURNING_INSERT
+DNMG 432 medium-radius balanced direction
+DNMG as a broad starting point
+Use the most rigid holder and shortest stickout the part allows.
+watch 0
+ISCAR IC8250 DNMG 432 MR steel turning insert
+SANDVIK GC4425 DNMG 432 MR steel turning insert
+KENNAMETAL KCP25C DNMG 432 MR steel turning insert
+MSC DNMG 432 MR ISO P25 ISO P steel turning insert
+
+ GROOVING_INSERT
+neutral hand grooving / part-off blade
+3 mm width with supported edge
+short overhang blade with the insert on spindle centerline
+watch 2
+MSC grooving insert 3 mm parting cutoff supported edge Steel
+SANDVIK CoroCut grooving insert 3 mm parting cutoff supported edge Steel
+KENNAMETAL Top Notch grooving insert 3 mm parting cutoff supported edge Steel
+ISCAR Do-Grip grooving insert 3 mm parting cutoff supported edge Steel
+
+ THREADING_INSERT
+partial-profile internal threading insert
+55 degree internal threading style
+shortest practical internal threading bar with solid support and confirmed tip height
+watch 2
+MSC threading insert laydown internal 55 degree partial profile Steel
+SANDVIK laydown threading insert internal 55 degree partial profile Steel
+KENNAMETAL laydown threading insert internal 55 degree partial profile Steel
+ISCAR laydown threading insert internal 55 degree partial profile Steel
+
+ DRILL
+through-coolant 5xD carbide drill
+140 degree split point
+short projection holder with runout checked at the drill margin
+watch 2
+MSC 5xD carbide drill 140 degree split point through coolant Steel
+SANDVIK CoroDrill 5xD carbide drill 140 degree split point through coolant Steel
+KENNAMETAL HPX drill 5xD carbide drill 140 degree split point through coolant Steel
+ISCAR SumoCham drill 5xD carbide drill 140 degree split point through coolant Steel
+
+ ENDMILL
+4 flute variable-helix carbide endmill
+square end
+shrink-fit or solid endmill holder with minimal gauge length
+watch 2
+MSC 4 flute variable-helix carbide endmill square end Steel
+SANDVIK CoroMill end mill 4 flute variable-helix carbide endmill square end Steel
+KENNAMETAL Harvi end mill 4 flute variable-helix carbide endmill square end Steel
+ISCAR end mill 4 flute variable-helix carbide endmill square end Steel
+
+ FACE_MILL
+45 degree positive face mill
+general face-mill body
+largest practical arbor or shell-mill mount the spindle will support
+watch 2
+MSC face mill 45 degree positive general face-mill body Steel
+SANDVIK CoroMill face mill 45 degree positive general face-mill body Steel
+KENNAMETAL face mill 45 degree positive general face-mill body Steel
+ISCAR face mill 45 degree positive general face-mill body Steel
+
+ TAP
+spiral-flute tap
+general-purpose thread limit
+tension-compression or rigid synchronous holder with minimal runout
+watch 2
+MSC machine tap spiral-flute tap general-purpose thread limit blind hole Steel
+SANDVIK CoroTap machine tap spiral-flute tap general-purpose thread limit blind hole Steel
+KENNAMETAL machine tap spiral-flute tap general-purpose thread limit blind hole Steel
+ISCAR machine tap spiral-flute tap general-purpose thread limit blind hole Steel
+
+ REAMER
+cobalt chucking reamer
+right-hand spiral
+true-running holder or floating reamer holder after the hole is prepped straight
+watch 2
+MSC cobalt chucking reamer right-hand spiral blind hole Steel
+SANDVIK cobalt chucking reamer right-hand spiral blind hole Steel
+KENNAMETAL cobalt chucking reamer right-hand spiral blind hole Steel
+ISCAR cobalt chucking reamer right-hand spiral blind hole Steel
+
+2026-04-10T01:51:10.658345Z ERROR codex_core::tools::router: error=write_stdin failed: stdin is closed for this session; rerun exec_command with tty=true to keep stdin open
+2026-04-10T01:51:13.859422Z ERROR codex_core::tools::router: error=write_stdin failed: stdin is closed for this session; rerun exec_command with tty=true to keep stdin open
+codex
+I’m looking for the second-pass weaknesses now, not just green tests. The most likely gaps are recommendation cleanup and validation depth, so I’m checking whether outputs duplicate warnings, whether links are well-formed for every supplier/family, and whether docs/reporting still match the real run path.
+exec
+/bin/bash -lc "sed -n '1,260p' COMPLETION_REPORT.md && printf '\\n===SPLIT===\\n' && sed -n '1,240p' requirements.txt && printf '\\n===SPLIT===\\n' && sed -n '1,240p' grade_engine/enums.py" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+# Completion Report
+
+## Scope Completed
+
+The app now returns live recommendations and supplier search output for:
+
+- turning inserts
+- grooving inserts
+- threading inserts
+- drills
+- endmills
+- face mills
+- taps
+- reamers
+
+## Run
+
+Windows PowerShell:
+
+```powershell
+py -m streamlit run app.py
+```
+
+Linux / macOS:
+
+```bash
+python3 -m streamlit run app.py
+```
+
+Headless startup check used during validation:
+
+Windows PowerShell:
+
+```powershell
+py -m pytest -q tests/test_app_startup_smoke.py
+```
+
+Linux / macOS:
+
+```bash
+python3 -m pytest -q tests/test_app_startup_smoke.py
+```
+
+## Test
+
+Windows PowerShell:
+
+```powershell
+py -m pytest -q
+py -m compileall app.py grade_engine tests
+```
+
+Linux / macOS:
+
+```bash
+python3 -m pytest -q
+python3 -m compileall app.py grade_engine tests
+```
+
+## Validation Notes
+
+- Streamlit startup is covered by both `streamlit.testing.v1.AppTest` and the subprocess-based free-port smoke test in `tests/test_app_startup_smoke.py`.
+- Recommendations now render live without a one-shot build button.
+- Threading now captures thread profile plus internal or external direction.
+- Tap and reamer flows now capture hole type so the starter callout and supplier search reflect through-hole versus blind-hole work.
+- Supplier cards now show process-appropriate labels and the actual catalog search query instead of implying every family maps to an exact grade.
+- The optional `Show internal logic key` control is covered by UI regression testing.
+- Every visible tool family is exercised through the UI path and must render the recommendation, starter setup, behavior readout, and supplier search sections.
+- Supplier search links are validated for turning and non-turning flows.
+- Startup validation no longer depends on `8513` already being free on the machine.
+- Kennametal search now routes through a live site-filtered catalog search instead of a dead internal search URL.
+- MSC and ISCAR search links now route through live site-filtered search results instead of brittle direct catalog endpoints that returned `403` during automated validation.
+- Sandvik `GC1115` now has a shop-readable description so PVD stainless and super-alloy paths do not render blank supplier text.
+- Drill guidance now keeps cast-iron geometry separate from polished non-ferrous drill guidance.
+- Tap warnings now stay material-relevant instead of showing super-alloy warnings on non-ferrous tap recommendations.
+- Stainless light-DOC warnings now stay accurate even when finish priority is not set to finishing.
+- Repeated automated test passes completed cleanly: two consecutive `32 passed` full-suite runs, a clean `5 passed` startup and UI smoke run, and a clean `python3 -m compileall app.py grade_engine tests`.
+
+## Remaining Limits
+
+- Non-turning families resolve to supplier search guidance rather than supplier-specific grade tables.
+- Tap recommendations still require the machinist to confirm through-hole versus blind-hole geometry before ordering.
+
+===SPLIT===
+pytest>=8.0,<9.0
+streamlit>=1.31,<2.0
+
+===SPLIT===
+TOOL_FAMILIES = ["TURNING_INSERT","GROOVING_INSERT","THREADING_INSERT","DRILL","ENDMILL","FACE_MILL","TAP","REAMER"]
+MATERIAL_GROUPS = ["P","M","K","N","S","H"]
+APPLICATION_ZONES = ["TOUGH","BALANCED","WEAR"]
+INTERRUPTED_CUT = ["NONE","LIGHT","HEAVY"]
+STICKOUT = ["SHORT","NORMAL","LONG"]
+WORKHOLDING = ["GOOD","AVERAGE","POOR"]
+CUTTING_SPEED_BAND = ["LOW","NORMAL","HIGH"]
+DOC_BAND = ["LIGHT","MEDIUM","HEAVY"]
+FINISH_PRIORITY = ["LOW","NORMAL","HIGH"]
+
+exec
+/bin/bash -lc "python3 - <<'PY'
+from grade_engine.enums import TOOL_FAMILIES, MATERIAL_GROUPS, APPLICATION_ZONES, INTERRUPTED_CUT, STICKOUT, WORKHOLDING, CUTTING_SPEED_BAND, DOC_BAND, FINISH_PRIORITY
+from grade_engine.tooling_advisor import resolve_tooling_recommendation
+
+issues=[]
+for family in TOOL_FAMILIES:
+  for material in MATERIAL_GROUPS:
+    data={
+      'material_group':material,
+      'application_zone':'BALANCED',
+      'interrupted_cut':'NONE',
+      'stickout':'NORMAL',
+      'workholding':'GOOD',
+      'cutting_speed_band':'NORMAL',
+      'doc_band':'MEDIUM',
+      'finish_priority':'NORMAL',
+    }
+    if family=='THREADING_INSERT':
+      data['thread_profile']='UNIFIED_60'; data['thread_side']='EXTERNAL'
+    if family in {'TAP','REAMER'}:
+      data['hole_type']='THROUGH'
+    rec=resolve_tooling_recommendation(family,data)
+    if len(rec['watch_items']) "'!= len(set(rec['"'watch_items'])):
+      issues.append((family, material, 'duplicate watch'))
+    for supplier, match in rec['supplier_matches'].items():
+      if not match['description'] or 'placeholder' in match['description'].lower():
+        issues.append((family, material, supplier, 'bad description'))
+      if not match['links'].get('Search','').startswith('http'):
+        issues.append((family, material, supplier, 'bad link'))
+print('\\n'.join(map(str, issues)) or 'NO_ISSUES')
+PY" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+NO_ISSUES
+
+exec
+/bin/bash -lc 'python3 -m pytest -q tests/test_app_startup_smoke.py' in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+collab: Wait
+ succeeded in 1596ms:
+.....                                                                    [100%]
+5 passed in 1.42s
+
+exec
+/bin/bash -lc 'python3 -m compileall app.py grade_engine tests' in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ succeeded in 0ms:
+Listing 'grade_engine'...
+Listing 'tests'...
+
+codex
+The first validation cycle is clean across full suite, startup smoke, and bytecode compilation. I’m keeping the loop going: one more deeper pass on tests and output quality, then I’ll patch any weak point I can materially strengthen before the final verification rounds.
+collab: Wait
+collab: Wait
+collab: Wait
+exec
+/bin/bash -lc "python3 - <<'PY'
+from itertools import product
+from grade_engine.enums import TOOL_FAMILIES, MATERIAL_GROUPS, APPLICATION_ZONES, INTERRUPTED_CUT, STICKOUT, WORKHOLDING, CUTTING_SPEED_BAND, DOC_BAND, FINISH_PRIORITY
+from grade_engine.tooling_advisor import resolve_tooling_recommendation
+
+count=0
+for family in TOOL_FAMILIES:
+    for material, zone, interrupt, stickout, workholding, speed, doc, finish in product(MATERIAL_GROUPS, APPLICATION_ZONES, INTERRUPTED_CUT, STICKOUT, WORKHOLDING, CUTTING_SPEED_BAND, DOC_BAND, FINISH_PRIORITY):
+        data={'material_group':material,'application_zone':zone,'interrupted_cut':interrupt,'stickout':stickout,'workholding':workholding,'cutting_speed_band':speed,'doc_band':doc,'finish_priority':finish}
+        if family=='THREADING_INSERT':
+            data['thread_profile']='UNIFIED_60'; data['thread_side']='EXTERNAL'
+        if family in {'TAP','REAMER'}:
+            data['hole_type']='THROUGH'
+        rec=resolve_tooling_recommendation(family, data)
+        assert rec['starter_platform']
+        assert rec['geometry_focus']
+        assert rec['holder_focus']
+        assert rec['supplier_matches']
+        count += 1
+print(count)
+PY" in /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+ERROR: You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Apr 10th, 2026 2:00 AM.
+ERROR: You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Apr 10th, 2026 2:00 AM.
+tokens used
+45,713

@@ -316,6 +316,31 @@ class ToolFamilyCoverageTests(unittest.TestCase):
         self.assertIn("strong-margin", recommendation["geometry_focus"].lower())
         self.assertNotIn("polished", recommendation["geometry_focus"].lower())
 
+    def test_stable_unified_threading_can_promote_full_profile_insert(self):
+        recommendation = resolve_tooling_recommendation(
+            "THREADING_INSERT",
+            {
+                "material_group": "P",
+                "application_zone": "WEAR",
+                "interrupted_cut": "NONE",
+                "stickout": "SHORT",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "LIGHT",
+                "finish_priority": "HIGH",
+                "thread_profile": "UNIFIED_60",
+                "thread_side": "EXTERNAL",
+            },
+        )
+
+        starter_text = recommendation["starter_platform"].lower()
+        search_text = " ".join(
+            supplier_data["search_query"].lower()
+            for supplier_data in recommendation["supplier_matches"].values()
+        )
+        self.assertIn("full-profile", starter_text)
+        self.assertIn("full profile", search_text)
+
     def test_non_ferrous_tap_watchouts_stay_material_relevant(self):
         recommendation = resolve_tooling_recommendation(
             "TAP",
@@ -336,6 +361,31 @@ class ToolFamilyCoverageTests(unittest.TestCase):
         self.assertIn("form tap", recommendation["starter_platform"].lower())
         self.assertIn("ductile aluminum", notes_text)
         self.assertNotIn("super alloy", watch_text)
+
+    def test_through_hole_steel_tap_uses_spiral_point_path(self):
+        recommendation = resolve_tooling_recommendation(
+            "TAP",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+                "hole_type": "THROUGH",
+            },
+        )
+
+        starter_text = recommendation["starter_platform"].lower()
+        search_text = " ".join(
+            supplier_data["search_query"].lower()
+            for supplier_data in recommendation["supplier_matches"].values()
+        )
+        self.assertIn("spiral-point gun tap", starter_text)
+        self.assertIn("through hole", search_text)
+        self.assertNotIn("blind hole", search_text)
 
     def test_non_turning_supplier_queries_drop_turning_grade_jargon(self):
         recommendation = resolve_tooling_recommendation(
@@ -518,6 +568,44 @@ class ToolFamilyCoverageTests(unittest.TestCase):
         )
 
         self.assertIn("right-hand spiral", recommendation["geometry_focus"].lower())
+
+    def test_hardened_material_reamer_prefers_carbide_platform(self):
+        recommendation = resolve_tooling_recommendation(
+            "REAMER",
+            {
+                "material_group": "H",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+                "hole_type": "THROUGH",
+            },
+        )
+
+        self.assertIn("solid carbide", recommendation["starter_platform"].lower())
+
+    def test_non_ferrous_endmill_keeps_polished_aluminum_bias(self):
+        recommendation = resolve_tooling_recommendation(
+            "ENDMILL",
+            {
+                "material_group": "N",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "LIGHT",
+                "finish_priority": "HIGH",
+            },
+        )
+
+        starter_text = recommendation["starter_platform"].lower()
+        summary_text = recommendation["behavior"]["recommendation_summary"].lower()
+        self.assertIn("polished carbide endmill", starter_text)
+        self.assertIn("non-ferrous", summary_text)
         self.assertTrue(
             all("blind hole" in supplier_data["search_query"].lower() for supplier_data in recommendation["supplier_matches"].values())
         )

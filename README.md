@@ -49,3 +49,10 @@ python3 -m pytest -q
 python3 -m pytest -q tests/test_app_startup_smoke.py
 python3 -m compileall app.py grade_engine tests
 ```
+
+Recommended full validation pass before shipping:
+
+1. Run the full suite.
+2. Run the Streamlit startup and UI smoke coverage directly.
+3. Run `compileall` for a syntax pass.
+4. Re-run `pytest -q` a second time to confirm the repo stays stable across consecutive passes.

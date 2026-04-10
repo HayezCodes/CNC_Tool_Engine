@@ -63,6 +63,7 @@ python3 -m compileall app.py grade_engine tests
 - Recommendations now render live without a one-shot build button.
 - Threading now captures thread profile plus internal or external direction.
 - Tap and reamer flows now capture hole type so the starter callout and supplier search reflect through-hole versus blind-hole work.
+- Validation coverage now locks down family-specific starter logic for full-profile threading, through-hole tapping, hardened-material reaming, and non-ferrous endmill guidance.
 - Supplier cards now show process-appropriate labels and the actual catalog search query instead of implying every family maps to an exact grade.
 - The optional `Show internal logic key` control is covered by UI regression testing.
 - Every visible tool family is exercised through the UI path and must render the recommendation, starter setup, behavior readout, and supplier search sections.

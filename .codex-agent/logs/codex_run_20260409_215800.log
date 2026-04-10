@@ -1,0 +1,291 @@
+[Thu Apr  9 21:58:00 EDT 2026] Starting Codex exec run...
+OpenAI Codex v0.118.0 (research preview)
+--------
+workdir: /mnt/c/Users/hayes/Desktop/Lets Have Some Fun/CNC_Tool_Engine-main
+model: gpt-5.4
+provider: openai
+approval: never
+sandbox: danger-full-access
+reasoning effort: none
+reasoning summaries: none
+session id: 019d751c-47ba-78c1-8e10-2524c083621b
+--------
+user
+You are working inside the GitHub repo: HayezCodes/CNC_Tool_Engine.
+
+This is an execution task, not a planning exercise.
+Do not stop for partial completion, cosmetic edits, placeholders, or “future-ready” scaffolding.
+Do not leave any visible tooling section unfinished.
+Do not ask me for choices unless the repo is fundamentally broken and literally cannot proceed.
+Bias toward action, implementation, testing, and verification.
+
+---
+
+# 🔥 SELF-HEALING AGENT LOOP SYSTEM (MANDATORY)
+
+You are NOT a single-pass agent.
+
+You are a **persistent multi-agent system that continuously improves the project until it is fully complete and stable.**
+
+You MUST:
+
+* run in loops
+* detect failures
+* fix them
+* re-run validation
+* repeat until stable
+
+---
+
+## 🧠 CORE LOOP (DO NOT BREAK THIS)
+
+Repeat the following cycle continuously:
+
+1. AUDIT CURRENT STATE
+2. IMPLEMENT IMPROVEMENTS
+3. RUN VALIDATION
+4. DETECT FAILURES OR WEAKNESS
+5. FIX ISSUES
+6. RE-RUN TESTS
+7. VERIFY AGAIN
+
+Then repeat the entire loop again.
+
+You do NOT exit after one success pass.
+
+You only stop when:
+
+* all success criteria are met
+* no regressions occur
+* no failures appear across multiple validation passes
+
+---
+
+## 🔁 SELF-HEALING BEHAVIOR
+
+If ANY of the following occur:
+
+* test failure
+* runtime error
+* broken UI
+* missing data
+* weak recommendation logic
+* invalid links
+* inconsistent structure
+
+You MUST:
+
+* trace root cause
+* fix the issue
+* re-run validation
+* confirm resolution
+
+DO NOT:
+
+* ignore errors
+* defer fixes
+* leave partial solutions
+
+---
+
+## 🧩 AGENT ROLES (RUN IN PARALLEL + LOOP)
+
+### TOOL_DATA_AGENT
+
+Continuously improves tooling dataset:
+
+* fills missing fields
+* replaces weak data
+* removes duplicates
+* improves normalization
+
+---
+
+### MACHINING_LOGIC_AGENT
+
+Continuously improves recommendation quality:
+
+* refines logic
+* improves clarity of explanations
+* ensures machinist usability
+* removes vague or generic outputs
+
+---
+
+### VALIDATION_AGENT
+
+Enforces correctness:
+
+* runs tests repeatedly
+* creates new tests when gaps found
+* stress-tests logic and UI
+* detects regressions
+
+---
+
+### UI_AGENT
+
+Continuously improves usability:
+
+* fixes broken layouts
+* removes dead controls
+* ensures consistency
+* validates interaction flows
+
+---
+
+### INTEGRATION_AGENT
+
+Maintains system integrity:
+
+* fixes imports
+* resolves broken dependencies
+* ensures modules communicate correctly
+
+---
+
+## ⚠️ LOOP INTELLIGENCE RULES
+
+* After each loop → compare results to previous state
+* If improvement is possible → continue looping
+* If instability is detected → prioritize fixing stability
+* If system regresses → rollback and correct
+
+You are expected to:
+
+* iterate multiple times
+* refine outputs
+* stabilize system behavior
+
+---
+
+## 🚫 STOP CONDITION (STRICT)
+
+You may ONLY stop when ALL are true:
+
+* multiple consecutive validation passes succeed
+* no test failures
+* no runtime errors
+* all tooling sections work
+* recommendation outputs are clear and practical
+* no broken UI or dead controls
+* no placeholder or incomplete sections remain
+
+If ANY doubt exists → continue looping.
+
+---
+
+# PRIMARY OBJECTIVE
+
+Finish this repo so every tooling section in the app is functional, populated, usable, and verified.
+I want this project actually working, not just improved-looking.
+
+---
+
+# NON-NEGOTIABLE SUCCESS CRITERIA
+
+1. The app launches cleanly
+2. Every visible tooling section works end-to-end
+3. Recommendation logic is sensible and readable
+4. Broken or fake catalog behavior is removed or repaired
+5. Tests are added/updated and actually run
+6. Docs are updated with exact run/test steps
+7. No dead buttons, placeholder cards, or incomplete sections remain
+8. All changes are committed cleanly
+
+---
+
+# OPERATING INSTRUCTIONS
+
+* Inspect → implement → test → fix → retest → repeat
+* Do not over-explain
+* Do not stop early
+* Do not fake completion
+* Favor real CNC usability over generic polish
+
+---
+
+# PHASES (EXECUTE INSIDE THE LOOP)
+
+## PHASE 1 — AUDIT
+
+Scan entire repo:
+
+* tooling sections
+* data sources
+* logic
+* UI
+* tests
+* failures
+
+---
+
+## PHASE 2 — DATA
+
+* normalize tooling data
+* ensure completeness
+* enforce structure
+* handle missing values
+
+---
+
+## PHASE 3 — LOGIC
+
+* implement robust machining recommendations
+* ensure readable outputs
+* refine based on validation feedback
+
+---
+
+## PHASE 4 — UI
+
+* ensure full usability
+* fix rendering and interaction issues
+* remove dead elements
+
+---
+
+## PHASE 5 — LINKS
+
+* repair catalog links
+* validate URLs
+* replace unreliable links
+
+---
+
+## PHASE 6 — TESTING
+
+* run all tests
+* add missing tests
+* validate app startup
+* fix and re-run until clean
+
+---
+
+## PHASE 7 — DOCUMENTATION
+
+* update setup + run instructions
+* create completion report
+
+---
+
+# FINAL OUTPUT REQUIREMENTS
+
+When (and ONLY when) the system is fully stable, output:
+
+1. summary
+2. files changed
+3. commands run
+4. results
+5. remaining limitations (if any)
+
+---
+
+# EXECUTION DIRECTIVE
+
+Start immediately.
+Activate all agents.
+Enter the self-healing loop.
+Do not stop until the project is fully complete and stable.
+ERROR: You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Apr 10th, 2026 2:01 AM.
+ERROR: You've hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at Apr 10th, 2026 2:01 AM.
