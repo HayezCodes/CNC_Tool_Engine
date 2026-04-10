@@ -341,6 +341,37 @@ class ToolFamilyCoverageTests(unittest.TestCase):
             self.assertNotIn("cvd", search_query)
             self.assertNotIn("pvd", search_query)
 
+    def test_non_turning_supplier_queries_collapse_overlapping_family_terms(self):
+        drill = resolve_tooling_recommendation(
+            "DRILL",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+        grooving = resolve_tooling_recommendation(
+            "GROOVING_INSERT",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        self.assertEqual(drill["supplier_matches"]["SANDVIK"]["search_query"].lower().count("carbide drill"), 1)
+        self.assertEqual(grooving["supplier_matches"]["SANDVIK"]["search_query"].lower().count("grooving insert"), 1)
+
     def test_tap_supplier_queries_include_hole_style_not_coating(self):
         recommendation = resolve_tooling_recommendation(
             "TAP",
@@ -414,6 +445,17 @@ class AppStartupTests(unittest.TestCase):
         app.run()
         self.assertTrue(any(header.value == "Recommendation" for header in app.subheader))
         self.assertTrue(any(header.value == "Supplier Search" for header in app.subheader))
+
+    def test_internal_logic_toggle_renders_key(self):
+        app = AppTest.from_file("app.py")
+        app.run()
+        app.checkbox[0].check()
+        app.button[0].click()
+        app.run()
+
+        self.assertEqual(len(app.exception), 0)
+        self.assertTrue(any(caption.value == "Internal logic key" for caption in app.caption))
+        self.assertTrue(any("grade_behavior_key" not in code.value and "_T_" in code.value for code in app.code))
 
     def test_every_family_builds_without_ui_exceptions(self):
         for tool_family in (

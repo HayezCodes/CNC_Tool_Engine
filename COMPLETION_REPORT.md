@@ -15,17 +15,42 @@ The app now returns live recommendations and supplier search output for:
 
 ## Run
 
+Windows PowerShell:
+
+```powershell
+py -m streamlit run app.py
+```
+
+Linux / macOS:
+
 ```bash
-streamlit run app.py
+python3 -m streamlit run app.py
 ```
 
 Headless startup check used during validation:
+
+Windows PowerShell:
+
+```powershell
+py -m pytest -q tests/test_app_startup_smoke.py
+```
+
+Linux / macOS:
 
 ```bash
 python3 -m pytest -q tests/test_app_startup_smoke.py
 ```
 
 ## Test
+
+Windows PowerShell:
+
+```powershell
+py -m pytest -q
+py -m compileall app.py grade_engine tests
+```
+
+Linux / macOS:
 
 ```bash
 python3 -m pytest -q
@@ -35,6 +60,7 @@ python3 -m compileall app.py grade_engine tests
 ## Validation Notes
 
 - Streamlit startup is covered with `streamlit.testing.v1.AppTest`.
+- The optional `Show internal logic key` control is covered by UI regression testing.
 - Headless startup is covered by `tests/test_app_startup_smoke.py`, which allocates a free port automatically, and was also re-verified manually on open local ports `8537` and `8538`.
 - Every visible tool family is exercised through the UI path.
 - Supplier search links are validated for turning and non-turning flows.

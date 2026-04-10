@@ -81,6 +81,22 @@ def compact_tokens(*tokens: str) -> str:
     return " ".join(cleaned)
 
 
+def compact_overlapping_terms(*tokens: str) -> str:
+    cleaned = []
+    for token in tokens:
+        value = " ".join((token or "").split()).strip()
+        if not value:
+            continue
+        value_upper = value.upper()
+        if any(value_upper == existing.upper() for existing in cleaned):
+            continue
+        if any(value_upper in existing.upper() for existing in cleaned):
+            continue
+        cleaned = [existing for existing in cleaned if existing.upper() not in value_upper]
+        cleaned.append(value)
+    return " ".join(cleaned)
+
+
 def get_stability_state(input_data: dict) -> str:
     instability = 0
     if input_data["interrupted_cut"] == "LIGHT":
@@ -149,7 +165,8 @@ def get_tap_notes(material_group: str) -> tuple[list, list]:
 
 def build_generic_supplier_query(tool_family: str, supplier: str, family_plan: dict) -> str:
     supplier_family_term = NON_TURNING_SUPPLIER_TOKENS.get(supplier, {}).get(tool_family, family_plan["supplier_seed"])
-    return compact_tokens(supplier_family_term, *family_plan["search_terms"], family_plan["material_focus"])
+    normalized_family_terms = compact_overlapping_terms(supplier_family_term, *family_plan["search_terms"])
+    return compact_tokens(normalized_family_terms, family_plan["material_focus"])
 
 
 def build_generic_supplier_matches(tool_family: str, result: dict, family_plan: dict) -> dict:
