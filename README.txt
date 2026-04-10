@@ -1,9 +1,19 @@
-UNIVERSAL BRIDGE V2
+CNC Tool Engine
 
-DROP THIS INTO ANY REPO ROOT.
+This Streamlit app gives shop-floor starter recommendations for:
+- Turning inserts
+- Grooving inserts
+- Threading inserts
+- Drills
+- Endmills
+- Face mills
+- Taps
+- Reamers
 
-Run:
-powershell -ExecutionPolicy Bypass -File .\scripts\start_prompt_bridge.ps1
+Quick start:
+python3 -m pip install --break-system-packages -r requirements.txt
+streamlit run app.py
 
-Send prompts from phone via:
-prompts/inbox/
+Validation:
+python3 -m pytest -q
+python3 -m compileall app.py grade_engine tests

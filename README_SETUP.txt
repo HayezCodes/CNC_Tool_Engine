@@ -1,16 +1,16 @@
-# CNC Codex Background Agent Setup
+CNC Tool Engine Setup
 
-1. Install WSL + Ubuntu
-2. Install dependencies:
-   sudo apt update
-   sudo apt install -y tmux inotify-tools
-   npm install -g @openai/codex
+Install:
+python3 -m pip install --break-system-packages -r requirements.txt
 
-3. Make scripts executable:
-   chmod +x scripts/*.sh
+Run:
+streamlit run app.py
 
-4. Run:
-   ./scripts/start_codex_agent_tmux.sh
+Headless startup check:
+timeout 20s streamlit run app.py --server.headless true --server.port 8501
 
-5. Attach:
-   tmux attach -t codex_cnc_agent
+Test:
+python3 -m pytest -q
+
+Compile check:
+python3 -m compileall app.py grade_engine tests

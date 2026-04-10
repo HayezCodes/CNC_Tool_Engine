@@ -4,6 +4,13 @@ from urllib.parse import parse_qs, urlparse
 from grade_engine.engine import resolve_grade_behavior
 from grade_engine.insert_identity import build_insert_identity
 from grade_engine.resolver import build_supplier_query, map_behavior_to_supplier_grades
+from grade_engine.router import get_tool_family_message
+from grade_engine.tooling_advisor import resolve_tooling_recommendation
+
+try:
+    from streamlit.testing.v1 import AppTest
+except ImportError:  # pragma: no cover
+    AppTest = None
 
 
 def decode_search_query(url: str) -> str:
@@ -143,6 +150,65 @@ class SupplierQueryTests(unittest.TestCase):
         decoded_query = decode_search_query(sandvik["links"]["Search"])
         self.assertEqual(decoded_query, sandvik["search_query"])
         self.assertNotIn("GENERAL-PURPOSE", decoded_query)
+
+
+class ToolFamilyCoverageTests(unittest.TestCase):
+    def test_every_family_resolves_to_live_message(self):
+        for tool_family in (
+            "TURNING_INSERT",
+            "GROOVING_INSERT",
+            "THREADING_INSERT",
+            "DRILL",
+            "ENDMILL",
+            "FACE_MILL",
+            "TAP",
+            "REAMER",
+        ):
+            message = get_tool_family_message(tool_family)
+            self.assertEqual(message["status"], "LIVE")
+
+    def test_every_family_returns_supplier_search(self):
+        input_data = {
+            "material_group": "P",
+            "application_zone": "BALANCED",
+            "interrupted_cut": "NONE",
+            "stickout": "NORMAL",
+            "workholding": "GOOD",
+            "cutting_speed_band": "NORMAL",
+            "doc_band": "MEDIUM",
+            "finish_priority": "NORMAL",
+        }
+        for tool_family in (
+            "TURNING_INSERT",
+            "GROOVING_INSERT",
+            "THREADING_INSERT",
+            "DRILL",
+            "ENDMILL",
+            "FACE_MILL",
+            "TAP",
+            "REAMER",
+        ):
+            recommendation = resolve_tooling_recommendation(tool_family, input_data)
+            self.assertTrue(recommendation["starter_platform"])
+            self.assertTrue(recommendation["geometry_focus"])
+            self.assertTrue(recommendation["holder_focus"])
+            self.assertGreater(len(recommendation["supplier_matches"]), 0)
+            for supplier_data in recommendation["supplier_matches"].values():
+                self.assertTrue(supplier_data["description"])
+                self.assertIn("Search", supplier_data["links"])
+                self.assertTrue(decode_search_query(supplier_data["links"]["Search"]))
+
+
+@unittest.skipIf(AppTest is None, "streamlit testing support unavailable")
+class AppStartupTests(unittest.TestCase):
+    def test_app_renders_and_builds_recommendation(self):
+        app = AppTest.from_file("app.py")
+        app.run()
+        self.assertEqual(app.title[0].value, "CNC Tool Engine")
+        app.button[0].click()
+        app.run()
+        self.assertTrue(any(header.value == "Recommendation" for header in app.subheader))
+        self.assertTrue(any(header.value == "Supplier Search" for header in app.subheader))
 
 
 if __name__ == "__main__":

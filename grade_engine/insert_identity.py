@@ -78,5 +78,4 @@ def build_insert_identity(input_data: dict, geometry_hint: dict, chipbreaker_hin
         "nose_radius": nose_radius,
         "identity_summary": summary,
         "chipbreaker_family": (chipbreaker_hint or {}).get("family", "MR"),
-        "future_shape_placeholders": ["WNMG", "SNMG"],
     }

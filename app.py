@@ -1,35 +1,51 @@
 import streamlit as st
+
 from grade_engine.enums import (
-    TOOL_FAMILIES, MATERIAL_GROUPS, APPLICATION_ZONES, INTERRUPTED_CUT, STICKOUT,
-    WORKHOLDING, CUTTING_SPEED_BAND, DOC_BAND, FINISH_PRIORITY
+    APPLICATION_ZONES,
+    CUTTING_SPEED_BAND,
+    DOC_BAND,
+    FINISH_PRIORITY,
+    INTERRUPTED_CUT,
+    MATERIAL_GROUPS,
+    STICKOUT,
+    TOOL_FAMILIES,
+    WORKHOLDING,
 )
-from grade_engine.engine import resolve_grade_behavior
-from grade_engine.resolver import map_behavior_to_supplier_grades
-from grade_engine.router import get_tool_family_message
+from grade_engine.tooling_advisor import TOOL_FAMILY_LABELS, resolve_tooling_recommendation
 
 MATERIAL_GROUP_LABELS = {
-    "P": "P — Steel",
-    "M": "M — Stainless",
-    "K": "K — Cast Iron",
-    "N": "N — Non-Ferrous",
-    "S": "S — Super Alloy",
-    "H": "H — Hardened",
+    "P": "P - Steel",
+    "M": "M - Stainless",
+    "K": "K - Cast Iron",
+    "N": "N - Non-Ferrous",
+    "S": "S - Super Alloy",
+    "H": "H - Hardened",
 }
 
-st.set_page_config(page_title="Universal Tooling Engine V2", layout="wide")
-st.title("Universal Tooling Engine V2")
-st.caption("Tool-family router + expanded material groups")
 
-tool_family = st.selectbox("Tool Family", TOOL_FAMILIES, index=0)
-family_info = get_tool_family_message(tool_family)
+def render_supplier_matches(matches: dict) -> None:
+    st.subheader("Supplier Search")
+    for supplier, data in matches.items():
+        with st.container(border=True):
+            st.markdown(f"**{supplier}**")
+            st.write(f"Recommended Start: {data['recommended_grade']}")
+            st.write(f"Fallback: {data['fallback_grade']}")
+            st.write(f"Description: {data['description']}")
+            links = data.get("links", {})
+            if links.get("Search"):
+                st.link_button(f"Search {supplier}", links["Search"])
 
-with st.container(border=True):
-    st.markdown(f"### {family_info['title']}")
-    st.write(family_info["message"])
 
-if tool_family != "TURNING_INSERT":
-    st.info("This family is routed and ready for future logic, but the active engine is still turning inserts.")
-    st.stop()
+st.set_page_config(page_title="CNC Tool Engine", layout="wide")
+st.title("CNC Tool Engine")
+st.caption("Shop-floor starter recommendations across turning, grooving, threading, drilling, milling, tapping, and reaming.")
+
+tool_family = st.selectbox(
+    "Tool Family",
+    TOOL_FAMILIES,
+    index=0,
+    format_func=lambda item: TOOL_FAMILY_LABELS[item],
+)
 
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -37,7 +53,7 @@ with col1:
         "Material Group",
         MATERIAL_GROUPS,
         index=0,
-        format_func=lambda x: MATERIAL_GROUP_LABELS[x],
+        format_func=lambda item: MATERIAL_GROUP_LABELS[item],
     )
     application_zone = st.selectbox("Application Zone", APPLICATION_ZONES, index=1)
 with col2:
@@ -55,7 +71,7 @@ with col5:
 
 show_internal = st.checkbox("Show internal logic key", value=False)
 
-if st.button("Resolve Grade Behavior", type="primary"):
+if st.button("Build Recommendation", type="primary"):
     input_data = {
         "material_group": material_group,
         "application_zone": application_zone,
@@ -67,39 +83,29 @@ if st.button("Resolve Grade Behavior", type="primary"):
         "finish_priority": finish_priority,
     }
 
-    result = resolve_grade_behavior(input_data)
-    supplier_matches = map_behavior_to_supplier_grades(
-        result["material_group"], result["application_zone"], result["preferred_coating"],
-        result["geometry_hint"], result["chipbreaker_hint"], result.get("insert_identity"),
-    )
+    recommendation = resolve_tooling_recommendation(tool_family, input_data)
+    behavior = recommendation["behavior"]
 
     st.subheader("Recommendation")
     with st.container(border=True):
-        st.markdown(f"### {result['recommendation_title']}")
-        st.write(result["recommendation_summary"])
-        st.write(result["recommendation_fit_sentence"])
+        st.markdown(f"### {behavior['recommendation_title']}")
+        st.write(behavior["recommendation_summary"])
+        st.write(behavior["recommendation_fit_sentence"])
 
     a, b, c = st.columns(3)
-    a.metric("Required Toughness", result["required_toughness"])
-    b.metric("Required Wear Resistance", result["required_wear_resistance"])
-    c.metric("Preferred Coating", result["preferred_coating"])
+    a.metric("Required Toughness", behavior["required_toughness"])
+    b.metric("Required Wear Resistance", behavior["required_wear_resistance"])
+    c.metric("Preferred Coating", behavior["preferred_coating"])
 
-    st.subheader("What that means")
-    st.write(f"**Toughness:** {result['toughness_explained']}")
-    st.write(f"**Wear resistance:** {result['wear_explained']}")
-    st.write(f"**Coating:** {result['coating_explained']}")
+    st.subheader("Starter Setup")
+    s1, s2, s3 = st.columns(3)
+    s1.info(f"**Start with**\n\n{recommendation['starter_platform']}")
+    s2.info(f"**Geometry / style**\n\n{recommendation['geometry_focus']}")
+    s3.info(f"**Holder / setup**\n\n{recommendation['holder_focus']}")
 
-    g1, g2 = st.columns(2)
-    with g1:
-        st.subheader("Starter geometry direction")
-        st.info(f"**{result['geometry_hint']['geometry']}**\n\n{result['geometry_hint']['why']}")
-    with g2:
-        st.subheader("Starter chipbreaker direction")
-        st.info(f"**{result['chipbreaker_hint']['family']}**\n\n{result['chipbreaker_hint']['why']}")
-
-    insert_identity = result.get("insert_identity", {})
-    if insert_identity:
-        st.subheader("Starter Insert Identity")
+    if tool_family == "TURNING_INSERT":
+        st.subheader("Turning Insert Identity")
+        insert_identity = behavior["insert_identity"]
         i1, i2, i3, i4 = st.columns(4)
         i1.metric("Shape", insert_identity.get("shape", "-"))
         i2.metric("ANSI Size", insert_identity.get("ansi_size", "-"))
@@ -107,30 +113,24 @@ if st.button("Resolve Grade Behavior", type="primary"):
         i4.metric("Nose Radius", insert_identity.get("nose_radius", "-"))
         st.info(insert_identity.get("identity_summary", ""))
 
-    if show_internal:
-        st.caption("Internal logic key")
-        st.code(result["grade_behavior_key"], language="text")
-
     st.subheader("Why this was chosen")
-    for step in result["explanation_steps"]:
+    for step in recommendation["process_notes"]:
         st.write(f"- {step}")
 
     st.subheader("What to watch")
-    if result["risk_flags"]:
-        for risk in result["risk_flags"]:
-            st.warning(risk)
+    if recommendation["watch_items"]:
+        for item in recommendation["watch_items"]:
+            st.warning(item)
     else:
-        st.success("No major risk flags from the current input mix.")
+        st.success("No major watch items from the current input mix.")
 
-    st.subheader("Supplier Matches")
-    for supplier, data in supplier_matches.items():
-        with st.container(border=True):
-            st.markdown(f"**{supplier}**")
-            st.write(f"Recommended Grade: {data['recommended_grade']}")
-            st.write(f"Fallback Grade: {data['fallback_grade']}")
-            st.write(f"Description: {data['description']}")
-            links = data.get("links", {})
-            if links:
-                search_url = links.get("Search")
-                if search_url:
-                    st.link_button(f"Search {supplier}", search_url)
+    st.subheader("Behavior Readout")
+    st.write(f"**Toughness:** {behavior['toughness_explained']}")
+    st.write(f"**Wear resistance:** {behavior['wear_explained']}")
+    st.write(f"**Coating:** {behavior['coating_explained']}")
+
+    if show_internal:
+        st.caption("Internal logic key")
+        st.code(behavior["grade_behavior_key"], language="text")
+
+    render_supplier_matches(recommendation["supplier_matches"])
