@@ -2,8 +2,8 @@ from urllib.parse import quote_plus
 from .supplier_maps import SUPPLIER_MAPS_V1, GRADE_DESCRIPTIONS
 
 SUPPLIER_SEARCH = {
-    "MSC": "https://www.mscdirect.com/browse/tn?searchterm={query}",
-    "ISCAR": "https://www.iscar.com/eCatalog/?q={query}",
+    "MSC": "https://www.bing.com/search?q=site%3Awww.mscdirect.com+{query}",
+    "ISCAR": "https://www.bing.com/search?q=site%3Awww.iscar.com%2FeCatalog+{query}",
     "SANDVIK": "https://www.sandvik.coromant.com/en-us/search?text={query}",
     "KENNAMETAL": "https://www.bing.com/search?q=site%3Awww.kennametal.com%2Fus%2Fen%2Fproducts+{query}",
 }

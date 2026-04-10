@@ -26,6 +26,45 @@ MATERIAL_NAMES = {
 
 SUPPLIERS = ("MSC", "SANDVIK", "KENNAMETAL", "ISCAR")
 
+NON_TURNING_SUPPLIER_TOKENS = {
+    "MSC": {
+        "GROOVING_INSERT": "grooving insert",
+        "THREADING_INSERT": "threading insert",
+        "DRILL": "carbide drill",
+        "ENDMILL": "carbide endmill",
+        "FACE_MILL": "face mill",
+        "TAP": "machine tap",
+        "REAMER": "chucking reamer",
+    },
+    "SANDVIK": {
+        "GROOVING_INSERT": "CoroCut grooving insert",
+        "THREADING_INSERT": "laydown threading insert",
+        "DRILL": "CoroDrill",
+        "ENDMILL": "CoroMill end mill",
+        "FACE_MILL": "CoroMill face mill",
+        "TAP": "CoroTap",
+        "REAMER": "reamer",
+    },
+    "KENNAMETAL": {
+        "GROOVING_INSERT": "Top Notch grooving insert",
+        "THREADING_INSERT": "laydown threading insert",
+        "DRILL": "HPX drill",
+        "ENDMILL": "Harvi end mill",
+        "FACE_MILL": "face mill",
+        "TAP": "machine tap",
+        "REAMER": "reamer",
+    },
+    "ISCAR": {
+        "GROOVING_INSERT": "Do-Grip grooving insert",
+        "THREADING_INSERT": "laydown threading insert",
+        "DRILL": "SumoCham drill",
+        "ENDMILL": "end mill",
+        "FACE_MILL": "face mill",
+        "TAP": "machine tap",
+        "REAMER": "reamer",
+    },
+}
+
 
 def compact_tokens(*tokens: str) -> str:
     cleaned = []
@@ -108,16 +147,15 @@ def get_tap_notes(material_group: str) -> tuple[list, list]:
     )
 
 
-def build_generic_supplier_matches(result: dict, family_plan: dict) -> dict:
+def build_generic_supplier_query(tool_family: str, supplier: str, family_plan: dict) -> str:
+    supplier_family_term = NON_TURNING_SUPPLIER_TOKENS.get(supplier, {}).get(tool_family, family_plan["supplier_seed"])
+    return compact_tokens(supplier_family_term, *family_plan["search_terms"], family_plan["material_focus"])
+
+
+def build_generic_supplier_matches(tool_family: str, result: dict, family_plan: dict) -> dict:
     matches = {}
     for supplier in SUPPLIERS:
-        query = compact_tokens(
-            family_plan["supplier_seed"],
-            family_plan["starter_platform"],
-            family_plan["geometry_focus"],
-            result["preferred_coating"],
-            family_plan["material_focus"],
-        )
+        query = build_generic_supplier_query(tool_family, supplier, family_plan)
         search_url = SUPPLIER_SEARCH.get(supplier, "").format(query=quote_plus(query))
         matches[supplier] = {
             "recommended_grade": family_plan["starter_platform"],
@@ -156,6 +194,7 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "Part-off work gets unstable fast if coolant or chip evacuation falls behind.",
         ]
         supplier_seed = f"{width} grooving insert"
+        search_terms = ["grooving insert", width, "parting", "cutoff", "supported edge"]
     elif tool_family == "THREADING_INSERT":
         starter = "partial-profile laydown threading insert"
         if finish_high and stability == "STABLE":
@@ -173,6 +212,8 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "Check the nose style against the required root form before buying inserts.",
         ]
         supplier_seed = "threading insert laydown 60 degree"
+        profile_style = "full profile" if "full-profile" in starter else "partial profile"
+        search_terms = ["threading insert", "laydown", "60 degree", "external", profile_style]
     elif tool_family == "DRILL":
         series = "3xD stub drill" if stability != "STABLE" else "5xD carbide drill"
         if input_data["material_group"] == "N":
@@ -199,6 +240,8 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "Cast iron and hardened work need firm entry conditions; avoid rubbing starts.",
         ]
         supplier_seed = "carbide drill"
+        drill_style = "polished aluminum" if input_data["material_group"] == "N" else "through coolant"
+        search_terms = ["carbide drill", series, geometry, drill_style]
     elif tool_family == "ENDMILL":
         if input_data["material_group"] == "N":
             starter = "3 flute polished carbide endmill"
@@ -221,6 +264,7 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "If finish matters, step down cutter wear before increasing feed per tooth.",
         ]
         supplier_seed = "carbide endmill"
+        search_terms = ["carbide endmill", starter, geometry]
     elif tool_family == "FACE_MILL":
         starter = "45 degree positive face mill"
         if toughness_high or stability != "STABLE":
@@ -238,6 +282,7 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "Do not oversize the face mill just because the machine can physically hold it.",
         ]
         supplier_seed = "face mill"
+        search_terms = ["face mill", starter, geometry]
     elif tool_family == "TAP":
         if input_data["material_group"] == "N":
             starter = "form tap"
@@ -250,6 +295,10 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         summary = f"Start with a {starter} and keep it simple on the first pass in {material_name}."
         notes, watch = get_tap_notes(input_data["material_group"])
         supplier_seed = "machine tap"
+        hole_style = "blind hole" if starter == "spiral-flute tap" else "through hole"
+        if starter == "form tap":
+            hole_style = "ductile material"
+        search_terms = ["machine tap", starter, geometry, hole_style]
     else:
         if input_data["material_group"] in {"H", "K"}:
             starter = "solid carbide chucking reamer"
@@ -268,6 +317,7 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "Blind-hole chips need a flute style that can actually evacuate them.",
         ]
         supplier_seed = "chucking reamer"
+        search_terms = ["chucking reamer", starter, geometry]
 
     material_focus = MATERIAL_GROUP_OVERLAY[input_data["material_group"]]["label"]
     return {
@@ -283,6 +333,7 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         "process_notes": notes,
         "watch_items": watch,
         "supplier_seed": supplier_seed,
+        "search_terms": search_terms,
         "material_focus": material_focus,
     }
 
@@ -311,7 +362,7 @@ def resolve_tooling_recommendation(tool_family: str, input_data: dict) -> dict:
         }
 
     family_plan = resolve_non_turning_family(tool_family, input_data, behavior)
-    supplier_matches = build_generic_supplier_matches(behavior, family_plan)
+    supplier_matches = build_generic_supplier_matches(tool_family, behavior, family_plan)
     return {
         "tool_family": tool_family,
         "family_label": family_plan["family_label"],
@@ -325,6 +376,6 @@ def resolve_tooling_recommendation(tool_family: str, input_data: dict) -> dict:
         "starter_platform": family_plan["starter_platform"],
         "geometry_focus": family_plan["geometry_focus"],
         "holder_focus": family_plan["holder_focus"],
-        "process_notes": family_plan["process_notes"],
-        "watch_items": family_plan["watch_items"],
+        "process_notes": behavior["explanation_steps"] + family_plan["process_notes"],
+        "watch_items": behavior["risk_flags"] + family_plan["watch_items"],
     }

@@ -14,13 +14,27 @@ python3 -m pip install --break-system-packages -r requirements.txt
 streamlit run app.py
 ```
 
-For a headless launch check:
+For an automated headless launch check with a free port:
 
 ```bash
-timeout 20s streamlit run app.py --server.headless true --server.port 8513
+python3 -m pytest -q tests/test_app_startup_smoke.py
 ```
 
-If Streamlit starts and prints the local URL before the timeout stops it, startup is clean. If `8513` is already in use on your machine, rerun the same command with another open port.
+For a manual headless launch check on a known free port:
+
+```bash
+PORT=$(python3 - <<'PY'
+import socket
+s = socket.socket()
+s.bind(("", 0))
+print(s.getsockname()[1])
+s.close()
+PY
+)
+timeout 20s streamlit run app.py --server.headless true --server.port "$PORT"
+```
+
+If Streamlit starts and prints the local URL before the timeout stops it, startup is clean.
 
 ## Run tests
 
@@ -45,4 +59,4 @@ python3 -m compileall app.py grade_engine tests
 - Taps
 - Reamers
 
-Every tool family now returns a live recommendation, supplier search links, and shop-facing setup guidance from the same input panel.
+Every tool family now returns a live recommendation, supplier search links, and shop-facing setup guidance from the same input panel. Non-turning supplier searches are built from tool style, geometry, hole style, and material terms instead of turning-insert coating jargon.

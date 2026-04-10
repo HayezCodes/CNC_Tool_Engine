@@ -177,6 +177,35 @@ class SupplierQueryTests(unittest.TestCase):
         self.assertIn("bing.com/search", kennametal_link)
         self.assertIn("site%3Awww.kennametal.com%2Fus%2Fen%2Fproducts", kennametal_link)
 
+    def test_msc_and_iscar_links_use_live_search_paths(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            }
+        )
+        matches = map_behavior_to_supplier_grades(
+            result["material_group"],
+            result["application_zone"],
+            result["preferred_coating"],
+            result["geometry_hint"],
+            result["chipbreaker_hint"],
+            result["insert_identity"],
+        )
+
+        msc_link = matches["MSC"]["links"]["Search"]
+        iscar_link = matches["ISCAR"]["links"]["Search"]
+        self.assertIn("bing.com/search", msc_link)
+        self.assertIn("site%3Awww.mscdirect.com", msc_link)
+        self.assertIn("bing.com/search", iscar_link)
+        self.assertIn("site%3Awww.iscar.com%2FeCatalog", iscar_link)
+
     def test_pvd_sandvik_mappings_keep_non_empty_description(self):
         result = resolve_grade_behavior(
             {
@@ -290,6 +319,70 @@ class ToolFamilyCoverageTests(unittest.TestCase):
         self.assertIn("form tap", recommendation["starter_platform"].lower())
         self.assertIn("ductile aluminum", notes_text)
         self.assertNotIn("super alloy", watch_text)
+
+    def test_non_turning_supplier_queries_drop_turning_grade_jargon(self):
+        recommendation = resolve_tooling_recommendation(
+            "DRILL",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("drill", search_query)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_tap_supplier_queries_include_hole_style_not_coating(self):
+        recommendation = resolve_tooling_recommendation(
+            "TAP",
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("spiral-flute tap", search_query)
+            self.assertIn("blind hole", search_query)
+            self.assertNotIn("cvd", search_query)
+            self.assertNotIn("pvd", search_query)
+
+    def test_non_turning_watch_items_keep_setup_risk_flags(self):
+        recommendation = resolve_tooling_recommendation(
+            "ENDMILL",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "HEAVY",
+                "stickout": "LONG",
+                "workholding": "POOR",
+                "cutting_speed_band": "HIGH",
+                "doc_band": "HEAVY",
+                "finish_priority": "LOW",
+            },
+        )
+
+        watch_text = " ".join(recommendation["watch_items"]).lower()
+        notes_text = " ".join(recommendation["process_notes"]).lower()
+        self.assertIn("high edge-chipping risk", watch_text)
+        self.assertIn("deflection / chatter risk", watch_text)
+        self.assertIn("poor workholding", notes_text)
 
     def test_light_doc_stainless_warning_stays_broadly_accurate(self):
         recommendation = resolve_tooling_recommendation(
