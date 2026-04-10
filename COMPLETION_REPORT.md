@@ -22,7 +22,7 @@ streamlit run app.py
 Headless startup check used during validation:
 
 ```bash
-timeout 20s streamlit run app.py --server.headless true --server.port 8537
+python3 -m pytest -q tests/test_app_startup_smoke.py
 ```
 
 ## Test
@@ -35,7 +35,7 @@ python3 -m compileall app.py grade_engine tests
 ## Validation Notes
 
 - Streamlit startup is covered with `streamlit.testing.v1.AppTest`.
-- Headless startup was re-verified on open local ports `8537` and `8538` during the latest validation passes.
+- Headless startup is covered by `tests/test_app_startup_smoke.py`, which allocates a free port automatically, and was also re-verified manually on open local ports `8537` and `8538`.
 - Every visible tool family is exercised through the UI path.
 - Supplier search links are validated for turning and non-turning flows.
 - Startup validation no longer depends on `8513` already being free on the machine.

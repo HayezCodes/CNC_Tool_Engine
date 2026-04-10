@@ -1,3 +1,4 @@
+import importlib.util
 import socket
 import subprocess
 import sys
@@ -12,6 +13,9 @@ def _get_free_port() -> int:
 
 
 class AppStartupSmokeTests(unittest.TestCase):
+    def test_streamlit_testing_module_is_available(self):
+        self.assertIsNotNone(importlib.util.find_spec("streamlit.testing.v1"))
+
     def test_streamlit_headless_startup_uses_free_port(self):
         port = _get_free_port()
         process = subprocess.Popen(
