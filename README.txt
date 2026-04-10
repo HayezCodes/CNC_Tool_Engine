@@ -14,6 +14,11 @@ Quick start:
 python3 -m pip install --break-system-packages -r requirements.txt
 streamlit run app.py
 
+Headless startup check:
+timeout 20s streamlit run app.py --server.headless true --server.port 8513
+
+If port 8513 is already taken on your machine, rerun the same command with any other open port.
+
 Validation:
 python3 -m pytest -q
 python3 -m compileall app.py grade_engine tests

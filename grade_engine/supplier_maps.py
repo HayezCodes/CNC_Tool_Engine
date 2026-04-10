@@ -143,6 +143,7 @@ GRADE_DESCRIPTIONS = {
     "GC2220": "Tough stainless turning option for unstable conditions",
     "GC2025": "Balanced stainless turning option",
     "GC2015": "Wear-side stainless option for stable cuts",
+    "GC1115": "PVD Sandvik option for stainless and super-alloy work when lower cutting force and edge security matter.",
     "GC3225": "General cast-iron turning option",
     "GC3210": "Wear-focused cast-iron turning option",
     "GC3115": "PVD-side cast-iron option for mixed stability",

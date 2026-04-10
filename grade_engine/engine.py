@@ -68,7 +68,7 @@ def get_risk_flags(input_data:dict, preferred_coating:str, toughness_level:str, 
     if input_data["application_zone"] == "WEAR" and preferred_coating == "PVD":
         risks.append("Wear-side cut resolved to PVD bias; watch tool life if the cut is very stable and hot.")
     if input_data["material_group"] == "M" and input_data["doc_band"] == "LIGHT":
-        risks.append("Stainless finishing cut: avoid rubbing and keep feed honest.")
+        risks.append("Light-DOC stainless cut: keep feed honest so the edge keeps cutting instead of rubbing.")
     return risks
 
 def get_shop_language_steps(input_data:dict)->list:

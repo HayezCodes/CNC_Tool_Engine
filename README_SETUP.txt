@@ -7,7 +7,7 @@ Run:
 streamlit run app.py
 
 Headless startup check:
-timeout 20s streamlit run app.py --server.headless true --server.port 8501
+timeout 20s streamlit run app.py --server.headless true --server.port 8513
 
 Test:
 python3 -m pytest -q

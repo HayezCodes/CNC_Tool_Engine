@@ -17,10 +17,10 @@ streamlit run app.py
 For a headless launch check:
 
 ```bash
-timeout 20s streamlit run app.py --server.headless true --server.port 8501
+timeout 20s streamlit run app.py --server.headless true --server.port 8513
 ```
 
-If Streamlit starts and prints the local URL before the timeout stops it, startup is clean.
+If Streamlit starts and prints the local URL before the timeout stops it, startup is clean. If `8513` is already in use on your machine, rerun the same command with another open port.
 
 ## Run tests
 

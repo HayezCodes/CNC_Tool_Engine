@@ -65,6 +65,49 @@ def get_doc_text(doc_band: str) -> str:
     return {"LIGHT": "light", "MEDIUM": "medium", "HEAVY": "heavy"}[doc_band]
 
 
+def get_tap_notes(material_group: str) -> tuple[list, list]:
+    common_notes = [
+        "Use spiral-point for through holes, spiral-flute for blind holes, and form taps only in ductile materials.",
+        "Tap life is usually lost from poor hole size or alignment before coating becomes the main issue.",
+    ]
+    common_watch = [
+        "Choose the chamfer style around the real hole type before ordering production taps.",
+    ]
+
+    if material_group == "N":
+        return (
+            common_notes
+            + [
+                "Form taps work well in ductile aluminum when the hole size and lube package are controlled.",
+            ],
+            common_watch
+            + [
+                "Do not force form taps into brittle non-ferrous castings or thin-wall parts.",
+            ],
+        )
+    if material_group in {"M", "S"}:
+        return (
+            common_notes
+            + [
+                "Keep feed synchronized and use a sharp geometry so stainless and heat-resistant alloys do not work-harden ahead of the tap.",
+            ],
+            common_watch
+            + [
+                "Super alloy and stainless tapping need conservative first-pass speed and dependable lubricant delivery.",
+            ],
+        )
+    return (
+        common_notes
+        + [
+            "Rigid tapping still needs the correct chamfer count for the hole type.",
+        ],
+        common_watch
+        + [
+            "Do not treat form taps as a universal answer; chipless does not mean low torque.",
+        ],
+    )
+
+
 def build_generic_supplier_matches(result: dict, family_plan: dict) -> dict:
     matches = {}
     for supplier in SUPPLIERS:
@@ -134,11 +177,16 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         series = "3xD stub drill" if stability != "STABLE" else "5xD carbide drill"
         if input_data["material_group"] == "N":
             starter = "polished aluminum drill"
+            geometry = "130 degree polished point"
+        elif input_data["material_group"] == "K":
+            starter = f"through-coolant {series}"
+            geometry = "140 degree strong-margin point"
         elif input_data["material_group"] == "H":
             starter = "solid carbide drill for hardened steel"
+            geometry = "140 degree split point"
         else:
             starter = f"through-coolant {series}"
-        geometry = "140 degree split point" if input_data["material_group"] in {"P", "M", "S", "H"} else "130 degree polished point"
+            geometry = "140 degree split point"
         holder = "short projection holder with runout checked at the drill margin"
         summary = f"Start with a {starter} matched to {doc_text} feed pressure and setup rigidity."
         notes = [
@@ -200,15 +248,7 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         geometry = "H-limit production style" if wear_high else "general-purpose thread limit"
         holder = "tension-compression or rigid synchronous holder with minimal runout"
         summary = f"Start with a {starter} and keep it simple on the first pass in {material_name}."
-        notes = [
-            "Use spiral-point for through holes, spiral-flute for blind holes, and form taps only in ductile materials.",
-            "Tap life is usually lost from poor hole size or alignment before coating becomes the main issue.",
-            "Rigid tapping still needs the correct chamfer count for the hole type.",
-        ]
-        watch = [
-            "Do not treat form taps as a universal answer; chipless does not mean low torque.",
-            "Super alloy tapping needs conservative first-pass speed and good lubricant control.",
-        ]
+        notes, watch = get_tap_notes(input_data["material_group"])
         supplier_seed = "machine tap"
     else:
         if input_data["material_group"] in {"H", "K"}:

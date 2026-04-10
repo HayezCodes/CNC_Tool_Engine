@@ -151,6 +151,58 @@ class SupplierQueryTests(unittest.TestCase):
         self.assertEqual(decoded_query, sandvik["search_query"])
         self.assertNotIn("GENERAL-PURPOSE", decoded_query)
 
+    def test_kennametal_links_use_live_search_path(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            }
+        )
+        matches = map_behavior_to_supplier_grades(
+            result["material_group"],
+            result["application_zone"],
+            result["preferred_coating"],
+            result["geometry_hint"],
+            result["chipbreaker_hint"],
+            result["insert_identity"],
+        )
+
+        kennametal_link = matches["KENNAMETAL"]["links"]["Search"]
+        self.assertIn("bing.com/search", kennametal_link)
+        self.assertIn("site%3Awww.kennametal.com%2Fus%2Fen%2Fproducts", kennametal_link)
+
+    def test_pvd_sandvik_mappings_keep_non_empty_description(self):
+        result = resolve_grade_behavior(
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "HEAVY",
+                "stickout": "LONG",
+                "workholding": "POOR",
+                "cutting_speed_band": "LOW",
+                "doc_band": "HEAVY",
+                "finish_priority": "LOW",
+            }
+        )
+        self.assertEqual(result["preferred_coating"], "PVD")
+        matches = map_behavior_to_supplier_grades(
+            result["material_group"],
+            result["application_zone"],
+            result["preferred_coating"],
+            result["geometry_hint"],
+            result["chipbreaker_hint"],
+            result["insert_identity"],
+        )
+
+        self.assertEqual(matches["SANDVIK"]["recommended_grade"], "GC1115")
+        self.assertTrue(matches["SANDVIK"]["description"])
+
 
 class ToolFamilyCoverageTests(unittest.TestCase):
     def test_every_family_resolves_to_live_message(self):
@@ -199,6 +251,64 @@ class ToolFamilyCoverageTests(unittest.TestCase):
                 self.assertTrue(decode_search_query(supplier_data["links"]["Search"]))
                 self.assertNotIn("coming next", supplier_data["description"].lower())
                 self.assertNotIn("placeholder", supplier_data["description"].lower())
+
+    def test_cast_iron_drill_does_not_use_polished_aluminum_point(self):
+        recommendation = resolve_tooling_recommendation(
+            "DRILL",
+            {
+                "material_group": "K",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        self.assertIn("strong-margin", recommendation["geometry_focus"].lower())
+        self.assertNotIn("polished", recommendation["geometry_focus"].lower())
+
+    def test_non_ferrous_tap_watchouts_stay_material_relevant(self):
+        recommendation = resolve_tooling_recommendation(
+            "TAP",
+            {
+                "material_group": "N",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        watch_text = " ".join(recommendation["watch_items"]).lower()
+        notes_text = " ".join(recommendation["process_notes"]).lower()
+        self.assertIn("form tap", recommendation["starter_platform"].lower())
+        self.assertIn("ductile aluminum", notes_text)
+        self.assertNotIn("super alloy", watch_text)
+
+    def test_light_doc_stainless_warning_stays_broadly_accurate(self):
+        recommendation = resolve_tooling_recommendation(
+            "TURNING_INSERT",
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "LIGHT",
+                "finish_priority": "NORMAL",
+            },
+        )
+
+        watch_text = " ".join(recommendation["watch_items"]).lower()
+        self.assertIn("light-doc stainless cut", watch_text)
+        self.assertNotIn("finishing cut", watch_text)
 
 
 @unittest.skipIf(AppTest is None, "streamlit testing support unavailable")

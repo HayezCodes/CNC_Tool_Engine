@@ -5,7 +5,7 @@ SUPPLIER_SEARCH = {
     "MSC": "https://www.mscdirect.com/browse/tn?searchterm={query}",
     "ISCAR": "https://www.iscar.com/eCatalog/?q={query}",
     "SANDVIK": "https://www.sandvik.coromant.com/en-us/search?text={query}",
-    "KENNAMETAL": "https://www.kennametal.com/us/en/search-results.html?q={query}",
+    "KENNAMETAL": "https://www.bing.com/search?q=site%3Awww.kennametal.com%2Fus%2Fen%2Fproducts+{query}",
 }
 
 SUPPLIER_MATERIAL_FAMILIES = {
