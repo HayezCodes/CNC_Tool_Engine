@@ -30,6 +30,8 @@ Linux / macOS:
 python3 -m streamlit run app.py
 ```
 
+The recommendation view updates live as inputs change. Threading adds thread profile and internal or external controls. Tap and reamer flows expose hole type so blind-hole versus through-hole guidance stays explicit.
+
 For an automated headless launch check with a free port:
 
 Windows PowerShell:
@@ -75,13 +77,22 @@ Windows PowerShell:
 
 ```powershell
 py -m pytest -q
+py -m pytest -q tests/test_app_startup_smoke.py
 ```
 
 Linux / macOS:
 
 ```bash
 python3 -m pytest -q
+python3 -m pytest -q tests/test_app_startup_smoke.py
 ```
+
+This runs:
+
+- grade-engine validation for turning and non-turning recommendation logic
+- headless startup validation on an auto-selected free port
+- Streamlit UI-path checks that build a recommendation for every visible tool family
+- the internal logic key toggle regression check
 
 ## Validate bytecode compilation
 

@@ -173,6 +173,8 @@ def map_behavior_to_supplier_grades(material_group: str, application_zone: str, 
         output[supplier] = {
             "recommended_grade": recommended,
             "fallback_grade": zone_map["primary"],
+            "recommended_label": "Recommended Grade",
+            "fallback_label": "Fallback Grade",
             "preferred_coating": preferred_coating,
             "description": GRADE_DESCRIPTIONS.get(recommended, ""),
             "search_query": search_query,

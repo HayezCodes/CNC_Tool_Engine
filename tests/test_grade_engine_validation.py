@@ -401,6 +401,7 @@ class ToolFamilyCoverageTests(unittest.TestCase):
                 "cutting_speed_band": "NORMAL",
                 "doc_band": "MEDIUM",
                 "finish_priority": "NORMAL",
+                "hole_type": "BLIND",
             },
         )
 
@@ -433,6 +434,29 @@ class ToolFamilyCoverageTests(unittest.TestCase):
             self.assertEqual(search_query.count("threading insert"), 1)
             self.assertNotIn("cvd", search_query)
             self.assertNotIn("pvd", search_query)
+
+    def test_threading_insert_internal_whitworth_search_stays_specific(self):
+        recommendation = resolve_tooling_recommendation(
+            "THREADING_INSERT",
+            {
+                "material_group": "M",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+                "thread_profile": "WHITWORTH_55",
+                "thread_side": "INTERNAL",
+            },
+        )
+
+        self.assertIn("55 degree internal threading style", recommendation["geometry_focus"].lower())
+        for supplier_data in recommendation["supplier_matches"].values():
+            search_query = supplier_data["search_query"].lower()
+            self.assertIn("55 degree", search_query)
+            self.assertIn("internal", search_query)
 
     def test_face_mill_supplier_queries_stay_family_specific(self):
         recommendation = resolve_tooling_recommendation(
@@ -476,6 +500,27 @@ class ToolFamilyCoverageTests(unittest.TestCase):
             self.assertNotIn("turning insert", search_query)
             self.assertNotIn("cvd", search_query)
             self.assertNotIn("pvd", search_query)
+
+    def test_blind_hole_reamer_uses_spiral_geometry(self):
+        recommendation = resolve_tooling_recommendation(
+            "REAMER",
+            {
+                "material_group": "P",
+                "application_zone": "BALANCED",
+                "interrupted_cut": "NONE",
+                "stickout": "NORMAL",
+                "workholding": "GOOD",
+                "cutting_speed_band": "NORMAL",
+                "doc_band": "MEDIUM",
+                "finish_priority": "NORMAL",
+                "hole_type": "BLIND",
+            },
+        )
+
+        self.assertIn("right-hand spiral", recommendation["geometry_focus"].lower())
+        self.assertTrue(
+            all("blind hole" in supplier_data["search_query"].lower() for supplier_data in recommendation["supplier_matches"].values())
+        )
 
     def test_non_turning_watch_items_keep_setup_risk_flags(self):
         recommendation = resolve_tooling_recommendation(
@@ -524,8 +569,7 @@ class AppStartupTests(unittest.TestCase):
         app = AppTest.from_file("app.py")
         app.run()
         self.assertEqual(app.title[0].value, "CNC Tool Engine")
-        app.button[0].click()
-        app.run()
+        self.assertEqual(len(app.button), 0)
         self.assertTrue(any(header.value == "Recommendation" for header in app.subheader))
         self.assertTrue(any(header.value == "Supplier Search" for header in app.subheader))
 
@@ -533,7 +577,6 @@ class AppStartupTests(unittest.TestCase):
         app = AppTest.from_file("app.py")
         app.run()
         app.checkbox[0].check()
-        app.button[0].click()
         app.run()
 
         self.assertEqual(len(app.exception), 0)
@@ -553,8 +596,7 @@ class AppStartupTests(unittest.TestCase):
         ):
             app = AppTest.from_file("app.py")
             app.run()
-            app.selectbox[0].select(tool_family)
-            app.button[0].click()
+            app.selectbox[0].set_value(tool_family)
             app.run()
 
             self.assertEqual(len(app.exception), 0, msg=f"{tool_family} raised a Streamlit exception")

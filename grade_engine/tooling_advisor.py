@@ -177,6 +177,8 @@ def build_generic_supplier_matches(tool_family: str, result: dict, family_plan: 
         matches[supplier] = {
             "recommended_grade": family_plan["starter_platform"],
             "fallback_grade": family_plan["fallback_platform"],
+            "recommended_label": "Recommended Start",
+            "fallback_label": "Fallback Search",
             "preferred_coating": result["preferred_coating"],
             "description": family_plan["catalog_description"],
             "search_query": query,
@@ -213,24 +215,37 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         supplier_seed = f"{width} grooving insert"
         search_terms = ["grooving insert", width, "parting", "cutoff", "supported edge"]
     elif tool_family == "THREADING_INSERT":
-        starter = "partial-profile laydown threading insert"
-        if finish_high and stability == "STABLE":
+        thread_profile = input_data.get("thread_profile", "UNIFIED_60")
+        thread_side = input_data.get("thread_side", "EXTERNAL")
+        profile_text = {
+            "UNIFIED_60": "60 degree",
+            "WHITWORTH_55": "55 degree",
+            "ACME_29": "29 degree Acme",
+        }[thread_profile]
+        side_text = "external" if thread_side == "EXTERNAL" else "internal"
+        starter = f"partial-profile {side_text} threading insert"
+        if finish_high and stability == "STABLE" and thread_profile == "UNIFIED_60":
             starter = "full-profile laydown threading insert"
-        geometry = "60 degree external laydown style"
-        holder = "rigid laydown holder with minimum stickout and confirmed tip height"
-        summary = f"Start with a {starter} in a {behavior['preferred_coating']} grade for {material_name} threads."
+        geometry = f"{profile_text} {side_text} threading style"
+        holder = (
+            "rigid laydown holder with minimum stickout and confirmed tip height"
+            if thread_side == "EXTERNAL"
+            else "shortest practical internal threading bar with solid support and confirmed tip height"
+        )
+        summary = f"Start with a {starter} in a {behavior['preferred_coating']} grade for {material_name} {side_text} threads."
         notes = [
-            "Partial-profile gives faster coverage across pitch changes; full-profile gives better crest control.",
+            "Partial-profile gives faster coverage across pitch changes; full-profile gives better crest control when the thread form is standard 60 degree work.",
             "Keep compound and infeed strategy consistent so the insert loads evenly.",
+            f"Confirm the insert form against the actual print requirement before buying production stock for {profile_text} threads.",
             "For gummy stainless or super alloy work, lean positive and keep the insert sharp.",
         ]
         watch = [
             "Threading punishes weak setup quickly, especially near shoulders.",
             "Check the nose style against the required root form before buying inserts.",
         ]
-        supplier_seed = "threading insert laydown 60 degree"
+        supplier_seed = f"laydown {side_text} threading insert {profile_text}"
         profile_style = "full profile" if "full-profile" in starter else "partial profile"
-        search_terms = ["laydown", "60 degree", "external", profile_style]
+        search_terms = ["threading insert", "laydown", side_text, profile_text, profile_style]
     elif tool_family == "DRILL":
         series = "3xD stub drill" if stability != "STABLE" else "5xD carbide drill"
         if input_data["material_group"] == "N":
@@ -302,9 +317,10 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         cutter_style = starter.replace("face mill", "").replace("  ", " ").strip()
         search_terms = [cutter_style, geometry]
     elif tool_family == "TAP":
-        if input_data["material_group"] == "N":
+        hole_type = input_data.get("hole_type", "THROUGH")
+        if input_data["material_group"] == "N" and hole_type == "THROUGH":
             starter = "form tap"
-        elif input_data["material_group"] in {"M", "S"}:
+        elif hole_type == "BLIND" or input_data["material_group"] in {"M", "S"}:
             starter = "spiral-flute tap"
         else:
             starter = "spiral-point gun tap"
@@ -313,16 +329,28 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
         summary = f"Start with a {starter} and keep it simple on the first pass in {material_name}."
         notes, watch = get_tap_notes(input_data["material_group"])
         supplier_seed = "machine tap"
-        hole_style = "blind hole" if starter == "spiral-flute tap" else "through hole"
+        if hole_type == "BLIND":
+            hole_style = "blind hole"
+        elif hole_type == "THROUGH":
+            hole_style = "through hole"
+        else:
+            hole_style = "blind hole" if starter == "spiral-flute tap" else "through hole"
         if starter == "form tap":
             hole_style = "ductile material"
+            notes.append("Form tapping is strongest when the aluminum is ductile and the hole volume can accept displaced material.")
+        else:
+            notes.append(f"Selected around a {hole_style} path so the chamfer and flute style match the hole exit condition.")
         search_terms = ["machine tap", starter, geometry, hole_style]
     else:
+        hole_type = input_data.get("hole_type", "THROUGH")
         if input_data["material_group"] in {"H", "K"}:
             starter = "solid carbide chucking reamer"
         else:
             starter = "cobalt chucking reamer"
-        geometry = "right-hand spiral" if input_data["material_group"] in {"M", "S"} else "straight flute"
+        if hole_type == "BLIND" or input_data["material_group"] in {"M", "S"}:
+            geometry = "right-hand spiral"
+        else:
+            geometry = "straight flute"
         holder = "true-running holder or floating reamer holder after the hole is prepped straight"
         summary = f"Start with a {starter} in a {geometry} style for size control in {material_name}."
         notes = [
@@ -335,7 +363,8 @@ def resolve_non_turning_family(tool_family: str, input_data: dict, behavior: dic
             "Blind-hole chips need a flute style that can actually evacuate them.",
         ]
         supplier_seed = "chucking reamer"
-        search_terms = ["chucking reamer", starter, geometry]
+        notes.append(f"Built around a {hole_type.lower()} hole so flute direction matches chip evacuation needs.")
+        search_terms = ["chucking reamer", starter, geometry, f"{hole_type.lower()} hole"]
 
     material_focus = MATERIAL_GROUP_OVERLAY[input_data["material_group"]]["label"]
     return {
