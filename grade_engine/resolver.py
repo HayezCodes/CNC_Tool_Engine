@@ -43,8 +43,8 @@ SUPPLIER_MATERIAL_FAMILIES = {
     },
 }
 
-# MSC bucket grades are internal placeholders in this app, so search with ISO-class aliases
-# instead of the placeholder key to keep the catalog query stable and human-readable.
+# MSC bucket grades resolve through ISO-class aliases so catalog queries stay
+# human-readable instead of exposing internal application keys.
 MSC_GRADE_SEARCH_ALIASES = {
     "MSC_ISO_P30": "ISO P30",
     "MSC_ISO_P25": "ISO P25",
@@ -147,10 +147,11 @@ def map_behavior_to_supplier_grades(material_group: str, application_zone: str, 
     if material_group not in ["P","M","K","N","S","H"]:
         return {
             "SYSTEM": {
-                "recommended_grade": "Behavior engine live",
-                "fallback_grade": "Supplier mapping coming next",
+                "recommended_grade": "General turning insert search",
+                "fallback_grade": "Broad catalog search",
                 "preferred_coating": preferred_coating,
-                "description": "Material group added to the behavior engine. Supplier-grade mapping for this group still needs tuned tables.",
+                "description": "Use the resolved coating and geometry as a broad turning-insert catalog search.",
+                "search_query": "turning insert",
                 "links": {},
             }
         }

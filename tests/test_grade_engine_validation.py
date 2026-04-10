@@ -197,6 +197,8 @@ class ToolFamilyCoverageTests(unittest.TestCase):
                 self.assertTrue(supplier_data["description"])
                 self.assertIn("Search", supplier_data["links"])
                 self.assertTrue(decode_search_query(supplier_data["links"]["Search"]))
+                self.assertNotIn("coming next", supplier_data["description"].lower())
+                self.assertNotIn("placeholder", supplier_data["description"].lower())
 
 
 @unittest.skipIf(AppTest is None, "streamlit testing support unavailable")
@@ -209,6 +211,27 @@ class AppStartupTests(unittest.TestCase):
         app.run()
         self.assertTrue(any(header.value == "Recommendation" for header in app.subheader))
         self.assertTrue(any(header.value == "Supplier Search" for header in app.subheader))
+
+    def test_every_family_builds_without_ui_exceptions(self):
+        for tool_family in (
+            "TURNING_INSERT",
+            "GROOVING_INSERT",
+            "THREADING_INSERT",
+            "DRILL",
+            "ENDMILL",
+            "FACE_MILL",
+            "TAP",
+            "REAMER",
+        ):
+            app = AppTest.from_file("app.py")
+            app.run()
+            app.selectbox[0].select(tool_family)
+            app.button[0].click()
+            app.run()
+
+            self.assertEqual(len(app.exception), 0, msg=f"{tool_family} raised a Streamlit exception")
+            self.assertTrue(any(header.value == "Recommendation" for header in app.subheader))
+            self.assertTrue(any(header.value == "Supplier Search" for header in app.subheader))
 
 
 if __name__ == "__main__":

@@ -1,26 +1,39 @@
 # Completion Report
 
-## Completed work
+## Scope Completed
 
-- Removed the hard-stop placeholder flow that blocked every family except turning inserts.
-- Added live recommendation logic for grooving, threading, drilling, endmills, face mills, taps, and reamers.
-- Kept the turning-insert behavior engine active and reused it as the shared toughness, wear, and coating backbone.
-- Added supplier search output for every visible family.
-- Expanded tests to cover family coverage, supplier links, and Streamlit app rendering.
-- Added clean run and test instructions that match the current repo.
+The app now returns live recommendations and supplier search output for:
 
-## Validation run
+- turning inserts
+- grooving inserts
+- threading inserts
+- drills
+- endmills
+- face mills
+- taps
+- reamers
+
+## Run
 
 ```bash
-python3 -m pip install --break-system-packages -r requirements.txt
-python3 -m pytest -q
-timeout 20s streamlit run app.py --server.headless true --server.port 8501
+streamlit run app.py
+```
+
+## Test
+
+```bash
 python3 -m pytest -q
 python3 -m compileall app.py grade_engine tests
 ```
 
-## Result
+## Validation Notes
 
-- Tests passed on consecutive runs.
-- Streamlit startup succeeded and served before timeout shutdown.
-- No visible tool family remains in a placeholder-only state.
+- Streamlit startup is covered with `streamlit.testing.v1.AppTest`.
+- Every visible tool family is exercised through the UI path.
+- Supplier search links are validated for turning and non-turning flows.
+- Repeated automated test passes completed cleanly.
+
+## Remaining Limits
+
+- Non-turning families resolve to supplier search guidance rather than supplier-specific grade tables.
+- Tap recommendations still require the machinist to confirm through-hole versus blind-hole geometry before ordering.

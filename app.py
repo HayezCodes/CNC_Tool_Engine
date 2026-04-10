@@ -11,6 +11,7 @@ from grade_engine.enums import (
     TOOL_FAMILIES,
     WORKHOLDING,
 )
+from grade_engine.router import get_tool_family_message
 from grade_engine.tooling_advisor import TOOL_FAMILY_LABELS, resolve_tooling_recommendation
 
 MATERIAL_GROUP_LABELS = {
@@ -46,6 +47,11 @@ tool_family = st.selectbox(
     index=0,
     format_func=lambda item: TOOL_FAMILY_LABELS[item],
 )
+family_info = get_tool_family_message(tool_family)
+
+with st.container(border=True):
+    st.markdown(f"### {family_info['title']}")
+    st.write(family_info["message"])
 
 col1, col2, col3 = st.columns(3)
 with col1:
