@@ -1,0 +1,1207 @@
+[
+  {
+    "id": "sandvik_cnmg_pf",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "shape_name": "80_degree_rhombic",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "longitudinal_turning",
+        "facing"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "GC4205",
+      "GC4215"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_cnmg_mf",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "shape_name": "80_degree_rhombic",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "MF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "longitudinal_turning",
+        "facing"
+      ],
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4225",
+      "GC2025"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "sandvik_cnmg_mr",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "shape_name": "80_degree_rhombic",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "MR"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "longitudinal_turning",
+        "facing"
+      ],
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "GC4235"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "sandvik_cnmg_wf",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "shape_name": "80_degree_rhombic",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "WF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "longitudinal_turning",
+        "facing"
+      ],
+      "cut_style": [
+        "wiper_finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4205",
+      "GC2015"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_dnmg_pf",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "DNMG",
+    "geometry": {
+      "shape_name": "55_degree_rhombic",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling",
+        "facing"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4215",
+      "GC2015"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_dnmg_mf",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "DNMG",
+    "geometry": {
+      "shape_name": "55_degree_rhombic",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "MF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling",
+        "facing"
+      ],
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4225",
+      "GC2025"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "sandvik_dnmg_mr",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "DNMG",
+    "geometry": {
+      "shape_name": "55_degree_rhombic",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "MR"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling"
+      ],
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "GC4235"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "sandvik_snmg_sm",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "SNMG",
+    "geometry": {
+      "shape_name": "square",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "SM"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "heavy_turning",
+        "facing"
+      ],
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "K"
+      ]
+    },
+    "recommended_grades": [
+      "GC4235",
+      "GC3225"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "sandvik_tnmg_pf",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "TNMG",
+    "geometry": {
+      "shape_name": "triangle",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "general_turning",
+        "profiling"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4215",
+      "GC2015"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_tnmg_mr",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "TNMG",
+    "geometry": {
+      "shape_name": "triangle",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "MR"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "general_turning"
+      ],
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "GC4235"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "sandvik_wnmg_pf",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "WNMG",
+    "geometry": {
+      "shape_name": "trigon",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "general_turning"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4215",
+      "GC2015"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_wnmg_mr",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_insert",
+    "subcategory": "negative_turning_insert",
+    "designation_family": "WNMG",
+    "geometry": {
+      "shape_name": "trigon",
+      "clearance_angle_deg": 0,
+      "sidedness": "double_sided",
+      "chipbreaker": "MR"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "general_turning"
+      ],
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "GC4235"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "sandvik_ccmt_xf",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107",
+    "tool_category": "turning_insert",
+    "subcategory": "positive_turning_insert",
+    "designation_family": "CCMT",
+    "geometry": {
+      "shape_name": "80_degree_rhombic",
+      "clearance_angle_deg": 7,
+      "sidedness": "single_sided",
+      "chipbreaker": "XF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling",
+        "small_part_turning"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": [
+      "H10A"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_ccmt_pf",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107",
+    "tool_category": "turning_insert",
+    "subcategory": "positive_turning_insert",
+    "designation_family": "CCMT",
+    "geometry": {
+      "shape_name": "80_degree_rhombic",
+      "clearance_angle_deg": 7,
+      "sidedness": "single_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling",
+        "general_turning"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4205",
+      "GC1115"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_dcmt_xf",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107",
+    "tool_category": "turning_insert",
+    "subcategory": "positive_turning_insert",
+    "designation_family": "DCMT",
+    "geometry": {
+      "shape_name": "55_degree_rhombic",
+      "clearance_angle_deg": 7,
+      "sidedness": "single_sided",
+      "chipbreaker": "XF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling",
+        "small_part_turning"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": [
+      "H10A"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_dcmt_pf",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107",
+    "tool_category": "turning_insert",
+    "subcategory": "positive_turning_insert",
+    "designation_family": "DCMT",
+    "geometry": {
+      "shape_name": "55_degree_rhombic",
+      "clearance_angle_deg": 7,
+      "sidedness": "single_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4215",
+      "GC1115"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_vcmt_pf",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107",
+    "tool_category": "turning_insert",
+    "subcategory": "positive_turning_insert",
+    "designation_family": "VCMT",
+    "geometry": {
+      "shape_name": "35_degree_rhombic",
+      "clearance_angle_deg": 7,
+      "sidedness": "single_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling",
+        "small_part_turning"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4215",
+      "GC1115"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_vbmt_xf",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107",
+    "tool_category": "turning_insert",
+    "subcategory": "positive_turning_insert",
+    "designation_family": "VBMT",
+    "geometry": {
+      "shape_name": "35_degree_rhombic",
+      "clearance_angle_deg": 7,
+      "sidedness": "single_sided",
+      "chipbreaker": "XF"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "profiling"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": [
+      "H10A"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_tcmt_pf",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 111",
+    "tool_category": "turning_insert",
+    "subcategory": "positive_turning_insert",
+    "designation_family": "TCMT",
+    "geometry": {
+      "shape_name": "triangle",
+      "clearance_angle_deg": 11,
+      "sidedness": "single_sided",
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "external_internal": [
+        "internal"
+      ],
+      "operations": [
+        "internal_turning",
+        "profiling"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "GC4215",
+      "GC1115"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "sandvik_ccgw_cbn",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107 CBN",
+    "tool_category": "turning_insert",
+    "subcategory": "cbn_turning_insert",
+    "designation_family": "CCGW",
+    "geometry": {
+      "shape_name": "80_degree_rhombic",
+      "clearance_angle_deg": 7,
+      "sidedness": "single_sided",
+      "chipbreaker": "CBN"
+    },
+    "application": {
+      "external_internal": [
+        "external",
+        "internal"
+      ],
+      "operations": [
+        "hard_turning",
+        "profiling"
+      ],
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "H"
+      ]
+    },
+    "recommended_grades": [
+      "CB7015",
+      "CB7025"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "kyocera_cnmg_pr1025",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "shape_family": "CNMG",
+      "chipbreaker_or_grade_focus": "PR1025"
+    },
+    "application": {
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "PR1025"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "kyocera_cnmg_ca5515",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "shape_family": "CNMG",
+      "chipbreaker_or_grade_focus": "CA5515"
+    },
+    "application": {
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "CA5515"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "kyocera_dnmg_pr930",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "DNMG",
+    "geometry": {
+      "shape_family": "DNMG",
+      "chipbreaker_or_grade_focus": "PR930"
+    },
+    "application": {
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "PR930",
+      "PV7020"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "kyocera_vnmg_pr930",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "VNMG",
+    "geometry": {
+      "shape_family": "VNMG",
+      "chipbreaker_or_grade_focus": "PR930"
+    },
+    "application": {
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "PR930"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "kyocera_tnmg_ca4120",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "TNMG",
+    "geometry": {
+      "shape_family": "TNMG",
+      "chipbreaker_or_grade_focus": "CA4120"
+    },
+    "application": {
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "K"
+      ]
+    },
+    "recommended_grades": [
+      "CA4120"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "kyocera_wnmg_kw10",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "WNMG",
+    "geometry": {
+      "shape_family": "WNMG",
+      "chipbreaker_or_grade_focus": "KW10"
+    },
+    "application": {
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": [
+      "KW10"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "kyocera_cnmg_pr660",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "shape_family": "CNMG",
+      "chipbreaker_or_grade_focus": "PR660"
+    },
+    "application": {
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "PR660"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "kyocera_tnga_kbn10b",
+    "brand": "Kyocera",
+    "series": "Turning Indexable Inserts",
+    "tool_category": "turning_insert",
+    "subcategory": "general_turning_insert",
+    "designation_family": "TNGA",
+    "geometry": {
+      "shape_family": "TNGA",
+      "chipbreaker_or_grade_focus": "KBN10B"
+    },
+    "application": {
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "H"
+      ]
+    },
+    "recommended_grades": [
+      "KBN10B"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "iscar_cnmg_PF",
+    "brand": "ISCAR",
+    "series": "general_negative",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "IC8150",
+      "IC806"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "iscar_cnmg_MR",
+    "brand": "ISCAR",
+    "series": "general_negative",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "CNMG",
+    "geometry": {
+      "chipbreaker": "MR"
+    },
+    "application": {
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "IC8250",
+      "IC807"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "iscar_dnmg_PF",
+    "brand": "ISCAR",
+    "series": "profiling_negative",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "DNMG",
+    "geometry": {
+      "chipbreaker": "PF"
+    },
+    "application": {
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "IC8150",
+      "IC806"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "iscar_wnmg_MR",
+    "brand": "ISCAR",
+    "series": "general_negative",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "WNMG",
+    "geometry": {
+      "chipbreaker": "MR"
+    },
+    "application": {
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "IC8250"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "iscar_tnmg_MF",
+    "brand": "ISCAR",
+    "series": "general_negative",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "TNMG",
+    "geometry": {
+      "chipbreaker": "MF"
+    },
+    "application": {
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "IC8250",
+      "IC808"
+    ],
+    "engine_zone": "BALANCED"
+  },
+  {
+    "id": "iscar_ccmt_finishing",
+    "brand": "ISCAR",
+    "series": "positive_general",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "CCMT",
+    "geometry": {
+      "chipbreaker": "finishing"
+    },
+    "application": {
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "IC806"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "iscar_dcmt_finishing",
+    "brand": "ISCAR",
+    "series": "positive_profiling",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "DCMT",
+    "geometry": {
+      "chipbreaker": "finishing"
+    },
+    "application": {
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "IC806"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "iscar_vcmt_finishing",
+    "brand": "ISCAR",
+    "series": "positive_profiling",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "VCMT",
+    "geometry": {
+      "chipbreaker": "finishing"
+    },
+    "application": {
+      "cut_style": [
+        "finishing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "IC806"
+    ],
+    "engine_zone": "WEAR"
+  },
+  {
+    "id": "iscar_lnmx_high_feed",
+    "brand": "ISCAR",
+    "series": "HELITURN tangential",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "LNMX",
+    "geometry": {
+      "chipbreaker": "high_feed"
+    },
+    "application": {
+      "cut_style": [
+        "roughing"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "IC8250"
+    ],
+    "engine_zone": "TOUGH"
+  },
+  {
+    "id": "iscar_lnmx_medium",
+    "brand": "ISCAR",
+    "series": "HELITURN tangential",
+    "tool_category": "turning_insert",
+    "subcategory": "turning_insert",
+    "designation_family": "LNMX",
+    "geometry": {
+      "chipbreaker": "medium"
+    },
+    "application": {
+      "cut_style": [
+        "medium"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": [
+      "IC808"
+    ],
+    "engine_zone": "BALANCED"
+  }
+]

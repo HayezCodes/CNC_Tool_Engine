@@ -1,0 +1,275 @@
+{
+  "_meta": {
+    "purpose": "Starter validation rules for grade/company/material/op-family proofing against the current CNC Tool Engine demo datasets.",
+    "cut_style_keys": [
+      "finish",
+      "medium",
+      "rough",
+      "general",
+      "productivity",
+      "deep_hole",
+      "reference"
+    ]
+  },
+  "Sandvik": {
+    "_notes": [
+      "Built from the current project grade maps and normalized turning/threading datasets.",
+      "Grooving is included as a practical starter bucket even though the normalized grooving family records do not yet carry explicit grade fields."
+    ],
+    "P": {
+      "turning": {
+        "finish": ["GC4205", "GC4215"],
+        "medium": ["GC4225"],
+        "rough": ["GC4235"]
+      },
+      "grooving": {
+        "general": ["GC4205", "GC4215", "GC4225", "GC4235"]
+      },
+      "threading": {
+        "general": ["GC1115", "GC2025", "GC1125"]
+      }
+    },
+    "M": {
+      "turning": {
+        "finish": ["GC1115", "GC2015"],
+        "medium": ["GC2025"],
+        "rough": ["GC2220"]
+      },
+      "grooving": {
+        "general": ["GC1115", "GC2015", "GC2025", "GC2220"]
+      },
+      "threading": {
+        "general": ["GC1115", "GC2025", "GC1125"]
+      }
+    },
+    "K": {
+      "turning": {
+        "finish": ["GC3205", "GC3210"],
+        "medium": ["GC3215", "GC3225"],
+        "rough": ["GC3225"]
+      },
+      "grooving": {
+        "general": ["GC3205", "GC3210", "GC3215", "GC3225"]
+      },
+      "threading": {
+        "general": ["GC1115", "GC2025", "GC1125"]
+      }
+    },
+    "N": {
+      "turning": {
+        "finish": ["H10A"],
+        "medium": ["H13A"],
+        "rough": ["H13A"]
+      },
+      "grooving": {
+        "general": ["H10A", "H13A"]
+      }
+    },
+    "S": {
+      "turning": {
+        "finish": ["GC1105", "GC1115"],
+        "medium": ["GC1115"],
+        "rough": ["S05F"]
+      },
+      "grooving": {
+        "general": ["GC1105", "GC1115", "S05F"]
+      }
+    },
+    "H": {
+      "turning": {
+        "finish": ["CB7015", "CB7025"],
+        "medium": ["CB7025"],
+        "rough": ["CB7015"]
+      },
+      "grooving": {
+        "general": ["CB7015", "CB7025"]
+      }
+    }
+  },
+  "Kyocera": {
+    "_notes": [
+      "Threading rules stay narrow to the grades explicitly present in the normalized threading dataset."
+    ],
+    "P": {
+      "turning": {
+        "finish": ["PR1005", "PR1025"],
+        "medium": ["PR1115", "CA5515"],
+        "rough": ["PR1125", "CA5525", "CA5535"]
+      },
+      "grooving": {
+        "general": ["PR1005", "PR1025", "PR1115", "CA5515", "PR1125", "CA5525", "CA5535"]
+      },
+      "threading": {
+        "general": ["PR930", "TC60"]
+      }
+    },
+    "M": {
+      "turning": {
+        "finish": ["CA6515"],
+        "medium": ["PV7020", "PR930"],
+        "rough": ["CA6525"]
+      },
+      "grooving": {
+        "general": ["CA6515", "PV7020", "PR930", "CA6525"]
+      },
+      "threading": {
+        "general": ["PR930", "TC60"]
+      }
+    },
+    "K": {
+      "turning": {
+        "finish": ["CA4115", "CR7015"],
+        "medium": ["CA4120"],
+        "rough": ["CA4120"]
+      },
+      "grooving": {
+        "general": ["CA4115", "CR7015", "CA4120"]
+      }
+    },
+    "N": {
+      "turning": {
+        "finish": ["KPD001"],
+        "medium": ["KPD010", "KW10"],
+        "rough": ["KW10"]
+      },
+      "grooving": {
+        "general": ["KPD001", "KPD010", "KW10"]
+      }
+    },
+    "S": {
+      "turning": {
+        "finish": ["PR905"],
+        "medium": ["PR905"],
+        "rough": ["PR660"]
+      },
+      "grooving": {
+        "general": ["PR905", "PR660"]
+      }
+    },
+    "H": {
+      "turning": {
+        "finish": ["KBN10B"],
+        "medium": ["KBN25B"],
+        "rough": ["KBN510"]
+      },
+      "grooving": {
+        "general": ["KBN10B", "KBN25B", "KBN510"]
+      }
+    }
+  },
+  "ISCAR": {
+    "_notes": [
+      "Current project data is strongest for turning and threading. Hardened-family approval coverage is intentionally left for manual follow-up."
+    ],
+    "P": {
+      "turning": {
+        "finish": ["IC806", "IC8150"],
+        "medium": ["IC808", "IC8250"],
+        "rough": ["IC807", "IC8250"]
+      },
+      "grooving": {
+        "general": ["IC806", "IC807", "IC808", "IC8150", "IC8250"]
+      },
+      "threading": {
+        "general": ["IC808", "IC806"]
+      }
+    },
+    "M": {
+      "turning": {
+        "finish": ["IC806", "IC8150"],
+        "medium": ["IC808", "IC8250"],
+        "rough": ["IC807", "IC8250"]
+      },
+      "grooving": {
+        "general": ["IC806", "IC807", "IC808", "IC8150", "IC8250"]
+      },
+      "threading": {
+        "general": ["IC808", "IC806"]
+      }
+    },
+    "K": {
+      "turning": {
+        "finish": ["IC8150"],
+        "medium": ["IC808", "IC8150"],
+        "rough": ["IC808"]
+      },
+      "grooving": {
+        "general": ["IC808", "IC8150"]
+      },
+      "threading": {
+        "general": ["IC808", "IC806"]
+      }
+    },
+    "N": {
+      "turning": {
+        "general": ["IC20"]
+      },
+      "grooving": {
+        "general": ["IC20"]
+      }
+    },
+    "S": {
+      "turning": {
+        "finish": ["IC806"],
+        "medium": ["IC808"],
+        "rough": ["IC807"]
+      },
+      "grooving": {
+        "general": ["IC806", "IC807", "IC808"]
+      }
+    }
+  },
+  "Mitsubishi": {
+    "_notes": [
+      "Only explicit grade-bearing drill records are approved here. Generic coatings like special/coated/gun_drill/miracle are left for manual review on purpose."
+    ],
+    "P": {
+      "drilling": {
+        "general": ["VP15TF"],
+        "productivity": ["VP15TF", "VP15TF/DP5010/VP10H"],
+        "deep_hole": ["VP15TF"]
+      }
+    },
+    "M": {
+      "drilling": {
+        "general": ["VP15TF"],
+        "productivity": ["VP15TF", "VP15TF/DP5010/VP10H"],
+        "deep_hole": ["VP15TF"]
+      }
+    },
+    "K": {
+      "drilling": {
+        "general": ["VP15TF"],
+        "productivity": ["VP15TF", "VP15TF/DP5010/VP10H"],
+        "deep_hole": ["VP15TF"]
+      }
+    },
+    "N": {
+      "drilling": {
+        "general": ["VP15TF"],
+        "deep_hole": ["VP15TF"]
+      }
+    },
+    "S": {
+      "drilling": {
+        "general": ["VP15TF"],
+        "deep_hole": ["VP15TF"]
+      }
+    }
+  },
+  "Allied": {
+    "_notes": [
+      "The current dataset only carries one explicit Allied reference coating and one generic indexable-drill placeholder. The generic placeholder is intentionally not approved yet."
+    ],
+    "P": {
+      "drilling": {
+        "reference": ["TiN/TiAlN/TiCN"]
+      }
+    }
+  },
+  "WIDIA": {
+    "_notes": [
+      "Current WIDIA grooving records are family-level only with no explicit grades, and the threading placeholder grade is generic. Keep WIDIA records in manual review until the dataset is enriched."
+    ]
+  }
+}

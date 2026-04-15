@@ -1,0 +1,104 @@
+[
+  {
+    "id": "smw_kncs_n",
+    "brand": "SMW-AUTOBLOK",
+    "series": "KNCS-N",
+    "tool_category": "workholding",
+    "subcategory": "quick_jaw_change_power_chuck",
+    "application": {
+      "operations": [
+        "od_clamping",
+        "id_clamping",
+        "quick_jaw_change",
+        "high_low_clamping"
+      ]
+    }
+  },
+  {
+    "id": "smw_hg_n",
+    "brand": "SMW-AUTOBLOK",
+    "series": "HG-N HI-GRIP",
+    "tool_category": "workholding",
+    "subcategory": "quick_jaw_change_manual_chuck",
+    "application": {
+      "operations": [
+        "od_clamping",
+        "quick_jaw_change"
+      ]
+    }
+  },
+  {
+    "id": "smw_manual_chucks",
+    "brand": "SMW-AUTOBLOK",
+    "series": "Manual Chucks",
+    "tool_category": "workholding",
+    "subcategory": "manual_chuck",
+    "application": {
+      "operations": [
+        "od_clamping"
+      ]
+    }
+  },
+  {
+    "id": "smw_open_center_power_chucks",
+    "brand": "SMW-AUTOBLOK",
+    "series": "Open Center Power Chucks",
+    "tool_category": "workholding",
+    "subcategory": "power_chuck",
+    "application": {
+      "operations": [
+        "od_clamping",
+        "id_clamping"
+      ]
+    }
+  },
+  {
+    "id": "smw_closed_center_power_chucks",
+    "brand": "SMW-AUTOBLOK",
+    "series": "Closed Center Power Chucks",
+    "tool_category": "workholding",
+    "subcategory": "power_chuck",
+    "application": {
+      "operations": [
+        "od_clamping"
+      ]
+    }
+  },
+  {
+    "id": "smw_collet_chucks",
+    "brand": "SMW-AUTOBLOK",
+    "series": "Collet Chucks",
+    "tool_category": "workholding",
+    "subcategory": "collet_chuck",
+    "application": {
+      "operations": [
+        "bar_work",
+        "small_part_work"
+      ]
+    }
+  },
+  {
+    "id": "smw_steady_rests",
+    "brand": "SMW-AUTOBLOK",
+    "series": "Self-centering Steady Rests",
+    "tool_category": "workholding",
+    "subcategory": "steady_rest",
+    "application": {
+      "operations": [
+        "long_part_support"
+      ]
+    }
+  },
+  {
+    "id": "smw_expanding_mandrels",
+    "brand": "SMW-AUTOBLOK",
+    "series": "Expanding Mandrels",
+    "tool_category": "workholding",
+    "subcategory": "mandrel",
+    "application": {
+      "operations": [
+        "id_clamping"
+      ]
+    }
+  }
+]

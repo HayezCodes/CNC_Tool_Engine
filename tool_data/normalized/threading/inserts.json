@@ -1,0 +1,95 @@
+[
+  {
+    "id": "kyocera_16er/16ir",
+    "brand": "Kyocera",
+    "series": "Threading",
+    "tool_category": "threading_insert",
+    "designation_family": "16ER/16IR",
+    "application": {
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "PR930",
+      "TC60"
+    ]
+  },
+  {
+    "id": "sandvik_corothread_266",
+    "brand": "Sandvik Coromant",
+    "series": "Threading",
+    "tool_category": "threading_insert",
+    "designation_family": "CoroThread 266",
+    "application": {
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": [
+      "GC1115",
+      "GC2025",
+      "GC1125"
+    ]
+  },
+  {
+    "id": "iscar_laydown_threading",
+    "brand": "ISCAR",
+    "series": "Threading",
+    "tool_category": "threading_insert",
+    "designation_family": "Laydown Threading",
+    "application": {
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": [
+      "IC808",
+      "IC806"
+    ]
+  },
+  {
+    "id": "widia_s-loc_threading",
+    "brand": "WIDIA",
+    "series": "S-LOC",
+    "tool_category": "threading_insert",
+    "designation_family": "S-LOC Threading",
+    "application": {
+      "operations": [
+        "internal_threading"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "generic"
+    ]
+  }
+]

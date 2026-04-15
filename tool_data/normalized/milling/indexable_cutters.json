@@ -1,0 +1,315 @@
+[
+  {
+    "id": "helido_h490",
+    "brand": "ISCAR",
+    "series": "HELIDO H490",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling",
+        "slotting",
+        "facing",
+        "plunge_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "helido_s890_fsn",
+    "brand": "ISCAR",
+    "series": "HELIDO S890 FSN",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "88_degree_face_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 8
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "helido_845",
+    "brand": "ISCAR",
+    "series": "HELIDO 845",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 8
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "helido_onmu_16-edge",
+    "brand": "ISCAR",
+    "series": "HELIDO ONMU 16-edge",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 16
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "helido_600_feedmill",
+    "brand": "ISCAR",
+    "series": "HELIDO 600 Feedmill",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "high_feed_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 6
+    },
+    "application": {
+      "operations": [
+        "high_feed_milling",
+        "ramping",
+        "plunging",
+        "helical_interpolation"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "t490_helitang_chip_splitting",
+    "brand": "ISCAR",
+    "series": "T490 HELITANG chip splitting",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    }
+  },
+  {
+    "id": "mini-tangslot",
+    "brand": "ISCAR",
+    "series": "MINI-TANGSLOT",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "slotting_cutter",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    },
+    "application": {
+      "operations": [
+        "slotting"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "tangplunge_htp",
+    "brand": "ISCAR",
+    "series": "TANGPLUNGE HTP",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "plunge_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    },
+    "application": {
+      "operations": [
+        "plunge_milling",
+        "face_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "ballplus",
+    "brand": "ISCAR",
+    "series": "BALLPLUS",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "modular_milling_system",
+    "geometry": {
+      "cutting_edges_per_insert": null
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "die_mold"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": "millshred",
+    "brand": "ISCAR",
+    "series": "MILLSHRED",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "deep_cavity_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "deep_cavity_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": "heliiqmill_390",
+    "brand": "ISCAR",
+    "series": "HELIIQMILL 390",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 3
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S"
+      ]
+    }
+  },
+  {
+    "id": "helido_h690",
+    "brand": "ISCAR",
+    "series": "HELIDO H690",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 6
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "thread_milling_tools",
+    "brand": "ISCAR",
+    "series": "Thread Milling Tools",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "thread_mill",
+    "geometry": {
+      "cutting_edges_per_insert": null
+    },
+    "application": {
+      "operations": [
+        "thread_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "N"
+      ]
+    }
+  },
+  {
+    "id": "cutters_for_aluminum",
+    "brand": "ISCAR",
+    "series": "Cutters for Aluminum",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "aluminum_mill",
+    "geometry": {
+      "cutting_edges_per_insert": null
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling",
+        "face_milling"
+      ]
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    }
+  }
+]

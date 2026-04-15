@@ -1,0 +1,346 @@
+[
+  {
+    "id": "p_tough",
+    "iso_group": "P",
+    "zone": "TOUGH",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "PR1125"
+      },
+      {
+        "brand": "Kyocera",
+        "grade": "CA5525"
+      },
+      {
+        "brand": "Kyocera",
+        "grade": "CA5535"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC4235"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC807"
+      }
+    ]
+  },
+  {
+    "id": "p_balanced",
+    "iso_group": "P",
+    "zone": "BALANCED",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "PR1115"
+      },
+      {
+        "brand": "Kyocera",
+        "grade": "CA5515"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC4225"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC8250"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC808"
+      }
+    ]
+  },
+  {
+    "id": "p_wear",
+    "iso_group": "P",
+    "zone": "WEAR",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "PR1025"
+      },
+      {
+        "brand": "Kyocera",
+        "grade": "PR1005"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC4205"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC4215"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC8150"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC806"
+      }
+    ]
+  },
+  {
+    "id": "m_tough",
+    "iso_group": "M",
+    "zone": "TOUGH",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "CA6525"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC2220"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC807"
+      }
+    ]
+  },
+  {
+    "id": "m_balanced",
+    "iso_group": "M",
+    "zone": "BALANCED",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "PV7020"
+      },
+      {
+        "brand": "Kyocera",
+        "grade": "PR930"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC2025"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC8250"
+      }
+    ]
+  },
+  {
+    "id": "m_wear",
+    "iso_group": "M",
+    "zone": "WEAR",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "CA6515"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC1115"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC2015"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC8150"
+      }
+    ]
+  },
+  {
+    "id": "k_tough",
+    "iso_group": "K",
+    "zone": "TOUGH",
+    "candidates": []
+  },
+  {
+    "id": "k_balanced",
+    "iso_group": "K",
+    "zone": "BALANCED",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "CA4120"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC3215"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC3225"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC808"
+      }
+    ]
+  },
+  {
+    "id": "k_wear",
+    "iso_group": "K",
+    "zone": "WEAR",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "CA4115"
+      },
+      {
+        "brand": "Kyocera",
+        "grade": "CR7015"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC3205"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC3210"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC8150"
+      }
+    ]
+  },
+  {
+    "id": "n_tough",
+    "iso_group": "N",
+    "zone": "TOUGH",
+    "candidates": []
+  },
+  {
+    "id": "n_balanced",
+    "iso_group": "N",
+    "zone": "BALANCED",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "KPD010"
+      },
+      {
+        "brand": "Kyocera",
+        "grade": "KW10"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "H13A"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC20"
+      }
+    ]
+  },
+  {
+    "id": "n_wear",
+    "iso_group": "N",
+    "zone": "WEAR",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "KPD001"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "H10A"
+      }
+    ]
+  },
+  {
+    "id": "s_tough",
+    "iso_group": "S",
+    "zone": "TOUGH",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "PR660"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "S05F"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC807"
+      }
+    ]
+  },
+  {
+    "id": "s_balanced",
+    "iso_group": "S",
+    "zone": "BALANCED",
+    "candidates": [
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC1115"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC808"
+      }
+    ]
+  },
+  {
+    "id": "s_wear",
+    "iso_group": "S",
+    "zone": "WEAR",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "PR905"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "GC1105"
+      },
+      {
+        "brand": "ISCAR",
+        "grade": "IC806"
+      }
+    ]
+  },
+  {
+    "id": "h_tough",
+    "iso_group": "H",
+    "zone": "TOUGH",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "KBN510"
+      }
+    ]
+  },
+  {
+    "id": "h_balanced",
+    "iso_group": "H",
+    "zone": "BALANCED",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "KBN25B"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "CB7025"
+      }
+    ]
+  },
+  {
+    "id": "h_wear",
+    "iso_group": "H",
+    "zone": "WEAR",
+    "candidates": [
+      {
+        "brand": "Kyocera",
+        "grade": "KBN10B"
+      },
+      {
+        "brand": "Sandvik Coromant",
+        "grade": "CB7015"
+      }
+    ]
+  }
+]

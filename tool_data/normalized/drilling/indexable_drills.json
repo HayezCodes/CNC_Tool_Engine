@@ -1,0 +1,197 @@
+[
+  {
+    "id": "taf_2d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        20.0,
+        56.0
+      ],
+      "l_d": 2,
+      "shank_type": "flange"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "U1/U2/U3"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "taf_3d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        20.0,
+        56.0
+      ],
+      "l_d": 3,
+      "shank_type": "flange"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "U1/U2/U3"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "taf_4d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        20.0,
+        56.0
+      ],
+      "l_d": 4,
+      "shank_type": "flange"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "U1/U2/U3"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "taw_3d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        10.0,
+        30.4
+      ],
+      "l_d": 3,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF/DP5010/VP10H",
+      "breaker": "general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "taw_5d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        10.0,
+        30.4
+      ],
+      "l_d": 5,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF/DP5010/VP10H",
+      "breaker": "general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "taw_8d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        14.0,
+        30.4
+      ],
+      "l_d": 8,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF/DP5010/VP10H",
+      "breaker": "general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  },
+  {
+    "id": "tawsb_bridge_construction",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        24.5,
+        26.7
+      ],
+      "l_d": 3,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "bridge"
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    }
+  },
+  {
+    "id": "generic_indexable_drill",
+    "brand": "Allied Machine & Engineering",
+    "series": "T-A/GEN3",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": "indexable_range",
+      "l_d": null,
+      "shank_type": "spade_or_indexable"
+    },
+    "insert_system": {
+      "grade": "various",
+      "breaker": "various"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    }
+  }
+]

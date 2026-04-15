@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mitsubishi_taf_u1",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "drill_insert",
+    "designation": "U1 breaker",
+    "notes": "Lighter cutting/chip control option"
+  },
+  {
+    "id": "mitsubishi_taf_u2",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "drill_insert",
+    "designation": "U2 breaker",
+    "notes": "Stable machining, wide application area"
+  },
+  {
+    "id": "mitsubishi_taf_u3",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "drill_insert",
+    "designation": "U3 breaker",
+    "notes": "More aggressive chip handling"
+  }
+]

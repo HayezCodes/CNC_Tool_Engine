@@ -1,0 +1,158 @@
+1. SUMMARY
+- Dataset checks: 188 items -> PASS 130, FAIL 0, REVIEW_NEEDED 58
+- Scenario checks: 8 items -> PASS 4, FAIL 0, REVIEW_NEEDED 4
+- The validator compares current project datasets and scenario outputs against approved brand/ISO/operation/cut-style grade rules.
+
+2. DATASET VALIDATION RESULTS
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pr1025 :: P :: turning :: finish :: PR1025 :: PR1025 matched Kyocera/P/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pr1005 :: P :: turning :: finish :: PR1005 :: PR1005 matched Kyocera/P/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pr1115 :: P :: turning :: medium :: PR1115 :: PR1115 matched Kyocera/P/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pr1125 :: P :: turning :: rough :: PR1125 :: PR1125 matched Kyocera/P/turning/rough.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_ca5515 :: P :: turning :: medium :: CA5515 :: CA5515 matched Kyocera/P/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_ca5525 :: P :: turning :: rough :: CA5525 :: CA5525 matched Kyocera/P/turning/rough.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_ca5535 :: P :: turning :: rough :: CA5535 :: CA5535 matched Kyocera/P/turning/rough.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pv7020 :: M :: turning :: medium :: PV7020 :: PV7020 matched Kyocera/M/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pr930 :: M :: turning :: medium :: PR930 :: PR930 matched Kyocera/M/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_ca6515 :: M :: turning :: finish :: CA6515 :: CA6515 matched Kyocera/M/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_ca6525 :: M :: turning :: rough :: CA6525 :: CA6525 matched Kyocera/M/turning/rough.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_ca4115 :: K :: turning :: finish :: CA4115 :: CA4115 matched Kyocera/K/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_ca4120 :: K :: turning :: medium :: CA4120 :: CA4120 matched Kyocera/K/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_cr7015 :: K :: turning :: finish :: CR7015 :: CR7015 matched Kyocera/K/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_kpd001 :: N :: turning :: finish :: KPD001 :: KPD001 matched Kyocera/N/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_kpd010 :: N :: turning :: medium :: KPD010 :: KPD010 matched Kyocera/N/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_kw10 :: N :: turning :: medium :: KW10 :: KW10 matched Kyocera/N/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pr660 :: S :: turning :: rough :: PR660 :: PR660 matched Kyocera/S/turning/rough.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_pr905 :: S :: turning :: finish :: PR905 :: PR905 matched Kyocera/S/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_kbn10b :: H :: turning :: finish :: KBN10B :: KBN10B matched Kyocera/H/turning/finish.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_kbn25b :: H :: turning :: medium :: KBN25B :: KBN25B matched Kyocera/H/turning/medium.
+- [PASS] grade_map_baseline :: Kyocera :: kyocera_kbn510 :: H :: turning :: rough :: KBN510 :: KBN510 matched Kyocera/H/turning/rough.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc4205 :: P :: turning :: finish :: GC4205 :: GC4205 matched Sandvik/P/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc4215 :: P :: turning :: finish :: GC4215 :: GC4215 matched Sandvik/P/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc4225 :: P :: turning :: medium :: GC4225 :: GC4225 matched Sandvik/P/turning/medium.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc4235 :: P :: turning :: rough :: GC4235 :: GC4235 matched Sandvik/P/turning/rough.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc1115 :: M :: turning :: finish :: GC1115 :: GC1115 matched Sandvik/M/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc2015 :: M :: turning :: finish :: GC2015 :: GC2015 matched Sandvik/M/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc2025 :: M :: turning :: medium :: GC2025 :: GC2025 matched Sandvik/M/turning/medium.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc2220 :: M :: turning :: rough :: GC2220 :: GC2220 matched Sandvik/M/turning/rough.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc3205 :: K :: turning :: finish :: GC3205 :: GC3205 matched Sandvik/K/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc3210 :: K :: turning :: finish :: GC3210 :: GC3210 matched Sandvik/K/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc3215 :: K :: turning :: medium :: GC3215 :: GC3215 matched Sandvik/K/turning/medium.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc3225 :: K :: turning :: medium :: GC3225 :: GC3225 matched Sandvik/K/turning/medium.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_h10a :: N :: turning :: finish :: H10A :: H10A matched Sandvik/N/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_h13a :: N :: turning :: medium :: H13A :: H13A matched Sandvik/N/turning/medium.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc1105 :: S :: turning :: finish :: GC1105 :: GC1105 matched Sandvik/S/turning/finish.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_gc1115 :: S :: turning :: medium :: GC1115 :: GC1115 matched Sandvik/S/turning/medium.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_s05f :: S :: turning :: rough :: S05F :: S05F matched Sandvik/S/turning/rough.
+- [PASS] grade_map_baseline :: Sandvik :: sandvik_coromant_cb7015 :: H :: turning :: finish :: CB7015 :: CB7015 matched Sandvik/H/turning/finish.
+- ... 148 more dataset validation rows omitted from the text report for brevity.
+
+3. SCENARIO VALIDATION RESULTS
+- [PASS] turning_steel_rough_interrupted :: turning :: P :: rough :: Resolved Tougher steel starting grade with coating bias PVD. Sandvik: GC4235 -> PASS | Kyocera: PR1125 -> PASS | ISCAR: IC807 -> PASS
+- [PASS] turning_stainless_finish_stable :: turning :: M :: finish :: Resolved Wear-oriented stainless starting grade with coating bias CVD. Sandvik: GC2015 -> PASS | Kyocera: CA6515 -> PASS | ISCAR: IC8150 -> PASS
+- [PASS] turning_hardened_finish :: turning :: H :: finish :: Resolved Wear-oriented hardened starting grade with coating bias CVD. Sandvik: CB7015 -> PASS | Kyocera: KBN10B -> PASS
+- [REVIEW_NEEDED] drilling_general_steel_solid :: drilling :: P :: general :: Mitsubishi MWS: VP15TF -> PASS | Mitsubishi MWS: VP15TF -> PASS | Mitsubishi MWS: VP15TF -> PASS | Mitsubishi MWS Super Long: VP15TF -> PASS | Mitsubishi MWE: VP15TF -> PASS | Mitsubishi MQS: special -> REVIEW_NEEDED | Mitsubishi MZE: coated -> REVIEW_NEEDED | Mitsubishi MZS: coated -> REVIEW_NEEDED
+- [REVIEW_NEEDED] drilling_large_steel_indexable :: drilling :: P :: productivity :: Mitsubishi TAF: VP15TF -> PASS | Mitsubishi TAF: VP15TF -> PASS | Mitsubishi TAF: VP15TF -> PASS | Mitsubishi TAW: VP15TF/DP5010/VP10H -> PASS | Mitsubishi TAW: VP15TF/DP5010/VP10H -> PASS | Mitsubishi TAW: VP15TF/DP5010/VP10H -> PASS | Mitsubishi TAW: VP15TF -> PASS | Allied T-A/GEN3: various -> REVIEW_NEEDED
+- [REVIEW_NEEDED] milling_face_steel :: milling :: P :: medium :: ISCAR HELIDO S890 FSN: no grade on record | ISCAR HELIDO 845: no grade on record | ISCAR HELIDO ONMU 16-edge: no grade on record | ISCAR TANGPLUNGE HTP: no grade on record | Scenario uses dataset-backed validation only; there is no pure non-UI recommendation function for this module yet. | Matched records did not expose precise grades, so this remains manual-review territory.
+- [REVIEW_NEEDED] grooving_cutoff_steel :: grooving :: P :: rough :: WIDIA WMT: no grade on record | WIDIA ProGroove: no grade on record | WIDIA Separator: no grade on record | Scenario uses dataset-backed validation only; there is no pure non-UI recommendation function for this module yet. | Matched records did not expose precise grades, so this remains manual-review territory.
+- [PASS] threading_internal_stainless :: threading :: M :: general :: Kyocera Threading: PR930 -> PASS | Kyocera Threading: TC60 -> PASS | Sandvik Threading: GC1115 -> PASS | Sandvik Threading: GC2025 -> PASS | Sandvik Threading: GC1125 -> PASS | ISCAR Threading: IC808 -> PASS | ISCAR Threading: IC806 -> PASS | Scenario uses dataset-backed validation only; there is no pure non-UI recommendation function for this module yet.
+
+4. FAILURES
+- None.
+
+5. REVIEW_NEEDED
+- iscar_ic20: IC20 matched only the general bucket for ISCAR/turning; style-specific coverage is incomplete.
+- widia_s-loc_threading: Grade 'generic' is a placeholder or generic coating token and needs manual review.
+- sandvik_tlg: No grade field on this record; family-level data only.
+- sandvik_tlr: No grade field on this record; family-level data only.
+- sandvik_tltp: No grade field on this record; family-level data only.
+- widia_wmt: No grade field on this record; family-level data only.
+- widia_topgroove: No grade field on this record; family-level data only.
+- widia_progroove: No grade field on this record; family-level data only.
+- widia_separator: No grade field on this record; family-level data only.
+- widia_ranger: No grade field on this record; family-level data only.
+- widia_s-loc: No grade field on this record; family-level data only.
+- iscar_gtn/gfn: No grade field on this record; family-level data only.
+- iscar_dgn/dgf: No grade field on this record; family-level data only.
+- iscar_tgfh/tgtr: No grade field on this record; family-level data only.
+- mqs_for_steel_and_cast_iron: Grade 'special' is a placeholder or generic coating token and needs manual review.
+- mms_for_stainless: Grade 'special' is a placeholder or generic coating token and needs manual review.
+- mns_for_aluminum: Grade 'special' is a placeholder or generic coating token and needs manual review.
+- mhs_for_mould_materials: Grade 'special' is a placeholder or generic coating token and needs manual review.
+- mze_general: Grade 'coated' is a placeholder or generic coating token and needs manual review.
+- mzs_internal_coolant: Grade 'coated' is a placeholder or generic coating token and needs manual review.
+- mse_mini_star: Grade 'coated' is a placeholder or generic coating token and needs manual review.
+- mgs_solid_gun_drill: Grade 'gun_drill' is a placeholder or generic coating token and needs manual review.
+- vc-sss_ssm: Grade 'miracle' is a placeholder or generic coating token and needs manual review.
+- mae_mas_for_aluminum_and_cast_iron: Grade 'special' is a placeholder or generic coating token and needs manual review.
+- generic_indexable_drill: Grade 'various' is a placeholder or generic coating token and needs manual review.
+- hvmg2: No grade field on this record; family-level data only.
+- hvmg3: No grade field on this record; family-level data only.
+- hvrmg3: No grade field on this record; family-level data only.
+- axmg45: No grade field on this record; family-level data only.
+- exmg: No grade field on this record; family-level data only.
+- gxmg5: No grade field on this record; family-level data only.
+- vxmg3t: No grade field on this record; family-level data only.
+- vxmg4t: No grade field on this record; family-level data only.
+- vxmg5t: No grade field on this record; family-level data only.
+- vxmg6t: No grade field on this record; family-level data only.
+- vxmg7: No grade field on this record; family-level data only.
+- vxmg9: No grade field on this record; family-level data only.
+- vhmg: No grade field on this record; family-level data only.
+- gvhmg: No grade field on this record; family-level data only.
+- crmg: No grade field on this record; family-level data only.
+- ... 22 more review-needed rows omitted from the text report for brevity.
+
+6. MISSING RULE COVERAGE
+- Allied / K / drilling
+- Allied / M / drilling
+- Allied / P / drilling
+- Mitsubishi / H / drilling
+- WIDIA / M / threading
+- WIDIA / P / threading
+
+7. LIMITATIONS
+- Scenario drilling_general_steel_solid used dataset-backed validation because drilling does not expose a reusable non-UI recommendation function yet.
+- Scenario drilling_large_steel_indexable used dataset-backed validation because drilling does not expose a reusable non-UI recommendation function yet.
+- Scenario grooving_cutoff_steel used dataset-backed validation because grooving does not expose a reusable non-UI recommendation function yet.
+- Scenario milling_face_steel used dataset-backed validation because milling does not expose a reusable non-UI recommendation function yet.
+- Scenario threading_internal_stainless used dataset-backed validation because threading does not expose a reusable non-UI recommendation function yet.
+- endmills carries family/application data but no explicit grades on record aa.
+- endmills carries family/application data but no explicit grades on record axmg45.
+- endmills carries family/application data but no explicit grades on record crfmg.
+- endmills carries family/application data but no explicit grades on record crmg.
+- endmills carries family/application data but no explicit grades on record emg35.
+- endmills carries family/application data but no explicit grades on record exmg.
+- endmills carries family/application data but no explicit grades on record gmg.
+- endmills carries family/application data but no explicit grades on record gvhmg.
+- endmills carries family/application data but no explicit grades on record gxmg5.
+- endmills carries family/application data but no explicit grades on record hvmg2.
+- endmills carries family/application data but no explicit grades on record hvmg3.
+- endmills carries family/application data but no explicit grades on record hvrmg3.
+- endmills carries family/application data but no explicit grades on record vhmg.
+- endmills carries family/application data but no explicit grades on record vxmg3t.
+- endmills carries family/application data but no explicit grades on record vxmg4t.
+- endmills carries family/application data but no explicit grades on record vxmg5t.
+- endmills carries family/application data but no explicit grades on record vxmg6t.
+- endmills carries family/application data but no explicit grades on record vxmg7.
+- endmills carries family/application data but no explicit grades on record vxmg9.
+- indexable_cutters carries family/application data but no explicit grades on record ballplus.
+- indexable_cutters carries family/application data but no explicit grades on record cutters_for_aluminum.
+- indexable_cutters carries family/application data but no explicit grades on record helido_600_feedmill.
+- indexable_cutters carries family/application data but no explicit grades on record helido_845.
+- indexable_cutters carries family/application data but no explicit grades on record helido_h490.
+- indexable_cutters carries family/application data but no explicit grades on record helido_h690.
+- indexable_cutters carries family/application data but no explicit grades on record helido_onmu_16-edge.
+- indexable_cutters carries family/application data but no explicit grades on record helido_s890_fsn.
+- indexable_cutters carries family/application data but no explicit grades on record heliiqmill_390.
+- indexable_cutters carries family/application data but no explicit grades on record millshred.
+- indexable_cutters carries family/application data but no explicit grades on record mini-tangslot.
+- indexable_cutters carries family/application data but no explicit grades on record t490_helitang_chip_splitting.
+- indexable_cutters carries family/application data but no explicit grades on record tangplunge_htp.
+- indexable_cutters carries family/application data but no explicit grades on record thread_milling_tools.
+
+8. NEXT CLEANUP ACTIONS
+- Reconcile supplier-map grades that do not exist in the approved dataset-backed rule set.
+- Replace generic drill coatings/placeholders with brand-and-ISO-specific drill grade entries where the source catalogs support it.
+- Add explicit grade fields to milling and grooving records if those modules need true grade-level proofing.
+- Split broad grade-map category assignments where a grade is valid for turning but not proven for threading or grooving.
+- Expand WIDIA and Allied coverage only after the underlying dataset carries precise grades instead of generic placeholders.

@@ -1,0 +1,281 @@
+[
+  {
+    "id": "sandvik_tlg",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok",
+    "tool_category": "grooving_insert",
+    "designation_family": "TLG",
+    "geometry": {
+      "width_range_mm": [
+        "0.8",
+        "1.5",
+        "2.0",
+        "3.0",
+        "4.0",
+        "6.0"
+      ],
+      "max_depth_mm": 12.0
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "parting"
+      ]
+    },
+    "notes": "Top-Lok grooving insert family"
+  },
+  {
+    "id": "sandvik_tlr",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok",
+    "tool_category": "grooving_insert",
+    "designation_family": "TLR",
+    "geometry": {
+      "width_range_mm": [
+        "1.5",
+        "2.0",
+        "3.0"
+      ],
+      "max_depth_mm": 12.0
+    },
+    "application": {
+      "operations": [
+        "grooving"
+      ]
+    },
+    "notes": "Top-Lok radius grooving"
+  },
+  {
+    "id": "sandvik_tltp",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok",
+    "tool_category": "grooving_insert",
+    "designation_family": "TLTP",
+    "geometry": {
+      "width_range_mm": [
+        "2.0",
+        "3.0"
+      ],
+      "max_depth_mm": 10.0
+    },
+    "application": {
+      "operations": [
+        "threading"
+      ]
+    },
+    "notes": "Top-Lok threading/grooving crossover"
+  },
+  {
+    "id": "widia_wmt",
+    "brand": "WIDIA",
+    "series": "WMT",
+    "tool_category": "grooving_insert",
+    "designation_family": "WMT",
+    "geometry": {
+      "width_range_mm": [
+        "2.0",
+        "3.0",
+        "4.0",
+        "6.0",
+        "8.0"
+      ],
+      "max_depth_mm": 25.4
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "cutoff",
+        "turning",
+        "profiling"
+      ]
+    },
+    "notes": "Heavy stock removal double-sided system"
+  },
+  {
+    "id": "widia_topgroove",
+    "brand": "WIDIA",
+    "series": "TopGroove",
+    "tool_category": "grooving_insert",
+    "designation_family": "TopGroove",
+    "geometry": {
+      "width_range_mm": [
+        "0.5",
+        "0.8",
+        "1.57",
+        "2.4",
+        "3.0",
+        "4.0",
+        "6.35"
+      ],
+      "max_depth_mm": 12.7
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "face_grooving",
+        "undercutting"
+      ]
+    },
+    "notes": "Wide coverage standard and face grooving"
+  },
+  {
+    "id": "widia_progroove",
+    "brand": "WIDIA",
+    "series": "ProGroove",
+    "tool_category": "grooving_insert",
+    "designation_family": "ProGroove",
+    "geometry": {
+      "width_range_mm": [
+        "2.0",
+        "3.0",
+        "4.0",
+        "6.0",
+        "8.0"
+      ],
+      "max_depth_mm": 40.0
+    },
+    "application": {
+      "operations": [
+        "cutoff",
+        "grooving"
+      ]
+    },
+    "notes": "Single-edge maximum depth capacity"
+  },
+  {
+    "id": "widia_separator",
+    "brand": "WIDIA",
+    "series": "Separator",
+    "tool_category": "grooving_insert",
+    "designation_family": "Separator",
+    "geometry": {
+      "width_range_mm": [
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "max_depth_mm": 25.4
+    },
+    "application": {
+      "operations": [
+        "cutoff"
+      ]
+    },
+    "notes": "Positive mechanical self-clamping blades"
+  },
+  {
+    "id": "widia_ranger",
+    "brand": "WIDIA",
+    "series": "Ranger",
+    "tool_category": "grooving_insert",
+    "designation_family": "Ranger",
+    "geometry": {
+      "width_range_mm": [
+        "3.18",
+        "4.76",
+        "6.35"
+      ],
+      "max_depth_mm": 25.4
+    },
+    "application": {
+      "operations": [
+        "face_grooving"
+      ]
+    },
+    "notes": "Adjustable cartridge face grooving system"
+  },
+  {
+    "id": "widia_s-loc",
+    "brand": "WIDIA",
+    "series": "S-LOC",
+    "tool_category": "grooving_insert",
+    "designation_family": "S-LOC",
+    "geometry": {
+      "width_range_mm": [
+        "1.04",
+        "1.5",
+        "2.0",
+        "3.81"
+      ],
+      "max_depth_mm": 2.4
+    },
+    "application": {
+      "operations": [
+        "face_grooving",
+        "id_grooving"
+      ]
+    },
+    "notes": "Small-bore grooving"
+  },
+  {
+    "id": "iscar_gtn/gfn",
+    "brand": "ISCAR",
+    "series": "Self-Grip",
+    "tool_category": "grooving_insert",
+    "designation_family": "GTN/GFN",
+    "geometry": {
+      "width_range_mm": [
+        "1.0",
+        "1.5",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "max_depth_mm": 25.0
+    },
+    "application": {
+      "operations": [
+        "parting",
+        "grooving"
+      ]
+    },
+    "notes": "Common self-grip style family"
+  },
+  {
+    "id": "iscar_dgn/dgf",
+    "brand": "ISCAR",
+    "series": "Do-Grip",
+    "tool_category": "grooving_insert",
+    "designation_family": "DGN/DGF",
+    "geometry": {
+      "width_range_mm": [
+        "1.0",
+        "1.5",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "max_depth_mm": 25.0
+    },
+    "application": {
+      "operations": [
+        "parting",
+        "grooving"
+      ]
+    },
+    "notes": "Double-ended grooving/parting"
+  },
+  {
+    "id": "iscar_tgfh/tgtr",
+    "brand": "ISCAR",
+    "series": "Top-Grip",
+    "tool_category": "grooving_insert",
+    "designation_family": "TGFH/TGTR",
+    "geometry": {
+      "width_range_mm": [
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0"
+      ],
+      "max_depth_mm": 20.0
+    },
+    "application": {
+      "operations": [
+        "face_grooving",
+        "profiling"
+      ]
+    },
+    "notes": "Face grooving and profiling family"
+  }
+]

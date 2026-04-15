@@ -1,0 +1,104 @@
+{
+  "zones": {
+    "TOUGH": {
+      "toughness": 5,
+      "wear": 2,
+      "coating_preference": [
+        "PVD",
+        "UNCOATED"
+      ],
+      "description": "Interrupted, unstable, heavy load, poor workholding or long stickout"
+    },
+    "BALANCED": {
+      "toughness": 3,
+      "wear": 3,
+      "coating_preference": [
+        "CVD",
+        "PVD"
+      ],
+      "description": "General purpose production with mixed stability and moderate parameters"
+    },
+    "WEAR": {
+      "toughness": 2,
+      "wear": 5,
+      "coating_preference": [
+        "CVD",
+        "PVD"
+      ],
+      "description": "Stable conditions, high speed, light DOC, finish-oriented work"
+    }
+  },
+  "modifiers": {
+    "interruption": {
+      "none": {
+        "wear_delta": 1
+      },
+      "light": {
+        "toughness_delta": 1
+      },
+      "heavy": {
+        "zone_shift": "TOUGH",
+        "toughness_delta": 2
+      }
+    },
+    "stickout": {
+      "short": {
+        "wear_delta": 1
+      },
+      "medium": {
+        "toughness_delta": 1
+      },
+      "long": {
+        "zone_shift": "TOUGH",
+        "toughness_delta": 2
+      }
+    },
+    "workholding": {
+      "rigid": {
+        "wear_delta": 1
+      },
+      "average": {
+        "toughness_delta": 1
+      },
+      "poor": {
+        "zone_shift": "TOUGH",
+        "toughness_delta": 2
+      }
+    },
+    "speed_band": {
+      "low": {
+        "zone_shift": "TOUGH"
+      },
+      "medium": {
+        "zone_shift": "BALANCED"
+      },
+      "high": {
+        "zone_shift": "WEAR"
+      }
+    },
+    "doc_band": {
+      "low": {
+        "zone_shift": "WEAR"
+      },
+      "medium": {
+        "zone_shift": "BALANCED"
+      },
+      "high": {
+        "zone_shift": "TOUGH"
+      }
+    },
+    "finish_priority": {
+      "yes": {
+        "wear_delta": 1,
+        "geometry_bias": "finishing_or_wiper"
+      },
+      "balanced": {
+        "geometry_bias": "medium"
+      },
+      "no": {
+        "toughness_delta": 1,
+        "geometry_bias": "roughing"
+      }
+    }
+  }
+}

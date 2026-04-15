@@ -1,0 +1,100 @@
+[
+  {
+    "id": "allied_ta_hss",
+    "brand": "Allied Machine & Engineering",
+    "file": "TA-SF-HSS-inch(178)(1).pdf",
+    "domain": "drilling",
+    "notes": "T-A HSS drill insert speed/feed chart"
+  },
+  {
+    "id": "iscar_non_rotating_2017",
+    "brand": "ISCAR",
+    "file": "Non-Rotating_Tools_Lines-2017(1).pdf",
+    "domain": "turning_grooving_threading",
+    "notes": "Turning, grooving, parting, threading, holders, grades"
+  },
+  {
+    "id": "mitsubishi_taf",
+    "brand": "Mitsubishi Materials",
+    "file": "Mitsubishi TAF Drills(1).pdf",
+    "domain": "drilling",
+    "notes": "TAF indexable drill family"
+  },
+  {
+    "id": "mitsubishi_drilling_catalog",
+    "brand": "Mitsubishi Materials",
+    "file": "c005b_n(1).pdf",
+    "domain": "drilling",
+    "notes": "Solid carbide, brazed and indexable drill catalog"
+  },
+  {
+    "id": "melin_hp_2016",
+    "brand": "Melin Tool",
+    "file": "Melin Tool - High Performance Tool Catalog 2016(1).pdf",
+    "domain": "milling",
+    "notes": "High performance solid tools"
+  },
+  {
+    "id": "sandvik_toplok_2011",
+    "brand": "Sandvik Coromant",
+    "file": "lit-cat-toplok 11(1).pdf",
+    "domain": "grooving",
+    "notes": "Top-Lok parting and grooving"
+  },
+  {
+    "id": "widia_grooving",
+    "brand": "WIDIA",
+    "file": "A-09-02078_Widia_Turning_metric_p332-447_grooving(1).pdf",
+    "domain": "grooving",
+    "notes": "WMT, TopGroove, ProGroove, Separator, Ranger, S-LOC"
+  },
+  {
+    "id": "kyocera_general",
+    "brand": "Kyocera",
+    "file": "katalog_kyocera(3).pdf",
+    "domain": "turning_drilling_milling",
+    "notes": "Insert grades, turning, grooving, threading, drilling, milling"
+  },
+  {
+    "id": "iscar_milling_2013",
+    "brand": "ISCAR",
+    "file": "Iscar Milling Systems catalog(3).pdf",
+    "domain": "milling",
+    "notes": "Indexable milling systems catalog"
+  },
+  {
+    "id": "smw_kncs_n",
+    "brand": "SMW-AUTOBLOK",
+    "file": "KNCS-N-catalog(1).pdf",
+    "domain": "workholding",
+    "notes": "KNCS-N quick jaw change power chuck"
+  },
+  {
+    "id": "smw_catalog_9e",
+    "brand": "SMW-AUTOBLOK",
+    "file": "Katalog_9E(3).pdf",
+    "domain": "workholding",
+    "notes": "Broader workholding catalog"
+  },
+  {
+    "id": "cogsdill_burnishing",
+    "brand": "Cogsdill",
+    "file": "Burnishing_catalog_06-24-16_web(1).pdf",
+    "domain": "burnishing",
+    "notes": "Roller and diamond burnishing tools"
+  },
+  {
+    "id": "cogsdill_chamber_burnishing",
+    "brand": "Cogsdill",
+    "file": "ChamberBurnishingTool_flyer_06-24-16_web(1).pdf",
+    "domain": "burnishing_specialty",
+    "notes": "Gun chamber burnishing tool flyer"
+  },
+  {
+    "id": "sandvik_master_2014",
+    "brand": "Sandvik Coromant",
+    "file": "Sandvik Product Catalogues 2014_v2.2(5).pdf",
+    "domain": "turning_milling_drilling_grooving_threading",
+    "notes": "Master product catalogue bundle"
+  }
+]

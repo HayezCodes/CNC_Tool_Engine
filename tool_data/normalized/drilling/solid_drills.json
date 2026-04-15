@@ -1,0 +1,434 @@
+[
+  {
+    "id": "mws_small_diameter",
+    "brand": "Mitsubishi Materials",
+    "series": "MWS",
+    "tool_category": "solid_drill",
+    "subcategory": "solid_carbide_micro_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        0.5,
+        2.95
+      ],
+      "available_l_d": [
+        1,
+        5,
+        12,
+        20,
+        25,
+        30
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "VP15TF"
+  },
+  {
+    "id": "mws_general_3d",
+    "brand": "Mitsubishi Materials",
+    "series": "MWS",
+    "tool_category": "solid_drill",
+    "subcategory": "solid_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        25.0
+      ],
+      "available_l_d": [
+        3
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "VP15TF"
+  },
+  {
+    "id": "mws_5d",
+    "brand": "Mitsubishi Materials",
+    "series": "MWS",
+    "tool_category": "solid_drill",
+    "subcategory": "solid_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        25.0
+      ],
+      "available_l_d": [
+        5
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "VP15TF"
+  },
+  {
+    "id": "mws_8d_10d_15d_20d_25d_30d",
+    "brand": "Mitsubishi Materials",
+    "series": "MWS Super Long",
+    "tool_category": "solid_drill",
+    "subcategory": "deep_hole_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        14.0
+      ],
+      "available_l_d": [
+        8,
+        10,
+        15,
+        20,
+        25,
+        30
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "VP15TF"
+  },
+  {
+    "id": "mwe_external_coolant_2d",
+    "brand": "Mitsubishi Materials",
+    "series": "MWE",
+    "tool_category": "solid_drill",
+    "subcategory": "solid_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        20.0
+      ],
+      "available_l_d": [
+        2,
+        3
+      ],
+      "coolant": "external"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "VP15TF"
+  },
+  {
+    "id": "mqs_for_steel_and_cast_iron",
+    "brand": "Mitsubishi Materials",
+    "series": "MQS",
+    "tool_category": "solid_drill",
+    "subcategory": "application_specific_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        20.0
+      ],
+      "available_l_d": [
+        3,
+        5
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "K"
+      ]
+    },
+    "grade_or_coating": "special"
+  },
+  {
+    "id": "mms_for_stainless",
+    "brand": "Mitsubishi Materials",
+    "series": "MMS",
+    "tool_category": "solid_drill",
+    "subcategory": "application_specific_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        20.0
+      ],
+      "available_l_d": [
+        3,
+        5
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "M"
+      ]
+    },
+    "grade_or_coating": "special"
+  },
+  {
+    "id": "mns_for_aluminum",
+    "brand": "Mitsubishi Materials",
+    "series": "MNS",
+    "tool_category": "solid_drill",
+    "subcategory": "application_specific_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        14.0
+      ],
+      "available_l_d": [
+        5,
+        10,
+        20,
+        30
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "grade_or_coating": "special"
+  },
+  {
+    "id": "mhs_for_mould_materials",
+    "brand": "Mitsubishi Materials",
+    "series": "MHS",
+    "tool_category": "solid_drill",
+    "subcategory": "application_specific_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        12.0
+      ],
+      "available_l_d": [
+        1,
+        30
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "H"
+      ]
+    },
+    "grade_or_coating": "special"
+  },
+  {
+    "id": "mze_general",
+    "brand": "Mitsubishi Materials",
+    "series": "MZE",
+    "tool_category": "solid_drill",
+    "subcategory": "solid_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        1.0,
+        20.0
+      ],
+      "available_l_d": [
+        2,
+        3
+      ],
+      "coolant": "external"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "coated"
+  },
+  {
+    "id": "mzs_internal_coolant",
+    "brand": "Mitsubishi Materials",
+    "series": "MZS",
+    "tool_category": "solid_drill",
+    "subcategory": "solid_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        1.0,
+        20.0
+      ],
+      "available_l_d": [
+        2,
+        3,
+        5,
+        12
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "coated"
+  },
+  {
+    "id": "mse_mini_star",
+    "brand": "Mitsubishi Materials",
+    "series": "MSE",
+    "tool_category": "solid_drill",
+    "subcategory": "micro_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        0.1,
+        0.99
+      ],
+      "available_l_d": [
+        5,
+        12
+      ],
+      "coolant": "external"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "coated"
+  },
+  {
+    "id": "mgs_solid_gun_drill",
+    "brand": "Mitsubishi Materials",
+    "series": "MGS",
+    "tool_category": "solid_drill",
+    "subcategory": "solid_gun_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        0.7,
+        3.0
+      ],
+      "available_l_d": [
+        100
+      ],
+      "coolant": "internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "gun_drill"
+  },
+  {
+    "id": "vc-sss_ssm",
+    "brand": "Mitsubishi Materials",
+    "series": "Miracle Drills",
+    "tool_category": "solid_drill",
+    "subcategory": "general_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        2.5,
+        20.0
+      ],
+      "available_l_d": [
+        3,
+        5
+      ],
+      "coolant": "external"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "grade_or_coating": "miracle"
+  },
+  {
+    "id": "mae_mas_for_aluminum_and_cast_iron",
+    "brand": "Mitsubishi Materials",
+    "series": "MAE/MAS",
+    "tool_category": "solid_drill",
+    "subcategory": "application_specific_carbide_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        3.0,
+        16.0
+      ],
+      "available_l_d": [
+        3,
+        6
+      ],
+      "coolant": "external_or_internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "N",
+        "K"
+      ]
+    },
+    "grade_or_coating": "special"
+  },
+  {
+    "id": "allied_t-a_hss_insert_drilling_data",
+    "brand": "Allied Machine & Engineering",
+    "series": "T-A HSS",
+    "tool_category": "solid_drill",
+    "subcategory": "speeds_and_feeds_reference",
+    "geometry": {
+      "diameter_range_mm": [
+        9.5,
+        114.3
+      ],
+      "available_l_d": [],
+      "coolant": "reference"
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "grade_or_coating": "TiN/TiAlN/TiCN"
+  }
+]
