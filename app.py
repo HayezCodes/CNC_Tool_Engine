@@ -1,5 +1,6 @@
 import inspect
 import json
+from numbers import Real
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -16,6 +17,13 @@ from grade_engine.enums import (
     MATERIAL_GROUPS,
     STICKOUT,
     WORKHOLDING,
+)
+from grade_engine.tool_engines import (
+    resolve_drilling_engine,
+    resolve_endmill_engine,
+    resolve_facemill_engine,
+    resolve_grooving_engine,
+    resolve_threading_engine,
 )
 
 MATERIAL_GROUP_LABELS = {
@@ -164,6 +172,20 @@ def render_empty_state(module_label: str, material_group: str, note: str | None 
 def render_reason_list(reasons: list[str]) -> None:
     if reasons:
         st.caption("Why it fits: " + " | ".join(reasons[:4]))
+
+
+def render_tool_engine_result(result: dict[str, Any], metrics: list[tuple[str, str]]) -> None:
+    with st.container(border=True):
+        st.markdown(f"### {result['recommendation_title']}")
+        st.write(result["recommendation_summary"])
+        st.write(result["tool_direction"])
+        st.caption(f"Geometry direction: {result['geometry_hint']}")
+        render_metric_strip(metrics)
+        if result["risk_flags"]:
+            st.warning("Watch-outs: " + " | ".join(result["risk_flags"]))
+        with st.expander("Engine reasoning"):
+            for step in result["reasoning_steps"]:
+                st.write(f"- {step}")
 
 
 def get_equivalent_bucket(iso_group: str, zone: str) -> dict[str, Any] | None:
@@ -385,9 +407,18 @@ def recommend_turning(common: dict[str, Any]) -> None:
 
 
 def recommend_drilling(common: dict[str, Any]) -> None:
-    drill_type = st.selectbox("Drill Type", ["Solid Carbide Drill", "Indexable Drill"])
+    selected_drill_type = st.selectbox("Drill Type", ["Solid Carbide Drill", "Indexable Drill"])
     diameter = st.number_input("Hole Diameter (mm)", min_value=0.5, max_value=80.0, value=12.0, step=0.5)
     ld = st.selectbox("Depth Ratio (L/D)", [1, 2, 3, 4, 5, 8, 10, 12, 15, 20, 25, 30], index=4)
+    engine_result = resolve_drilling_engine(
+        {
+            **common,
+            "drill_type": selected_drill_type,
+            "diameter_mm": diameter,
+            "l_d_ratio": ld,
+        }
+    )
+    drill_type = engine_result["drill_type"]
     path = "normalized/drilling/solid_drills.json" if drill_type == "Solid Carbide Drill" else "normalized/drilling/indexable_drills.json"
     rows = load_json(path) or []
     scored = []
@@ -412,10 +443,16 @@ def recommend_drilling(common: dict[str, Any]) -> None:
                 score += max(0, 3 - min(abs(ld - x) for x in available_ld))
             if geom.get("coolant") == "internal":
                 score += 1
-                reasons.append("internal coolant")
-            if common["finish_priority"] == "HIGH":
+                if "strongly preferred" in engine_result["coolant_preference"].lower():
+                    score += 1
+                reasons.append("coolant direction matches")
+            if engine_result["geometry_bias"].startswith("Sharper"):
+                score += match_terms(text_blob(row), ["micro", "solid", "precision"])
+                if score:
+                    reasons.append("sharper solid-drill direction")
+            if engine_result["stability_bias"] != "HIGH":
                 score += 1
-                reasons.append("finish-side drilling bias")
+                reasons.append("solid-drill stability bias")
             if common["cutting_speed_band"] == "HIGH":
                 score += 1
                 reasons.append("speed-friendly carbide bias")
@@ -430,24 +467,38 @@ def recommend_drilling(common: dict[str, Any]) -> None:
                 reasons.append("exact L/D match")
             elif isinstance(l_d, int):
                 score += max(0, 3 - abs(ld - l_d))
-            if common["doc_band"] == "HEAVY":
+            if engine_result["stability_bias"] == "HIGH":
                 score += 1
-                reasons.append("productivity-side DOC bias")
+                reasons.append("setup allows indexable productivity")
             if diameter >= 20:
                 score += 1
                 reasons.append("larger-diameter fit")
+            if engine_result["geometry_bias"].startswith("Stronger"):
+                score += 1
+                reasons.append("stronger point-direction fit")
         if common["material_group"] in row.get("materials", {}).get("iso_groups", []):
             score += 2
             reasons.append(f"{common['material_group']} material coverage")
-        if common["workholding"] == "POOR" or common["stickout"] == "LONG":
+        if engine_result["stability_bias"] == "LOW":
             score -= 1
             reasons.append("flagged for setup stability review")
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get("brand", ""), x[1].get("series", "")))
 
     st.subheader("Drilling Recommendation")
+    render_tool_engine_result(
+        engine_result,
+        [
+            ("Drill Type", engine_result["drill_type"]),
+            ("Coolant", "Strong" if "strongly" in engine_result["coolant_preference"].lower() else "Preferred"),
+            ("Stability", engine_result["stability_bias"]),
+            ("Point Bias", engine_result["geometry_bias"].split()[0]),
+        ],
+    )
     st.write(f"Target: **{diameter:.1f} mm**, **{ld}xD**, **{MATERIAL_GROUP_LABELS[common['material_group']]}**")
-    st.caption(DRILL_TYPE_HINTS[drill_type])
+    st.caption(DRILL_TYPE_HINTS[engine_result["drill_type"]])
+    if selected_drill_type != engine_result["drill_type"]:
+        st.info(f"Selected type: {selected_drill_type}. Engine direction: {engine_result['drill_type']}.")
     if not scored:
         alternate = "Solid Carbide Drill" if drill_type == "Indexable Drill" else "Catalog Data Explorer"
         render_empty_state("drilling", common["material_group"], f"Try {alternate} for this material group in the current demo dataset.")
@@ -485,6 +536,7 @@ def recommend_milling(common: dict[str, Any], mode: str) -> None:
             "Finishing": ["finish", "semi_finish"],
         }
         operation_label = st.selectbox("Endmill Strategy", list(operation_options.keys()))
+        engine_result = resolve_endmill_engine({**common, "operation": operation_label})
     else:
         rows = load_json("normalized/milling/indexable_cutters.json") or []
         operation_options = {
@@ -494,6 +546,7 @@ def recommend_milling(common: dict[str, Any], mode: str) -> None:
             "Slotting": ["slotting"],
         }
         operation_label = st.selectbox("Face Mill Operation", list(operation_options.keys()))
+        engine_result = resolve_facemill_engine({**common, "operation": operation_label})
     operation_terms = operation_options[operation_label]
     scored = []
     for row in rows:
@@ -505,28 +558,59 @@ def recommend_milling(common: dict[str, Any], mode: str) -> None:
         application = row.get("application", {})
         operations = application.get("operations", [])
         strategy = application.get("strategy", "")
+        geom = row.get("geometry", {})
         if mode == "ENDMILL":
-            if strategy in operation_terms:
+            if strategy == engine_result["strategy_bias"] or strategy in operation_terms:
                 score += 5
                 reasons.append(f"{operation_label.lower()} strategy match")
             if match_terms(blob, [application.get("materials_focus", "")]):
                 score += 1
+            flute_count = geom.get("flute_count") or 0
+            if not isinstance(flute_count, Real):
+                flute_count = 0
+            if "2-3" in engine_result["flute_count_direction"] and flute_count <= 3:
+                score += 2
+                reasons.append("lower flute-count direction")
+            elif "4-6" in engine_result["flute_count_direction"] and flute_count >= 4:
+                score += 2
+                reasons.append("finish-side flute direction")
+            elif "4 flute" in engine_result["flute_count_direction"] and flute_count == 4:
+                score += 2
+                reasons.append("general-purpose flute direction")
         else:
             if any(term in operations for term in operation_terms):
                 score += 5
                 reasons.append(f"{operation_label.lower()} cutter coverage")
+            if engine_result["cutter_style"] == "high_feed":
+                score += match_terms(blob, ["high_feed", "plunge", "feedmill"])
+                if match_terms(blob, ["high_feed", "plunge", "feedmill"]):
+                    reasons.append("high-feed engine direction")
+            elif engine_result["cutter_style"] == "shoulder":
+                score += match_terms(blob, ["shoulder", "90_degree"])
+                if match_terms(blob, ["shoulder", "90_degree"]):
+                    reasons.append("shoulder engine direction")
+            else:
+                score += match_terms(blob, ["face", "45_degree", "88_degree"])
+                if match_terms(blob, ["face", "45_degree", "88_degree"]):
+                    reasons.append("face-mill engine direction")
+            edges = geom.get("cutting_edges_per_insert") or 0
+            if not isinstance(edges, Real):
+                edges = 0
+            if "higher" in engine_result["insert_density"] and edges >= 8:
+                score += 2
+                reasons.append("higher insert-density direction")
+            elif "moderate" in engine_result["insert_density"] and 4 <= edges <= 8:
+                score += 2
+                reasons.append("moderate insert-density direction")
+            elif "lower" in engine_result["insert_density"] and 0 < edges <= 6:
+                score += 2
+                reasons.append("lower insert-density direction")
         if common["application_zone"] == "TOUGH":
             score += match_terms(blob, ["rough", "heavy", "plunge", "shoulder", "high_feed"])
-            if match_terms(blob, ["rough", "heavy", "plunge", "shoulder", "high_feed"]):
-                reasons.append("tough-side milling bias")
         elif common["application_zone"] == "WEAR":
             score += match_terms(blob, ["finish", "high velocity", "semi finish", "fine", "surface finish"])
-            if match_terms(blob, ["finish", "high velocity", "semi finish", "fine", "surface finish"]):
-                reasons.append("finish-side milling bias")
         else:
             score += match_terms(blob, ["general", "facing", "profiling"])
-            if match_terms(blob, ["general", "facing", "profiling"]):
-                reasons.append("balanced milling bias")
         if common["finish_priority"] == "HIGH":
             score += match_terms(blob, ["finish", "semi_finish", "surface finish"])
         if common["doc_band"] == "HEAVY":
@@ -538,6 +622,26 @@ def recommend_milling(common: dict[str, Any], mode: str) -> None:
 
     title = "Endmill Recommendation" if mode == "ENDMILL" else "Face Mill Recommendation"
     st.subheader(title)
+    if mode == "ENDMILL":
+        render_tool_engine_result(
+            engine_result,
+            [
+                ("Strategy", engine_result["strategy_bias"].replace("_", " ").title()),
+                ("Flute Dir.", engine_result["flute_count_direction"].split()[0]),
+                ("Chatter", engine_result["chatter_risk"]),
+                ("Zone", common["application_zone"]),
+            ],
+        )
+    else:
+        render_tool_engine_result(
+            engine_result,
+            [
+                ("Cutter Style", engine_result["cutter_style"].replace("_", " ").title()),
+                ("Insert Density", engine_result["insert_density"].split()[0].title()),
+                ("Zone", common["application_zone"]),
+                ("DOC", common["doc_band"]),
+            ],
+        )
     if not scored:
         render_empty_state(title, common["material_group"], "Use Catalog Data Explorer to show the supported milling families in this demo dataset.")
         return
@@ -566,6 +670,7 @@ def recommend_grooving(common: dict[str, Any]) -> None:
         "Undercutting": ["undercutting"],
     }
     operation_label = st.selectbox("Grooving Operation", list(operation_options.keys()))
+    engine_result = resolve_grooving_engine({**common, "operation": operation_label})
     operation_terms = operation_options[operation_label]
     rows = load_json("normalized/grooving/inserts.json") or []
     scored = []
@@ -580,20 +685,41 @@ def recommend_grooving(common: dict[str, Any]) -> None:
         if any(term in operations for term in operation_terms):
             score += 5
             reasons.append(f"{operation_label.lower()} coverage")
+        if engine_result["operation_type"] == "parting":
+            score += match_terms(blob, ["cutoff", "parting", "wmt", "self-grip"])
+            if match_terms(blob, ["cutoff", "parting", "wmt", "self-grip"]):
+                reasons.append("parting-direction fit")
+        elif engine_result["operation_type"] == "face_grooving":
+            score += match_terms(blob, ["face_grooving", "topgroove", "ranger"])
+            if match_terms(blob, ["face_grooving", "topgroove", "ranger"]):
+                reasons.append("face-grooving direction")
+        elif engine_result["operation_type"] == "undercutting":
+            score += match_terms(blob, ["undercutting", "topgroove"])
+            if match_terms(blob, ["undercutting", "topgroove"]):
+                reasons.append("undercutting direction")
+        else:
+            score += match_terms(blob, ["grooving", "top-lok", "wmt"])
+            if match_terms(blob, ["grooving", "top-lok", "wmt"]):
+                reasons.append("general grooving direction")
         if common["application_zone"] == "TOUGH":
             score += match_terms(blob, ["heavy", "wmt", "progroove"])
-            if match_terms(blob, ["heavy", "wmt", "progroove"]):
-                reasons.append("tough-side grooving bias")
         elif common["application_zone"] == "WEAR":
             score += match_terms(blob, ["topgroove", "precision", "finish"])
-            if match_terms(blob, ["topgroove", "precision", "finish"]):
-                reasons.append("wear-side grooving bias")
         if row_groups:
             reasons.append(f"{common['material_group']} material coverage")
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get('brand', ''), x[1].get('series', '')))
     grades = get_grade_rows(common["material_group"], common["application_zone"], "grooving_insert")
     st.subheader("Grooving Recommendation")
+    render_tool_engine_result(
+        engine_result,
+        [
+            ("Operation", operation_label),
+            ("Blade Dir.", engine_result["blade_rigidity"].split()[0].title()),
+            ("Chip Evac.", engine_result["chip_evacuating_priority"]),
+            ("Zone", common["application_zone"]),
+        ],
+    )
     st.caption("Insert-family records in this demo are mostly material-neutral here, so ISO-group sensitivity comes primarily from the matched grade bucket below.")
     if not scored:
         render_empty_state("grooving", common["material_group"])
@@ -624,7 +750,9 @@ def recommend_threading(common: dict[str, Any]) -> None:
         "Internal Threading": "internal_threading",
     }
     thread_label = st.selectbox("Threading Type", list(thread_options.keys()))
+    pitch_hint = st.selectbox("Pitch Bias", ["Fine", "Medium", "Coarse"], index=1)
     thread_type = thread_options[thread_label]
+    engine_result = resolve_threading_engine({**common, "thread_type": thread_type, "pitch_hint": pitch_hint})
     rows = load_json("normalized/threading/inserts.json") or []
     grades = get_grade_rows(common["material_group"], common["application_zone"], "threading_insert")
     grade_names = {row.get("grade") for row in grades}
@@ -641,6 +769,14 @@ def recommend_threading(common: dict[str, Any]) -> None:
             reasons.append(f"{thread_label.lower()} support")
         else:
             continue
+        if engine_result["thread_profile_direction"] == "laydown":
+            score += match_terms(blob, ["laydown", "266", "s-loc"])
+            if match_terms(blob, ["laydown", "266", "s-loc"]):
+                reasons.append("laydown-direction fit")
+        else:
+            score += match_terms(blob, ["16er", "16ir", "partial"])
+            if match_terms(blob, ["16er", "16ir", "partial"]):
+                reasons.append("partial-profile direction")
         matched_grades = [grade for grade in row.get("recommended_grades", []) if grade in grade_names]
         if matched_grades:
             score += 3
@@ -654,6 +790,15 @@ def recommend_threading(common: dict[str, Any]) -> None:
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get('brand', ''), x[1].get('designation_family', '')))
     st.subheader("Threading Recommendation")
+    render_tool_engine_result(
+        engine_result,
+        [
+            ("Thread Type", "Internal" if engine_result["thread_access"] == "internal" else "External"),
+            ("Profile Dir.", engine_result["thread_profile_direction"].title()),
+            ("Pitch", engine_result["pitch_hint"]),
+            ("Zone", common["application_zone"]),
+        ],
+    )
     if not scored:
         render_empty_state("threading", common["material_group"], "The current threading demo dataset is strongest for P, M, and K materials.")
         return
