@@ -281,10 +281,10 @@
   {
     "id": "kyocera_cn_diamond",
     "brand": "Kyocera",
-    "series": "CN 80\u00b0 Diamond",
+    "series": "CN 80° Diamond",
     "tool_category": "turning_insert",
     "subcategory": "negative_turning_insert",
-    "designation_family": "CN\u25a1\u25a1",
+    "designation_family": "CN",
     "geometry": {
       "shape_name": "80_degree_diamond",
       "clearance_angle_deg": 0
@@ -311,10 +311,10 @@
   {
     "id": "kyocera_dn_diamond",
     "brand": "Kyocera",
-    "series": "DN 55\u00b0 Diamond",
+    "series": "DN 55° Diamond",
     "tool_category": "turning_insert",
     "subcategory": "negative_turning_insert",
-    "designation_family": "DN\u25a1\u25a1",
+    "designation_family": "DN",
     "geometry": {
       "shape_name": "55_degree_diamond",
       "clearance_angle_deg": 0
@@ -341,10 +341,10 @@
   {
     "id": "kyocera_kn_parallelogram",
     "brand": "Kyocera",
-    "series": "KN 55\u00b0 Parallelogram",
+    "series": "KN 55° Parallelogram",
     "tool_category": "turning_insert",
     "subcategory": "negative_turning_insert",
-    "designation_family": "KN\u25a1\u25a1",
+    "designation_family": "KN",
     "geometry": {
       "shape_name": "55_degree_parallelogram",
       "clearance_angle_deg": 0
@@ -374,7 +374,7 @@
     "series": "RN Round",
     "tool_category": "turning_insert",
     "subcategory": "round_turning_insert",
-    "designation_family": "RN\u25a1\u25a1",
+    "designation_family": "RN",
     "geometry": {
       "shape_name": "round",
       "clearance_angle_deg": 0
@@ -401,10 +401,10 @@
   {
     "id": "kyocera_sn_square",
     "brand": "Kyocera",
-    "series": "SN 90\u00b0 Square",
+    "series": "SN 90° Square",
     "tool_category": "turning_insert",
     "subcategory": "negative_turning_insert",
-    "designation_family": "SN\u25a1\u25a1",
+    "designation_family": "SN",
     "geometry": {
       "shape_name": "90_degree_square",
       "clearance_angle_deg": 0
@@ -431,10 +431,10 @@
   {
     "id": "kyocera_tn_triangle",
     "brand": "Kyocera",
-    "series": "TN 60\u00b0 Triangle",
+    "series": "TN 60° Triangle",
     "tool_category": "turning_insert",
     "subcategory": "negative_turning_insert",
-    "designation_family": "TN\u25a1\u25a1",
+    "designation_family": "TN",
     "geometry": {
       "shape_name": "60_degree_triangle",
       "clearance_angle_deg": 0
@@ -686,10 +686,10 @@
   {
     "id": "kyocera_vn_diamond",
     "brand": "Kyocera",
-    "series": "VN 35\u00b0 Diamond",
+    "series": "VN 35° Diamond",
     "tool_category": "turning_insert",
     "subcategory": "positive_turning_insert",
-    "designation_family": "VN\u25a1\u25a1",
+    "designation_family": "VN",
     "geometry": {
       "shape_name": "35_degree_diamond",
       "clearance_angle_deg": 7
@@ -719,7 +719,7 @@
     "series": "WN Trigon",
     "tool_category": "turning_insert",
     "subcategory": "negative_turning_insert",
-    "designation_family": "WN\u25a1\u25a1",
+    "designation_family": "WN",
     "geometry": {
       "shape_name": "80_degree_trigon",
       "clearance_angle_deg": 0
