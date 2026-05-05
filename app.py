@@ -68,6 +68,8 @@ DRILL_TYPE_HINTS = {
     "Indexable Drill": "Best when diameter is larger and the holemaking priority leans toward productivity and insert economy.",
 }
 
+TURNING_INTENTS = ["Roughing", "Medium / General", "Finishing"]
+
 
 def load_json(relative_path: str) -> Any:
     path = DATA_ROOT / relative_path
@@ -179,6 +181,73 @@ def preferred_frame(rows: list[dict[str, Any]], preferred_columns: list[str]) ->
     frame = pd.DataFrame(rows)
     columns = [column for column in preferred_columns if column in frame.columns]
     return frame[columns] if columns else frame
+
+
+def build_turning_intent_profile(common: dict[str, Any], turning_intent: str) -> dict[str, Any]:
+    profile = {
+        "intent": turning_intent,
+        "chipbreaker_weights": {},
+        "primary_chipbreakers": [],
+        "secondary_chipbreakers": [],
+        "keyword_terms": [],
+        "edge_direction": "Balanced edge direction.",
+        "nose_radius_direction": "Moderate nose radius direction.",
+        "intent_caption": "General-purpose turning bias.",
+        "shop_preference": None,
+    }
+
+    if turning_intent == "Roughing":
+        profile.update(
+            {
+                "chipbreaker_weights": {"PR": 3, "MR": 2, "MRR": 3, "MF": 1, "SM": 1},
+                "primary_chipbreakers": ["PR", "MR", "MRR"],
+                "secondary_chipbreakers": ["MF", "SM"],
+                "keyword_terms": ["rough", "heavy", "medium", "general"],
+                "edge_direction": "Stronger edge / roughing direction.",
+                "nose_radius_direction": "Larger nose radius direction when setup and feature size allow.",
+                "intent_caption": "Bias toward stronger-edge, roughing-capable families.",
+            }
+        )
+    elif turning_intent == "Finishing":
+        profile.update(
+            {
+                "chipbreaker_weights": {"PF": 3, "MF": 2, "WF": 2, "XF": 2, "FINISHING": 2, "MR": 1},
+                "primary_chipbreakers": ["PF", "MF"],
+                "secondary_chipbreakers": ["WF", "XF", "FINISHING", "MR"],
+                "keyword_terms": ["finish", "wiper", "light", "profil", "precision"],
+                "edge_direction": "Sharper, lower-force finishing direction.",
+                "nose_radius_direction": "Smaller nose radius direction when print and edge strength permit.",
+                "intent_caption": "Bias toward lower-force, finishing-oriented families.",
+            }
+        )
+    else:
+        profile.update(
+            {
+                "chipbreaker_weights": {"MR": 2, "MF": 2, "PF": 1, "PR": 1},
+                "primary_chipbreakers": ["MR", "MF"],
+                "secondary_chipbreakers": ["PF", "PR"],
+                "keyword_terms": ["medium", "general", "balanced", "turning"],
+                "edge_direction": "Balanced edge / medium-cut direction.",
+                "nose_radius_direction": "Moderate nose radius direction for general turning.",
+                "intent_caption": "Bias toward medium-cut, general-purpose families.",
+            }
+        )
+
+    if common.get("material_group") == "P":
+        chipbreaker_weights = dict(profile["chipbreaker_weights"])
+        if turning_intent == "Roughing" or common.get("doc_band") == "HEAVY":
+            chipbreaker_weights["PR"] = max(chipbreaker_weights.get("PR", 0), 5)
+            chipbreaker_weights["MR"] = max(chipbreaker_weights.get("MR", 0), 2)
+            chipbreaker_weights["MF"] = max(chipbreaker_weights.get("MF", 0), 1)
+            profile["shop_preference"] = "PR"
+        elif turning_intent == "Finishing" or common.get("finish_priority") == "HIGH":
+            chipbreaker_weights["PF"] = max(chipbreaker_weights.get("PF", 0), 5)
+            chipbreaker_weights["MF"] = max(chipbreaker_weights.get("MF", 0), 2)
+            chipbreaker_weights["MR"] = max(chipbreaker_weights.get("MR", 0), 1)
+            profile["shop_preference"] = "PF"
+        profile["chipbreaker_weights"] = chipbreaker_weights
+
+    return profile
 
 
 def dataframe_display_kwargs(height: int | None = None) -> dict[str, Any]:
@@ -383,7 +452,12 @@ def recommend_turning(common: dict[str, Any]) -> None:
         "PR for rougher/heavier steel turning. MF/MR remain valid catalog alternatives "
         "depending on insert family and supplier."
     )
+    intent_note = (
+        "Turning intent is a shop-facing guide layered on top of DOC, finish priority, "
+        "setup stability, and catalog fit."
+    )
     operation = st.selectbox("Turning Operation", ["Longitudinal turning", "Facing", "Profiling", "Plunging"])
+    turning_intent = st.selectbox("Turning Intent", TURNING_INTENTS, index=1)
     rows = load_json("normalized/turning/inserts.json") or []
     blob_terms = {
         "Longitudinal turning": ["longitudinal", "turning", "general"],
@@ -398,6 +472,7 @@ def recommend_turning(common: dict[str, Any]) -> None:
         "Plunging": ["plunging"],
     }
     result = resolve_grade_behavior(common)
+    intent_profile = build_turning_intent_profile(common, turning_intent)
     identity = result["insert_identity"]
     target_chipbreaker = result["chipbreaker_hint"]["family"].split("/")[0].strip().upper()
     scored = []
@@ -421,6 +496,14 @@ def recommend_turning(common: dict[str, Any]) -> None:
         if target_chipbreaker and target_chipbreaker in chipbreaker:
             score += 2
             reasons.append(f"{target_chipbreaker} chipbreaker direction")
+        intent_weight = intent_profile["chipbreaker_weights"].get(chipbreaker, 0)
+        if intent_weight:
+            score += intent_weight
+            reasons.append(f"{turning_intent.lower()} intent favors {chipbreaker}")
+        intent_hits = match_terms(blob, intent_profile["keyword_terms"])
+        if intent_hits:
+            score += intent_hits
+            reasons.append(f"{turning_intent.lower()} intent wording")
         if result["required_toughness"] == "HIGH":
             score += match_terms(blob, ["rough", "mr", "smr", "heavy"])
             if score:
@@ -473,6 +556,13 @@ def recommend_turning(common: dict[str, Any]) -> None:
             f"Starting insert direction: {clean_text(identity['identity_summary'])}. "
             f"Chipbreaker bias: {clean_text(result['chipbreaker_hint']['family'])}."
         )
+        st.caption(
+            f"Turning intent: {clean_text(turning_intent)} | "
+            f"{clean_text(intent_profile['intent_caption'])} "
+            f"Edge direction: {clean_text(intent_profile['edge_direction'])} "
+            f"Nose-radius direction: {clean_text(intent_profile['nose_radius_direction'])}"
+        )
+        st.info(clean_text(intent_note))
         if common["material_group"] == "P":
             st.info(clean_text(p_steel_shop_note))
         if result["risk_flags"]:

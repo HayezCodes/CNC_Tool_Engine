@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 from difflib import SequenceMatcher
-from numbers import Real
 from typing import Any
 
 from .index import load_lookup_records
-from .normalize import normalize_tool_number
+from .normalize import normalize_tool_number, parse_tool_number_tokens
 
 
 def _safe_list(value: Any) -> list[str]:
@@ -33,6 +32,9 @@ def _designation_prefixes(value: str) -> list[str]:
     if not normalized:
         return []
     prefixes: list[str] = []
+    parsed = parse_tool_number_tokens(normalized)
+    if parsed["designation_prefix"]:
+        prefixes.append(parsed["designation_prefix"])
     if normalized.startswith("COROMILL"):
         prefixes.extend(["COROMILL", normalized])
     if normalized.startswith("CORODRILL"):
@@ -62,6 +64,79 @@ def _designation_prefixes(value: str) -> list[str]:
     if len(digit_prefix) >= 4:
         prefixes.append(digit_prefix)
     return list(dict.fromkeys(prefixes))
+
+
+def _record_tokens(record: dict[str, Any]) -> dict[str, str]:
+    base_value = (
+        str(record.get("manufacturer_number", "")).strip()
+        or str(record.get("manufacturer_reference", "")).strip()
+        or str(record.get("designation", "")).strip()
+        or str(record.get("series", "")).strip()
+    )
+    tokens = parse_tool_number_tokens(base_value)
+    if not tokens["designation_prefix"]:
+        designation = str(record.get("designation", "")).strip()
+        if designation:
+            tokens["designation_prefix"] = parse_tool_number_tokens(designation)["designation_prefix"]
+    if not tokens["suffix_token"]:
+        chipbreaker = str(record.get("geometry", {}).get("chipbreaker", "")).strip().upper()
+        if chipbreaker:
+            tokens["suffix_token"] = chipbreaker
+    if not tokens["grade_token"]:
+        grade = str(record.get("grade", "")).strip().upper()
+        if grade:
+            tokens["grade_token"] = normalize_tool_number(grade)
+    return tokens
+
+
+def _strong_partial_exact_style_match(
+    query_tokens: dict[str, str],
+    record_tokens: dict[str, str],
+    record: dict[str, Any],
+) -> tuple[float, list[str]]:
+    score = 0.0
+    reasons: list[str] = []
+
+    if not query_tokens["designation_prefix"] or not record_tokens["designation_prefix"]:
+        return score, reasons
+    if query_tokens["designation_prefix"] != record_tokens["designation_prefix"]:
+        return score, reasons
+
+    score += 6.0
+    reasons.append("same designation prefix")
+
+    if query_tokens["size_token"] and record_tokens["size_token"]:
+        if query_tokens["size_token"] == record_tokens["size_token"]:
+            score += 6.0
+            reasons.append("same ANSI size chunk")
+        else:
+            return 0.0, []
+
+    if query_tokens["suffix_token"] and record_tokens["suffix_token"]:
+        if query_tokens["suffix_token"] == record_tokens["suffix_token"]:
+            score += 5.0
+            reasons.append("same chipbreaker / suffix")
+        else:
+            return 0.0, []
+
+    if query_tokens["grade_token"] and record_tokens["grade_token"]:
+        if query_tokens["grade_token"] == record_tokens["grade_token"]:
+            score += 4.0
+            reasons.append("same grade chunk")
+        else:
+            return 0.0, []
+
+    if record.get("tool_category") == "turning_insert":
+        score += 3.0
+        reasons.append("turning insert family")
+    elif record.get("tool_category") == "threading_insert":
+        score += 2.0
+        reasons.append("threading family")
+
+    if query_tokens["designation_prefix"] and query_tokens["suffix_token"]:
+        reasons.append("strong insert-style match")
+
+    return score, reasons
 
 
 def _match_seed(record: dict[str, Any], normalized_query: str) -> bool:
@@ -114,6 +189,7 @@ def _exact_match(records: list[dict[str, Any]], normalized_query: str) -> dict[s
 def _score_record(
     record: dict[str, Any],
     normalized_query: str,
+    query_tokens: dict[str, str],
     query_prefixes: list[str],
     seed_profile: dict[str, set[str]],
     tool_category: str | None,
@@ -127,6 +203,7 @@ def _score_record(
         "series": normalize_tool_number(record.get("series", "")),
         "manufacturer_number": normalize_tool_number(record.get("manufacturer_number", "")),
     }
+    record_tokens = _record_tokens(record)
 
     if tool_category and record.get("tool_category") == tool_category:
         score += 2.0
@@ -159,6 +236,11 @@ def _score_record(
             if similarity >= 0.6:
                 score += round(similarity * 3.0, 2)
                 reasons.append(f"similar {label}")
+
+    partial_score, partial_reasons = _strong_partial_exact_style_match(query_tokens, record_tokens, record)
+    if partial_score:
+        score += partial_score
+        reasons.extend(partial_reasons)
 
     record_prefixes = []
     for field in (
@@ -199,6 +281,15 @@ def _score_record(
         if chipbreaker.strip().upper() in seed_profile["chipbreakers"]:
             score += 1.5
             reasons.append("similar chipbreaker")
+
+    if query_tokens["designation_prefix"] and record_tokens["designation_prefix"]:
+        if query_tokens["designation_prefix"] == record_tokens["designation_prefix"]:
+            score += 2.0
+            reasons.append("same normalized designation")
+    if query_tokens["grade_token"] and record_tokens["grade_token"]:
+        if query_tokens["grade_token"] == record_tokens["grade_token"]:
+            score += 2.0
+            reasons.append("same normalized grade")
 
     return score, list(dict.fromkeys(reasons))
 
@@ -294,6 +385,7 @@ def cross_reference_tool(
         if isinstance(chipbreaker, str) and chipbreaker.strip():
             seed_profile["chipbreakers"].add(chipbreaker.strip().upper())
 
+    query_tokens = parse_tool_number_tokens(normalized_query)
     query_prefixes = _designation_prefixes(normalized_query)
     scored: list[tuple[float, dict[str, Any], list[str]]] = []
     exact_key = None
@@ -312,7 +404,15 @@ def cross_reference_tool(
         )
         if exact_key and record_key == exact_key:
             continue
-        score, reasons = _score_record(record, normalized_query, query_prefixes, seed_profile, tool_category, brand)
+        score, reasons = _score_record(
+            record,
+            normalized_query,
+            query_tokens,
+            query_prefixes,
+            seed_profile,
+            tool_category,
+            brand,
+        )
         if score > 0:
             scored.append((score, record, reasons))
 

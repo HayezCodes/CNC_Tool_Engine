@@ -1,1 +1,110 @@
-[]
+[
+  {
+    "brand": "Sandvik Coromant",
+    "manufacturer_number": "CNMG 432-PF 4425",
+    "normalized_number": "CNMG432PF4425",
+    "tool_category": "turning_insert",
+    "series": "T-Max P",
+    "designation": "CNMG",
+    "grade": "4425",
+    "geometry": {
+      "chipbreaker": "PF",
+      "shape_family": "CNMG"
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "application": {
+      "operations": [
+        "longitudinal_turning",
+        "profiling"
+      ],
+      "strategy": "finishing"
+    },
+    "source_catalog": "manufacturer_lookup_seed",
+    "search_hint": "Sandvik Coromant CNMG 432 PF 4425 turning insert"
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "manufacturer_number": "CNMG 432-MR 4325",
+    "normalized_number": "CNMG432MR4325",
+    "tool_category": "turning_insert",
+    "series": "T-Max P",
+    "designation": "CNMG",
+    "grade": "4325",
+    "geometry": {
+      "chipbreaker": "MR",
+      "shape_family": "CNMG"
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "application": {
+      "operations": [
+        "longitudinal_turning",
+        "facing"
+      ],
+      "strategy": "roughing"
+    },
+    "source_catalog": "manufacturer_lookup_seed",
+    "search_hint": "Sandvik Coromant CNMG 432 MR 4325 turning insert"
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "manufacturer_number": "DNMG 432-PF 4425",
+    "normalized_number": "DNMG432PF4425",
+    "tool_category": "turning_insert",
+    "series": "T-Max P",
+    "designation": "DNMG",
+    "grade": "4425",
+    "geometry": {
+      "chipbreaker": "PF",
+      "shape_family": "DNMG"
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "facing"
+      ],
+      "strategy": "finishing"
+    },
+    "source_catalog": "manufacturer_lookup_seed",
+    "search_hint": "Sandvik Coromant DNMG 432 PF 4425 turning insert"
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "manufacturer_number": "DNMG 432-MR 4325",
+    "normalized_number": "DNMG432MR4325",
+    "tool_category": "turning_insert",
+    "series": "T-Max P",
+    "designation": "DNMG",
+    "grade": "4325",
+    "geometry": {
+      "chipbreaker": "MR",
+      "shape_family": "DNMG"
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "application": {
+      "operations": [
+        "longitudinal_turning",
+        "profiling"
+      ],
+      "strategy": "roughing"
+    },
+    "source_catalog": "manufacturer_lookup_seed",
+    "search_hint": "Sandvik Coromant DNMG 432 MR 4325 turning insert"
+  }
+]
