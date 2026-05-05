@@ -1,57 +1,23 @@
 [
   {
-    "id": "hvmg2",
+    "id": "aa",
     "brand": "Melin Tool",
-    "series": "HVMG2",
+    "series": "AA",
     "tool_category": "endmill",
     "geometry": {
       "flute_count": 2
     },
     "application": {
-      "strategy": "high_velocity",
-      "materials_focus": "Aluminum"
+      "strategy": "general",
+      "materials_focus": "Aluminum",
+      "operations": []
     },
     "materials": {
       "iso_groups": [
         "N"
       ]
-    }
-  },
-  {
-    "id": "hvmg3",
-    "brand": "Melin Tool",
-    "series": "HVMG3",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 3
     },
-    "application": {
-      "strategy": "high_velocity",
-      "materials_focus": "Aluminum"
-    },
-    "materials": {
-      "iso_groups": [
-        "N"
-      ]
-    }
-  },
-  {
-    "id": "hvrmg3",
-    "brand": "Melin Tool",
-    "series": "HVRMG3",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 3
-    },
-    "application": {
-      "strategy": "roughing",
-      "materials_focus": "Aluminum"
-    },
-    "materials": {
-      "iso_groups": [
-        "N"
-      ]
-    }
+    "recommended_grades": []
   },
   {
     "id": "axmg45",
@@ -63,213 +29,15 @@
     },
     "application": {
       "strategy": "general",
-      "materials_focus": "Aluminum"
+      "materials_focus": "Aluminum",
+      "operations": []
     },
     "materials": {
       "iso_groups": [
         "N"
       ]
-    }
-  },
-  {
-    "id": "exmg",
-    "brand": "Melin Tool",
-    "series": "EXMG",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 3
     },
-    "application": {
-      "strategy": "general",
-      "materials_focus": "Aluminum"
-    },
-    "materials": {
-      "iso_groups": [
-        "N"
-      ]
-    }
-  },
-  {
-    "id": "gxmg5",
-    "brand": "Melin Tool",
-    "series": "GXMG5",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 5
-    },
-    "application": {
-      "strategy": "trochoidal_milling",
-      "materials_focus": "trochoidal"
-    },
-    "materials": {
-      "iso_groups": [
-        "N"
-      ]
-    }
-  },
-  {
-    "id": "vxmg3t",
-    "brand": "Melin Tool",
-    "series": "VXMG3T",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 3
-    },
-    "application": {
-      "strategy": "rough_finish",
-      "materials_focus": "Titanium"
-    },
-    "materials": {
-      "iso_groups": [
-        "S"
-      ]
-    }
-  },
-  {
-    "id": "vxmg4t",
-    "brand": "Melin Tool",
-    "series": "VXMG4T",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 4
-    },
-    "application": {
-      "strategy": "roughing",
-      "materials_focus": "Titanium"
-    },
-    "materials": {
-      "iso_groups": [
-        "S"
-      ]
-    }
-  },
-  {
-    "id": "vxmg5t",
-    "brand": "Melin Tool",
-    "series": "VXMG5T",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 5
-    },
-    "application": {
-      "strategy": "roughing",
-      "materials_focus": "Titanium"
-    },
-    "materials": {
-      "iso_groups": [
-        "S"
-      ]
-    }
-  },
-  {
-    "id": "vxmg6t",
-    "brand": "Melin Tool",
-    "series": "VXMG6T",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 6
-    },
-    "application": {
-      "strategy": "rough_finish",
-      "materials_focus": "Titanium"
-    },
-    "materials": {
-      "iso_groups": [
-        "S"
-      ]
-    }
-  },
-  {
-    "id": "vxmg7",
-    "brand": "Melin Tool",
-    "series": "VXMG7",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 7
-    },
-    "application": {
-      "strategy": "semi_finish",
-      "materials_focus": "Steel"
-    },
-    "materials": {
-      "iso_groups": [
-        "P"
-      ]
-    }
-  },
-  {
-    "id": "vxmg9",
-    "brand": "Melin Tool",
-    "series": "VXMG9",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 9
-    },
-    "application": {
-      "strategy": "finish",
-      "materials_focus": "Steel"
-    },
-    "materials": {
-      "iso_groups": [
-        "P"
-      ]
-    }
-  },
-  {
-    "id": "vhmg",
-    "brand": "Melin Tool",
-    "series": "VHMG",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 4
-    },
-    "application": {
-      "strategy": "general",
-      "materials_focus": "Ferrous"
-    },
-    "materials": {
-      "iso_groups": [
-        "P",
-        "M"
-      ]
-    }
-  },
-  {
-    "id": "gvhmg",
-    "brand": "Melin Tool",
-    "series": "GVHMG",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 5
-    },
-    "application": {
-      "strategy": "general",
-      "materials_focus": "Ferrous"
-    },
-    "materials": {
-      "iso_groups": [
-        "P",
-        "M"
-      ]
-    }
-  },
-  {
-    "id": "crmg",
-    "brand": "Melin Tool",
-    "series": "CRMG",
-    "tool_category": "endmill",
-    "geometry": {
-      "flute_count": 8
-    },
-    "application": {
-      "strategy": "roughing",
-      "materials_focus": "Ferrous"
-    },
-    "materials": {
-      "iso_groups": [
-        "P"
-      ]
-    }
+    "recommended_grades": []
   },
   {
     "id": "crfmg",
@@ -281,13 +49,35 @@
     },
     "application": {
       "strategy": "rough_finish",
-      "materials_focus": "Ferrous"
+      "materials_focus": "Ferrous",
+      "operations": []
     },
     "materials": {
       "iso_groups": [
         "P"
       ]
-    }
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "crmg",
+    "brand": "Melin Tool",
+    "series": "CRMG",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 8
+    },
+    "application": {
+      "strategy": "roughing",
+      "materials_focus": "Ferrous",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": []
   },
   {
     "id": "emg35",
@@ -299,13 +89,35 @@
     },
     "application": {
       "strategy": "general",
-      "materials_focus": "Stainless"
+      "materials_focus": "Stainless",
+      "operations": []
     },
     "materials": {
       "iso_groups": [
         "M"
       ]
-    }
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "exmg",
+    "brand": "Melin Tool",
+    "series": "EXMG",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 3
+    },
+    "application": {
+      "strategy": "general",
+      "materials_focus": "Aluminum",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": []
   },
   {
     "id": "gmg",
@@ -317,31 +129,561 @@
     },
     "application": {
       "strategy": "general",
-      "materials_focus": "Stainless"
+      "materials_focus": "Stainless",
+      "operations": []
     },
     "materials": {
       "iso_groups": [
         "M",
         "S"
       ]
-    }
+    },
+    "recommended_grades": []
   },
   {
-    "id": "aa",
+    "id": "gvhmg",
     "brand": "Melin Tool",
-    "series": "AA",
+    "series": "GVHMG",
     "tool_category": "endmill",
     "geometry": {
-      "flute_count": 2
+      "flute_count": 5
     },
     "application": {
       "strategy": "general",
-      "materials_focus": "Aluminum"
+      "materials_focus": "Ferrous",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "gxmg5",
+    "brand": "Melin Tool",
+    "series": "GXMG5",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 5
+    },
+    "application": {
+      "strategy": "trochoidal_milling",
+      "materials_focus": "trochoidal",
+      "operations": []
     },
     "materials": {
       "iso_groups": [
         "N"
       ]
-    }
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "hvmg2",
+    "brand": "Melin Tool",
+    "series": "HVMG2",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 2
+    },
+    "application": {
+      "strategy": "high_velocity",
+      "materials_focus": "Aluminum",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "hvmg3",
+    "brand": "Melin Tool",
+    "series": "HVMG3",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 3
+    },
+    "application": {
+      "strategy": "high_velocity",
+      "materials_focus": "Aluminum",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "hvrmg3",
+    "brand": "Melin Tool",
+    "series": "HVRMG3",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 3
+    },
+    "application": {
+      "strategy": "roughing",
+      "materials_focus": "Aluminum",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "melin_hxmg2",
+    "brand": "Melin Tool",
+    "series": "HXMG2",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 2
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "slotting"
+      ],
+      "strategy": "high_feed"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "melin_hxmg4",
+    "brand": "Melin Tool",
+    "series": "HXMG4",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 4
+    },
+    "application": {
+      "operations": [
+        "roughing",
+        "profiling"
+      ],
+      "strategy": "high_feed"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "melin_vbmg_270",
+    "brand": "Melin Tool",
+    "series": "VBMG 270",
+    "tool_category": "endmill",
+    "geometry": {
+      "tip_style": "spherical_ball",
+      "sweep_deg": 270
+    },
+    "application": {
+      "operations": [
+        "finishing",
+        "profiling"
+      ],
+      "strategy": "ball_nose"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "melin_vbmg_300",
+    "brand": "Melin Tool",
+    "series": "VBMG 300",
+    "tool_category": "endmill",
+    "geometry": {
+      "tip_style": "spherical_ball",
+      "sweep_deg": 300
+    },
+    "application": {
+      "operations": [
+        "finishing",
+        "profiling"
+      ],
+      "strategy": "ball_nose"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "melin_vbmg2",
+    "brand": "Melin Tool",
+    "series": "VBMG2",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 2,
+      "tip_style": "spherical_ball"
+    },
+    "application": {
+      "operations": [
+        "finishing",
+        "profiling"
+      ],
+      "strategy": "ball_nose"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "melin_vbmg4",
+    "brand": "Melin Tool",
+    "series": "VBMG4",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 4,
+      "tip_style": "spherical_ball"
+    },
+    "application": {
+      "operations": [
+        "finishing",
+        "profiling"
+      ],
+      "strategy": "ball_nose"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "vhmg",
+    "brand": "Melin Tool",
+    "series": "VHMG",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 4
+    },
+    "application": {
+      "strategy": "general",
+      "materials_focus": "Ferrous",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "vxmg3t",
+    "brand": "Melin Tool",
+    "series": "VXMG3T",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 3
+    },
+    "application": {
+      "strategy": "rough_finish",
+      "materials_focus": "Titanium",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "vxmg4t",
+    "brand": "Melin Tool",
+    "series": "VXMG4T",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 4
+    },
+    "application": {
+      "strategy": "roughing",
+      "materials_focus": "Titanium",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "vxmg5t",
+    "brand": "Melin Tool",
+    "series": "VXMG5T",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 5
+    },
+    "application": {
+      "strategy": "roughing",
+      "materials_focus": "Titanium",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "vxmg6t",
+    "brand": "Melin Tool",
+    "series": "VXMG6T",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 6
+    },
+    "application": {
+      "strategy": "rough_finish",
+      "materials_focus": "Titanium",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "vxmg7",
+    "brand": "Melin Tool",
+    "series": "VXMG7",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 7
+    },
+    "application": {
+      "strategy": "semi_finish",
+      "materials_focus": "Steel",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "vxmg9",
+    "brand": "Melin Tool",
+    "series": "VXMG9",
+    "tool_category": "endmill",
+    "geometry": {
+      "flute_count": 9
+    },
+    "application": {
+      "strategy": "finish",
+      "materials_focus": "Steel",
+      "operations": []
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_316",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 316",
+    "tool_category": "endmill",
+    "geometry": {
+      "construction": "exchangeable_solid_carbide_head"
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "shoulder_milling"
+      ],
+      "strategy": "exchangeable_head"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_ball_nose",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill Ball Nose",
+    "tool_category": "endmill",
+    "geometry": {
+      "tip_style": "ball_nose"
+    },
+    "application": {
+      "operations": [
+        "semi_finish",
+        "profiling"
+      ],
+      "strategy": "ball_nose"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_ball_nose_finish",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill Ball Nose Finishing",
+    "tool_category": "endmill",
+    "geometry": {
+      "tip_style": "ball_nose"
+    },
+    "application": {
+      "operations": [
+        "finishing",
+        "profiling"
+      ],
+      "strategy": "ball_nose_finishing"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_plura_ball",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill Plura Ball Nose",
+    "tool_category": "endmill",
+    "geometry": {
+      "construction": "solid_carbide",
+      "tip_style": "ball_nose"
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "finishing"
+      ],
+      "strategy": "ball_nose"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_plura_sq",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill Plura Square Shoulder",
+    "tool_category": "endmill",
+    "geometry": {
+      "construction": "solid_carbide"
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "slotting",
+        "shoulder_milling"
+      ],
+      "strategy": "square_shoulder"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_plura_thread",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill Plura Thread Milling",
+    "tool_category": "endmill",
+    "geometry": {
+      "construction": "solid_carbide"
+    },
+    "application": {
+      "operations": [
+        "thread_milling"
+      ],
+      "strategy": "thread_milling"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
   }
 ]

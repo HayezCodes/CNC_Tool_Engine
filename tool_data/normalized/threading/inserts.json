@@ -1,50 +1,89 @@
 [
   {
-    "id": "kyocera_16er/16ir",
-    "brand": "Kyocera",
-    "series": "Threading",
+    "id": "iscar_gepi_partial",
+    "brand": "ISCAR",
+    "series": "GEPI-Partial Profile",
     "tool_category": "threading_insert",
-    "designation_family": "16ER/16IR",
+    "designation_family": "GEPI",
+    "geometry": {
+      "profile_style": "partial_profile",
+      "minimum_bore_mm": 12.5
+    },
     "application": {
       "operations": [
-        "external_threading",
         "internal_threading"
-      ]
-    },
-    "materials": {
-      "iso_groups": [
-        "P",
-        "M"
-      ]
-    },
-    "recommended_grades": [
-      "PR930",
-      "TC60"
-    ]
-  },
-  {
-    "id": "sandvik_corothread_266",
-    "brand": "Sandvik Coromant",
-    "series": "Threading",
-    "tool_category": "threading_insert",
-    "designation_family": "CoroThread 266",
-    "application": {
-      "operations": [
-        "external_threading",
-        "internal_threading"
-      ]
+      ],
+      "strategy": "partial_profile"
     },
     "materials": {
       "iso_groups": [
         "P",
         "M",
-        "K"
+        "K",
+        "S"
       ]
     },
     "recommended_grades": [
-      "GC1115",
-      "GC2025",
-      "GC1125"
+      "IC08",
+      "IC908"
+    ]
+  },
+  {
+    "id": "iscar_tip_partial_full",
+    "brand": "ISCAR",
+    "series": "TIP Partial / Full Profile",
+    "tool_category": "threading_insert",
+    "designation_family": "TIP",
+    "geometry": {
+      "profile_style": "partial_or_full_profile",
+      "minimum_bore_mm": 2.4
+    },
+    "application": {
+      "operations": [
+        "external_threading"
+      ],
+      "strategy": "small_part_threading"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "IC08",
+      "IC908"
+    ]
+  },
+  {
+    "id": "iscar_tipi_partial",
+    "brand": "ISCAR",
+    "series": "TIPI-Partial Profile",
+    "tool_category": "threading_insert",
+    "designation_family": "TIPI",
+    "geometry": {
+      "profile_style": "partial_profile",
+      "minimum_bore_mm": 20.0
+    },
+    "application": {
+      "operations": [
+        "internal_threading"
+      ],
+      "strategy": "partial_profile"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "IC08",
+      "IC908"
     ]
   },
   {
@@ -57,7 +96,8 @@
       "operations": [
         "external_threading",
         "internal_threading"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -69,7 +109,159 @@
     "recommended_grades": [
       "IC808",
       "IC806"
-    ]
+    ],
+    "geometry": {}
+  },
+  {
+    "id": "iscar_umgr_partial",
+    "brand": "ISCAR",
+    "series": "UMGR Partial Profile 55\u00b0/60\u00b0",
+    "tool_category": "threading_insert",
+    "designation_family": "UMGR",
+    "geometry": {
+      "profile_style": "partial_profile",
+      "minimum_bore_mm": 5.2
+    },
+    "application": {
+      "operations": [
+        "internal_threading"
+      ],
+      "strategy": "partial_profile"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_16er/16ir",
+    "brand": "Kyocera",
+    "series": "Threading",
+    "tool_category": "threading_insert",
+    "designation_family": "16ER/16IR",
+    "application": {
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M"
+      ]
+    },
+    "recommended_grades": [
+      "PR930",
+      "TC60"
+    ],
+    "geometry": {}
+  },
+  {
+    "id": "kyocera_vnt",
+    "brand": "Kyocera",
+    "series": "VNT",
+    "tool_category": "threading_insert",
+    "designation_family": "VNT",
+    "geometry": {
+      "profile_style": "laydown"
+    },
+    "application": {
+      "operations": [
+        "external_threading"
+      ],
+      "strategy": "general_threading"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_tmax_twin_lock",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max Twin-Lock",
+    "tool_category": "threading_insert",
+    "designation_family": "T-Max Twin-Lock",
+    "geometry": {
+      "profile_style": "laydown"
+    },
+    "application": {
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ],
+      "strategy": "oil_pipe_threading"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_tmax_u_lock",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max U-Lock",
+    "tool_category": "threading_insert",
+    "designation_family": "T-Max U-Lock",
+    "geometry": {
+      "profile_style": "laydown"
+    },
+    "application": {
+      "operations": [
+        "internal_threading"
+      ],
+      "strategy": "internal_threading"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corothread_266",
+    "brand": "Sandvik Coromant",
+    "series": "Threading",
+    "tool_category": "threading_insert",
+    "designation_family": "CoroThread 266",
+    "application": {
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": [
+      "GC1115",
+      "GC2025",
+      "GC1125"
+    ],
+    "geometry": {}
   },
   {
     "id": "widia_s-loc_threading",
@@ -80,7 +272,8 @@
     "application": {
       "operations": [
         "internal_threading"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -90,6 +283,7 @@
     },
     "recommended_grades": [
       "generic"
-    ]
+    ],
+    "geometry": {}
   }
 ]

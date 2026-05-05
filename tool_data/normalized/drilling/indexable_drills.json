@@ -1,5 +1,141 @@
 [
   {
+    "id": "generic_indexable_drill",
+    "brand": "Allied Machine & Engineering",
+    "series": "T-A/GEN3",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": "indexable_range",
+      "l_d": null,
+      "shank_type": "spade_or_indexable"
+    },
+    "insert_system": {
+      "grade": "various",
+      "breaker": "various"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_drs",
+    "brand": "Kyocera",
+    "series": "DRS",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        10.0,
+        12.5
+      ],
+      "l_d": 2,
+      "sleeve": "adjustable"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_drz",
+    "brand": "Kyocera",
+    "series": "DRZ",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        13.0,
+        59.0
+      ],
+      "l_d": 4
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_she",
+    "brand": "Kyocera",
+    "series": "SHE",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        60.0,
+        999.0
+      ],
+      "mount": "cartridge"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "large_diameter"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_shem",
+    "brand": "Kyocera",
+    "series": "SHEM",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        13.0,
+        59.0
+      ],
+      "l_d": 3
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
     "id": "taf_2d",
     "brand": "Mitsubishi Materials",
     "series": "TAF",
@@ -22,7 +158,12 @@
         "M",
         "K"
       ]
-    }
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
   },
   {
     "id": "taf_3d",
@@ -47,7 +188,12 @@
         "M",
         "K"
       ]
-    }
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
   },
   {
     "id": "taf_4d",
@@ -72,7 +218,12 @@
         "M",
         "K"
       ]
-    }
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
   },
   {
     "id": "taw_3d",
@@ -97,7 +248,12 @@
         "M",
         "K"
       ]
-    }
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
   },
   {
     "id": "taw_5d",
@@ -122,7 +278,12 @@
         "M",
         "K"
       ]
-    }
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
   },
   {
     "id": "taw_8d",
@@ -147,7 +308,12 @@
         "M",
         "K"
       ]
-    }
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
   },
   {
     "id": "tawsb_bridge_construction",
@@ -170,21 +336,26 @@
       "iso_groups": [
         "P"
       ]
-    }
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
   },
   {
-    "id": "generic_indexable_drill",
-    "brand": "Allied Machine & Engineering",
-    "series": "T-A/GEN3",
+    "id": "sandvik_corodrill_800",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 800",
     "tool_category": "indexable_drill",
     "geometry": {
-      "diameter_range_mm": "indexable_range",
-      "l_d": null,
-      "shank_type": "spade_or_indexable"
+      "tip_style": "indexable_insert_head"
     },
-    "insert_system": {
-      "grade": "various",
-      "breaker": "various"
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
     },
     "materials": {
       "iso_groups": [
@@ -192,6 +363,78 @@
         "M",
         "K"
       ]
-    }
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_801",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 801",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "tip_style": "asymmetrical_indexable"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_870",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 870",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "tip_style": "exchangeable_tip"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "exchangeable_tip"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_880",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 880",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "tip_style": "indexable_insert"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "large_diameter"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
   }
 ]

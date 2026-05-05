@@ -1,5 +1,706 @@
 [
   {
+    "id": "iscar_cut_grip",
+    "brand": "ISCAR",
+    "series": "CUT-GRIP",
+    "tool_category": "grooving_insert",
+    "designation_family": "CUT-GRIP",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving",
+        "parting"
+      ],
+      "strategy": "swiss_and_small_lathe"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "iscar_dgn/dgf",
+    "brand": "ISCAR",
+    "series": "Do-Grip",
+    "tool_category": "grooving_insert",
+    "designation_family": "DGN/DGF",
+    "geometry": {
+      "width_range_mm": [
+        "1.0",
+        "1.5",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "max_depth_mm": 25.0
+    },
+    "application": {
+      "operations": [
+        "parting",
+        "grooving"
+      ],
+      "strategy": ""
+    },
+    "notes": "Double-ended grooving/parting",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "iscar_heli_grip",
+    "brand": "ISCAR",
+    "series": "HELI-GRIP",
+    "tool_category": "grooving_insert",
+    "designation_family": "HELI-GRIP",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_groove_turn"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "iscar_pentacut",
+    "brand": "ISCAR",
+    "series": "PENTACUT",
+    "tool_category": "grooving_insert",
+    "designation_family": "PENTACUT",
+    "geometry": {
+      "cutting_edges": 5
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "turning"
+      ],
+      "strategy": "multi_edge_groove_turn"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "IC830",
+      "IC808"
+    ]
+  },
+  {
+    "id": "iscar_picco",
+    "brand": "ISCAR",
+    "series": "PICCO",
+    "tool_category": "grooving_insert",
+    "designation_family": "PICCO",
+    "geometry": {
+      "minimum_bore_mm": 0.6
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "internal_grooving"
+      ],
+      "strategy": "small_bore_internal"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "iscar_swisscut",
+    "brand": "ISCAR",
+    "series": "SWISSCUT",
+    "tool_category": "grooving_insert",
+    "designation_family": "SWISSCUT",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving",
+        "parting"
+      ],
+      "strategy": "swiss_type"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "iscar_gtn/gfn",
+    "brand": "ISCAR",
+    "series": "Self-Grip",
+    "tool_category": "grooving_insert",
+    "designation_family": "GTN/GFN",
+    "geometry": {
+      "width_range_mm": [
+        "1.0",
+        "1.5",
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "max_depth_mm": 25.0
+    },
+    "application": {
+      "operations": [
+        "parting",
+        "grooving"
+      ],
+      "strategy": ""
+    },
+    "notes": "Common self-grip style family",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "iscar_tgfh/tgtr",
+    "brand": "ISCAR",
+    "series": "Top-Grip",
+    "tool_category": "grooving_insert",
+    "designation_family": "TGFH/TGTR",
+    "geometry": {
+      "width_range_mm": [
+        "2.0",
+        "3.0",
+        "4.0",
+        "5.0"
+      ],
+      "max_depth_mm": 20.0
+    },
+    "application": {
+      "operations": [
+        "face_grooving",
+        "profiling"
+      ],
+      "strategy": ""
+    },
+    "notes": "Face grooving and profiling family",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ceracut_cutoff",
+    "brand": "Kyocera",
+    "series": "CERACUT Cut-Off",
+    "tool_category": "grooving_insert",
+    "designation_family": "CERACUT Cut-Off",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "parting"
+      ],
+      "strategy": "cut_off"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ceracut_plunge_turn",
+    "brand": "Kyocera",
+    "series": "CERACUT Plunge & Turn",
+    "tool_category": "grooving_insert",
+    "designation_family": "CERACUT Plunge & Turn",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving",
+        "profiling"
+      ],
+      "strategy": "plunge_turn"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_kga",
+    "brand": "Kyocera",
+    "series": "KGA",
+    "tool_category": "grooving_insert",
+    "designation_family": "KGA",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_kgb_kgbs",
+    "brand": "Kyocera",
+    "series": "KGB / KGBS",
+    "tool_category": "grooving_insert",
+    "designation_family": "KGB / KGBS",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_kgba_kgbas",
+    "brand": "Kyocera",
+    "series": "KGBA / KGBAS",
+    "tool_category": "grooving_insert",
+    "designation_family": "KGBA / KGBAS",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_kgh_kghs",
+    "brand": "Kyocera",
+    "series": "KGH / KGHS",
+    "tool_category": "grooving_insert",
+    "designation_family": "KGH / KGHS",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_kgm_kgmt",
+    "brand": "Kyocera",
+    "series": "KGM / KGM-T",
+    "tool_category": "grooving_insert",
+    "designation_family": "KGM / KGM-T",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "automatic_lathe_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_kgmm_kgms",
+    "brand": "Kyocera",
+    "series": "KGMM / KGMS",
+    "tool_category": "grooving_insert",
+    "designation_family": "KGMM / KGMS",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_kgmu",
+    "brand": "Kyocera",
+    "series": "KGMU",
+    "tool_category": "grooving_insert",
+    "designation_family": "KGMU",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ktg",
+    "brand": "Kyocera",
+    "series": "KTG",
+    "tool_category": "grooving_insert",
+    "designation_family": "KTG",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ktgf",
+    "brand": "Kyocera",
+    "series": "KTGF-F / KTGF",
+    "tool_category": "grooving_insert",
+    "designation_family": "KTGF-F / KTGF",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ktkb",
+    "brand": "Kyocera",
+    "series": "KTKB",
+    "tool_category": "grooving_insert",
+    "designation_family": "KTKB",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "parting"
+      ],
+      "strategy": "cut_off"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ktkh",
+    "brand": "Kyocera",
+    "series": "KTKH",
+    "tool_category": "grooving_insert",
+    "designation_family": "KTKH",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "parting"
+      ],
+      "strategy": "cut_off"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ktktb",
+    "brand": "Kyocera",
+    "series": "KTKTB / KTKTBF",
+    "tool_category": "grooving_insert",
+    "designation_family": "KTKTB / KTKTBF",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "parting"
+      ],
+      "strategy": "cut_off"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_s_ktgf",
+    "brand": "Kyocera",
+    "series": "S-KTGF",
+    "tool_category": "grooving_insert",
+    "designation_family": "S\u2026KTGF",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "external_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_bear_paw",
+    "brand": "Sandvik Coromant",
+    "series": "Bear Paw",
+    "tool_category": "grooving_insert",
+    "designation_family": "BP",
+    "geometry": {
+      "insert_width_range_inch": [
+        ".500",
+        ".750"
+      ]
+    },
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "heavy_duty_external"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "P45",
+      "M35",
+      "S30"
+    ]
+  },
+  {
+    "id": "sandvik_corocut_1_2",
+    "brand": "Sandvik Coromant",
+    "series": "CoroCut 1-2",
+    "tool_category": "grooving_insert",
+    "designation_family": "CoroCut 1-2",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "parting",
+        "grooving",
+        "profiling"
+      ],
+      "strategy": "general_parting_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corocut_3_edge",
+    "brand": "Sandvik Coromant",
+    "series": "CoroCut 3 edge",
+    "tool_category": "grooving_insert",
+    "designation_family": "CoroCut 3 edge",
+    "geometry": {
+      "cutting_edges": 3
+    },
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "multi_edge_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corocut_qd",
+    "brand": "Sandvik Coromant",
+    "series": "CoroCut QD",
+    "tool_category": "grooving_insert",
+    "designation_family": "CoroCut QD",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "parting",
+        "grooving"
+      ],
+      "strategy": "parting_off"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_tmax_q_cut",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max Q-Cut",
+    "tool_category": "grooving_insert",
+    "designation_family": "T-Max Q-Cut",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "parting",
+        "grooving"
+      ],
+      "strategy": "heavy_parting"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
     "id": "sandvik_tlg",
     "brand": "Sandvik Coromant",
     "series": "Top-Lok",
@@ -20,9 +721,14 @@
       "operations": [
         "grooving",
         "parting"
-      ]
+      ],
+      "strategy": ""
     },
-    "notes": "Top-Lok grooving insert family"
+    "notes": "Top-Lok grooving insert family",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
   },
   {
     "id": "sandvik_tlr",
@@ -41,9 +747,14 @@
     "application": {
       "operations": [
         "grooving"
-      ]
+      ],
+      "strategy": ""
     },
-    "notes": "Top-Lok radius grooving"
+    "notes": "Top-Lok radius grooving",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
   },
   {
     "id": "sandvik_tltp",
@@ -61,16 +772,119 @@
     "application": {
       "operations": [
         "threading"
-      ]
+      ],
+      "strategy": ""
     },
-    "notes": "Top-Lok threading/grooving crossover"
+    "notes": "Top-Lok threading/grooving crossover",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
   },
   {
-    "id": "widia_wmt",
-    "brand": "WIDIA",
-    "series": "WMT",
+    "id": "sandvik_tltf",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok Fine Pitch",
     "tool_category": "grooving_insert",
-    "designation_family": "WMT",
+    "designation_family": "TLTF",
+    "geometry": {
+      "profile": "60_degree_v"
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "threading"
+      ],
+      "strategy": "fine_pitch_profile"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "1125",
+      "2135",
+      "3020",
+      "H13A"
+    ]
+  },
+  {
+    "id": "sandvik_tlgp",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok GP",
+    "tool_category": "grooving_insert",
+    "designation_family": "TLGP",
+    "geometry": {
+      "insert_width_range_inch": [
+        ".031",
+        ".250"
+      ]
+    },
+    "application": {
+      "operations": [
+        "grooving"
+      ],
+      "strategy": "precision_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "1125",
+      "2135",
+      "3020",
+      "H13A"
+    ]
+  },
+  {
+    "id": "sandvik_tltk",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok Positive V-Profile",
+    "tool_category": "grooving_insert",
+    "designation_family": "TLTK",
+    "geometry": {
+      "profile": "60_degree_v_positive"
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "threading"
+      ],
+      "strategy": "v_profile_positive"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "1125",
+      "2135",
+      "3020",
+      "H13A"
+    ]
+  },
+  {
+    "id": "widia_progroove",
+    "brand": "WIDIA",
+    "series": "ProGroove",
+    "tool_category": "grooving_insert",
+    "designation_family": "ProGroove",
     "geometry": {
       "width_range_mm": [
         "2.0",
@@ -79,17 +893,100 @@
         "6.0",
         "8.0"
       ],
+      "max_depth_mm": 40.0
+    },
+    "application": {
+      "operations": [
+        "cutoff",
+        "grooving"
+      ],
+      "strategy": ""
+    },
+    "notes": "Single-edge maximum depth capacity",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "widia_ranger",
+    "brand": "WIDIA",
+    "series": "Ranger",
+    "tool_category": "grooving_insert",
+    "designation_family": "Ranger",
+    "geometry": {
+      "width_range_mm": [
+        "3.18",
+        "4.76",
+        "6.35"
+      ],
       "max_depth_mm": 25.4
     },
     "application": {
       "operations": [
-        "grooving",
-        "cutoff",
-        "turning",
-        "profiling"
-      ]
+        "face_grooving"
+      ],
+      "strategy": ""
     },
-    "notes": "Heavy stock removal double-sided system"
+    "notes": "Adjustable cartridge face grooving system",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "widia_s-loc",
+    "brand": "WIDIA",
+    "series": "S-LOC",
+    "tool_category": "grooving_insert",
+    "designation_family": "S-LOC",
+    "geometry": {
+      "width_range_mm": [
+        "1.04",
+        "1.5",
+        "2.0",
+        "3.81"
+      ],
+      "max_depth_mm": 2.4
+    },
+    "application": {
+      "operations": [
+        "face_grooving",
+        "id_grooving"
+      ],
+      "strategy": ""
+    },
+    "notes": "Small-bore grooving",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "widia_separator",
+    "brand": "WIDIA",
+    "series": "Separator",
+    "tool_category": "grooving_insert",
+    "designation_family": "Separator",
+    "geometry": {
+      "width_range_mm": [
+        "2.0",
+        "3.0",
+        "4.0"
+      ],
+      "max_depth_mm": 25.4
+    },
+    "application": {
+      "operations": [
+        "cutoff"
+      ],
+      "strategy": ""
+    },
+    "notes": "Positive mechanical self-clamping blades",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
   },
   {
     "id": "widia_topgroove",
@@ -114,16 +1011,21 @@
         "grooving",
         "face_grooving",
         "undercutting"
-      ]
+      ],
+      "strategy": ""
     },
-    "notes": "Wide coverage standard and face grooving"
+    "notes": "Wide coverage standard and face grooving",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
   },
   {
-    "id": "widia_progroove",
+    "id": "widia_wmt",
     "brand": "WIDIA",
-    "series": "ProGroove",
+    "series": "WMT",
     "tool_category": "grooving_insert",
-    "designation_family": "ProGroove",
+    "designation_family": "WMT",
     "geometry": {
       "width_range_mm": [
         "2.0",
@@ -132,150 +1034,21 @@
         "6.0",
         "8.0"
       ],
-      "max_depth_mm": 40.0
+      "max_depth_mm": 25.4
     },
     "application": {
       "operations": [
+        "grooving",
         "cutoff",
-        "grooving"
-      ]
-    },
-    "notes": "Single-edge maximum depth capacity"
-  },
-  {
-    "id": "widia_separator",
-    "brand": "WIDIA",
-    "series": "Separator",
-    "tool_category": "grooving_insert",
-    "designation_family": "Separator",
-    "geometry": {
-      "width_range_mm": [
-        "2.0",
-        "3.0",
-        "4.0"
-      ],
-      "max_depth_mm": 25.4
-    },
-    "application": {
-      "operations": [
-        "cutoff"
-      ]
-    },
-    "notes": "Positive mechanical self-clamping blades"
-  },
-  {
-    "id": "widia_ranger",
-    "brand": "WIDIA",
-    "series": "Ranger",
-    "tool_category": "grooving_insert",
-    "designation_family": "Ranger",
-    "geometry": {
-      "width_range_mm": [
-        "3.18",
-        "4.76",
-        "6.35"
-      ],
-      "max_depth_mm": 25.4
-    },
-    "application": {
-      "operations": [
-        "face_grooving"
-      ]
-    },
-    "notes": "Adjustable cartridge face grooving system"
-  },
-  {
-    "id": "widia_s-loc",
-    "brand": "WIDIA",
-    "series": "S-LOC",
-    "tool_category": "grooving_insert",
-    "designation_family": "S-LOC",
-    "geometry": {
-      "width_range_mm": [
-        "1.04",
-        "1.5",
-        "2.0",
-        "3.81"
-      ],
-      "max_depth_mm": 2.4
-    },
-    "application": {
-      "operations": [
-        "face_grooving",
-        "id_grooving"
-      ]
-    },
-    "notes": "Small-bore grooving"
-  },
-  {
-    "id": "iscar_gtn/gfn",
-    "brand": "ISCAR",
-    "series": "Self-Grip",
-    "tool_category": "grooving_insert",
-    "designation_family": "GTN/GFN",
-    "geometry": {
-      "width_range_mm": [
-        "1.0",
-        "1.5",
-        "2.0",
-        "3.0",
-        "4.0"
-      ],
-      "max_depth_mm": 25.0
-    },
-    "application": {
-      "operations": [
-        "parting",
-        "grooving"
-      ]
-    },
-    "notes": "Common self-grip style family"
-  },
-  {
-    "id": "iscar_dgn/dgf",
-    "brand": "ISCAR",
-    "series": "Do-Grip",
-    "tool_category": "grooving_insert",
-    "designation_family": "DGN/DGF",
-    "geometry": {
-      "width_range_mm": [
-        "1.0",
-        "1.5",
-        "2.0",
-        "3.0",
-        "4.0"
-      ],
-      "max_depth_mm": 25.0
-    },
-    "application": {
-      "operations": [
-        "parting",
-        "grooving"
-      ]
-    },
-    "notes": "Double-ended grooving/parting"
-  },
-  {
-    "id": "iscar_tgfh/tgtr",
-    "brand": "ISCAR",
-    "series": "Top-Grip",
-    "tool_category": "grooving_insert",
-    "designation_family": "TGFH/TGTR",
-    "geometry": {
-      "width_range_mm": [
-        "2.0",
-        "3.0",
-        "4.0",
-        "5.0"
-      ],
-      "max_depth_mm": 20.0
-    },
-    "application": {
-      "operations": [
-        "face_grooving",
+        "turning",
         "profiling"
-      ]
+      ],
+      "strategy": ""
     },
-    "notes": "Face grooving and profiling family"
+    "notes": "Heavy stock removal double-sided system",
+    "materials": {
+      "iso_groups": []
+    },
+    "recommended_grades": []
   }
 ]

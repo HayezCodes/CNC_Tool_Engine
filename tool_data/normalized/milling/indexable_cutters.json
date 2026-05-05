@@ -1,93 +1,51 @@
 [
   {
-    "id": "helido_h490",
+    "id": "ballplus",
     "brand": "ISCAR",
-    "series": "HELIDO H490",
+    "series": "BALLPLUS",
     "tool_category": "indexable_milling_cutter",
-    "subcategory": "90_degree_shoulder_mill",
+    "subcategory": "modular_milling_system",
     "geometry": {
-      "cutting_edges_per_insert": 4
+      "cutting_edges_per_insert": null
+    },
+    "application": {
+      "operations": [
+        "profiling",
+        "die_mold"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "cutters_for_aluminum",
+    "brand": "ISCAR",
+    "series": "Cutters for Aluminum",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "aluminum_mill",
+    "geometry": {
+      "cutting_edges_per_insert": null
     },
     "application": {
       "operations": [
         "shoulder_milling",
-        "slotting",
-        "facing",
-        "plunge_milling"
-      ]
-    },
-    "materials": {
-      "iso_groups": [
-        "P",
-        "M",
-        "K"
-      ]
-    }
-  },
-  {
-    "id": "helido_s890_fsn",
-    "brand": "ISCAR",
-    "series": "HELIDO S890 FSN",
-    "tool_category": "indexable_milling_cutter",
-    "subcategory": "88_degree_face_mill",
-    "geometry": {
-      "cutting_edges_per_insert": 8
-    },
-    "application": {
-      "operations": [
         "face_milling"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
-        "P",
-        "K"
-      ]
-    }
-  },
-  {
-    "id": "helido_845",
-    "brand": "ISCAR",
-    "series": "HELIDO 845",
-    "tool_category": "indexable_milling_cutter",
-    "subcategory": "45_degree_face_mill",
-    "geometry": {
-      "cutting_edges_per_insert": 8
-    },
-    "application": {
-      "operations": [
-        "face_milling"
+        "N"
       ]
     },
-    "materials": {
-      "iso_groups": [
-        "P",
-        "M",
-        "K"
-      ]
-    }
-  },
-  {
-    "id": "helido_onmu_16-edge",
-    "brand": "ISCAR",
-    "series": "HELIDO ONMU 16-edge",
-    "tool_category": "indexable_milling_cutter",
-    "subcategory": "45_degree_face_mill",
-    "geometry": {
-      "cutting_edges_per_insert": 16
-    },
-    "application": {
-      "operations": [
-        "face_milling"
-      ]
-    },
-    "materials": {
-      "iso_groups": [
-        "P",
-        "M",
-        "K"
-      ]
-    }
+    "recommended_grades": []
   },
   {
     "id": "helido_600_feedmill",
@@ -104,7 +62,8 @@
         "ramping",
         "plunging",
         "helical_interpolation"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -112,12 +71,37 @@
         "M",
         "K"
       ]
-    }
+    },
+    "recommended_grades": []
   },
   {
-    "id": "t490_helitang_chip_splitting",
+    "id": "helido_845",
     "brand": "ISCAR",
-    "series": "T490 HELITANG chip splitting",
+    "series": "HELIDO 845",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 8
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "helido_h490",
+    "brand": "ISCAR",
+    "series": "HELIDO H490",
     "tool_category": "indexable_milling_cutter",
     "subcategory": "90_degree_shoulder_mill",
     "geometry": {
@@ -125,28 +109,36 @@
     },
     "application": {
       "operations": [
+        "shoulder_milling",
+        "slotting",
+        "facing",
+        "plunge_milling"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "helido_h690",
+    "brand": "ISCAR",
+    "series": "HELIDO H690",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 6
+    },
+    "application": {
+      "operations": [
         "shoulder_milling"
-      ]
-    },
-    "materials": {
-      "iso_groups": [
-        "P"
-      ]
-    }
-  },
-  {
-    "id": "mini-tangslot",
-    "brand": "ISCAR",
-    "series": "MINI-TANGSLOT",
-    "tool_category": "indexable_milling_cutter",
-    "subcategory": "slotting_cutter",
-    "geometry": {
-      "cutting_edges_per_insert": 4
-    },
-    "application": {
-      "operations": [
-        "slotting"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -154,22 +146,23 @@
         "M",
         "K"
       ]
-    }
+    },
+    "recommended_grades": []
   },
   {
-    "id": "tangplunge_htp",
+    "id": "helido_onmu_16-edge",
     "brand": "ISCAR",
-    "series": "TANGPLUNGE HTP",
+    "series": "HELIDO ONMU 16-edge",
     "tool_category": "indexable_milling_cutter",
-    "subcategory": "plunge_mill",
+    "subcategory": "45_degree_face_mill",
     "geometry": {
-      "cutting_edges_per_insert": 4
+      "cutting_edges_per_insert": 16
     },
     "application": {
       "operations": [
-        "plunge_milling",
         "face_milling"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -177,22 +170,46 @@
         "M",
         "K"
       ]
-    }
+    },
+    "recommended_grades": []
   },
   {
-    "id": "ballplus",
+    "id": "helido_s890_fsn",
     "brand": "ISCAR",
-    "series": "BALLPLUS",
+    "series": "HELIDO S890 FSN",
     "tool_category": "indexable_milling_cutter",
-    "subcategory": "modular_milling_system",
+    "subcategory": "88_degree_face_mill",
     "geometry": {
-      "cutting_edges_per_insert": null
+      "cutting_edges_per_insert": 8
     },
     "application": {
       "operations": [
-        "profiling",
-        "die_mold"
+        "face_milling"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "K"
       ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "heliiqmill_390",
+    "brand": "ISCAR",
+    "series": "HELIIQMILL 390",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 3
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -200,7 +217,8 @@
         "M",
         "S"
       ]
-    }
+    },
+    "recommended_grades": []
   },
   {
     "id": "millshred",
@@ -215,7 +233,8 @@
       "operations": [
         "profiling",
         "deep_cavity_milling"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -223,43 +242,23 @@
         "M",
         "S"
       ]
-    }
+    },
+    "recommended_grades": []
   },
   {
-    "id": "heliiqmill_390",
+    "id": "mini-tangslot",
     "brand": "ISCAR",
-    "series": "HELIIQMILL 390",
+    "series": "MINI-TANGSLOT",
     "tool_category": "indexable_milling_cutter",
-    "subcategory": "90_degree_shoulder_mill",
+    "subcategory": "slotting_cutter",
     "geometry": {
-      "cutting_edges_per_insert": 3
+      "cutting_edges_per_insert": 4
     },
     "application": {
       "operations": [
-        "shoulder_milling"
-      ]
-    },
-    "materials": {
-      "iso_groups": [
-        "P",
-        "M",
-        "S"
-      ]
-    }
-  },
-  {
-    "id": "helido_h690",
-    "brand": "ISCAR",
-    "series": "HELIDO H690",
-    "tool_category": "indexable_milling_cutter",
-    "subcategory": "90_degree_shoulder_mill",
-    "geometry": {
-      "cutting_edges_per_insert": 6
-    },
-    "application": {
-      "operations": [
-        "shoulder_milling"
-      ]
+        "slotting"
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -267,7 +266,55 @@
         "M",
         "K"
       ]
-    }
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "t490_helitang_chip_splitting",
+    "brand": "ISCAR",
+    "series": "T490 HELITANG chip splitting",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "tangplunge_htp",
+    "brand": "ISCAR",
+    "series": "TANGPLUNGE HTP",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "plunge_mill",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    },
+    "application": {
+      "operations": [
+        "plunge_milling",
+        "face_milling"
+      ],
+      "strategy": ""
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
   },
   {
     "id": "thread_milling_tools",
@@ -281,7 +328,8 @@
     "application": {
       "operations": [
         "thread_milling"
-      ]
+      ],
+      "strategy": ""
     },
     "materials": {
       "iso_groups": [
@@ -289,27 +337,886 @@
         "M",
         "N"
       ]
-    }
+    },
+    "recommended_grades": []
   },
   {
-    "id": "cutters_for_aluminum",
-    "brand": "ISCAR",
-    "series": "Cutters for Aluminum",
+    "id": "kyocera_dmc",
+    "brand": "Kyocera",
+    "series": "DMC / DMC-H / DMC-SX",
     "tool_category": "indexable_milling_cutter",
-    "subcategory": "aluminum_mill",
+    "subcategory": "shoulder_endmill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": "multifunction_endmill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mec_mecx",
+    "brand": "Kyocera",
+    "series": "MEC / MECX",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "shoulder_endmill",
     "geometry": {
-      "cutting_edges_per_insert": null
+      "corner_angle_deg": 90
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": "endmill_for_shouldering"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mey",
+    "brand": "Kyocera",
+    "series": "MEY",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "multifunction_endmill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "profiling",
+        "shoulder_milling"
+      ],
+      "strategy": "multi_function"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mez_g",
+    "brand": "Kyocera",
+    "series": "MEZ-G",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "multifunction_endmill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "profiling",
+        "shoulder_milling"
+      ],
+      "strategy": "multi_function"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mfb_r",
+    "brand": "Kyocera",
+    "series": "MFB-R",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "corner_angle_deg": 45
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mhd",
+    "brand": "Kyocera",
+    "series": "MHD",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "shoulder_endmill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": "shouldering"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mof45_r",
+    "brand": "Kyocera",
+    "series": "MOF45-R",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "corner_angle_deg": 45
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "45_degree_face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_msd45_r",
+    "brand": "Kyocera",
+    "series": "MSD45-R",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "corner_angle_deg": 45
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "45_degree_face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mse45",
+    "brand": "Kyocera",
+    "series": "MSE45",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "corner_angle_deg": 45
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "45_degree_face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_msm",
+    "brand": "Kyocera",
+    "series": "MSM",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "0_degree_face_mill",
+    "geometry": {
+      "corner_angle_deg": 0
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "high_feed_face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mso45",
+    "brand": "Kyocera",
+    "series": "MSO45",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "45_degree_face_mill",
+    "geometry": {
+      "corner_angle_deg": 45
+    },
+    "application": {
+      "operations": [
+        "face_milling",
+        "shoulder_milling"
+      ],
+      "strategy": "45_degree_face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mso90_r",
+    "brand": "Kyocera",
+    "series": "MSO90-R",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "corner_angle_deg": 90
     },
     "application": {
       "operations": [
         "shoulder_milling",
         "face_milling"
+      ],
+      "strategy": "90_degree_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
       ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_msp15_mse15",
+    "brand": "Kyocera",
+    "series": "MSP15 / MSE15",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "15_degree_shank_mill",
+    "geometry": {
+      "corner_angle_deg": 15
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "15_degree_shank_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_msr",
+    "brand": "Kyocera",
+    "series": "MSR",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "15_degree_face_mill",
+    "geometry": {
+      "corner_angle_deg": 15
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "15_degree_face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mte90",
+    "brand": "Kyocera",
+    "series": "MTE90",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "90_degree_shoulder_mill",
+    "geometry": {
+      "corner_angle_deg": 90
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling",
+        "face_milling"
+      ],
+      "strategy": "90_degree_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mtp90_meal",
+    "brand": "Kyocera",
+    "series": "MTP90 / MEAL",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "0_degree_shank_mill",
+    "geometry": {
+      "corner_angle_deg": 0
+    },
+    "application": {
+      "operations": [
+        "face_milling",
+        "aluminum_milling"
+      ],
+      "strategy": "0_degree_shank_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_mtps_mtes",
+    "brand": "Kyocera",
+    "series": "MTPS / MTES",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "shoulder_endmill",
+    "geometry": {
+      "corner_angle_deg": 90
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": "endmill_for_shouldering"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_plus_mill",
+    "brand": "Kyocera",
+    "series": "Plus Mill",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "aluminum_endmill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "profiling",
+        "shoulder_milling"
+      ],
+      "strategy": "aluminum_machining"
     },
     "materials": {
       "iso_groups": [
         "N"
       ]
-    }
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_ultra_drill_mill",
+    "brand": "Kyocera",
+    "series": "Ultra Drill Mill",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "drill_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "ramping",
+        "profiling"
+      ],
+      "strategy": "drill_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_200",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 200",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "roughing_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "roughing"
+      ],
+      "strategy": "roughing"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_210",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 210",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "roughing_face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "roughing",
+        "face_milling"
+      ],
+      "strategy": "high_productive_roughing"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_245",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 245",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "light_cutting_face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "light_cutting"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_290",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 290",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "roughing_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "roughing"
+      ],
+      "strategy": "roughing"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_300",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 300",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "semi_finishing_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "semi_finish",
+        "profiling"
+      ],
+      "strategy": "light_cutting_semi_finishing"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_329",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 329",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "slot_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "slotting"
+      ],
+      "strategy": "slot_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_331",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 331",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "side_and_face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "slotting",
+        "side_milling",
+        "face_milling"
+      ],
+      "strategy": "side_and_face"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_345",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 345",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "face_milling"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_357",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 357",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "face_milling"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_360",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 360",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "heavy_duty_face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "heavy_duty"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_365",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 365",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "roughing_face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "roughing",
+        "face_milling"
+      ],
+      "strategy": "cast_iron_and_steel_roughing"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_390",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 390",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "face_and_shoulder_mill",
+    "geometry": {
+      "corner_angle_deg": 90
+    },
+    "application": {
+      "operations": [
+        "face_milling",
+        "shoulder_milling"
+      ],
+      "strategy": "deep_and_shallow_shoulder"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_419",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 419",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "face_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "face_milling"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_490",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 490",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "small_cutting_depth_shoulder_mill",
+    "geometry": {
+      "corner_angle_deg": 90
+    },
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": "small_cutting_depth"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_495",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 495",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "chamfer_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "chamfer_milling"
+      ],
+      "strategy": "chamfer_milling"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_690",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 690",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "long_edge_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "shoulder_milling"
+      ],
+      "strategy": "long_edge"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_790",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 790",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "router",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "profiling"
+      ],
+      "strategy": "non_ferrous_router"
+    },
+    "materials": {
+      "iso_groups": [
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_coromill_century",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill Century",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "high_speed_mill",
+    "geometry": {},
+    "application": {
+      "operations": [
+        "face_milling",
+        "finishing"
+      ],
+      "strategy": "high_speed_machining"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "N"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_tmax_45",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max 45",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "heavy_duty_face_mill",
+    "geometry": {
+      "corner_angle_deg": 45
+    },
+    "application": {
+      "operations": [
+        "face_milling"
+      ],
+      "strategy": "heavy_duty_face_mill"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
   }
 ]
