@@ -25,6 +25,8 @@ from grade_engine.tool_engines import (
     resolve_grooving_engine,
     resolve_threading_engine,
 )
+from tool_lookup.cross_reference import cross_reference_tool
+from tool_lookup.index import load_lookup_records
 
 MATERIAL_GROUP_LABELS = {
     "P": "P — Steel",
@@ -44,6 +46,7 @@ FAMILY_LABELS = {
     "THREADING_INSERT": "Threading",
     "BURNISHING": "Burnishing",
     "WORKHOLDING": "Workholding",
+    "TOOL_LOOKUP": "Tool Lookup / Cross Reference",
 }
 
 DATA_ROOT = Path(__file__).parent / "tool_data"
@@ -57,6 +60,7 @@ MODULE_DESCRIPTIONS = {
     "THREADING_INSERT": "Threading family shortlist with material- and zone-aware grade support.",
     "BURNISHING": "Reference screen for finish-improvement tools when size, finish, and surface integrity matter.",
     "WORKHOLDING": "Reference screen for chucking and setup stability options that support the cutting recommendation.",
+    "TOOL_LOOKUP": "Cross-reference manufacturer numbers, designation families, and series names without relying on fragile product links.",
 }
 
 DRILL_TYPE_HINTS = {
@@ -276,6 +280,65 @@ def render_catalog_explorer() -> None:
     if rows:
         df = pd.json_normalize(rows)
         st.dataframe(df, **dataframe_display_kwargs(height=450))
+
+
+def render_tool_lookup() -> None:
+    st.subheader("Tool Lookup / Cross Reference")
+    st.caption("Use manufacturer numbers, insert designations, or series names to find likely family matches and comparable alternatives.")
+    records = load_lookup_records()
+    categories = sorted({record.get("tool_category", "") for record in records if record.get("tool_category")})
+    brands = sorted({record.get("brand", "") for record in records if record.get("brand")})
+
+    c1, c2, c3 = st.columns([2, 1, 1])
+    with c1:
+        query = st.text_input("Search", placeholder="CNMG 432, CoroMill 490, 16ER AG60")
+    with c2:
+        category_filter = st.selectbox("Tool Category", ["Any"] + categories)
+    with c3:
+        brand_filter = st.selectbox("Brand", ["Any"] + brands)
+
+    if not query.strip():
+        st.info("Enter a manufacturer number, designation, or series to run the cross-reference search.")
+        return
+
+    result = cross_reference_tool(
+        query,
+        tool_category=None if category_filter == "Any" else category_filter,
+        brand=None if brand_filter == "Any" else brand_filter,
+    )
+
+    if result["exact_match"]:
+        exact = result["exact_match"]
+        st.markdown("#### Exact Match")
+        with st.container(border=True):
+            st.write(f"**{clean_text(exact.get('brand', ''))} — {clean_text(exact.get('series', ''))}**")
+            st.write(f"Reference: {clean_text(exact.get('manufacturer_reference', exact.get('manufacturer_number', '')))}")
+            st.write(f"Category: {clean_text(exact.get('tool_category', ''))}")
+            if exact.get("designation"):
+                st.write(f"Designation: {clean_text(exact['designation'])}")
+            if exact.get("grade"):
+                st.write(f"Grade: {clean_text(exact['grade'])}")
+            st.write(f"Materials: {compact_list(exact.get('materials', {}).get('iso_groups', []))}")
+            st.write(f"Application: {format_mapping(exact.get('application', {}))}")
+            st.caption(f"Search hint: {clean_text(exact.get('search_hint', ''))}")
+
+    st.markdown("#### Alternatives")
+    if result["alternatives"]:
+        for alternative in result["alternatives"]:
+            with st.container(border=True):
+                st.write(f"**{clean_text(alternative.get('brand', ''))} — {clean_text(alternative.get('series', ''))}**")
+                st.write(f"Reference: {clean_text(alternative.get('manufacturer_reference', ''))}")
+                st.write(f"Category: {clean_text(alternative.get('tool_category', ''))}")
+                st.write(f"Match score: {alternative.get('score', 0)}")
+                if alternative.get("match_reasons"):
+                    st.write("Match reasons: " + " | ".join(clean_text(reason) for reason in alternative["match_reasons"]))
+                st.caption(f"Search hint: {clean_text(alternative.get('search_hint', ''))}")
+    else:
+        st.info("No alternatives found in the current lookup index.")
+
+    if result["warnings"]:
+        for warning in result["warnings"]:
+            st.warning(clean_text(warning))
 
 
 def build_common_inputs() -> dict[str, Any]:
@@ -903,9 +966,11 @@ if mode == "Catalog Data Explorer":
 family = st.selectbox("Module", list(FAMILY_LABELS.keys()), format_func=lambda x: FAMILY_LABELS[x])
 st.caption(MODULE_DESCRIPTIONS[family])
 
-if family in {"BURNISHING", "WORKHOLDING"}:
+if family in {"BURNISHING", "WORKHOLDING", "TOOL_LOOKUP"}:
     if family == "BURNISHING":
         recommend_burnishing()
+    elif family == "TOOL_LOOKUP":
+        render_tool_lookup()
     else:
         recommend_workholding()
     st.stop()
