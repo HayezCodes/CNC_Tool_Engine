@@ -390,6 +390,66 @@
     "recommended_grades": []
   },
   {
+    "id": "sandvik_corodrill_805",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 805",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "hole_depth_x_d": 15,
+      "tip_style": "indexable_insert"
+    },
+    "application": {
+      "operations": [
+        "drilling",
+        "deep_hole_drilling"
+      ],
+      "strategy": "deep_hole_conventional_machine"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "1025"
+    ]
+  },
+  {
+    "id": "sandvik_corodrill_818",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 818",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        40.0,
+        301.75
+      ],
+      "hole_tolerance": "IT10"
+    },
+    "application": {
+      "operations": [
+        "counterboring",
+        "drilling",
+        "deep_hole_drilling"
+      ],
+      "strategy": "large_diameter_counterboring"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
     "id": "sandvik_corodrill_870",
     "brand": "Sandvik Coromant",
     "series": "CoroDrill 870",
@@ -436,5 +496,43 @@
       ]
     },
     "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_881",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 881",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        14.0,
+        23.5
+      ],
+      "l_d_range": [
+        2,
+        5
+      ],
+      "tip_style": "indexable_insert"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "small_hole_indexable"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": [
+      "1044",
+      "4024",
+      "4044"
+    ]
   }
 ]

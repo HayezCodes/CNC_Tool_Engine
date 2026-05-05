@@ -904,6 +904,104 @@
     "recommended_grades": []
   },
   {
+    "id": "sandvik_coromill_325",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 325",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "thread_whirling_cutter",
+    "geometry": {
+      "threading_method": "thread_whirling"
+    },
+    "application": {
+      "operations": [
+        "thread_whirling"
+      ],
+      "strategy": "thread_whirling"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "H10F"
+    ]
+  },
+  {
+    "id": "sandvik_coromill_327",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 327",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "grooving_thread_cutter",
+    "geometry": {
+      "minimum_hole_mm": 10.0,
+      "grooving_width_range_mm": [
+        0.7,
+        5.15
+      ]
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "thread_milling",
+        "chamfer_milling",
+        "profiling"
+      ],
+      "strategy": "internal_eccentric_groove_thread"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "GC1025"
+    ]
+  },
+  {
+    "id": "sandvik_coromill_328",
+    "brand": "Sandvik Coromant",
+    "series": "CoroMill 328",
+    "tool_category": "indexable_milling_cutter",
+    "subcategory": "grooving_thread_cutter",
+    "geometry": {
+      "minimum_hole_mm": 39.0,
+      "grooving_width_range_mm": [
+        1.3,
+        5.15
+      ]
+    },
+    "application": {
+      "operations": [
+        "circlip_grooving",
+        "grooving",
+        "thread_milling",
+        "chamfer_milling"
+      ],
+      "strategy": "internal_circlip_threading"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "GC1025"
+    ]
+  },
+  {
     "id": "sandvik_coromill_329",
     "brand": "Sandvik Coromant",
     "series": "CoroMill 329",

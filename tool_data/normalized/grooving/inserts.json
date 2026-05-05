@@ -76,6 +76,40 @@
     "recommended_grades": []
   },
   {
+    "id": "iscar_mincut",
+    "brand": "ISCAR",
+    "series": "MINCUT",
+    "tool_category": "grooving_insert",
+    "designation_family": "MINCUT",
+    "geometry": {
+      "minimum_bore_mm": 8.0,
+      "groove_width_range_mm": [
+        1.5,
+        3.0
+      ]
+    },
+    "application": {
+      "operations": [
+        "face_grooving",
+        "face_turning",
+        "internal_grooving"
+      ],
+      "strategy": "small_diameter_internal_face_grooving"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "IC908"
+    ],
+    "notes": "MIFHR and MIFR face grooving system for small diameters"
+  },
+  {
     "id": "iscar_pentacut",
     "brand": "ISCAR",
     "series": "PENTACUT",
@@ -552,7 +586,7 @@
     "brand": "Kyocera",
     "series": "S-KTGF",
     "tool_category": "grooving_insert",
-    "designation_family": "S\u2026KTGF",
+    "designation_family": "S…KTGF",
     "geometry": {},
     "application": {
       "operations": [
@@ -653,6 +687,41 @@
     "recommended_grades": []
   },
   {
+    "id": "sandvik_corocut_mb",
+    "brand": "Sandvik Coromant",
+    "series": "CoroCut MB",
+    "tool_category": "grooving_insert",
+    "designation_family": "CoroCut MB",
+    "geometry": {
+      "minimum_hole_mm": 10.0
+    },
+    "application": {
+      "operations": [
+        "grooving",
+        "turning",
+        "threading",
+        "profiling",
+        "pre_parting",
+        "face_grooving",
+        "back_boring"
+      ],
+      "strategy": "precision_internal_machining"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "N",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": [
+      "1025",
+      "CB7015"
+    ]
+  },
+  {
     "id": "sandvik_corocut_qd",
     "brand": "Sandvik Coromant",
     "series": "CoroCut QD",
@@ -675,6 +744,39 @@
       ]
     },
     "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corocut_xs",
+    "brand": "Sandvik Coromant",
+    "series": "CoroCut XS",
+    "tool_category": "grooving_insert",
+    "designation_family": "CoroCut XS",
+    "geometry": {
+      "seat_size": 3
+    },
+    "application": {
+      "operations": [
+        "parting",
+        "grooving",
+        "turning",
+        "back_turning",
+        "threading"
+      ],
+      "strategy": "small_part_external"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "1025",
+      "1105",
+      "H13A"
+    ]
   },
   {
     "id": "sandvik_tmax_q_cut",

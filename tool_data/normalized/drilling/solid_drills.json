@@ -613,6 +613,35 @@
     "recommended_grades": []
   },
   {
+    "id": "sandvik_corodrill_808",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 808",
+    "tool_category": "solid_drill",
+    "subcategory": "brazed_carbide_deep_hole_drill",
+    "geometry": {
+      "tip_construction": "brazed_carbide",
+      "hole_depth_x_d": 150,
+      "hole_tolerance": "IT9"
+    },
+    "application": {
+      "operations": [
+        "drilling",
+        "deep_hole_drilling"
+      ],
+      "strategy": "close_tolerance_deep_hole"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
     "id": "sandvik_corodrill_854_856",
     "brand": "Sandvik Coromant",
     "series": "CoroDrill 854/856",
