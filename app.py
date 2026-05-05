@@ -1,3 +1,4 @@
+import inspect
 import json
 from pathlib import Path
 from typing import Any, Iterable
@@ -142,6 +143,17 @@ def preferred_frame(rows: list[dict[str, Any]], preferred_columns: list[str]) ->
     return frame[columns] if columns else frame
 
 
+def dataframe_display_kwargs(height: int | None = None) -> dict[str, Any]:
+    kwargs: dict[str, Any] = {}
+    if height is not None:
+        kwargs["height"] = height
+    if "width" in inspect.signature(st.dataframe).parameters:
+        kwargs["width"] = "stretch"
+    else:
+        kwargs["use_container_width"] = True
+    return kwargs
+
+
 def render_empty_state(module_label: str, material_group: str, note: str | None = None) -> None:
     material_label = MATERIAL_GROUP_LABELS.get(material_group, material_group)
     st.warning(f"No {module_label.lower()} matches are available in the current demo dataset for {material_label}.")
@@ -215,7 +227,7 @@ def render_catalog_explorer() -> None:
     st.write(f"{choice}: **{len(rows)}** records loaded")
     if rows:
         df = pd.json_normalize(rows)
-        st.dataframe(df, use_container_width=True, height=450)
+        st.dataframe(df, **dataframe_display_kwargs(height=450))
 
 
 def build_common_inputs() -> dict[str, Any]:
@@ -347,7 +359,10 @@ def recommend_turning(common: dict[str, Any]) -> None:
     with col2:
         st.markdown("#### Matching grade records")
         if grades:
-            st.dataframe(preferred_frame(grades, ["brand", "grade", "zone", "coating", "tags"]), use_container_width=True, height=220)
+            st.dataframe(
+                preferred_frame(grades, ["brand", "grade", "zone", "coating", "tags"]),
+                **dataframe_display_kwargs(height=220),
+            )
         else:
             st.write("No grade rows found.")
 
@@ -595,7 +610,10 @@ def recommend_grooving(common: dict[str, Any]) -> None:
             render_reason_list(reasons)
     with st.expander("Matching grooving grades"):
         if grades:
-            st.dataframe(preferred_frame(grades, ["brand", "grade", "zone", "coating", "tags"]), use_container_width=True)
+            st.dataframe(
+                preferred_frame(grades, ["brand", "grade", "zone", "coating", "tags"]),
+                **dataframe_display_kwargs(),
+            )
         else:
             st.write("No grooving grade rows found.")
 
@@ -650,7 +668,10 @@ def recommend_threading(common: dict[str, Any]) -> None:
             render_reason_list(reasons)
     with st.expander("Matching threading grades"):
         if grades:
-            st.dataframe(preferred_frame(grades, ["brand", "grade", "zone", "coating", "tags"]), use_container_width=True)
+            st.dataframe(
+                preferred_frame(grades, ["brand", "grade", "zone", "coating", "tags"]),
+                **dataframe_display_kwargs(),
+            )
         else:
             st.write("No threading grade rows found.")
 

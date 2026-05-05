@@ -41,6 +41,16 @@ Start the Streamlit app from the repo root:
 streamlit run app.py
 ```
 
+## Validation Commands
+
+Use these commands from the repo root to verify the app and grade engine baseline:
+
+```powershell
+python -m compileall .
+pytest
+python tools/engine_health_report.py
+```
+
 ## Project Structure
 
 - `app.py`: Streamlit UI and module navigation
