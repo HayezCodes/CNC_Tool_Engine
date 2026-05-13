@@ -61,7 +61,7 @@ def validate_reviewed_record(record: dict) -> list[str]:
     return errors
 
 
-def save_reviewed_records(brand_slug: str, records: list[dict]) -> Path:
+def save_reviewed_records(brand_slug: str, records: list[dict], output_filename: str | None = None) -> Path:
     REVIEWED_ROOT.mkdir(parents=True, exist_ok=True)
     all_errors: list[str] = []
     for index, record in enumerate(records):
@@ -69,7 +69,8 @@ def save_reviewed_records(brand_slug: str, records: list[dict]) -> Path:
     if all_errors:
         raise ValueError("; ".join(all_errors))
 
-    path = REVIEWED_ROOT / f"{_slugify(brand_slug)}_reviewed_records.json"
+    filename = output_filename or f"{_slugify(brand_slug)}_reviewed_records.json"
+    path = REVIEWED_ROOT / filename
     path.write_text(json.dumps(records, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return path
 

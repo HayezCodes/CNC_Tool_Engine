@@ -125,6 +125,15 @@ def test_summary_includes_values_from_temp_reviewed_data(monkeypatch) -> None:
         shutil.rmtree(reviewed_root, ignore_errors=True)
 
 
+def test_real_helical_reviewed_records_load_through_viewer_helper() -> None:
+    records = filter_reviewed_catalog_records(brand="Helical Solutions")
+
+    assert len(records) == 10
+    assert all(record["verification_status"] == "reviewed_family_level" for record in records)
+    assert all(record["cutting_data_status"] == "not_imported" for record in records)
+    assert any(record["family_name"] == "Dynamic/adaptive milling end mill families" for record in records)
+
+
 def _write_reviewed_file(root: Path, records: list[dict]) -> None:
     root.mkdir(parents=True, exist_ok=True)
     (root / "reviewed_records.json").write_text(json.dumps(records), encoding="utf-8")
