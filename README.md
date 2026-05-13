@@ -30,6 +30,12 @@ The brand intelligence layer provides family-level tooling guidance for practica
 
 This layer does not replace manufacturer catalogs, does not provide certified speeds/feeds, and does not claim exact catalog numbers, dimensions, grade equivalency, or manufacturer-approved cutting data.
 
+## Catalog Ingestion Pipeline
+
+The catalog ingestion pipeline is a staged foundation for future manufacturer tooling data work. It uses official manufacturer catalog/resource pages first, keeps staged records untrusted until reviewed, and does not import exact feeds/speeds into staged data yet.
+
+Staged records live separately from production recommendation data. Reviewed records can later feed the Brand Intelligence layer only after source citation and shop-safe validation.
+
 ## Install
 
 1. Create and activate a virtual environment.
