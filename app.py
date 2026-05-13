@@ -12,6 +12,10 @@ from grade_engine.brand_intelligence import (
     load_brand_intelligence,
     recommend_brand_families,
 )
+from grade_engine.catalog_review import (
+    filter_reviewed_catalog_records,
+    get_reviewed_catalog_summary,
+)
 from grade_engine.engine import resolve_grade_behavior
 from grade_engine.enums import (
     APPLICATION_ZONES,
@@ -596,6 +600,60 @@ def render_brand_intelligence() -> None:
         for caution in solution["cautions"]:
             st.caption(clean_text(caution))
         st.caption(clean_text(solution["verification_note"]))
+
+    render_reviewed_catalog_families()
+
+
+def render_reviewed_catalog_families() -> None:
+    with st.expander("Reviewed Catalog Families"):
+        st.caption("Reviewed catalog families are reference-only and do not provide certified speeds/feeds.")
+        summary = get_reviewed_catalog_summary()
+        if summary["total_records"] == 0:
+            st.info("No reviewed catalog family records yet. Stage and review catalog families before they appear here.")
+            return
+
+        render_metric_strip(
+            [
+                ("Records", str(summary["total_records"])),
+                ("Brands", str(len(summary["brands"]))),
+                ("Categories", str(len(summary["tool_categories"]))),
+                ("Operations", str(len(summary["operations"]))),
+            ]
+        )
+
+        c1, c2, c3, c4 = st.columns(4)
+        with c1:
+            brand = st.selectbox("Reviewed Brand", ["Any"] + summary["brands"])
+        with c2:
+            tool_category = st.selectbox("Reviewed Category", ["Any"] + summary["tool_categories"], format_func=lambda value: "Any" if value == "Any" else titleize_token(value))
+        with c3:
+            material_group = st.selectbox("Reviewed Material", ["Any"] + summary["materials"])
+        with c4:
+            operation = st.selectbox("Reviewed Operation", ["Any"] + summary["operations"], format_func=lambda value: "Any" if value == "Any" else titleize_token(value))
+
+        records = filter_reviewed_catalog_records(
+            brand=None if brand == "Any" else brand,
+            tool_category=None if tool_category == "Any" else tool_category,
+            material_group=None if material_group == "Any" else material_group,
+            operation=None if operation == "Any" else operation,
+        )
+        if not records:
+            st.info("No reviewed catalog family records match these filters.")
+            return
+
+        for record in records[:12]:
+            with st.container(border=True):
+                st.write(f"**{clean_text(record.get('brand', ''))} — {clean_text(record.get('family_name', ''))}**")
+                st.write(f"Category: {clean_text(record.get('tool_category', ''))}")
+                st.write(f"Operations: {compact_list(record.get('operation_fit', []))}")
+                st.write(f"Materials: {compact_list(record.get('material_fit', []))}")
+                st.caption(clean_text(record.get("dimension_summary", "")))
+                if record.get("source_url"):
+                    st.caption(
+                        f"Source: [{clean_text(record.get('source_label', 'Catalog source'))}]"
+                        f"({record['source_url']})"
+                    )
+                st.caption(f"Status: {clean_text(record.get('verification_status', ''))} | Cutting data: {clean_text(record.get('cutting_data_status', ''))}")
 
 
 def build_common_inputs() -> dict[str, Any]:

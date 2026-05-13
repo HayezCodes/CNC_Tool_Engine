@@ -40,6 +40,8 @@ Staged records live separately from production recommendation data. Reviewed rec
 
 Reviewed catalog records are still family-level unless cutting data is separately validated.
 
+Reviewed Catalog Families are display/reference only and are not yet used in recommendation scoring.
+
 ## Install
 
 1. Create and activate a virtual environment.
