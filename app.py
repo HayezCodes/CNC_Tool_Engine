@@ -7,7 +7,11 @@ from typing import Any, Iterable
 import pandas as pd
 import streamlit as st
 
-from grade_engine.brand_intelligence import load_brand_intelligence, recommend_brand_families
+from grade_engine.brand_intelligence import (
+    infer_brand_intelligence_from_query,
+    load_brand_intelligence,
+    recommend_brand_families,
+)
 from grade_engine.engine import resolve_grade_behavior
 from grade_engine.enums import (
     APPLICATION_ZONES,
@@ -412,6 +416,60 @@ def render_tool_lookup() -> None:
     if result["warnings"]:
         for warning in result["warnings"]:
             st.warning(clean_text(warning))
+
+    render_lookup_brand_intelligence(query)
+
+
+def render_lookup_brand_intelligence(query: str) -> None:
+    inferred = infer_brand_intelligence_from_query(query)
+    has_matches = bool(
+        inferred["matched_terms"]
+        or inferred["brand_matches"]
+        or inferred["operation_matches"]
+        or inferred["recommended_brands"]
+        or inferred["endmill_candidates"]
+        or inferred["insert_candidates"]
+    )
+    if not has_matches:
+        return
+
+    with st.expander("Brand Intelligence Match", expanded=True):
+        st.caption("Supplemental family-level guidance only. Normal Tool Lookup results above are unchanged.")
+        st.write("Matched terms: " + compact_list(inferred["matched_terms"]))
+        if inferred["operation_matches"]:
+            st.write("Operation direction: " + compact_list(inferred["operation_matches"]))
+
+        if inferred["recommended_brands"]:
+            st.markdown("##### Recommended Brand Families")
+            for item in inferred["recommended_brands"]:
+                with st.container(border=True):
+                    st.write(f"**{clean_text(item['brand'])}** | Score: {item['score']}")
+                    if item.get("reasons"):
+                        st.caption("Why: " + " | ".join(clean_text(reason) for reason in item["reasons"][:3]))
+                    if item.get("shop_use_notes"):
+                        st.caption(clean_text(item["shop_use_notes"][0]))
+
+        if inferred["endmill_candidates"]:
+            st.markdown("##### Endmill Candidates")
+            for item in inferred["endmill_candidates"]:
+                with st.container(border=True):
+                    st.write(f"**{clean_text(item['brand'])}** — {clean_text(item['family_name'])}")
+                    st.caption("Fit: " + compact_list(item.get("operation_fit", [])))
+                    if item.get("cautions"):
+                        st.caption(clean_text(item["cautions"][0]))
+
+        if inferred["insert_candidates"]:
+            st.markdown("##### Insert Candidates")
+            for item in inferred["insert_candidates"]:
+                with st.container(border=True):
+                    st.write(f"**{clean_text(item['brand'])}** | Score: {item['score']}")
+                    st.caption("Application fit: " + compact_list(item.get("application_fit", [])))
+                    if item.get("shop_use_notes"):
+                        st.caption(clean_text(item["shop_use_notes"][0]))
+
+        for note in inferred["notes"]:
+            st.caption(clean_text(note))
+        st.caption(clean_text(inferred["verification_note"]))
 
 
 def render_brand_intelligence() -> None:

@@ -26,6 +26,7 @@ The brand intelligence layer provides family-level tooling guidance for practica
 - Endmill Families: endmill-only family guidance for general milling, dynamic/adaptive milling, value tooling, and specialty cutters.
 - Insert/Grade Families: broad insert brand behavior tags for production turning, toughness, wear-resistance, chipbreaker direction, and general insert use.
 - Problem Solver: converts common shop problems like chatter, poor finish, short tool life, small-bore access, value sourcing, dynamic milling, specialty features, and production turning into practical recommendation directions.
+- Tool Lookup Integration: search terms that match known brands, operations, or tooling families can show a supplemental family-level Brand Intelligence panel below the normal lookup results.
 
 This layer does not replace manufacturer catalogs, does not provide certified speeds/feeds, and does not claim exact catalog numbers, dimensions, grade equivalency, or manufacturer-approved cutting data.
 

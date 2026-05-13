@@ -17,6 +17,44 @@ PRIORITY_TERMS = {
     "small_bore": ["small_bore", "small bore", "miniature", "boring_bars", "small_id_work"],
 }
 
+BRAND_ALIASES = {
+    "YG-1": ["yg-1", "yg1", "yg 1"],
+    "Helical Solutions": ["helical", "helical solutions"],
+    "Niagara Cutter": ["niagara", "niagara cutter"],
+    "Harvey Tool": ["harvey", "harvey tool"],
+    "Micro 100": ["micro 100", "micro100"],
+    "Garr Tool": ["garr", "garr tool"],
+    "Sumitomo Electric": ["sumitomo", "sumitomo electric"],
+    "Kyocera": ["kyocera"],
+    "Tungaloy": ["tungaloy"],
+    "Accupro": ["accupro"],
+    "Hertel": ["hertel"],
+    "Haas Branded Tooling": ["haas", "haas tooling", "haas branded tooling"],
+    "Sandvik Coromant": ["sandvik", "sandvik coromant"],
+}
+
+QUERY_OPERATION_TERMS = {
+    "dynamic_milling": ["dynamic milling", "dynamic", "adaptive milling", "adaptive"],
+    "chamfer": ["chamfer", "chamfering"],
+    "keyseat": ["keyseat", "keyway cutter", "woodruff"],
+    "small_bore": ["small bore", "small id", "micro bore", "boring bar", "boring"],
+    "production_turning": ["production turning"],
+    "turning": ["turning", "lathe"],
+    "grooving": ["grooving", "parting"],
+    "threading": ["threading", "thread mill", "threadmill"],
+    "drilling": ["drill", "drilling"],
+    "general_milling": ["milling", "mill"],
+    "specialty": ["specialty", "undercut", "undercutting"],
+}
+
+QUERY_TOOL_TERMS = {
+    "endmill": ["endmill", "end mill", "milling cutter"],
+    "drill": ["drill", "spot drill", "center drill"],
+    "insert": ["insert", "turning insert", "milling insert", "carbide insert"],
+    "boring_bar": ["boring bar", "boring"],
+    "thread_mill": ["thread mill", "threadmill"],
+}
+
 STRATEGY_TERMS = {
     "balanced": [],
     "adaptive": ["adaptive", "dynamic", "high_efficiency", "light_adaptive"],
@@ -256,6 +294,75 @@ def recommend_insert_grade_families(
     return sorted(recommendations, key=lambda item: (-item["score"], item["brand"]))
 
 
+def infer_brand_intelligence_from_query(query: str) -> dict:
+    result = {
+        "matched_terms": [],
+        "brand_matches": [],
+        "operation_matches": [],
+        "recommended_brands": [],
+        "endmill_candidates": [],
+        "insert_candidates": [],
+        "notes": [],
+        "verification_note": "Family-level guidance only. Verify exact tool selection and cutting data with the manufacturer catalog.",
+    }
+    text = query.strip().lower()
+    if not text:
+        return result
+
+    matched_terms: list[str] = []
+    brand_matches = _match_brand_aliases(text, matched_terms)
+    operation_matches = _match_term_map(text, QUERY_OPERATION_TERMS, matched_terms)
+    tool_matches = _match_term_map(text, QUERY_TOOL_TERMS, matched_terms)
+
+    inferred_operation = _infer_operation(operation_matches, tool_matches)
+    inferred_priority = _infer_priority(operation_matches, tool_matches)
+    material_group = "P"
+
+    recommended_brands = recommend_brand_families(inferred_operation, material_group, inferred_priority) if inferred_operation else []
+    if brand_matches:
+        recommended_brands = _prioritize_brand_matches(recommended_brands, brand_matches)
+
+    endmill_candidates: list[dict[str, Any]] = []
+    if tool_matches.intersection({"endmill", "thread_mill"}) or inferred_operation in {"dynamic_milling", "chamfer", "keyseat", "specialty", "general_milling"}:
+        endmill_strategy = "dynamic" if inferred_operation == "dynamic_milling" else inferred_priority
+        endmill_candidates = recommend_endmill_families(
+            inferred_operation or "general_milling",
+            material_group,
+            strategy=endmill_strategy,
+            priority=inferred_priority,
+        )
+        if brand_matches:
+            endmill_candidates = _prioritize_brand_matches(endmill_candidates, brand_matches)
+
+    insert_candidates: list[dict[str, Any]] = []
+    if tool_matches.intersection({"insert", "boring_bar"}) or inferred_operation in {"turning", "production_turning", "grooving", "threading", "small_bore"}:
+        insert_operation = "production_turning" if inferred_operation == "production_turning" else inferred_operation or "turning"
+        insert_candidates = recommend_insert_grade_families(insert_operation, material_group, inferred_priority)
+        if brand_matches:
+            insert_candidates = _prioritize_brand_matches(insert_candidates, brand_matches)
+
+    notes: list[str] = []
+    if tool_matches:
+        notes.append(f"Tooling terms detected: {', '.join(sorted(tool_matches))}.")
+    if inferred_operation:
+        notes.append(f"Using {inferred_operation} as the inferred operation direction.")
+    if not matched_terms:
+        notes.append("No brand, operation, or tooling family terms matched the current brand intelligence layer.")
+
+    result.update(
+        {
+            "matched_terms": sorted(set(matched_terms)),
+            "brand_matches": sorted(brand_matches),
+            "operation_matches": sorted(operation_matches),
+            "recommended_brands": recommended_brands[:5],
+            "endmill_candidates": endmill_candidates[:4],
+            "insert_candidates": insert_candidates[:4],
+            "notes": notes,
+        }
+    )
+    return result
+
+
 def _score_priority(record: dict, priority: str) -> tuple[int, list[str]]:
     terms = PRIORITY_TERMS.get(priority, [])
     if not terms:
@@ -307,6 +414,80 @@ def _insert_operation_family_match(operation: str, applications: set[str], focus
     if operation in milling_ops and (applications.intersection(milling_ops) or "milling" in focus):
         return True
     return operation in focus
+
+
+def _match_brand_aliases(text: str, matched_terms: list[str]) -> set[str]:
+    brands = set()
+    for brand, aliases in BRAND_ALIASES.items():
+        for alias in aliases:
+            if alias in text:
+                brands.add(brand)
+                matched_terms.append(alias)
+                break
+    return brands
+
+
+def _match_term_map(text: str, term_map: dict[str, list[str]], matched_terms: list[str]) -> set[str]:
+    matches = set()
+    for normalized_term, phrases in term_map.items():
+        for phrase in phrases:
+            if phrase in text:
+                matches.add(normalized_term)
+                matched_terms.append(phrase)
+                break
+    return matches
+
+
+def _infer_operation(operation_matches: set[str], tool_matches: set[str]) -> str:
+    for preferred in [
+        "production_turning",
+        "dynamic_milling",
+        "small_bore",
+        "chamfer",
+        "keyseat",
+        "grooving",
+        "threading",
+        "turning",
+        "drilling",
+        "specialty",
+        "general_milling",
+    ]:
+        if preferred in operation_matches:
+            return preferred
+    if "boring_bar" in tool_matches:
+        return "small_bore"
+    if "insert" in tool_matches:
+        return "turning"
+    if "endmill" in tool_matches:
+        return "general_milling"
+    if "thread_mill" in tool_matches:
+        return "threading"
+    if "drill" in tool_matches:
+        return "drilling"
+    return ""
+
+
+def _infer_priority(operation_matches: set[str], tool_matches: set[str]) -> str:
+    if operation_matches.intersection({"dynamic_milling"}):
+        return "high_performance"
+    if operation_matches.intersection({"chamfer", "keyseat", "specialty"}) or "thread_mill" in tool_matches:
+        return "specialty"
+    if operation_matches.intersection({"small_bore"}) or "boring_bar" in tool_matches:
+        return "small_bore"
+    if operation_matches.intersection({"production_turning", "turning", "grooving"}) or "insert" in tool_matches:
+        return "production_turning"
+    return "balanced"
+
+
+def _prioritize_brand_matches(records: list[dict], brand_matches: set[str]) -> list[dict]:
+    return sorted(
+        records,
+        key=lambda record: (
+            0 if record.get("brand") in brand_matches else 1,
+            -record.get("score", 0),
+            record.get("brand", ""),
+        ),
+    )
 
 
 def _load_records(relative_path: Path, data_root: Path | None, label: str) -> list[dict]:
