@@ -97,7 +97,12 @@ def validate_staged_record(record: dict) -> list[str]:
     return errors
 
 
-def save_staged_records(brand: str, records: list[dict], data_root: Path | None = None) -> Path:
+def save_staged_records(
+    brand: str,
+    records: list[dict],
+    data_root: Path | None = None,
+    output_filename: str | None = None,
+) -> Path:
     staged_root = _staged_root(data_root)
     staged_root.mkdir(parents=True, exist_ok=True)
 
@@ -108,7 +113,8 @@ def save_staged_records(brand: str, records: list[dict], data_root: Path | None 
     if all_errors:
         raise ValueError("; ".join(all_errors))
 
-    path = staged_root / f"{_slugify(brand)}_staged_records.json"
+    filename = output_filename or f"{_slugify(brand)}_staged_records.json"
+    path = staged_root / filename
     path.write_text(json.dumps(records, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return path
 

@@ -34,6 +34,8 @@ This layer does not replace manufacturer catalogs, does not provide certified sp
 
 The catalog ingestion pipeline is a staged foundation for future manufacturer tooling data work. It uses official manufacturer catalog/resource pages first, keeps staged records untrusted until reviewed, and does not import exact feeds/speeds into staged data yet.
 
+First staged manufacturer data: Helical Solutions endmill family records.
+
 Staged records live separately from production recommendation data. Reviewed records can later feed the Brand Intelligence layer only after source citation and shop-safe validation.
 
 ## Install
