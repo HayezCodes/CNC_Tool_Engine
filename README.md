@@ -22,7 +22,12 @@ Under the hood, the app uses the modular `grade_engine/` package for grade behav
 
 The brand intelligence layer provides family-level tooling guidance for practical brand and tool-family selection by operation, ISO material group, and shop priority. It is designed to help programmers choose likely tooling families to investigate.
 
-This layer does not replace manufacturer catalogs, does not provide certified speeds/feeds, and does not claim exact catalog numbers or tool dimensions.
+- Brand Intelligence: broad brand strengths, shop-use notes, source status, and recommended engine use.
+- Endmill Families: endmill-only family guidance for general milling, dynamic/adaptive milling, value tooling, and specialty cutters.
+- Insert/Grade Families: broad insert brand behavior tags for production turning, toughness, wear-resistance, chipbreaker direction, and general insert use.
+- Problem Solver: converts common shop problems like chatter, poor finish, short tool life, small-bore access, value sourcing, dynamic milling, specialty features, and production turning into practical recommendation directions.
+
+This layer does not replace manufacturer catalogs, does not provide certified speeds/feeds, and does not claim exact catalog numbers, dimensions, grade equivalency, or manufacturer-approved cutting data.
 
 ## Install
 

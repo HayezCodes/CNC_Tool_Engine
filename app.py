@@ -7,7 +7,7 @@ from typing import Any, Iterable
 import pandas as pd
 import streamlit as st
 
-from grade_engine.brand_intelligence import recommend_brand_families
+from grade_engine.brand_intelligence import load_brand_intelligence, recommend_brand_families
 from grade_engine.engine import resolve_grade_behavior
 from grade_engine.enums import (
     APPLICATION_ZONES,
@@ -26,6 +26,7 @@ from grade_engine.tool_engines import (
     resolve_grooving_engine,
     resolve_threading_engine,
 )
+from grade_engine.problem_solver import solve_operation_problem
 from tool_lookup.cross_reference import cross_reference_tool
 from tool_lookup.index import load_lookup_records
 
@@ -415,7 +416,7 @@ def render_tool_lookup() -> None:
 
 def render_brand_intelligence() -> None:
     st.subheader("Brand Intelligence")
-    st.info("Family-level guidance only. Verify exact tools, catalog numbers, and cutting parameters with the manufacturer before release.")
+    st.info("Family-level guidance only. Verify exact tool selection, geometry, dimensions, and cutting data with the manufacturer catalog.")
 
     operations = [
         "general_milling",
@@ -439,8 +440,9 @@ def render_brand_intelligence() -> None:
         "production_turning",
         "small_bore",
     ]
+    brand_types = sorted({item for record in load_brand_intelligence() for item in record.get("brand_type", [])})
 
-    c1, c2, c3 = st.columns(3)
+    c1, c2, c3, c4 = st.columns([1.2, 1.1, 1.1, 1.2])
     with c1:
         operation = st.selectbox("Operation", operations, format_func=titleize_token)
     with c2:
@@ -451,21 +453,91 @@ def render_brand_intelligence() -> None:
         )
     with c3:
         priority = st.selectbox("Priority", priorities, format_func=titleize_token)
+    with c4:
+        brand_type_filter = st.selectbox("Brand Type", ["Any"] + brand_types, format_func=lambda value: "Any" if value == "Any" else titleize_token(value))
+
+    minimum_score = st.slider("Minimum Score", min_value=1, max_value=12, value=1, step=1)
 
     recommendations = recommend_brand_families(operation, material_group, priority)
+    if brand_type_filter != "Any":
+        recommendations = [
+            recommendation
+            for recommendation in recommendations
+            if brand_type_filter in recommendation.get("brand_type", [])
+        ]
+    recommendations = [
+        recommendation
+        for recommendation in recommendations
+        if recommendation.get("score", 0) >= minimum_score
+    ]
     if not recommendations:
         st.warning("No family-level brand candidates found for this combination.")
         return
 
     for recommendation in recommendations[:8]:
         with st.container(border=True):
-            st.write(f"**{clean_text(recommendation['brand'])}**")
-            st.write(f"Fit score: {recommendation['score']}")
+            header, status = st.columns([2.4, 1])
+            with header:
+                st.markdown(f"#### {clean_text(recommendation['brand'])}")
+            with status:
+                st.metric("Score", recommendation["score"])
+                st.caption(clean_text(recommendation["source_status"]))
             if recommendation.get("reasons"):
                 st.write("Why it fits: " + " | ".join(clean_text(reason) for reason in recommendation["reasons"]))
+            detail_cols = st.columns(3)
+            with detail_cols[0]:
+                st.write(f"Best-fit operations: {compact_list(recommendation.get('best_fit_operations', []))}")
+            with detail_cols[1]:
+                st.write(f"Material strengths: {compact_list(recommendation.get('material_strengths', []))}")
+            with detail_cols[2]:
+                st.write(f"Engine use: {compact_list(recommendation.get('recommended_engine_use', []))}")
             for note in recommendation.get("shop_use_notes", []):
                 st.caption(clean_text(note))
-            st.caption(f"Source status: {clean_text(recommendation['source_status'])}")
+            if recommendation.get("official_source_url"):
+                st.caption(
+                    f"Source: [{clean_text(recommendation.get('official_source_label', 'Official source'))}]"
+                    f"({recommendation['official_source_url']}) | Verification: {clean_text(recommendation.get('verification_level', ''))}"
+                )
+
+    with st.expander("Problem Solver"):
+        problem_types = [
+            "chatter",
+            "poor_finish",
+            "short_tool_life",
+            "chip_control",
+            "small_bore_access",
+            "needs_value_option",
+            "dynamic_milling",
+            "specialty_feature",
+            "production_turning",
+        ]
+        pc1, pc2, pc3, pc4, pc5 = st.columns([1.2, 1.1, 1, 1, 1])
+        with pc1:
+            problem_type = st.selectbox("Problem", problem_types, format_func=titleize_token)
+        with pc2:
+            problem_operation = st.selectbox("Problem Operation", operations, format_func=titleize_token)
+        with pc3:
+            problem_material = st.selectbox(
+                "Problem Material",
+                ["P", "M", "K", "N", "S", "H"],
+                format_func=lambda value: MATERIAL_GROUP_LABELS[value],
+            )
+        with pc4:
+            problem_priority = st.selectbox("Problem Priority", priorities, format_func=titleize_token)
+        with pc5:
+            setup_rigidity = st.selectbox("Setup Rigidity", ["good", "average", "poor"], format_func=titleize_token)
+
+        solution = solve_operation_problem(problem_type, problem_material, problem_operation, problem_priority, setup_rigidity)
+        st.write(clean_text(solution["recommended_direction"]))
+        if solution["brand_family_candidates"]:
+            st.write("Brand candidates: " + compact_list([item["brand"] for item in solution["brand_family_candidates"]]))
+        if solution["endmill_candidates"]:
+            st.write("Endmill candidates: " + compact_list([item["brand"] for item in solution["endmill_candidates"]]))
+        if solution["insert_candidates"]:
+            st.write("Insert candidates: " + compact_list([item["brand"] for item in solution["insert_candidates"]]))
+        for caution in solution["cautions"]:
+            st.caption(clean_text(caution))
+        st.caption(clean_text(solution["verification_note"]))
 
 
 def build_common_inputs() -> dict[str, Any]:
