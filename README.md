@@ -18,6 +18,12 @@ The app helps generate practical starting-point recommendations across these cur
 
 Under the hood, the app uses the modular `grade_engine/` package for grade behavior resolution and `tool_data/` JSON files for catalog-style reference data.
 
+## Brand Intelligence Layer
+
+The brand intelligence layer provides family-level tooling guidance for practical brand and tool-family selection by operation, ISO material group, and shop priority. It is designed to help programmers choose likely tooling families to investigate.
+
+This layer does not replace manufacturer catalogs, does not provide certified speeds/feeds, and does not claim exact catalog numbers or tool dimensions.
+
 ## Install
 
 1. Create and activate a virtual environment.

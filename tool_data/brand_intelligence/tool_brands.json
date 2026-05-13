@@ -1,0 +1,170 @@
+[
+  {
+    "brand": "YG-1",
+    "brand_type": ["value_performance", "general_purpose", "solid_round_tools"],
+    "primary_strengths": ["carbide_endmills", "drilling", "threading", "general_milling"],
+    "best_fit_operations": ["general_milling", "roughing", "finishing", "drilling", "threading"],
+    "material_strengths": ["P", "M", "N"],
+    "shop_use_notes": [
+      "Good value/performance option for general-purpose carbide tooling.",
+      "Useful when premium tooling is not required but consistent performance matters."
+    ],
+    "recommended_engine_use": ["value alternative", "general purpose milling candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public YG-1 general catalog and indexable catalog availability. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Helical Solutions",
+    "brand_type": ["high_performance", "solid_round_tools", "material_specific"],
+    "primary_strengths": ["carbide_endmills", "dynamic_milling", "aluminum_milling", "material_specific_endmills"],
+    "best_fit_operations": ["general_milling", "dynamic_milling", "aluminum_milling", "roughing", "finishing"],
+    "material_strengths": ["P", "M", "N", "S", "H"],
+    "shop_use_notes": [
+      "Strong candidate when the job calls for high-performance solid end mills.",
+      "Good fit for adaptive milling, aluminum work, and material-specific geometry selection."
+    ],
+    "recommended_engine_use": ["high performance milling candidate", "dynamic milling candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Helical catalog availability and Machining Advisor Pro positioning. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "brand_type": ["production_milling", "solid_round_tools", "traditional_milling"],
+    "primary_strengths": ["solid_endmills", "hss_cobalt_tools", "carbide_endmills", "production_milling"],
+    "best_fit_operations": ["general_milling", "roughing", "finishing", "dynamic_milling"],
+    "material_strengths": ["P", "M", "K", "N"],
+    "shop_use_notes": [
+      "Good production milling candidate with broad solid round tool coverage.",
+      "Useful when the shop wants established milling families across carbide, cobalt, and HSS-style needs."
+    ],
+    "recommended_engine_use": ["production milling candidate", "general purpose milling candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Seco/Niagara Cutter family descriptions and catalog positioning. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Harvey Tool",
+    "brand_type": ["specialty", "miniature", "solid_round_tools", "problem_solving"],
+    "primary_strengths": ["miniature_endmills", "specialty_cutters", "keyseat_cutters", "undercutting", "chamfer_tools", "thread_mills"],
+    "best_fit_operations": ["specialty", "keyseat", "chamfer", "threading", "small_bore", "general_milling"],
+    "material_strengths": ["P", "M", "K", "N", "S", "H"],
+    "shop_use_notes": [
+      "First-pass specialty option when the operation needs a miniature, odd-geometry, keyseat, undercut, chamfer, or thread milling solution.",
+      "Useful for problem-solving work where a standard end mill family is too broad."
+    ],
+    "recommended_engine_use": ["specialty tooling candidate", "problem solving candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Harvey Tool catalog positioning for miniature and specialty tools. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Micro 100",
+    "brand_type": ["small_bore", "miniature", "turning_boring", "solid_carbide"],
+    "primary_strengths": ["boring_bars", "miniature_turning", "grooving", "small_id_work", "micro_tooling"],
+    "best_fit_operations": ["small_bore", "turning", "grooving", "threading", "specialty"],
+    "material_strengths": ["P", "M", "N", "S"],
+    "shop_use_notes": [
+      "Strong candidate for small ID boring, miniature turning, grooving, and compact internal features.",
+      "Useful when insert tooling is too large and a solid carbide miniature tool is more practical."
+    ],
+    "recommended_engine_use": ["small bore candidate", "miniature turning candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Micro 100 catalog and miniature turning/boring product-family positioning. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Garr Tool",
+    "brand_type": ["high_performance", "solid_round_tools", "production_milling"],
+    "primary_strengths": ["high_performance_endmills", "roughing", "finishing", "tough_materials"],
+    "best_fit_operations": ["general_milling", "dynamic_milling", "roughing", "finishing", "aluminum_milling"],
+    "material_strengths": ["P", "M", "N", "S", "H"],
+    "shop_use_notes": [
+      "Good high-performance solid carbide option for roughing and finishing work.",
+      "Useful when the shop wants a focused end mill family for tougher material or productivity-driven milling."
+    ],
+    "recommended_engine_use": ["high performance milling candidate", "production milling candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Garr Tool catalog and high-performance solid carbide positioning. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "brand_type": ["production_turning", "indexable", "production_machining"],
+    "primary_strengths": ["turning_inserts", "milling_inserts", "drilling", "production_insert_grades"],
+    "best_fit_operations": ["turning", "production_turning", "grooving", "general_milling", "drilling"],
+    "material_strengths": ["P", "M", "K", "S", "H"],
+    "shop_use_notes": [
+      "Strong production insert candidate for turning, milling, and drilling workflows.",
+      "Useful when insert grade behavior and repeatable production machining matter more than budget sourcing."
+    ],
+    "recommended_engine_use": ["production turning candidate", "indexable tooling candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Sumitomo Electric Hardmetal catalog sections for inserts, holders, milling cutters, and drills. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Kyocera",
+    "brand_type": ["production_turning", "indexable", "cost_effective_insert_alternative"],
+    "primary_strengths": ["turning_inserts", "milling_inserts", "drilling_inserts", "grooving", "threading"],
+    "best_fit_operations": ["turning", "production_turning", "grooving", "threading", "general_milling", "drilling"],
+    "material_strengths": ["P", "M", "K", "N", "S", "H"],
+    "shop_use_notes": [
+      "Good production turning and indexable tooling candidate with broad insert coverage.",
+      "Useful as a cost-conscious insert alternative when the shop still needs structured grade families."
+    ],
+    "recommended_engine_use": ["production turning candidate", "cost effective insert candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Kyocera indexable and cutting-tool catalog availability. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Tungaloy",
+    "brand_type": ["production_turning", "indexable", "multifunction_tooling"],
+    "primary_strengths": ["turning_inserts", "grooving", "threading", "high_feed_milling", "indexable_milling"],
+    "best_fit_operations": ["turning", "production_turning", "grooving", "threading", "general_milling", "dynamic_milling"],
+    "material_strengths": ["P", "M", "K", "S", "H"],
+    "shop_use_notes": [
+      "Strong indexable candidate for turning, grooving, threading, and high-feed milling families.",
+      "Useful when the setup benefits from production insert systems or multifunction indexable options."
+    ],
+    "recommended_engine_use": ["production turning candidate", "indexable tooling candidate", "high feed milling candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Tungaloy catalog sections for turning, grooving, threading, milling, and drilling families. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Accupro",
+    "brand_type": ["value", "general_purpose", "job_shop", "budget"],
+    "primary_strengths": ["general_milling", "holemaking", "threading", "turning_boring", "indexable"],
+    "best_fit_operations": ["general_milling", "drilling", "threading", "turning", "grooving", "chamfer"],
+    "material_strengths": ["P", "M", "K", "N"],
+    "shop_use_notes": [
+      "Good budget/general-purpose job shop candidate with broad sourcing coverage.",
+      "Useful for common work when easy availability and practical cost matter."
+    ],
+    "recommended_engine_use": ["value alternative", "job shop general purpose candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public MSC Accupro category positioning. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Hertel",
+    "brand_type": ["value", "general_purpose", "job_shop", "budget"],
+    "primary_strengths": ["holemaking", "threading", "general_milling", "indexable_inserts", "toolholding"],
+    "best_fit_operations": ["general_milling", "drilling", "threading", "turning", "grooving", "chamfer"],
+    "material_strengths": ["P", "M", "K", "N"],
+    "shop_use_notes": [
+      "Good budget/general-purpose option for shops that need reliable common tooling families.",
+      "Useful when availability, simple sourcing, and value matter more than premium specialization."
+    ],
+    "recommended_engine_use": ["value alternative", "job shop general purpose candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public MSC Hertel category positioning. Treat as family-level guidance only."
+  },
+  {
+    "brand": "Haas Branded Tooling",
+    "brand_type": ["value", "general_purpose", "machine_builder_tooling", "budget"],
+    "primary_strengths": ["general_milling", "drilling", "turning_inserts", "toolholding", "easy_sourcing"],
+    "best_fit_operations": ["general_milling", "drilling", "threading", "turning", "grooving", "chamfer", "keyseat"],
+    "material_strengths": ["P", "M", "K", "N", "S", "H"],
+    "shop_use_notes": [
+      "Good budget/general-purpose candidate when a Haas shop wants easy sourcing from one tooling channel.",
+      "Useful for practical starter tooling, kits, and common replacement needs."
+    ],
+    "recommended_engine_use": ["value alternative", "easy sourcing candidate", "general purpose milling candidate"],
+    "source_status": "family_level_verified_brand_scope_not_catalog_dimensions",
+    "source_notes": "Based on public Haas Tooling category coverage for milling, turning, holemaking, threading, and shop tooling. Treat as family-level guidance only."
+  }
+]

@@ -7,6 +7,7 @@ from typing import Any, Iterable
 import pandas as pd
 import streamlit as st
 
+from grade_engine.brand_intelligence import recommend_brand_families
 from grade_engine.engine import resolve_grade_behavior
 from grade_engine.enums import (
     APPLICATION_ZONES,
@@ -47,6 +48,7 @@ FAMILY_LABELS = {
     "BURNISHING": "Burnishing",
     "WORKHOLDING": "Workholding",
     "TOOL_LOOKUP": "Tool Lookup / Cross Reference",
+    "BRAND_INTELLIGENCE": "Brand Intelligence",
 }
 
 DATA_ROOT = Path(__file__).parent / "tool_data"
@@ -61,6 +63,7 @@ MODULE_DESCRIPTIONS = {
     "BURNISHING": "Reference screen for finish-improvement tools when size, finish, and surface integrity matter.",
     "WORKHOLDING": "Reference screen for chucking and setup stability options that support the cutting recommendation.",
     "TOOL_LOOKUP": "Cross-reference manufacturer numbers, designation families, and series names without relying on fragile product links.",
+    "BRAND_INTELLIGENCE": "Family-level brand and tool-family guidance by operation, material group, and shop priority.",
 }
 
 DRILL_TYPE_HINTS = {
@@ -408,6 +411,61 @@ def render_tool_lookup() -> None:
     if result["warnings"]:
         for warning in result["warnings"]:
             st.warning(clean_text(warning))
+
+
+def render_brand_intelligence() -> None:
+    st.subheader("Brand Intelligence")
+    st.info("Family-level guidance only. Verify exact tools, catalog numbers, and cutting parameters with the manufacturer before release.")
+
+    operations = [
+        "general_milling",
+        "dynamic_milling",
+        "aluminum_milling",
+        "drilling",
+        "threading",
+        "turning",
+        "grooving",
+        "small_bore",
+        "specialty",
+        "keyseat",
+        "chamfer",
+        "production_turning",
+    ]
+    priorities = [
+        "balanced",
+        "value",
+        "high_performance",
+        "specialty",
+        "production_turning",
+        "small_bore",
+    ]
+
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        operation = st.selectbox("Operation", operations, format_func=titleize_token)
+    with c2:
+        material_group = st.selectbox(
+            "Material Group",
+            ["P", "M", "K", "N", "S", "H"],
+            format_func=lambda value: MATERIAL_GROUP_LABELS[value],
+        )
+    with c3:
+        priority = st.selectbox("Priority", priorities, format_func=titleize_token)
+
+    recommendations = recommend_brand_families(operation, material_group, priority)
+    if not recommendations:
+        st.warning("No family-level brand candidates found for this combination.")
+        return
+
+    for recommendation in recommendations[:8]:
+        with st.container(border=True):
+            st.write(f"**{clean_text(recommendation['brand'])}**")
+            st.write(f"Fit score: {recommendation['score']}")
+            if recommendation.get("reasons"):
+                st.write("Why it fits: " + " | ".join(clean_text(reason) for reason in recommendation["reasons"]))
+            for note in recommendation.get("shop_use_notes", []):
+                st.caption(clean_text(note))
+            st.caption(f"Source status: {clean_text(recommendation['source_status'])}")
 
 
 def build_common_inputs() -> dict[str, Any]:
@@ -1056,11 +1114,13 @@ if mode == "Catalog Data Explorer":
 family = st.selectbox("Module", list(FAMILY_LABELS.keys()), format_func=lambda x: FAMILY_LABELS[x])
 st.caption(MODULE_DESCRIPTIONS[family])
 
-if family in {"BURNISHING", "WORKHOLDING", "TOOL_LOOKUP"}:
+if family in {"BURNISHING", "WORKHOLDING", "TOOL_LOOKUP", "BRAND_INTELLIGENCE"}:
     if family == "BURNISHING":
         recommend_burnishing()
     elif family == "TOOL_LOOKUP":
         render_tool_lookup()
+    elif family == "BRAND_INTELLIGENCE":
+        render_brand_intelligence()
     else:
         recommend_workholding()
     st.stop()
