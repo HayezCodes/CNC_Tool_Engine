@@ -38,6 +38,8 @@ First staged manufacturer data: Helical Solutions endmill family records.
 
 Staged records live separately from production recommendation data. Reviewed records can later feed the Brand Intelligence layer only after source citation and shop-safe validation.
 
+Reviewed catalog records are still family-level unless cutting data is separately validated.
+
 ## Install
 
 1. Create and activate a virtual environment.
