@@ -48,10 +48,23 @@ def get_chipbreaker_hint(material_group:str, application_zone:str)->dict:
     }
     return {"family":"General-purpose family","why":generic.get(material_group, "No chipbreaker hint available.")}
 
-def get_geometry_hint(application_zone:str, finish_priority:str, doc_band:str)->dict:
-    if application_zone == "TOUGH":
-        return {"geometry":"DNMG / CNMG type direction","why":"Rougher or less stable work usually benefits from a stronger shape with more edge support."}
-    if application_zone == "WEAR" or finish_priority == "HIGH" or doc_band == "LIGHT":
+def get_geometry_hint(input_data:dict)->dict:
+    application_zone = input_data["application_zone"]
+    finish_priority = input_data["finish_priority"]
+    doc_band = input_data["doc_band"]
+    interrupted_cut = input_data["interrupted_cut"]
+    workholding = input_data["workholding"]
+    stickout = input_data["stickout"]
+
+    unstable = interrupted_cut in ["LIGHT", "HEAVY"] or workholding in ["AVERAGE", "POOR"] or stickout == "LONG"
+    rough_bias = application_zone == "TOUGH" or doc_band == "HEAVY" or interrupted_cut == "HEAVY"
+    finish_bias = application_zone == "WEAR" or finish_priority == "HIGH" or doc_band == "LIGHT"
+
+    if rough_bias or unstable:
+        if interrupted_cut == "HEAVY" or workholding == "POOR":
+            return {"geometry":"CNMG / stronger negative-turning direction","why":"Interrupted or less stable work usually benefits from a stronger shape with more edge support."}
+        return {"geometry":"CNMG / DNMG supported-turning direction","why":"Moderately unstable or heavier work usually starts from a supported shape before moving sharper."}
+    if finish_bias:
         return {"geometry":"VNMG / sharper finishing direction","why":"Stable lighter finishing work usually benefits from a sharper geometry that lowers cutting force."}
     return {"geometry":"DNMG as a broad starting point","why":"Balanced work can usually start with a versatile shape before narrowing into a more specialized geometry."}
 
@@ -68,7 +81,7 @@ def get_risk_flags(input_data:dict, preferred_coating:str, toughness_level:str, 
     if input_data["application_zone"] == "WEAR" and preferred_coating == "PVD":
         risks.append("Wear-side cut resolved to PVD bias; watch tool life if the cut is very stable and hot.")
     if input_data["material_group"] == "M" and input_data["doc_band"] == "LIGHT":
-        risks.append("Light-DOC stainless cut: keep feed honest so the edge keeps cutting instead of rubbing.")
+        risks.append("Stainless finishing cut: avoid rubbing and keep feed honest.")
     return risks
 
 def get_shop_language_steps(input_data:dict)->list:
@@ -163,7 +176,7 @@ def resolve_grade_behavior(input_data:dict)->dict:
     wear_level = SCORE_TO_LEVEL[wear]
     recommendation = build_recommendation_summary(input_data["material_group"], input_data["application_zone"], toughness_level, wear_level, preferred_coating)
     chipbreaker = get_chipbreaker_hint(input_data["material_group"], input_data["application_zone"])
-    geometry = get_geometry_hint(input_data["application_zone"], input_data["finish_priority"], input_data["doc_band"])
+    geometry = get_geometry_hint(input_data)
     insert_identity = build_insert_identity(input_data, geometry, chipbreaker)
 
     return {

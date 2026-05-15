@@ -1,0 +1,388 @@
+[
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level square end mill category only; verify size, reach, flute count, and corner details by catalog",
+    "family_name": "High-performance square end mill families",
+    "geometry_tags": [
+      "square_end",
+      "solid_carbide",
+      "high_performance"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "slotting",
+      "profiling",
+      "roughing",
+      "finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "high_performance",
+      "job_shop_general",
+      "production_milling"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level variable pitch category only; verify size, reach, flute count, helix, and corner details by catalog",
+    "family_name": "Variable pitch end mill families",
+    "geometry_tags": [
+      "variable_pitch",
+      "solid_carbide",
+      "chatter_reduction_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "roughing",
+      "finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "high_performance",
+      "chatter_reduction_candidate",
+      "production_milling"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog or manufacturer advisor",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level dynamic milling category only; verify size, reach, flute count, chip clearance, and toolpath limits by catalog",
+    "family_name": "Dynamic/adaptive milling end mill families",
+    "geometry_tags": [
+      "dynamic_milling",
+      "adaptive_milling",
+      "solid_carbide",
+      "chip_evacuation_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "dynamic_milling",
+      "adaptive_milling",
+      "roughing",
+      "profiling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "dynamic",
+      "adaptive",
+      "high_efficiency",
+      "radial_engagement_strategy"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify polished, coated, or uncoated configuration by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level aluminum milling category only; verify size, reach, flute count, coating, and chip clearance by catalog",
+    "family_name": "Aluminum end mill families",
+    "geometry_tags": [
+      "aluminum_geometry",
+      "high_rake_candidate",
+      "chip_evacuation_candidate"
+    ],
+    "material_fit": [
+      "N"
+    ],
+    "operation_fit": [
+      "aluminum_milling",
+      "slotting",
+      "profiling",
+      "roughing",
+      "finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "aluminum_milling",
+      "high_efficiency",
+      "chip_evacuation_priority"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level finishing category only; verify size, reach, flute count, corner style, and finish geometry by catalog",
+    "family_name": "Finishing end mill families",
+    "geometry_tags": [
+      "finishing",
+      "solid_carbide",
+      "surface_finish_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "finishing",
+      "profiling",
+      "wall_finishing",
+      "floor_finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "finishing",
+      "surface_finish_priority",
+      "light_radial_engagement"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level roughing category only; verify size, reach, flute count, chipbreaker style, and corner details by catalog",
+    "family_name": "Roughing end mill families",
+    "geometry_tags": [
+      "roughing",
+      "chipbreaker_candidate",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "roughing",
+      "slotting",
+      "pocketing",
+      "profiling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "roughing",
+      "high_performance",
+      "production_milling"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level corner radius category only; verify size, reach, flute count, radius, and material application by catalog",
+    "family_name": "Corner radius end mill families",
+    "geometry_tags": [
+      "corner_radius",
+      "solid_carbide",
+      "edge_strength_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "roughing",
+      "finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "edge_strength_priority",
+      "high_performance",
+      "job_shop_general"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level ball end mill category only; verify size, reach, flute count, and neck clearance by catalog",
+    "family_name": "Ball end mill families",
+    "geometry_tags": [
+      "ball_end",
+      "solid_carbide",
+      "contouring_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "contouring",
+      "finishing",
+      "3d_milling",
+      "profiling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "3d_finishing",
+      "surface_finish_priority",
+      "contouring"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level chamfer mill category only; verify included angle, size, flute count, and reach by catalog",
+    "family_name": "Chamfer mill families",
+    "geometry_tags": [
+      "chamfer_mill",
+      "angle_geometry_requires_review",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "chamfer",
+      "deburring",
+      "edge_breaking",
+      "spotting"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "chamfering",
+      "edge_breaking",
+      "specialty_milling"
+    ],
+    "tool_category": "chamfer_mill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Helical Solutions",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level specialty milling category only; verify exact cutter form, clearance, reach, and application by catalog",
+    "family_name": "Specialty milling cutter families",
+    "geometry_tags": [
+      "specialty_milling",
+      "geometry_requires_review",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "specialty_milling",
+      "undercutting",
+      "profiling",
+      "feature_milling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "strategy_fit": [
+      "specialty_feature",
+      "problem_solving",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "specialty_milling",
+    "verification_status": "staged_unreviewed"
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "brand": "YG-1",
+    "source_label": "YG-1 Product Catalogs",
+    "source_url": "https://product.yg1.solutions/resource/catalog?lang=ENG&lang=eng",
+    "source_type": "official_catalog_portal",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["endmills", "drills", "threading", "indexable_inserts"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Helical Solutions",
+    "source_label": "Helical Solutions 2025 Product Catalog",
+    "source_url": "https://www.helicaltool.com/catalog-request",
+    "source_type": "official_catalog_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["endmills", "chamfer_mills", "specialty_milling"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Harvey Tool",
+    "source_label": "Harvey Tool 2026 Product Catalog",
+    "source_url": "https://www.harveytool.com/catalog-request",
+    "source_type": "official_catalog_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["miniature_endmills", "specialty_cutters", "chamfer_tools", "keyseat_cutters", "thread_mills"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Micro 100",
+    "source_label": "Micro 100 Catalog",
+    "source_url": "https://www.micro100.com/catalog",
+    "source_type": "official_catalog_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["boring_bars", "miniature_turning", "grooving", "threading", "micro_tooling"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Garr Tool",
+    "source_label": "Garr Tool Full Catalog 2026",
+    "source_url": "https://www.garrtool.com/downloads/",
+    "source_type": "official_catalog_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["endmills", "high_efficiency_milling", "drills", "roughers"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "source_label": "Seco Tools About Niagara Cutter",
+    "source_url": "https://www.secotools.com/article/about_niagara_cutter?language=en",
+    "source_type": "official_brand_scope_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["endmills", "solid_round_tools", "production_milling"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Confirm current Niagara catalog resources before importing any staged records."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "source_label": "Sumitomo Electric Hardmetal Cutting Tools General Catalog 2025-2026",
+    "source_url": "https://www.sumitool.com/en/downloads/cutting-tools/general-catalog/",
+    "source_type": "official_catalog_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["turning_inserts", "milling_cutters", "drilling", "boring_bars", "endmills"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Kyocera",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "source_type": "official_catalog_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["turning_inserts", "milling_inserts", "grooving", "threading", "drilling"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Tungaloy",
+    "source_label": "Tungaloy Catalog Publications",
+    "source_url": "https://tungaloy.com/publications/catalog/",
+    "source_type": "official_catalog_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["turning", "grooving", "milling", "drilling", "tooling_systems"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  },
+  {
+    "brand": "Haas Tooling",
+    "source_label": "Haas Tooling Milling Inserts and Tooling Categories",
+    "source_url": "https://www.haascnc.com/haas-tooling/milling/milling_inserts.html",
+    "source_type": "official_tooling_page",
+    "allowed_ingestion_mode": "manual_download_or_page_parse",
+    "data_scope": ["milling_inserts", "turning_tooling", "boring_bars", "drills", "general_tooling"],
+    "trust_level": "official_source",
+    "ingestion_status": "not_started",
+    "notes": "Use family-level extraction first. Do not import exact cutting data without source citation and review."
+  }
+]

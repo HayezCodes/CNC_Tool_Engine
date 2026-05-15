@@ -1,0 +1,29 @@
+{
+  "dataset_name": "CNC Tool Engine Catalog-Backed Dataset Baseline",
+  "version": "2026-05-05",
+  "record_counts": {
+    "grades": 55,
+    "turning_inserts": 49,
+    "turning_holders": 5,
+    "grooving_inserts": 43,
+    "grooving_holders": 6,
+    "threading_inserts": 11,
+    "threading_holders": 2,
+    "solid_drills": 31,
+    "indexable_drills": 19,
+    "drill_inserts": 3,
+    "endmills": 43,
+    "indexable_cutters": 55,
+    "milling_inserts": 7,
+    "burnishing_tools": 6,
+    "workholding": 8,
+    "grooving": 43,
+    "threading": 11
+  },
+  "notes": [
+    "This baseline is curated and normalized from the uploaded catalogs.",
+    "It is intended as an engine-ready seed dataset rather than a full SKU-exact replication of every source catalog.",
+    "Records favor family-level recommendation logic, grade behavior, and application coverage for demo and future expansion.",
+    "Expanded with direct family-level ingestion from attached WIDIA, Sandvik, Kyocera, Melin, Mitsubishi, ISCAR, and Allied catalog PDFs."
+  ]
+}

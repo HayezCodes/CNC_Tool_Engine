@@ -1,0 +1,243 @@
+[
+  {
+    "brand": "Kyocera",
+    "catalog_number": "",
+    "coating_or_grade": "verify insert grade families and chipbreaker groups by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level turning insert category only; verify shape, relief, chipbreaker family, grade family, and ISO application by catalog",
+    "family_name": "General-purpose turning insert families",
+    "geometry_tags": [
+      "turning_insert",
+      "chipbreaker_requires_review",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "internal_turning",
+      "profiling",
+      "facing"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for production turning and milling insert families. Exact insert shapes, grades, thread/groove forms, cutter platforms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "strategy_fit": [
+      "general_purpose",
+      "production_turning",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "turning_insert",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Kyocera",
+    "catalog_number": "",
+    "coating_or_grade": "verify finishing grade families and chipbreaker groups by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level finishing turning insert category only; verify nose style, chipbreaker family, grade family, and holder compatibility by catalog",
+    "family_name": "Finishing and profiling turning insert families",
+    "geometry_tags": [
+      "turning_insert",
+      "finishing",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "finishing",
+      "profiling",
+      "facing",
+      "copy_turning"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for production turning and milling insert families. Exact insert shapes, grades, thread/groove forms, cutter platforms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "strategy_fit": [
+      "finishing",
+      "surface_finish_priority",
+      "production_turning"
+    ],
+    "tool_category": "turning_insert",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Kyocera",
+    "catalog_number": "",
+    "coating_or_grade": "verify milling insert grade families and cutter systems by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level shoulder milling insert category only; verify insert style, cutter system, grade family, and application range by catalog",
+    "family_name": "Shoulder milling insert families",
+    "geometry_tags": [
+      "milling_insert",
+      "shoulder_milling",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "shoulder_milling",
+      "face_milling",
+      "slotting",
+      "general_milling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for production turning and milling insert families. Exact insert shapes, grades, thread/groove forms, cutter platforms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "strategy_fit": [
+      "production_milling",
+      "general_purpose",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "milling_insert",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Kyocera",
+    "catalog_number": "",
+    "coating_or_grade": "verify face mill insert grade families and cutter systems by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level face milling insert category only; verify insert style, cutter system, grade family, and target materials by catalog",
+    "family_name": "Face milling insert families",
+    "geometry_tags": [
+      "milling_insert",
+      "face_milling",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "face_milling",
+      "roughing",
+      "finishing",
+      "general_milling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for production turning and milling insert families. Exact insert shapes, grades, thread/groove forms, cutter platforms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "strategy_fit": [
+      "production_milling",
+      "face_milling",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "milling_insert",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Kyocera",
+    "catalog_number": "",
+    "coating_or_grade": "verify groove insert grade families and system platforms by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level grooving insert category only; verify groove form, insert style, system platform, and target materials by catalog",
+    "family_name": "Grooving and cut-off insert families",
+    "geometry_tags": [
+      "grooving_insert",
+      "groove_form_requires_review",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting",
+      "face_grooving",
+      "profiling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for production turning and milling insert families. Exact insert shapes, grades, thread/groove forms, cutter platforms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "strategy_fit": [
+      "grooving",
+      "production_turning",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "grooving_insert",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Kyocera",
+    "catalog_number": "",
+    "coating_or_grade": "verify thread form, pitch grouping, and grade family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level threading insert category only; verify thread form, pitch grouping, insert style, and holder compatibility by catalog",
+    "family_name": "Threading insert families",
+    "geometry_tags": [
+      "threading_insert",
+      "thread_form_requires_review",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "threading",
+      "external_threading",
+      "internal_threading"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for production turning and milling insert families. Exact insert shapes, grades, thread/groove forms, cutter platforms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "strategy_fit": [
+      "threading",
+      "production_turning",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "threading_insert",
+    "verification_status": "reviewed_family_level"
+  }
+]

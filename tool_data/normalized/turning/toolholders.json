@@ -1,0 +1,116 @@
+[
+  {
+    "id": "slanr_l_2525m-15_tang",
+    "brand": "ISCAR",
+    "series": "HELITURN",
+    "tool_category": "turning_holder",
+    "designation": "SLANR/L 2525M-15 TANG",
+    "geometry": {
+      "holder_style": "external",
+      "shank_height_mm": 25,
+      "shank_width_mm": 25,
+      "approach_angle_deg": 93
+    },
+    "compatibility": {
+      "insert_families": [
+        "LNMX 1506"
+      ],
+      "operations": [
+        "rough_turning",
+        "facing"
+      ]
+    }
+  },
+  {
+    "id": "planr_l_3232p-22_tang",
+    "brand": "ISCAR",
+    "series": "HELITURN",
+    "tool_category": "turning_holder",
+    "designation": "PLANR/L 3232P-22 TANG",
+    "geometry": {
+      "holder_style": "external",
+      "shank_height_mm": 32,
+      "shank_width_mm": 32,
+      "approach_angle_deg": 93
+    },
+    "compatibility": {
+      "insert_families": [
+        "LNMX 2210"
+      ],
+      "operations": [
+        "rough_turning"
+      ]
+    }
+  },
+  {
+    "id": "coroturn_rc",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn RC",
+    "tool_category": "turning_holder",
+    "designation": "CoroTurn RC",
+    "geometry": {
+      "holder_style": "external",
+      "shank_height_mm": 25,
+      "shank_width_mm": 25,
+      "approach_angle_deg": 95
+    },
+    "compatibility": {
+      "insert_families": [
+        "negative_round_or_rc"
+      ],
+      "operations": [
+        "rough_turning",
+        "profiling"
+      ]
+    }
+  },
+  {
+    "id": "t-max_p_shank_holder",
+    "brand": "Sandvik Coromant",
+    "series": "T-Max P",
+    "tool_category": "turning_holder",
+    "designation": "T-Max P Shank Holder",
+    "geometry": {
+      "holder_style": "external",
+      "shank_height_mm": 25,
+      "shank_width_mm": 25,
+      "approach_angle_deg": 95
+    },
+    "compatibility": {
+      "insert_families": [
+        "CNMG",
+        "DNMG",
+        "SNMG",
+        "TNMG",
+        "WNMG"
+      ],
+      "operations": [
+        "general_turning"
+      ]
+    }
+  },
+  {
+    "id": "coroturn_107_holder",
+    "brand": "Sandvik Coromant",
+    "series": "CoroTurn 107",
+    "tool_category": "turning_holder",
+    "designation": "CoroTurn 107 Holder",
+    "geometry": {
+      "holder_style": "internal",
+      "shank_height_mm": 16,
+      "shank_width_mm": 16,
+      "approach_angle_deg": 95
+    },
+    "compatibility": {
+      "insert_families": [
+        "CCMT",
+        "DCMT",
+        "VCMT"
+      ],
+      "operations": [
+        "internal_turning",
+        "profiling"
+      ]
+    }
+  }
+]

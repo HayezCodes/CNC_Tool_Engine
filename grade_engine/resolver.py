@@ -2,10 +2,10 @@ from urllib.parse import quote_plus
 from .supplier_maps import SUPPLIER_MAPS_V1, GRADE_DESCRIPTIONS
 
 SUPPLIER_SEARCH = {
-    "MSC": "https://www.bing.com/search?q=site%3Awww.mscdirect.com+{query}",
-    "ISCAR": "https://www.bing.com/search?q=site%3Awww.iscar.com%2FeCatalog+{query}",
+    "MSC": "https://www.mscdirect.com/browse/tn?searchterm={query}",
+    "ISCAR": "https://www.iscar.com/eCatalog/?q={query}",
     "SANDVIK": "https://www.sandvik.coromant.com/en-us/search?text={query}",
-    "KENNAMETAL": "https://www.bing.com/search?q=site%3Awww.kennametal.com%2Fus%2Fen%2Fproducts+{query}",
+    "KENNAMETAL": "https://www.kennametal.com/us/en/search-results.html?q={query}",
 }
 
 SUPPLIER_MATERIAL_FAMILIES = {
@@ -25,6 +25,14 @@ SUPPLIER_MATERIAL_FAMILIES = {
         "S": "HRSA super alloy",
         "H": "hardened steel CBN",
     },
+    "KYOCERA": {
+        "P": "steel",
+        "M": "stainless",
+        "K": "cast iron",
+        "N": "aluminum non-ferrous",
+        "S": "super alloy",
+        "H": "hardened steel",
+    },
     "KENNAMETAL": {
         "P": "steel",
         "M": "stainless",
@@ -43,8 +51,8 @@ SUPPLIER_MATERIAL_FAMILIES = {
     },
 }
 
-# MSC bucket grades resolve through ISO-class aliases so catalog queries stay
-# human-readable instead of exposing internal application keys.
+# MSC bucket grades are internal placeholders in this app, so search with ISO-class aliases
+# instead of the placeholder key to keep the catalog query stable and human-readable.
 MSC_GRADE_SEARCH_ALIASES = {
     "MSC_ISO_P30": "ISO P30",
     "MSC_ISO_P25": "ISO P25",
@@ -130,6 +138,8 @@ def build_supplier_query(supplier: str, material_group: str, grade: str, geometr
         return compact_query_tokens(insert_code, size, breaker, grade_term, family_hint, "turning insert")
     if supplier == "SANDVIK":
         return compact_query_tokens(grade_term, insert_code, size, breaker, family_hint, "turning insert")
+    if supplier == "KYOCERA":
+        return compact_query_tokens(grade_term, insert_code, size, breaker, family_hint, "turning insert")
     if supplier == "KENNAMETAL":
         return compact_query_tokens(grade_term, insert_code, size, breaker, family_hint, "turning insert")
     if supplier == "ISCAR":
@@ -147,11 +157,10 @@ def map_behavior_to_supplier_grades(material_group: str, application_zone: str, 
     if material_group not in ["P","M","K","N","S","H"]:
         return {
             "SYSTEM": {
-                "recommended_grade": "General turning insert search",
-                "fallback_grade": "Broad catalog search",
+                "recommended_grade": "Behavior engine live",
+                "fallback_grade": "Supplier mapping coming next",
                 "preferred_coating": preferred_coating,
-                "description": "Use the resolved coating and geometry as a broad turning-insert catalog search.",
-                "search_query": "turning insert",
+                "description": "Material group added to the behavior engine. Supplier-grade mapping for this group still needs tuned tables.",
                 "links": {},
             }
         }
@@ -173,8 +182,6 @@ def map_behavior_to_supplier_grades(material_group: str, application_zone: str, 
         output[supplier] = {
             "recommended_grade": recommended,
             "fallback_grade": zone_map["primary"],
-            "recommended_label": "Recommended Grade",
-            "fallback_label": "Fallback Grade",
             "preferred_coating": preferred_coating,
             "description": GRADE_DESCRIPTIONS.get(recommended, ""),
             "search_query": search_query,

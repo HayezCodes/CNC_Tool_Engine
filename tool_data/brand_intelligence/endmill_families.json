@@ -1,0 +1,98 @@
+[
+  {
+    "brand": "YG-1",
+    "family_name": "General-purpose carbide endmill families",
+    "family_type": ["solid_carbide_endmill", "general_purpose", "value_performance"],
+    "operation_fit": ["general_milling", "slotting", "profiling", "roughing", "finishing"],
+    "material_fit": ["P", "M", "N"],
+    "strategy_fit": ["conventional", "light_adaptive", "job_shop_general"],
+    "strengths": ["value_performance", "general_shop_use"],
+    "cautions": ["verify coating, flute count, corner radius, reach, and cutting data by catalog"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Helical Solutions",
+    "family_name": "High-performance and material-specific endmill families",
+    "family_type": ["solid_carbide_endmill", "high_performance", "material_specific"],
+    "operation_fit": ["general_milling", "dynamic_milling", "aluminum_milling", "profiling", "roughing", "finishing"],
+    "material_fit": ["P", "M", "N", "S", "H"],
+    "strategy_fit": ["adaptive", "dynamic", "high_efficiency", "material_specific"],
+    "strengths": ["dynamic_milling", "high_performance", "aluminum_milling"],
+    "cautions": ["verify coating, flute count, chip evacuation, corner style, reach, and cutting data by catalog or MAP"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Niagara Cutter",
+    "family_name": "Production solid endmill families",
+    "family_type": ["solid_endmill", "traditional_milling", "production_milling"],
+    "operation_fit": ["general_milling", "slotting", "profiling", "roughing", "finishing", "dynamic_milling"],
+    "material_fit": ["P", "M", "K", "N"],
+    "strategy_fit": ["conventional", "production_milling", "job_shop_general"],
+    "strengths": ["production_milling", "broad_solid_round_tooling"],
+    "cautions": ["verify substrate, coating, flute geometry, reach, and cutting data by current catalog"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Harvey Tool",
+    "family_name": "Miniature and specialty endmill/cutter families",
+    "family_type": ["solid_carbide_endmill", "miniature", "specialty"],
+    "operation_fit": ["specialty", "small_bore", "chamfer", "keyseat", "undercutting", "threading", "profiling"],
+    "material_fit": ["P", "M", "K", "N", "S", "H"],
+    "strategy_fit": ["specialty_feature", "miniature_work", "problem_solving"],
+    "strengths": ["miniature_tools", "specialty_geometry", "problem_solving"],
+    "cautions": ["verify cutter geometry, reach, shank clearance, minimum feature access, and cutting data by catalog"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Garr Tool",
+    "family_name": "High-performance solid carbide endmill families",
+    "family_type": ["solid_carbide_endmill", "high_performance", "production_milling"],
+    "operation_fit": ["general_milling", "dynamic_milling", "aluminum_milling", "roughing", "finishing", "profiling"],
+    "material_fit": ["P", "M", "N", "S", "H"],
+    "strategy_fit": ["adaptive", "dynamic", "high_efficiency", "production_milling"],
+    "strengths": ["high_performance", "tough_materials", "roughing_finishing"],
+    "cautions": ["verify coating family, flute count, chip splitter needs, reach, and cutting data by catalog"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Accupro",
+    "family_name": "Job shop general-purpose endmill families",
+    "family_type": ["solid_endmill", "general_purpose", "value"],
+    "operation_fit": ["general_milling", "slotting", "profiling", "roughing", "finishing", "chamfer"],
+    "material_fit": ["P", "M", "K", "N"],
+    "strategy_fit": ["conventional", "job_shop_general", "value"],
+    "strengths": ["value", "availability", "general_shop_use"],
+    "cautions": ["verify coating, flute count, corner style, reach, and cutting data by distributor or catalog"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Hertel",
+    "family_name": "Budget/general-purpose endmill families",
+    "family_type": ["solid_endmill", "general_purpose", "value"],
+    "operation_fit": ["general_milling", "slotting", "profiling", "roughing", "finishing", "chamfer"],
+    "material_fit": ["P", "M", "K", "N"],
+    "strategy_fit": ["conventional", "job_shop_general", "value"],
+    "strengths": ["value", "general_shop_use", "broad_common_tooling"],
+    "cautions": ["verify coating, substrate, geometry, reach, and cutting data by distributor or catalog"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Haas Branded Tooling",
+    "family_name": "Easy-sourcing general-purpose mill tooling families",
+    "family_type": ["solid_endmill", "general_purpose", "value", "machine_builder_tooling"],
+    "operation_fit": ["general_milling", "slotting", "profiling", "roughing", "finishing", "chamfer", "keyseat"],
+    "material_fit": ["P", "M", "K", "N", "S", "H"],
+    "strategy_fit": ["conventional", "job_shop_general", "value", "easy_sourcing"],
+    "strengths": ["easy_sourcing", "value", "general_shop_use"],
+    "cautions": ["verify coating, tool geometry, holder compatibility, reach, and cutting data by Haas Tooling listing"],
+    "source_status": "family_level_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  }
+]

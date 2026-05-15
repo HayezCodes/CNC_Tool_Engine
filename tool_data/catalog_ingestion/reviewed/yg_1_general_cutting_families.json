@@ -1,0 +1,233 @@
+[
+  {
+    "brand": "YG-1",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family and flute style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level general carbide end mill category only; verify flute count, reach, corner style, and material application by catalog",
+    "family_name": "General-purpose carbide end mill families",
+    "geometry_tags": [
+      "solid_carbide",
+      "general_purpose",
+      "square_end_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "slotting",
+      "profiling",
+      "shoulder_milling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for value-oriented general carbide endmills, drills, and taps. Exact geometry, dimensions, coatings, thread forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "YG-1 Product Catalogs",
+    "source_page_reference": "",
+    "source_type": "official_catalog_portal",
+    "source_url": "https://product.yg1.solutions/resource/catalog?lang=ENG&lang=eng",
+    "strategy_fit": [
+      "job_shop_general",
+      "value_focused",
+      "general_purpose"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "YG-1",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family and helix style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level variable helix end mill category only; verify flute count, reach, corner style, and application limits by catalog",
+    "family_name": "Variable helix performance end mill families",
+    "geometry_tags": [
+      "variable_helix",
+      "solid_carbide",
+      "chatter_reduction_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "roughing",
+      "finishing"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for value-oriented general carbide endmills, drills, and taps. Exact geometry, dimensions, coatings, thread forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "YG-1 Product Catalogs",
+    "source_page_reference": "",
+    "source_type": "official_catalog_portal",
+    "source_url": "https://product.yg1.solutions/resource/catalog?lang=ENG&lang=eng",
+    "strategy_fit": [
+      "chatter_reduction_candidate",
+      "high_performance",
+      "production_milling"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "YG-1",
+    "catalog_number": "",
+    "coating_or_grade": "verify rougher form and coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level roughing end mill category only; verify serration style, flute count, reach, and material application by catalog",
+    "family_name": "Roughing end mill families",
+    "geometry_tags": [
+      "roughing",
+      "chipbreaker_candidate",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "roughing",
+      "slotting",
+      "pocketing",
+      "profiling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for value-oriented general carbide endmills, drills, and taps. Exact geometry, dimensions, coatings, thread forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "YG-1 Product Catalogs",
+    "source_page_reference": "",
+    "source_type": "official_catalog_portal",
+    "source_url": "https://product.yg1.solutions/resource/catalog?lang=ENG&lang=eng",
+    "strategy_fit": [
+      "roughing",
+      "production_milling",
+      "material_removal_priority"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "YG-1",
+    "catalog_number": "",
+    "coating_or_grade": "verify drill substrate and coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level carbide drill category only; verify point style, coolant style, diameter range, and depth series by catalog",
+    "family_name": "General-purpose carbide drill families",
+    "geometry_tags": [
+      "solid_drill",
+      "general_purpose",
+      "through_coolant_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for value-oriented general carbide endmills, drills, and taps. Exact geometry, dimensions, coatings, thread forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "YG-1 Product Catalogs",
+    "source_page_reference": "",
+    "source_type": "official_catalog_portal",
+    "source_url": "https://product.yg1.solutions/resource/catalog?lang=ENG&lang=eng",
+    "strategy_fit": [
+      "general_purpose",
+      "job_shop_general",
+      "value_focused"
+    ],
+    "tool_category": "drill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "YG-1",
+    "catalog_number": "",
+    "coating_or_grade": "verify performance drill substrate and coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level performance drill category only; verify coolant style, point geometry, diameter range, and depth series by catalog",
+    "family_name": "Performance drill families",
+    "geometry_tags": [
+      "solid_drill",
+      "high_performance",
+      "through_coolant_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "high_efficiency_drilling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for value-oriented general carbide endmills, drills, and taps. Exact geometry, dimensions, coatings, thread forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "YG-1 Product Catalogs",
+    "source_page_reference": "",
+    "source_type": "official_catalog_portal",
+    "source_url": "https://product.yg1.solutions/resource/catalog?lang=ENG&lang=eng",
+    "strategy_fit": [
+      "production_drilling",
+      "through_coolant_candidate",
+      "high_performance"
+    ],
+    "tool_category": "drill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "YG-1",
+    "catalog_number": "",
+    "coating_or_grade": "verify substrate, coating family, and thread form by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level machine tap category only; verify thread form, pitch range, chamfer style, coolant style, and material application by catalog",
+    "family_name": "Machine tap families",
+    "geometry_tags": [
+      "tap",
+      "thread_form_requires_review",
+      "spiral_point_or_spiral_flute_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "threading",
+      "tapping",
+      "internal_threading"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for value-oriented general carbide endmills, drills, and taps. Exact geometry, dimensions, coatings, thread forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "YG-1 Product Catalogs",
+    "source_page_reference": "",
+    "source_type": "official_catalog_portal",
+    "source_url": "https://product.yg1.solutions/resource/catalog?lang=ENG&lang=eng",
+    "strategy_fit": [
+      "machine_tapping",
+      "production_threading",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "tap",
+    "verification_status": "reviewed_family_level"
+  }
+]

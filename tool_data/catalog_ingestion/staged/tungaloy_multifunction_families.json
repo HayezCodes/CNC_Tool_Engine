@@ -1,0 +1,228 @@
+[
+  {
+    "brand": "Tungaloy",
+    "catalog_number": "",
+    "coating_or_grade": "verify groove insert grade families and system platforms by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level grooving insert category only; verify groove form, insert style, system platform, and target materials by catalog",
+    "family_name": "Grooving and parting insert families",
+    "geometry_tags": [
+      "grooving_insert",
+      "groove_form_requires_review",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting",
+      "face_grooving",
+      "profiling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Tungaloy Catalog Publications",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://tungaloy.com/publications/catalog/",
+    "strategy_fit": [
+      "grooving",
+      "production_turning",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "grooving_insert",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Tungaloy",
+    "catalog_number": "",
+    "coating_or_grade": "verify compatible insert systems and holder style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level grooving holder category only; verify holder style, hand, insert family compatibility, and application limits by catalog",
+    "family_name": "Grooving and parting holder families",
+    "geometry_tags": [
+      "grooving_toolholder",
+      "system_platform",
+      "insert_compatibility_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting",
+      "face_grooving"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Tungaloy Catalog Publications",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://tungaloy.com/publications/catalog/",
+    "strategy_fit": [
+      "grooving",
+      "tooling_system",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "grooving_toolholder",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Tungaloy",
+    "catalog_number": "",
+    "coating_or_grade": "verify thread form, pitch grouping, and grade family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level threading insert category only; verify thread form, pitch grouping, insert style, and holder compatibility by catalog",
+    "family_name": "Threading insert families",
+    "geometry_tags": [
+      "threading_insert",
+      "thread_form_requires_review",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "threading",
+      "external_threading",
+      "internal_threading"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Tungaloy Catalog Publications",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://tungaloy.com/publications/catalog/",
+    "strategy_fit": [
+      "threading",
+      "production_turning",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "threading_insert",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Tungaloy",
+    "catalog_number": "",
+    "coating_or_grade": "verify compatible insert systems and holder style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level threading holder category only; verify holder style, hand, insert family compatibility, and application limits by catalog",
+    "family_name": "Threading holder families",
+    "geometry_tags": [
+      "threading_toolholder",
+      "system_platform",
+      "insert_compatibility_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "threading",
+      "external_threading",
+      "internal_threading"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Tungaloy Catalog Publications",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://tungaloy.com/publications/catalog/",
+    "strategy_fit": [
+      "threading",
+      "tooling_system",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "threading_toolholder",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Tungaloy",
+    "catalog_number": "",
+    "coating_or_grade": "verify high-feed insert grades and cutter systems by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level high-feed milling cutter category only; verify cutter platform, insert family, entering angle, and target operations by catalog",
+    "family_name": "High-feed milling cutter families",
+    "geometry_tags": [
+      "indexable_cutter",
+      "high_feed",
+      "system_platform"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "high_feed_milling",
+      "roughing",
+      "face_milling",
+      "shoulder_milling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Tungaloy Catalog Publications",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://tungaloy.com/publications/catalog/",
+    "strategy_fit": [
+      "high_feed",
+      "production_milling",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "indexable_cutter",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Tungaloy",
+    "catalog_number": "",
+    "coating_or_grade": "verify platform compatibility and insert families by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level multifunction tooling category only; verify system platform, compatible inserts, operation limits, and machine-side requirements by catalog",
+    "family_name": "Multifunction turning and milling system families",
+    "geometry_tags": [
+      "multifunction_tooling",
+      "system_platform",
+      "insert_compatibility_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "grooving",
+      "threading",
+      "turning",
+      "specialty_milling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Tungaloy Catalog Publications",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://tungaloy.com/publications/catalog/",
+    "strategy_fit": [
+      "multifunction",
+      "tooling_system",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "multifunction_tooling",
+    "verification_status": "staged_unreviewed"
+  }
+]
