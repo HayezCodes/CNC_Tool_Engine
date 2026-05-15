@@ -1,0 +1,226 @@
+"""Seco Tools structured JSON adapter for the Enterprise Tooling Search system.
+
+Seco Tools (part of Seco Tools AB, owned by Sandvik AB) is a Swedish cutting tool
+manufacturer. Key product families: Duratomic turning inserts (TC/TP coating series),
+Turbo milling inserts, Feedmax solid carbide drills, Jabro solid carbide endmills,
+MDT grooving/parting inserts, and Snap Tap threading inserts.
+
+Synthetic fixture adapter — not real catalog data.
+"""
+
+from __future__ import annotations
+
+import json
+import sys
+from pathlib import Path
+from typing import Any
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+
+from tools.tooling_adapters.base_adapter import (
+    BaseToolingAdapter,
+    DEFAULT_CUTTING_DATA_STATUS,
+    DEFAULT_VERIFICATION_STATUS,
+    field_contains_forbidden_term,
+    make_empty_record,
+    normalize_geometry_tags,
+    normalize_holder_compatibility,
+    normalize_material_fit,
+    normalize_operation_fit,
+    normalize_tool_category_value,
+)
+
+BRAND = "Seco Tools"
+
+_TOOL_CATEGORY_MAP: dict[str, str] = {
+    "turninginsert": "turning_insert",
+    "indexableturninginsert": "turning_insert",
+    "millinginsert": "milling_insert",
+    "shouldermillinginsert": "milling_insert",
+    "facemillinginsert": "milling_insert",
+    "indexablemillinginsert": "milling_insert",
+    "highfeedmillinginsert": "high_feed_insert",
+    "highfeedinsert": "high_feed_insert",
+    "solidcarbidedrill": "drill",
+    "hssdrill": "drill",
+    "hsscobaltdrill": "drill",
+    "indexabledrill": "indexable_drill",
+    "drillinsert": "indexable_drill",
+    "solidcarbideendmill": "endmill",
+    "endmill": "endmill",
+    "groovinginsert": "grooving_insert",
+    "partinginsert": "grooving_insert",
+    "threadinginsert": "threading_insert",
+    "boringbar": "boring_bar",
+    "boringtoolholder": "boring_bar",
+    "spiraltap": "tap",
+    "machinetap": "tap",
+    "formtap": "tap",
+    "threadmill": "thread_mill",
+    "reamer": "reamer",
+    "solidcarbidereamer": "reamer",
+    "countersink": "countersink",
+    "stepdrill": "step_drill",
+}
+
+_OPERATION_MAP: dict[str, str] = {
+    "externalturning": "external_turning",
+    "internalturning": "internal_turning",
+    "facing": "facing",
+    "profiling": "profiling",
+    "roughing": "roughing",
+    "finishing": "finishing",
+    "mediumturning": "medium_turning",
+    "lightroughing": "light_roughing",
+    "heavyturning": "heavy_turning",
+    "generalmilling": "general_milling",
+    "shouldermilling": "shoulder_milling",
+    "facemilling": "face_milling",
+    "slotmilling": "slot_milling",
+    "ramping": "ramping",
+    "plunging": "plunge_milling",
+    "plungemilling": "plunge_milling",
+    "highfeedmilling": "high_feed_milling",
+    "trochoidal": "trochoidal_milling",
+    "dynamicmilling": "dynamic_milling",
+    "drilling": "drilling",
+    "throughholedrilling": "through_hole_drilling",
+    "blindholedrilling": "blind_hole_drilling",
+    "tapping": "tapping",
+    "threadmilling": "thread_milling",
+    "externalthreadmilling": "external_thread_milling",
+    "internalthreadmilling": "internal_thread_milling",
+    "externalthreading": "external_threading",
+    "internalthreading": "internal_threading",
+    "reaming": "reaming",
+    "finishreaming": "finish_reaming",
+    "countersinking": "countersinking",
+    "chamfering": "chamfering",
+    "grooving": "grooving",
+    "facegrooving": "face_grooving",
+    "parting": "parting",
+    "boring": "boring",
+}
+
+_COOLANT_MAP: dict[str, str] = {
+    "throughcoolantcapable": "through_coolant_capable",
+    "externalonly": "external_only",
+    "unknown": "unknown",
+    "verifybycatalog": "verify_by_catalog",
+    "dry": "external_only",
+    "": "unknown",
+}
+
+
+class SecoToolsAdapter(BaseToolingAdapter):
+    """Parse Seco Tools-style structured JSON tooling records into normalized records."""
+
+    SOURCE_FORMAT = "seco_tools_json"
+
+    def parse(self, source: str | Path) -> list[dict[str, Any]]:
+        self._errors = []
+        self._rejected_count = 0
+        return self.parse_json_string(Path(source).read_text(encoding="utf-8"))
+
+    def parse_json_string(self, json_string: str) -> list[dict[str, Any]]:
+        self._errors = []
+        self._rejected_count = 0
+        try:
+            data = json.loads(json_string)
+        except json.JSONDecodeError as exc:
+            self._errors.append(f"JSON parse error: {exc}")
+            return []
+        if not isinstance(data, dict):
+            self._errors.append("Top-level JSON must be an object with catalog_header and tool_records.")
+            return []
+        header = data.get("catalog_header", {})
+        manufacturer = str(header.get("manufacturer", BRAND)).strip() or BRAND
+        source_label = str(header.get("catalog_label", "")).strip()
+        source_url = str(header.get("catalog_url", "")).strip()
+        tool_records = data.get("tool_records")
+        if not isinstance(tool_records, list):
+            self._errors.append("'tool_records' must be a JSON array.")
+            return []
+        records: list[dict[str, Any]] = []
+        for raw_record in tool_records:
+            if not isinstance(raw_record, dict):
+                self._errors.append("Each tool_record must be a JSON object; skipping.")
+                self._rejected_count += 1
+                continue
+            record, error = self._normalize_record(
+                raw_record, manufacturer=manufacturer,
+                source_label=source_label, source_url=source_url,
+            )
+            if error:
+                self._errors.append(error)
+                self._rejected_count += 1
+            elif record is not None:
+                records.append(record)
+        return records
+
+    def _normalize_record(self, raw, *, manufacturer, source_label, source_url):
+        mpn = str(raw.get("part_number", "")).strip()
+        for key in raw:
+            if field_contains_forbidden_term(str(key)):
+                return None, (
+                    f"Record '{mpn or 'unknown'}': rejected — "
+                    f"forbidden key '{key}' detected (feed/speed data not allowed)"
+                )
+        record = make_empty_record()
+        record["brand"] = manufacturer
+        record["manufacturer_part_number"] = mpn
+        record["tool_category"] = self._map_tool_category(str(raw.get("tool_type", "")))
+        record["series"] = str(raw.get("series", "")).strip()
+        record["family_name"] = str(raw.get("family_name", "")).strip()
+        record["designation"] = str(raw.get("designation", "")).strip()
+        record["grade"] = str(raw.get("grade", "")).strip()
+        record["chipbreaker"] = str(raw.get("chipbreaker", "")).strip()
+        record["coating"] = str(raw.get("coating", "")).strip()
+        if isinstance(raw.get("material_groups"), list):
+            record["material_fit"] = normalize_material_fit(raw["material_groups"])
+        if isinstance(raw.get("operations"), list):
+            record["operation_fit"] = self._map_operations(raw["operations"])
+        if isinstance(raw.get("geometry_tags"), list):
+            record["geometry_tags"] = normalize_geometry_tags(raw["geometry_tags"])
+        holder_raw = str(raw.get("holder_compatibility", "")).strip()
+        if holder_raw:
+            record["holder_compatibility"] = normalize_holder_compatibility(
+                [h.strip() for h in holder_raw.split(",")]
+            )
+        record["coolant_capability"] = self._map_coolant(str(raw.get("coolant", "")))
+        record["source_label"] = source_label
+        record["source_url"] = source_url
+        record["source_page_reference"] = str(raw.get("source_page", "")).strip()
+        record["verification_status"] = DEFAULT_VERIFICATION_STATUS
+        record["cutting_data_status"] = DEFAULT_CUTTING_DATA_STATUS
+        record["notes"] = str(raw.get("notes", "")).strip()
+        return record, None
+
+    def _map_tool_category(self, raw: str) -> str:
+        return _TOOL_CATEGORY_MAP.get(normalize_tool_category_value(raw), normalize_tool_category_value(raw))
+
+    def _map_operations(self, raw_ops: list[str]) -> list[str]:
+        result = []
+        for op in raw_ops:
+            key = normalize_tool_category_value(op)
+            result.append(_OPERATION_MAP.get(key, normalize_operation_fit([op])[0] if op.strip() else ""))
+        return [op for op in result if op]
+
+    def _map_coolant(self, raw: str) -> str:
+        return _COOLANT_MAP.get(normalize_tool_category_value(raw), "unknown")
+
+
+def parse_seco_tools_file(source: str | Path) -> dict[str, Any]:
+    """Parse a Seco Tools structured JSON file and return a result summary dict."""
+    adapter = SecoToolsAdapter()
+    records = adapter.parse(source)
+    return {
+        "source_file": str(source),
+        "record_count": len(records),
+        "rejected_count": adapter.rejected_count,
+        "parse_errors": adapter.parse_errors,
+        "validation_errors": adapter.validate_output(records),
+        "records": records,
+    }

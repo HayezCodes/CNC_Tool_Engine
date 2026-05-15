@@ -1,0 +1,369 @@
+[
+  {
+    "brand": "Seco Tools",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-SECO-TI-001",
+    "series": "Duratomic TC",
+    "family_name": "Duratomic TC positive turning insert fixture",
+    "designation": "CNMG 120408-MF4",
+    "grade": "TP2500",
+    "chipbreaker": "MF4",
+    "coating": "Duratomic CVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "profiling",
+      "medium_turning"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "80_degree_diamond",
+      "medium_finishing"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNR DCLNR holders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-SECO-TI-002",
+    "series": "Duratomic TP",
+    "family_name": "Duratomic TP roughing turning insert fixture",
+    "designation": "SNMG 120412-M3",
+    "grade": "TP1020",
+    "chipbreaker": "M3",
+    "coating": "Duratomic CVD",
+    "material_fit": [
+      "P",
+      "M",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "roughing",
+      "heavy_turning"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "square_insert",
+      "heavy_roughing"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CSRNR MSRNR holders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-SECO-MI-003",
+    "series": "R220.96",
+    "family_name": "R220.96 shoulder milling insert fixture",
+    "designation": "SEEX 1204AFTN-ME08",
+    "grade": "MP2500",
+    "chipbreaker": "ME08",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "shoulder_milling",
+      "face_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "shoulder_milling",
+      "90_degree_approach",
+      "multi_edge"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "R220.96 cutter bodies"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "high_feed_insert",
+    "manufacturer_part_number": "FIXTURE-SECO-HFI-004",
+    "series": "Turbo 10",
+    "family_name": "Turbo 10 high-feed milling insert fixture",
+    "designation": "XOEX 10T308FR-E06",
+    "grade": "MP1500",
+    "chipbreaker": "E06",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "high_feed_milling",
+      "plunge_milling",
+      "ramping"
+    ],
+    "geometry_tags": [
+      "high_feed",
+      "small_depth_of_cut",
+      "round_insert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Turbo 10 cutter bodies"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-SECO-SCD-005",
+    "series": "Feedmax",
+    "family_name": "Feedmax solid carbide drill fixture",
+    "designation": "SD203A-12.0-56-12R1",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "TiAlN PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling"
+    ],
+    "geometry_tags": [
+      "solid_carbide",
+      "through_coolant",
+      "general_purpose_drill"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-SECO-SCE-006",
+    "series": "Jabro",
+    "family_name": "Jabro solid carbide endmill fixture",
+    "designation": "JH713-1000-045-HX1630",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "slot_milling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "solid_carbide",
+      "4_flute",
+      "general_purpose"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck",
+      "CoroChuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-SECO-GI-007",
+    "series": "MDT",
+    "family_name": "MDT grooving and parting insert fixture",
+    "designation": "MDT-0200-C1.50R100A",
+    "grade": "CP500",
+    "chipbreaker": "",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting",
+      "face_grooving"
+    ],
+    "geometry_tags": [
+      "grooving",
+      "parting",
+      "tangential_clamping"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "MDT blade toolholders"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-SECO-THI-008",
+    "series": "Snap Tap",
+    "family_name": "Snap Tap threading insert fixture",
+    "designation": "16ER1.5ISO CP500",
+    "grade": "CP500",
+    "chipbreaker": "",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "external_threading",
+      "internal_threading"
+    ],
+    "geometry_tags": [
+      "threading_insert",
+      "partial_profile",
+      "metric_thread"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Snap Tap toolholders"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Seco Tools",
+    "tool_category": "boring_bar",
+    "manufacturer_part_number": "FIXTURE-SECO-BB-009",
+    "series": "Seco Boring",
+    "family_name": "Seco solid carbide boring bar fixture",
+    "designation": "A16Q-SCLCR 09",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "internal_turning",
+      "boring",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "boring_bar",
+      "small_bore",
+      "through_coolant"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Seco boring bar adapters"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Seco Tools Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.secotools.com/en/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]

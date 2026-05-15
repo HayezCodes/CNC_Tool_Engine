@@ -1,0 +1,379 @@
+[
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-SC-TI-001",
+    "series": "CoroTurn 107",
+    "family_name": "CoroTurn 107 positive geometry turning insert fixture",
+    "designation": "VCMT 110304",
+    "grade": "GC4325",
+    "chipbreaker": "MF",
+    "coating": "Tiger-tec Silver CVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "profiling",
+      "finishing",
+      "light_roughing"
+    ],
+    "geometry_tags": [
+      "positive_rake",
+      "35_degree_diamond",
+      "small_nose_radius"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroTurn 107 A-style holders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-SC-TI-002",
+    "series": "CoroTurn 111",
+    "family_name": "CoroTurn 111 general-purpose negative insert fixture",
+    "designation": "CNMG 120408",
+    "grade": "GC4335",
+    "chipbreaker": "MR",
+    "coating": "Tiger-tec Silver CVD",
+    "material_fit": [
+      "P",
+      "M",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "roughing",
+      "medium_turning"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "80_degree_diamond",
+      "production_turning"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroTurn 111 PCLNR holders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-SC-MI-003",
+    "series": "CoroMill 390",
+    "family_name": "CoroMill 390 shoulder milling insert fixture",
+    "designation": "R390-11 T3 08M",
+    "grade": "GC4240",
+    "chipbreaker": "",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "shoulder_milling",
+      "slot_milling",
+      "ramping"
+    ],
+    "geometry_tags": [
+      "shoulder_milling",
+      "90_degree_approach"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroMill 390 cutter bodies"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "high_feed_insert",
+    "manufacturer_part_number": "FIXTURE-SC-HFI-004",
+    "series": "CoroMill 210",
+    "family_name": "CoroMill 210 high-feed milling insert fixture",
+    "designation": "R210-18 T6 M-PM",
+    "grade": "GC4220",
+    "chipbreaker": "",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "high_feed_milling",
+      "plunge_milling",
+      "ramping"
+    ],
+    "geometry_tags": [
+      "high_feed",
+      "small_depth_of_cut",
+      "high_table_advance"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroMill 210 cutter bodies"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-SC-SCD-005",
+    "series": "CoroDrill 460",
+    "family_name": "CoroDrill 460 solid carbide drill fixture",
+    "designation": "R460.A-12.0A12-34",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "TiAlN PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling"
+    ],
+    "geometry_tags": [
+      "solid_carbide",
+      "through_coolant",
+      "general_purpose"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "indexable_drill",
+    "manufacturer_part_number": "FIXTURE-SC-ID-006",
+    "series": "CoroDrill 880",
+    "family_name": "CoroDrill 880 indexable insert drill fixture",
+    "designation": "R880-0800C5-03",
+    "grade": "GC4234",
+    "chipbreaker": "",
+    "coating": "CVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling"
+    ],
+    "geometry_tags": [
+      "indexable_drill",
+      "two_insert_system",
+      "high_productivity"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroChuck 930"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-SC-SCE-007",
+    "series": "CoroMill Plura",
+    "family_name": "CoroMill Plura solid carbide endmill fixture",
+    "designation": "2P342-1000-NA 1630",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "slot_milling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "solid_carbide",
+      "4_flute",
+      "general_purpose"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroChuck 930",
+      "ER collet"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-SC-GI-008",
+    "series": "CoroCut 1-2",
+    "family_name": "CoroCut 1-2 grooving and parting insert fixture",
+    "designation": "N123G2-0200-0002-GF",
+    "grade": "GC4225",
+    "chipbreaker": "GF",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting",
+      "face_grooving"
+    ],
+    "geometry_tags": [
+      "grooving",
+      "parting",
+      "self_clamping"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroCut 1-2 toolholder blades"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-SC-THI-009",
+    "series": "CoroThread 266",
+    "family_name": "CoroThread 266 threading insert fixture",
+    "designation": "266RG-16UN01A150E",
+    "grade": "GC1020",
+    "chipbreaker": "",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "external_threading",
+      "internal_threading"
+    ],
+    "geometry_tags": [
+      "threading_insert",
+      "laydown_style",
+      "full_profile"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CoroThread 266 holders"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "tool_category": "boring_bar",
+    "manufacturer_part_number": "FIXTURE-SC-BB-010",
+    "series": "CoroTurn 107",
+    "family_name": "CoroTurn 107 boring bar fixture",
+    "designation": "A16M-SVQCR 11",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "internal_turning",
+      "boring",
+      "profiling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "boring_bar",
+      "small_bore",
+      "positive_rake"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "A-style shank",
+      "VDI toolpost"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sandvik Coromant Tooling Fixture \u2014 Synthetic Test Record",
+    "source_url": "https://www.sandvik.coromant.com/en-gb/products",
+    "source_page_reference": "Synthetic fixture",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  }
+]
