@@ -90,6 +90,17 @@ A third adapter pilot for Iscar Ltd. focuses on indexable tooling normalization 
 
 As with all pilots, this is a pipeline proof-of-concept with synthetic fixtures only — not real catalog data.
 
+### Walter AG Adapter Pilot
+
+A fourth adapter pilot for Walter AG covers the full Walter tooling portfolio — turning inserts (Tiger·tec Silver family), shoulder and face milling inserts (Blaxx M3255 style), solid carbide drills (Walter Titex), indexable drills (D4140-style two-insert systems), thread mills (TC410 solid carbide), grooving inserts (Cut 3), solid carbide endmills (Walter Prototyp), and boring bars (CBo). This pilot introduces the `thread_mill` category (shared with Guhring) and demonstrates the shoulder vs. face milling insert normalization pattern (`ShoulderMillingInsert` and `FaceMillingInsert` both map to `milling_insert`; geometry_tags carry the subtype).
+
+- **Adapter:** `tools/tooling_adapters/walter_adapter.py`
+- **Fixture:** `tools/tooling_adapters/samples/sample_walter_structured.json` — 9 synthetic records, clearly marked as test fixtures (not manufacturer data)
+- **Imported records:** `tool_data/tooling_search/records/walter_imported_tools.json` — 0 audit issues, searchable
+- **Reviewed records:** `tool_data/tooling_search/records/reviewed/walter_reviewed_tooling_records.json` — reviewed by Joshua Hayes, `reviewed_family_level_candidate`
+
+As with all pilots, this is a pipeline proof-of-concept with synthetic fixtures only — not real catalog data.
+
 ## Install
 
 1. Create and activate a virtual environment.

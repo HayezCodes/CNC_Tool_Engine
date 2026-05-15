@@ -1,0 +1,394 @@
+[
+  {
+    "brand": "Walter AG",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-WAL-TI-001",
+    "series": "Tiger\u00b7tec Silver Fixture Series",
+    "family_name": "Fixture Tiger\u00b7tec Silver turning insert \u2014 steel and stainless",
+    "designation": "CNMG 120408-NF4",
+    "grade": "FIXTURE-WAP35S",
+    "chipbreaker": "FIXTURE-NF4",
+    "coating": "FIXTURE-TiAlN-AlCrN-MT-CVD",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "profiling",
+      "medium_turning"
+    ],
+    "geometry_tags": [
+      "negativerake",
+      "80degreediamond",
+      "generalpurpose",
+      "indexableinsert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "DCLNL/R",
+      "PCLNL/R external turning toolholders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.C-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-WAL-SMI-002",
+    "series": "Walter Blaxx Fixture Series",
+    "family_name": "Fixture square shoulder milling insert \u2014 true 90-degree",
+    "designation": "ADKT 1505PDR-F57",
+    "grade": "FIXTURE-WKP35S",
+    "chipbreaker": "FIXTURE-F57",
+    "coating": "FIXTURE-TiAlN-PVD-Multilayer",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "shoulder_milling",
+      "slot_milling",
+      "ramping",
+      "plunge_milling"
+    ],
+    "geometry_tags": [
+      "positiverake",
+      "squareshoulder",
+      "true90degree",
+      "indexableinsert",
+      "shouldermilling"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture M3255 Blaxx shell mill",
+      "matching bore and pitch"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.M-44",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-WAL-FMI-003",
+    "series": "Walter M2131 Fixture Series",
+    "family_name": "Fixture face milling insert \u2014 positive rake, versatile",
+    "designation": "SCET 1203AFTN-G88",
+    "grade": "FIXTURE-WAK15",
+    "chipbreaker": "FIXTURE-G88",
+    "coating": "FIXTURE-Al2O3-TiCN-CVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "face_milling",
+      "shoulder_milling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "positiverake",
+      "facemilling",
+      "generalpurpose",
+      "indexableinsert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture M2131 face mill cutter body",
+      "matching bore and tooth pitch"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.M-68",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-WAL-SCD-004",
+    "series": "Walter Titex Fixture Series",
+    "family_name": "Fixture solid carbide drill \u2014 through coolant, general purpose",
+    "designation": "A6489DPL-8",
+    "grade": "FIXTURE-WJ30TF",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN-TiN-PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "throughcoolant",
+      "pointangle140",
+      "generalpurposedrill"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck",
+      "hydraulic chuck",
+      "or shrink-fit holder \u2014 cylindrical shank"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.D-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "indexable_drill",
+    "manufacturer_part_number": "FIXTURE-WAL-IDR-005",
+    "series": "Walter D4140 Fixture Series",
+    "family_name": "Fixture indexable insert drill \u2014 two-insert system",
+    "designation": "D4140-05-36.00F40-P",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling",
+      "high_efficiency_drilling"
+    ],
+    "geometry_tags": [
+      "indexabledrill",
+      "twoinsertsystem",
+      "throughcoolant",
+      "productiondrilling"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Walter D4140 drill body \u2014 modular or cylindrical shank",
+      "matching insert seats"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.D-58",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-WAL-TM-006",
+    "series": "Walter TC410 Fixture Series",
+    "family_name": "Fixture solid carbide thread mill \u2014 metric and unified",
+    "designation": "TC410-M8-3-WJ30TA",
+    "grade": "FIXTURE-WJ30TA",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN-PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "external_thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "threadmill",
+      "helicalinterpolation",
+      "metricthread"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck or hydraulic chuck \u2014 cylindrical shank"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.N-38",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-WAL-GRV-007",
+    "series": "Walter Cut 3 Fixture Series",
+    "family_name": "Fixture grooving and parting insert \u2014 external, full radius",
+    "designation": "P2884-D3.00R0.40",
+    "grade": "FIXTURE-WSM33S",
+    "chipbreaker": "FIXTURE-D3",
+    "coating": "FIXTURE-PVD-TiAlN-Nano",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "face_grooving",
+      "parting",
+      "circular_grooving"
+    ],
+    "geometry_tags": [
+      "groovinginsert",
+      "externalgrooving",
+      "parting",
+      "fullradius"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture Cut 3 blade holder or grooving bar",
+      "matching groove width"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.G-34",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-WAL-SCE-008",
+    "series": "Walter Prototyp Fixture Series",
+    "family_name": "Fixture solid carbide endmill \u2014 general milling, 4-flute",
+    "designation": "MC142-12.000A3-WJ30TA",
+    "grade": "FIXTURE-WJ30TA",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN-PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling",
+      "ramping"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "endmill",
+      "4flute",
+      "generalpurpose"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck",
+      "hydraulic chuck",
+      "or shrink-fit holder \u2014 cylindrical shank"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.E-24",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Walter AG",
+    "tool_category": "boring_bar",
+    "manufacturer_part_number": "FIXTURE-WAL-BB-009",
+    "series": "Walter CBo Fixture Series",
+    "family_name": "Fixture indexable boring bar \u2014 SCXCR system",
+    "designation": "A32T-SCXCR09-P fixture boring bar, 32mm shank",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "boring",
+      "internal_turning",
+      "finishing",
+      "profiling"
+    ],
+    "geometry_tags": [
+      "boringbar",
+      "indexableinsert",
+      "internalmachining",
+      "straightshank"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Boring bar holder",
+      "matching 32mm shank",
+      "BT40 or HSK63A adapter"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Walter AG \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.walter-tools.com/en-gb/products",
+    "source_page_reference": "p.B-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]

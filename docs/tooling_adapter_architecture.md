@@ -62,11 +62,13 @@ tools/
     mitsubishi_materials_adapter.py               # Mitsubishi Materials JSON adapter
     guhring_adapter.py                            # Guhring KG JSON adapter
     iscar_adapter.py                              # Iscar Ltd. JSON adapter
+    walter_adapter.py                             # Walter AG JSON adapter
     samples/
       sample_gtc_iso13399.xml                     # synthetic test fixture (NOT manufacturer data)
       sample_mitsubishi_materials_structured.json # synthetic test fixture (NOT manufacturer data)
       sample_guhring_structured.json              # synthetic test fixture (NOT manufacturer data)
       sample_iscar_structured.json                # synthetic test fixture (NOT manufacturer data)
+      sample_walter_structured.json               # synthetic test fixture (NOT manufacturer data)
     output/
       .gitkeep                                    # output directory stub
       <name>_records.json                         # adapter output (staged, not yet in records/)
@@ -75,9 +77,11 @@ tools/
   parse_mitsubishi_materials_sample.py  # runner: parse Mitsubishi sample, validate, write output
   parse_guhring_sample.py               # runner: parse Guhring sample, validate, write output
   parse_iscar_sample.py                 # runner: parse Iscar sample, validate, write output
+  parse_walter_sample.py                # runner: parse Walter sample, validate, write output
   import_mitsubishi_adapter_output.py   # importer: adapter output → records/
   import_guhring_adapter_output.py      # importer: adapter output → records/
   import_iscar_adapter_output.py        # importer: adapter output → records/
+  import_walter_adapter_output.py       # importer: adapter output → records/
 ```
 
 ## Base Adapter (`base_adapter.py`)
@@ -267,6 +271,63 @@ python tools/import_iscar_adapter_output.py --dry-run
 ```
 
 Output is written to `tools/tooling_adapters/output/iscar_sample_records.json` (8 synthetic fixture records: 2 turning inserts, 1 milling insert, 1 high-feed insert, 1 indexable drill, 1 grooving insert, 1 threading insert, 1 boring bar). Imported records go to `tool_data/tooling_search/records/iscar_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/iscar_reviewed_tools.json`.
+
+## Walter Adapter (`walter_adapter.py`)
+
+Parses Walter-style structured JSON tooling records into normalized tooling search records. Walter AG covers a broad tooling portfolio across turning, milling, drilling, threading, grooving, and boring — combining insert-based tooling (Tiger·tec Silver turning grades, Blaxx shoulder milling) with solid carbide tooling families (Walter Titex drills, Walter Prototyp endmills, TC410 thread mills).
+
+**Shoulder milling insert normalization:**
+
+Walter shoulder milling inserts (`ShoulderMillingInsert`) and face milling inserts (`FaceMillingInsert`) both normalize to `tool_category = "milling_insert"`. This is consistent with how other adapters treat milling subtypes — the `tool_category` identifies the insert type; `geometry_tags` (e.g., `SquareShoulder`, `True90Degree`, `FaceMilling`) and `operation_fit` (e.g., `shoulder_milling`, `face_milling`) carry the specific subtype information for downstream filtering and display.
+
+**Drilling family mapping — solid vs. indexable:**
+
+Walter Titex solid carbide drills (`SolidCarbideDrill`) map to `tool_category = "drill"`, consistent with Guhring solid carbide drills. Walter D4140-style two-insert indexable drills (`IndexableDrill`) map to `tool_category = "indexable_drill"`. This split allows operators to filter specifically for solid-shank vs. insert-based drilling systems.
+
+**Thread mill normalization:**
+
+Walter TC410-style solid carbide thread mills (`ThreadMill`, `SolidCarbideThreadMill`) map to `tool_category = "thread_mill"`. Thread mill operations (`ThreadMilling`, `ExternalThreadMilling`, `InternalThreadMilling`) are mapped to snake_case operation values. No tap category is introduced by this adapter — threading inserts remain a distinct category if added in the future.
+
+**Solid carbide endmill normalization:**
+
+Walter Prototyp solid carbide endmills (`SolidCarbideEndmill`) map to `tool_category = "endmill"`, consistent with all other adapters. No Walter-specific subtype is introduced.
+
+**Tool category mapping (Walter-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | Tiger·tec Silver family |
+| `MillingInsert`, `ShoulderMillingInsert`, `FaceMillingInsert` | `milling_insert` | geometry_tags distinguish subtype |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | |
+| `SolidCarbideDrill`, `HSSEDrill` | `drill` | Titex family |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | D4140-style two-insert systems |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | TC410 family |
+| `ThreadingInsert` | `threading_insert` | |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | Cut 3 family |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | Prototyp family |
+| `BoringBar`, `BoringToolholder` | `boring_bar` | CBo family |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+
+**New operations introduced:**
+
+| Input string | schema operation |
+|---|---|
+| `ThreadMilling` | `thread_milling` |
+| `ExternalThreadMilling` | `external_thread_milling` |
+| `InternalThreadMilling` | `internal_thread_milling` |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter — `part_number → manufacturer_part_number`, `tool_type → tool_category`, `material_groups → material_fit`, `operations → operation_fit`, `geometry_tags → geometry_tags`, `holder_compatibility → holder_compatibility`, `coolant → coolant_capability`. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_walter_sample.py
+python tools/parse_walter_sample.py --dry-run
+python tools/import_walter_adapter_output.py
+python tools/import_walter_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/walter_sample_records.json` (9 synthetic fixture records: 1 turning insert, 2 milling inserts (shoulder + face), 1 solid carbide drill, 1 indexable drill, 1 thread mill, 1 grooving insert, 1 endmill, 1 boring bar). Imported records go to `tool_data/tooling_search/records/walter_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/walter_reviewed_tooling_records.json`.
 
 ## What Is Never Imported
 
