@@ -16,3 +16,4 @@ pytest-cache-files-*/
 
 # Local bridge archives
 prompts/done/
+.claude/
