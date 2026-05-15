@@ -19,7 +19,7 @@ def test_script_builds_records_without_validation_errors() -> None:
 def test_staged_file_schema_is_valid() -> None:
     records = _load_staged_records()
 
-    assert len(records) == 6
+    assert len(records) == 7
     for record in records:
         assert validate_staged_record(record) == []
         assert set(record.keys()) == {
@@ -72,8 +72,8 @@ def test_required_sumitomo_electric_families_exist() -> None:
     categories = {record["tool_category"] for record in records}
     operations = {operation for record in records for operation in record["operation_fit"]}
 
-    assert {"turning_insert", "milling_insert", "indexable_cutter"}.issubset(categories)
-    assert {"external_turning", "face_milling", "shoulder_milling", "copy_turning"}.issubset(operations)
+    assert {"turning_insert", "milling_insert", "indexable_cutter", "indexable_drill"}.issubset(categories)
+    assert {"external_turning", "face_milling", "shoulder_milling", "copy_turning", "drilling"}.issubset(operations)
 
 
 def test_records_require_human_review_note() -> None:

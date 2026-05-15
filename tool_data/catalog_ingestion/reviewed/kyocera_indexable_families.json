@@ -239,5 +239,46 @@
     ],
     "tool_category": "threading_insert",
     "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Kyocera",
+    "catalog_number": "",
+    "coating_or_grade": "verify insert grade families, drill body system, and coolant style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level indexable drill category only; verify drill body platform, insert style, coolant configuration, and depth capability by catalog",
+    "family_name": "Indexable drill families",
+    "geometry_tags": [
+      "indexable_drill",
+      "insert_compatibility_requires_review",
+      "through_coolant_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "high_efficiency_drilling",
+      "production_drilling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for production turning and milling insert families. Exact insert shapes, grades, thread/groove forms, cutter platforms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Kyocera Indexable Cutting Tools Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.kyoceraprecisiontool.com/catalogs/indexable/",
+    "strategy_fit": [
+      "production_drilling",
+      "indexable_drill_platform",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "indexable_drill",
+    "verification_status": "reviewed_family_level"
   }
 ]

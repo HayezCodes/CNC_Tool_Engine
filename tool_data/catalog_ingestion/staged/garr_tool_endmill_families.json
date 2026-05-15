@@ -185,5 +185,39 @@
     ],
     "tool_category": "endmill",
     "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Garr Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify aluminum-focused substrate and coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level aluminum milling category only; verify flute count, polish/coating style, reach, and chip evacuation geometry by catalog",
+    "family_name": "Aluminum milling end mill families",
+    "geometry_tags": [
+      "aluminum_geometry",
+      "high_rake_candidate",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "N"
+    ],
+    "operation_fit": [
+      "aluminum_milling",
+      "slotting",
+      "profiling",
+      "finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Garr Tool Full Catalog 2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.garrtool.com/downloads/",
+    "strategy_fit": [
+      "high_efficiency",
+      "surface_finish_priority",
+      "chip_evacuation_priority"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
   }
 ]

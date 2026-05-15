@@ -77,6 +77,16 @@ FAMILY_SPECS = [
         "geometry_tags": ["threading_insert", "thread_form_requires_review", "grade_family_requires_review"],
         "dimension_summary": "family-level threading insert category only; verify thread form, pitch grouping, insert style, and holder compatibility by catalog",
     },
+    {
+        "tool_category": "indexable_drill",
+        "family_name": "Indexable drill families",
+        "operation_fit": ["drilling", "through_hole_drilling", "high_efficiency_drilling", "production_drilling"],
+        "material_fit": ["P", "M", "K", "N", "S", "H"],
+        "strategy_fit": ["production_drilling", "indexable_drill_platform", "manual_catalog_review_required"],
+        "coating_or_grade": "verify insert grade families, drill body system, and coolant style by catalog",
+        "geometry_tags": ["indexable_drill", "insert_compatibility_requires_review", "through_coolant_requires_review"],
+        "dimension_summary": "family-level indexable drill category only; verify drill body platform, insert style, coolant configuration, and depth capability by catalog",
+    },
 ]
 
 

@@ -19,7 +19,7 @@ def test_script_builds_records_without_validation_errors() -> None:
 def test_staged_file_schema_is_valid() -> None:
     records = _load_staged_records()
 
-    assert len(records) == 5
+    assert len(records) == 6
     for record in records:
         assert validate_staged_record(record) == []
         assert set(record.keys()) == {
@@ -70,10 +70,12 @@ def test_no_catalog_numbers_or_source_page_references_were_invented() -> None:
 def test_required_garr_tool_families_exist() -> None:
     records = _load_staged_records()
     operations = {operation for record in records for operation in record["operation_fit"]}
+    materials = {material for record in records for material in record["material_fit"]}
     strategies = {strategy for record in records for strategy in record["strategy_fit"]}
 
     assert all(record["tool_category"] == "endmill" for record in records)
-    assert {"roughing", "finishing", "profiling"}.issubset(operations)
+    assert {"roughing", "finishing", "profiling", "aluminum_milling"}.issubset(operations)
+    assert "N" in materials
     assert {"high_performance", "high_efficiency", "surface_finish_priority"}.issubset(strategies)
 
 

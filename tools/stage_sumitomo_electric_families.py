@@ -77,6 +77,16 @@ FAMILY_SPECS = [
         "geometry_tags": ["indexable_cutter", "system_platform", "insert_compatibility_requires_review"],
         "dimension_summary": "family-level indexable cutter system category only; verify cutter platform, insert family, entering angle, and target operations by catalog",
     },
+    {
+        "tool_category": "indexable_drill",
+        "family_name": "Indexable drill families",
+        "operation_fit": ["drilling", "through_hole_drilling", "high_efficiency_drilling", "production_drilling"],
+        "material_fit": ["P", "M", "K", "N", "S", "H"],
+        "strategy_fit": ["production_drilling", "indexable_drill_platform", "manual_catalog_review_required"],
+        "coating_or_grade": "verify insert grade families, holder body, and coolant style by catalog",
+        "geometry_tags": ["indexable_drill", "insert_compatibility_requires_review", "through_coolant_requires_review"],
+        "dimension_summary": "family-level indexable drill category only; verify drill body system, insert style, coolant configuration, and depth capability by catalog",
+    },
 ]
 
 

@@ -67,6 +67,16 @@ FAMILY_SPECS = [
         "geometry_tags": ["finishing", "difficult_material_candidate", "solid_carbide"],
         "dimension_summary": "family-level difficult-material finishing category only; verify flute count, reach, corner style, and target materials by catalog",
     },
+    {
+        "tool_category": "endmill",
+        "family_name": "Aluminum milling end mill families",
+        "operation_fit": ["aluminum_milling", "slotting", "profiling", "finishing"],
+        "material_fit": ["N"],
+        "strategy_fit": ["high_efficiency", "surface_finish_priority", "chip_evacuation_priority"],
+        "coating_or_grade": "verify aluminum-focused substrate and coating family by catalog",
+        "geometry_tags": ["aluminum_geometry", "high_rake_candidate", "solid_carbide"],
+        "dimension_summary": "family-level aluminum milling category only; verify flute count, polish/coating style, reach, and chip evacuation geometry by catalog",
+    },
 ]
 
 

@@ -331,18 +331,21 @@
       "brand": "Garr Tool",
       "family_names": [
         "Aerospace and hard-metal finishing end mill families",
+        "Aluminum milling end mill families",
         "Corner radius end mill families",
         "High-efficiency roughing end mill families",
         "High-performance square end mill families",
         "Variable helix finishing end mill families"
       ],
       "geometry_tags_coverage": [
+        "aluminum_geometry",
         "corner_radius",
         "difficult_material_candidate",
         "edge_strength_candidate",
         "finishing",
         "high_efficiency",
         "high_performance",
+        "high_rake_candidate",
         "roughing",
         "solid_carbide",
         "square_end",
@@ -352,13 +355,13 @@
         "H",
         "K",
         "M",
+        "N",
         "P",
         "S"
       ],
-      "missing_obvious_family_categories": [
-        "aluminum_milling"
-      ],
+      "missing_obvious_family_categories": [],
       "operation_fit_coverage": [
+        "aluminum_milling",
         "contouring",
         "dynamic_milling",
         "finishing",
@@ -374,6 +377,7 @@
       "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\garr_tool_endmill_families.json",
       "strategy_fit_coverage": [
         "chatter_reduction_candidate",
+        "chip_evacuation_priority",
         "difficult_material_focus",
         "edge_strength_priority",
         "finishing",
@@ -388,7 +392,7 @@
       "tool_categories": [
         "endmill"
       ],
-      "total_reviewed_records": 5
+      "total_reviewed_records": 6
     },
     {
       "brand": "Niagara Cutter",
@@ -454,6 +458,7 @@
         "Finishing and profiling turning insert families",
         "General-purpose turning insert families",
         "Heavy roughing turning insert families",
+        "Indexable drill families",
         "Indexable milling cutter system families",
         "Shoulder milling insert families"
       ],
@@ -463,11 +468,13 @@
         "finishing",
         "grade_family_requires_review",
         "indexable_cutter",
+        "indexable_drill",
         "insert_compatibility_requires_review",
         "milling_insert",
         "roughing",
         "shoulder_milling",
         "system_platform",
+        "through_coolant_requires_review",
         "turning_insert"
       ],
       "material_fit_coverage": [
@@ -478,24 +485,26 @@
         "P",
         "S"
       ],
-      "missing_obvious_family_categories": [
-        "drilling_indexable"
-      ],
+      "missing_obvious_family_categories": [],
       "operation_fit_coverage": [
         "copy_milling",
         "copy_turning",
+        "drilling",
         "external_turning",
         "face_milling",
         "facing",
         "finishing",
         "general_milling",
+        "high_efficiency_drilling",
         "high_feed_milling",
         "internal_turning",
+        "production_drilling",
         "profiling",
         "roughing",
         "shoulder_milling",
         "shoulder_turning",
-        "slotting"
+        "slotting",
+        "through_hole_drilling"
       ],
       "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\sumitomo_electric_insert_families.json",
       "strategy_fit_coverage": [
@@ -504,8 +513,10 @@
         "face_milling",
         "finishing",
         "general_purpose",
+        "indexable_drill_platform",
         "insert_grade_verification_required",
         "manual_catalog_review_required",
+        "production_drilling",
         "production_milling",
         "production_turning",
         "roughing",
@@ -513,10 +524,11 @@
       ],
       "tool_categories": [
         "indexable_cutter",
+        "indexable_drill",
         "milling_insert",
         "turning_insert"
       ],
-      "total_reviewed_records": 6
+      "total_reviewed_records": 7
     },
     {
       "brand": "Kyocera",
@@ -525,6 +537,7 @@
         "Finishing and profiling turning insert families",
         "General-purpose turning insert families",
         "Grooving and cut-off insert families",
+        "Indexable drill families",
         "Shoulder milling insert families",
         "Threading insert families"
       ],
@@ -535,10 +548,13 @@
         "grade_family_requires_review",
         "groove_form_requires_review",
         "grooving_insert",
+        "indexable_drill",
+        "insert_compatibility_requires_review",
         "milling_insert",
         "shoulder_milling",
         "thread_form_requires_review",
         "threading_insert",
+        "through_coolant_requires_review",
         "turning_insert"
       ],
       "material_fit_coverage": [
@@ -549,11 +565,10 @@
         "P",
         "S"
       ],
-      "missing_obvious_family_categories": [
-        "drilling_indexable"
-      ],
+      "missing_obvious_family_categories": [],
       "operation_fit_coverage": [
         "copy_turning",
+        "drilling",
         "external_threading",
         "external_turning",
         "face_grooving",
@@ -562,14 +577,17 @@
         "finishing",
         "general_milling",
         "grooving",
+        "high_efficiency_drilling",
         "internal_threading",
         "internal_turning",
         "parting",
+        "production_drilling",
         "profiling",
         "roughing",
         "shoulder_milling",
         "slotting",
-        "threading"
+        "threading",
+        "through_hole_drilling"
       ],
       "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\kyocera_indexable_families.json",
       "strategy_fit_coverage": [
@@ -577,8 +595,10 @@
         "finishing",
         "general_purpose",
         "grooving",
+        "indexable_drill_platform",
         "insert_grade_verification_required",
         "manual_catalog_review_required",
+        "production_drilling",
         "production_milling",
         "production_turning",
         "surface_finish_priority",
@@ -586,11 +606,12 @@
       ],
       "tool_categories": [
         "grooving_insert",
+        "indexable_drill",
         "milling_insert",
         "threading_insert",
         "turning_insert"
       ],
-      "total_reviewed_records": 6
+      "total_reviewed_records": 7
     },
     {
       "brand": "Tungaloy",
