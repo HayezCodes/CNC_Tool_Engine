@@ -1,0 +1,299 @@
+[
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HEL-SCE-001",
+    "series": "HEV-5",
+    "family_name": "HEV-5 5-flute general purpose endmill",
+    "designation": "82740",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "five_flute",
+      "variable_helix",
+      "variable_pitch"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck",
+      "shrink-fit"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.E-10",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HEL-SCE-002",
+    "series": "HVNI",
+    "family_name": "HVNI 3-flute aluminum endmill",
+    "designation": "82001",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "ZrN",
+    "material_fit": [
+      "N"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "slot_milling",
+      "roughing"
+    ],
+    "geometry_tags": [
+      "three_flute",
+      "high_helix",
+      "polished_flutes"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.E-28",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HEL-SCE-003",
+    "series": "Variable Helix",
+    "family_name": "5-flute finishing endmill",
+    "designation": "82760",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "finishing",
+      "profiling",
+      "shoulder_milling"
+    ],
+    "geometry_tags": [
+      "five_flute",
+      "corner_radius",
+      "variable_helix"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "shrink-fit"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.E-45",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HEL-SCE-004",
+    "series": "Rougher",
+    "family_name": "7-flute roughing endmill",
+    "designation": "84010",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "roughing",
+      "general_milling"
+    ],
+    "geometry_tags": [
+      "seven_flute",
+      "chipbreaker_geometry",
+      "rougher"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "shrink-fit"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.E-58",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HEL-SCE-005",
+    "series": "Corner Radius",
+    "family_name": "4-flute corner radius endmill",
+    "designation": "82920",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "corner_radius"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.E-70",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HEL-SCE-006",
+    "series": "Dynamic Milling",
+    "family_name": "Dynamic milling 5-flute endmill",
+    "designation": "82830",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "dynamic_milling",
+      "trochoidal_milling",
+      "roughing"
+    ],
+    "geometry_tags": [
+      "five_flute",
+      "variable_helix",
+      "extended_neck"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "shrink-fit"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.E-82",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-HEL-SCD-007",
+    "series": "Drill",
+    "family_name": "Solid carbide drill",
+    "designation": "86080",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling"
+    ],
+    "geometry_tags": [
+      "through_coolant",
+      "135_degree_point"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.D-12",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Helical Solutions",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-HEL-TM-008",
+    "series": "Thread Mill",
+    "family_name": "Single-point thread mill",
+    "designation": "85230",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "single_profile",
+      "thread_mill"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Helical Solutions Synthetic Fixture Catalog",
+    "source_url": "https://www.helicaltool.com/products/",
+    "source_page_reference": "p.H-18",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  }
+]

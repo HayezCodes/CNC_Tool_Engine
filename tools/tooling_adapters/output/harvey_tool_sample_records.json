@@ -1,0 +1,290 @@
+[
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HVT-SCE-001",
+    "series": "Miniature Ball Nose",
+    "family_name": "Miniature ball nose endmill",
+    "designation": "868202",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiB2",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "profiling",
+      "finishing",
+      "general_milling"
+    ],
+    "geometry_tags": [
+      "ball_nose",
+      "two_flute",
+      "miniature"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.B-10",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-HVT-SCE-002",
+    "series": "Long Reach",
+    "family_name": "Long reach endmill",
+    "designation": "876420",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "profiling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "long_reach",
+      "reduced_neck"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "shrink-fit"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.E-24",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-HVT-ITM-003",
+    "series": "Internal Thread Mill",
+    "family_name": "Internal thread mill",
+    "designation": "985030",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "thread_mill",
+      "multiple_profile"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.H-14",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-HVT-ETM-004",
+    "series": "External Thread Mill",
+    "family_name": "External thread mill",
+    "designation": "993030",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "external_thread_milling"
+    ],
+    "geometry_tags": [
+      "thread_mill",
+      "single_profile"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.H-22",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "reamer",
+    "manufacturer_part_number": "FIXTURE-HVT-RMR-005",
+    "series": "Reamer",
+    "family_name": "Solid carbide reamer",
+    "designation": "805040",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "reaming",
+      "finish_reaming"
+    ],
+    "geometry_tags": [
+      "straight_flute",
+      "h7_tolerance"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.R-10",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "countersink",
+    "manufacturer_part_number": "FIXTURE-HVT-CSK-006",
+    "series": "Countersink",
+    "family_name": "82-degree countersink",
+    "designation": "852080",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "countersinking",
+      "chamfering"
+    ],
+    "geometry_tags": [
+      "82_degree",
+      "single_flute"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.C-12",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-HVT-SCD-007",
+    "series": "Drill",
+    "family_name": "Solid carbide drill",
+    "designation": "816040",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling"
+    ],
+    "geometry_tags": [
+      "135_degree_point",
+      "through_coolant"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.D-08",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Harvey Tool",
+    "tool_category": "step_drill",
+    "manufacturer_part_number": "FIXTURE-HVT-STP-008",
+    "series": "Step Drill",
+    "family_name": "Solid carbide step drill",
+    "designation": "823020",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling"
+    ],
+    "geometry_tags": [
+      "step_drill",
+      "two_step"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Harvey Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.harveytool.com/products/",
+    "source_page_reference": "p.D-20",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  }
+]

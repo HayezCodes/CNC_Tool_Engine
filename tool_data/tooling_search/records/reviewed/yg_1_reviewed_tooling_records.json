@@ -1,0 +1,347 @@
+[
+  {
+    "brand": "YG-1",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-YG1-SCD-001",
+    "series": "Dream Drill",
+    "family_name": "Dream Drill solid carbide drill",
+    "designation": "D4100059",
+    "grade": "Ultra-fine Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling"
+    ],
+    "geometry_tags": [
+      "through_coolant",
+      "140_degree_point"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.D-10",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-YG1-SCE-002",
+    "series": "Dream EMS",
+    "family_name": "Dream EMS 4-flute endmill",
+    "designation": "E2R4160",
+    "grade": "Ultra-fine Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "variable_helix"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.E-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-YG1-SCE-003",
+    "series": "Dream EMS",
+    "family_name": "Dream EMS 3-flute aluminum endmill",
+    "designation": "E3A3160",
+    "grade": "Ultra-fine Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "N"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "slot_milling",
+      "roughing"
+    ],
+    "geometry_tags": [
+      "three_flute",
+      "high_helix",
+      "polished_flutes"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.E-44",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "tap",
+    "manufacturer_part_number": "FIXTURE-YG1-TAP-004",
+    "series": "Hi-Pro Syn",
+    "family_name": "Hi-Pro Syn spiral flute tap",
+    "designation": "K-TA4110M8X1.25",
+    "grade": "HSS-E",
+    "chipbreaker": "",
+    "coating": "TiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "tapping"
+    ],
+    "geometry_tags": [
+      "spiral_flute",
+      "through_hole"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Tap chuck",
+      "torque adapter"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.T-30",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-YG1-TM-005",
+    "series": "Thread Mill",
+    "family_name": "Single-profile thread mill",
+    "designation": "EPM060-M8X1.25",
+    "grade": "Ultra-fine Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "single_profile",
+      "thread_mill"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.H-20",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "reamer",
+    "manufacturer_part_number": "FIXTURE-YG1-RMR-006",
+    "series": "Carbide Reamer",
+    "family_name": "Solid carbide reamer",
+    "designation": "RCS0600H7",
+    "grade": "Ultra-fine Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "reaming",
+      "finish_reaming"
+    ],
+    "geometry_tags": [
+      "straight_flute",
+      "h7_tolerance"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.R-14",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "countersink",
+    "manufacturer_part_number": "FIXTURE-YG1-CSK-007",
+    "series": "Countersink",
+    "family_name": "90-degree countersink",
+    "designation": "CSI090-0600",
+    "grade": "Ultra-fine Carbide",
+    "chipbreaker": "",
+    "coating": "TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "countersinking",
+      "chamfering"
+    ],
+    "geometry_tags": [
+      "90_degree",
+      "single_flute"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.C-08",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-YG1-TI-008",
+    "series": "YG-1 Insert",
+    "family_name": "Turning insert",
+    "designation": "CNMG 431 TT5100",
+    "grade": "TT5100",
+    "chipbreaker": "MP",
+    "coating": "CVD",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing"
+    ],
+    "geometry_tags": [
+      "negative_rake"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNR/L"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.I-12",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "YG-1",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-YG1-GI-009",
+    "series": "YG-1 Grooving",
+    "family_name": "Grooving insert",
+    "designation": "GL3200",
+    "grade": "TT5080",
+    "chipbreaker": "GM",
+    "coating": "PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting"
+    ],
+    "geometry_tags": [
+      "ground_top_face"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "YG-1 grooving toolholder"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "YG-1 Synthetic Fixture Catalog",
+    "source_url": "https://www.yg1.us/products/",
+    "source_page_reference": "p.G-08",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]
