@@ -49,6 +49,7 @@ The enterprise tooling search foundation is a new, separate backend layer for fu
 - It is separate from the current recommendation logic and does not replace recommendation scoring.
 - It stores exact-tool-style records under `tool_data/tooling_search/` while reviewed family guidance remains separate.
 - It currently uses only a small, conservative sample record set to establish schema, search behavior, filtering, and match explanations.
+- A bulk CSV/JSON importer foundation now exists for dry-run validation and normalization before records are written.
 - Speeds and feeds are not imported in this phase.
 - Records must stay source-linked and explicitly verification-marked.
 
