@@ -1,0 +1,668 @@
+{
+  "brands": [
+    {
+      "brand": "Helical Solutions",
+      "family_names": [
+        "Aluminum end mill families",
+        "Ball end mill families",
+        "Chamfer mill families",
+        "Corner radius end mill families",
+        "Dynamic/adaptive milling end mill families",
+        "Finishing end mill families",
+        "High-performance square end mill families",
+        "Roughing end mill families",
+        "Specialty milling cutter families",
+        "Variable pitch end mill families"
+      ],
+      "geometry_tags_coverage": [
+        "adaptive_milling",
+        "aluminum_geometry",
+        "angle_geometry_requires_review",
+        "ball_end",
+        "chamfer_mill",
+        "chatter_reduction_candidate",
+        "chip_evacuation_candidate",
+        "chipbreaker_candidate",
+        "contouring_candidate",
+        "corner_radius",
+        "dynamic_milling",
+        "edge_strength_candidate",
+        "finishing",
+        "geometry_requires_review",
+        "high_performance",
+        "high_rake_candidate",
+        "roughing",
+        "solid_carbide",
+        "specialty_milling",
+        "square_end",
+        "surface_finish_candidate",
+        "variable_pitch"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "N",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [],
+      "operation_fit_coverage": [
+        "3d_milling",
+        "adaptive_milling",
+        "aluminum_milling",
+        "chamfer",
+        "contouring",
+        "deburring",
+        "dynamic_milling",
+        "edge_breaking",
+        "feature_milling",
+        "finishing",
+        "floor_finishing",
+        "general_milling",
+        "pocketing",
+        "profiling",
+        "roughing",
+        "slotting",
+        "specialty_milling",
+        "spotting",
+        "undercutting",
+        "wall_finishing"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\helical_solutions_endmill_families.json",
+      "strategy_fit_coverage": [
+        "3d_finishing",
+        "adaptive",
+        "aluminum_milling",
+        "chamfering",
+        "chatter_reduction_candidate",
+        "chip_evacuation_priority",
+        "contouring",
+        "dynamic",
+        "edge_breaking",
+        "edge_strength_priority",
+        "finishing",
+        "high_efficiency",
+        "high_performance",
+        "job_shop_general",
+        "light_radial_engagement",
+        "manual_catalog_review_required",
+        "problem_solving",
+        "production_milling",
+        "radial_engagement_strategy",
+        "roughing",
+        "specialty_feature",
+        "specialty_milling",
+        "surface_finish_priority"
+      ],
+      "tool_categories": [
+        "chamfer_mill",
+        "endmill",
+        "specialty_milling"
+      ],
+      "total_reviewed_records": 10
+    },
+    {
+      "brand": "Harvey Tool",
+      "family_names": [
+        "Chamfer mill families",
+        "Keyseat cutter families",
+        "Miniature end mill families",
+        "Specialty milling cutter families",
+        "Thread mill families",
+        "Undercutting tool families"
+      ],
+      "geometry_tags_coverage": [
+        "angle_geometry_requires_review",
+        "catalog_review_required",
+        "chamfer_mill",
+        "clearance_requires_review",
+        "deflection_risk_requires_review",
+        "geometry_requires_review",
+        "keyseat_cutter",
+        "miniature_endmill",
+        "slotting_candidate",
+        "small_feature_candidate",
+        "solid_carbide",
+        "specialty_cutter",
+        "specialty_milling",
+        "thread_form_requires_review",
+        "thread_mill",
+        "undercut_tool"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "N",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [],
+      "operation_fit_coverage": [
+        "back_chamfering",
+        "chamfer",
+        "deburring",
+        "edge_breaking",
+        "external_threading",
+        "feature_milling",
+        "finishing",
+        "internal_threading",
+        "keyseat",
+        "keyway",
+        "miniature_milling",
+        "problem_solving",
+        "profiling",
+        "relief_milling",
+        "slotting",
+        "small_feature_milling",
+        "specialty_milling",
+        "spotting",
+        "thread_milling",
+        "threading",
+        "undercutting"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\harvey_tool_specialty_families.json",
+      "strategy_fit_coverage": [
+        "clearance_priority",
+        "edge_preparation",
+        "manual_catalog_review_required",
+        "miniature_work",
+        "problem_solving",
+        "slotting",
+        "small_feature_access",
+        "specialty_feature",
+        "specialty_milling",
+        "thread_milling"
+      ],
+      "tool_categories": [
+        "chamfer_mill",
+        "keyseat_cutter",
+        "miniature_endmill",
+        "specialty_milling",
+        "thread_mill",
+        "undercut_tool"
+      ],
+      "total_reviewed_records": 6
+    },
+    {
+      "brand": "Micro 100",
+      "family_names": [
+        "Indexable boring bar families",
+        "Internal grooving tool families",
+        "Miniature internal threading tool families",
+        "Miniature internal turning tool families",
+        "Small-ID multifunction turning tool families",
+        "Solid carbide boring bar families"
+      ],
+      "geometry_tags_coverage": [
+        "boring_bar",
+        "clearance_requires_review",
+        "groove_form_requires_review",
+        "indexable",
+        "internal_grooving",
+        "internal_threading",
+        "miniature_turning",
+        "multifunction_candidate",
+        "small_id_candidate",
+        "solid_carbide",
+        "specialty_turning",
+        "thread_form_requires_review"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "N",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [],
+      "operation_fit_coverage": [
+        "boring",
+        "face_grooving",
+        "facing",
+        "grooving",
+        "internal_grooving",
+        "internal_threading",
+        "internal_turning",
+        "profiling",
+        "shoulder_turning",
+        "small_feature_turning",
+        "small_id_turning",
+        "specialty_turning",
+        "threading"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\micro_100_turning_families.json",
+      "strategy_fit_coverage": [
+        "grooving",
+        "indexable_turning",
+        "manual_catalog_review_required",
+        "miniature_work",
+        "multifunction",
+        "production_turning",
+        "rigidity_priority",
+        "small_feature_access",
+        "small_id_access",
+        "threading"
+      ],
+      "tool_categories": [
+        "boring_bar",
+        "grooving_tool",
+        "miniature_turning_tool",
+        "specialty_turning",
+        "threading_tool"
+      ],
+      "total_reviewed_records": 6
+    },
+    {
+      "brand": "YG-1",
+      "family_names": [
+        "General-purpose carbide drill families",
+        "General-purpose carbide end mill families",
+        "Machine tap families",
+        "Performance drill families",
+        "Roughing end mill families",
+        "Variable helix performance end mill families"
+      ],
+      "geometry_tags_coverage": [
+        "chatter_reduction_candidate",
+        "chipbreaker_candidate",
+        "general_purpose",
+        "high_performance",
+        "roughing",
+        "solid_carbide",
+        "solid_drill",
+        "spiral_point_or_spiral_flute_requires_review",
+        "square_end_candidate",
+        "tap",
+        "thread_form_requires_review",
+        "through_coolant_requires_review",
+        "variable_helix"
+      ],
+      "material_fit_coverage": [
+        "K",
+        "M",
+        "N",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [],
+      "operation_fit_coverage": [
+        "blind_hole_drilling",
+        "drilling",
+        "finishing",
+        "general_milling",
+        "high_efficiency_drilling",
+        "internal_threading",
+        "pocketing",
+        "profiling",
+        "roughing",
+        "shoulder_milling",
+        "slotting",
+        "tapping",
+        "threading",
+        "through_hole_drilling"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\yg_1_general_cutting_families.json",
+      "strategy_fit_coverage": [
+        "chatter_reduction_candidate",
+        "general_purpose",
+        "high_performance",
+        "job_shop_general",
+        "machine_tapping",
+        "manual_catalog_review_required",
+        "material_removal_priority",
+        "production_drilling",
+        "production_milling",
+        "production_threading",
+        "roughing",
+        "through_coolant_candidate",
+        "value_focused"
+      ],
+      "tool_categories": [
+        "drill",
+        "endmill",
+        "tap"
+      ],
+      "total_reviewed_records": 6
+    },
+    {
+      "brand": "Garr Tool",
+      "family_names": [
+        "Aerospace and hard-metal finishing end mill families",
+        "Corner radius end mill families",
+        "High-efficiency roughing end mill families",
+        "High-performance square end mill families",
+        "Variable helix finishing end mill families"
+      ],
+      "geometry_tags_coverage": [
+        "corner_radius",
+        "difficult_material_candidate",
+        "edge_strength_candidate",
+        "finishing",
+        "high_efficiency",
+        "high_performance",
+        "roughing",
+        "solid_carbide",
+        "square_end",
+        "variable_helix"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [
+        "aluminum_milling"
+      ],
+      "operation_fit_coverage": [
+        "contouring",
+        "dynamic_milling",
+        "finishing",
+        "floor_finishing",
+        "general_milling",
+        "pocketing",
+        "profiling",
+        "roughing",
+        "shoulder_milling",
+        "slotting",
+        "wall_finishing"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\garr_tool_endmill_families.json",
+      "strategy_fit_coverage": [
+        "chatter_reduction_candidate",
+        "difficult_material_focus",
+        "edge_strength_priority",
+        "finishing",
+        "high_efficiency",
+        "high_performance",
+        "material_removal_priority",
+        "production_milling",
+        "radial_engagement_strategy",
+        "roughing",
+        "surface_finish_priority"
+      ],
+      "tool_categories": [
+        "endmill"
+      ],
+      "total_reviewed_records": 5
+    },
+    {
+      "brand": "Niagara Cutter",
+      "family_names": [
+        "Corner radius production end mill families",
+        "Finishing and contouring end mill families",
+        "Production square end mill families",
+        "Roughing end mill families",
+        "Variable helix production end mill families"
+      ],
+      "geometry_tags_coverage": [
+        "chipbreaker_candidate",
+        "contouring_candidate",
+        "corner_radius",
+        "finishing",
+        "production_candidate",
+        "roughing",
+        "solid_carbide",
+        "square_end",
+        "variable_helix"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [],
+      "operation_fit_coverage": [
+        "contouring",
+        "finishing",
+        "general_milling",
+        "pocketing",
+        "profiling",
+        "roughing",
+        "shoulder_milling",
+        "slotting",
+        "wall_finishing"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\niagara_cutter_milling_families.json",
+      "strategy_fit_coverage": [
+        "chatter_reduction_candidate",
+        "edge_strength_priority",
+        "finishing",
+        "general_purpose",
+        "high_performance",
+        "job_shop_general",
+        "material_removal_priority",
+        "production_milling",
+        "roughing",
+        "surface_finish_priority"
+      ],
+      "tool_categories": [
+        "endmill"
+      ],
+      "total_reviewed_records": 5
+    },
+    {
+      "brand": "Sumitomo Electric",
+      "family_names": [
+        "Face milling insert families",
+        "Finishing and profiling turning insert families",
+        "General-purpose turning insert families",
+        "Heavy roughing turning insert families",
+        "Indexable milling cutter system families",
+        "Shoulder milling insert families"
+      ],
+      "geometry_tags_coverage": [
+        "chipbreaker_requires_review",
+        "face_milling",
+        "finishing",
+        "grade_family_requires_review",
+        "indexable_cutter",
+        "insert_compatibility_requires_review",
+        "milling_insert",
+        "roughing",
+        "shoulder_milling",
+        "system_platform",
+        "turning_insert"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "N",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [
+        "drilling_indexable"
+      ],
+      "operation_fit_coverage": [
+        "copy_milling",
+        "copy_turning",
+        "external_turning",
+        "face_milling",
+        "facing",
+        "finishing",
+        "general_milling",
+        "high_feed_milling",
+        "internal_turning",
+        "profiling",
+        "roughing",
+        "shoulder_milling",
+        "shoulder_turning",
+        "slotting"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\sumitomo_electric_insert_families.json",
+      "strategy_fit_coverage": [
+        "cutter_platform",
+        "edge_strength_priority",
+        "face_milling",
+        "finishing",
+        "general_purpose",
+        "insert_grade_verification_required",
+        "manual_catalog_review_required",
+        "production_milling",
+        "production_turning",
+        "roughing",
+        "surface_finish_priority"
+      ],
+      "tool_categories": [
+        "indexable_cutter",
+        "milling_insert",
+        "turning_insert"
+      ],
+      "total_reviewed_records": 6
+    },
+    {
+      "brand": "Kyocera",
+      "family_names": [
+        "Face milling insert families",
+        "Finishing and profiling turning insert families",
+        "General-purpose turning insert families",
+        "Grooving and cut-off insert families",
+        "Shoulder milling insert families",
+        "Threading insert families"
+      ],
+      "geometry_tags_coverage": [
+        "chipbreaker_requires_review",
+        "face_milling",
+        "finishing",
+        "grade_family_requires_review",
+        "groove_form_requires_review",
+        "grooving_insert",
+        "milling_insert",
+        "shoulder_milling",
+        "thread_form_requires_review",
+        "threading_insert",
+        "turning_insert"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "N",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [
+        "drilling_indexable"
+      ],
+      "operation_fit_coverage": [
+        "copy_turning",
+        "external_threading",
+        "external_turning",
+        "face_grooving",
+        "face_milling",
+        "facing",
+        "finishing",
+        "general_milling",
+        "grooving",
+        "internal_threading",
+        "internal_turning",
+        "parting",
+        "profiling",
+        "roughing",
+        "shoulder_milling",
+        "slotting",
+        "threading"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\kyocera_indexable_families.json",
+      "strategy_fit_coverage": [
+        "face_milling",
+        "finishing",
+        "general_purpose",
+        "grooving",
+        "insert_grade_verification_required",
+        "manual_catalog_review_required",
+        "production_milling",
+        "production_turning",
+        "surface_finish_priority",
+        "threading"
+      ],
+      "tool_categories": [
+        "grooving_insert",
+        "milling_insert",
+        "threading_insert",
+        "turning_insert"
+      ],
+      "total_reviewed_records": 6
+    },
+    {
+      "brand": "Tungaloy",
+      "family_names": [
+        "Grooving and parting holder families",
+        "Grooving and parting insert families",
+        "High-feed milling cutter families",
+        "Multifunction turning and milling system families",
+        "Threading holder families",
+        "Threading insert families"
+      ],
+      "geometry_tags_coverage": [
+        "grade_family_requires_review",
+        "groove_form_requires_review",
+        "grooving_insert",
+        "grooving_toolholder",
+        "high_feed",
+        "indexable_cutter",
+        "insert_compatibility_requires_review",
+        "multifunction_tooling",
+        "system_platform",
+        "thread_form_requires_review",
+        "threading_insert",
+        "threading_toolholder"
+      ],
+      "material_fit_coverage": [
+        "H",
+        "K",
+        "M",
+        "N",
+        "P",
+        "S"
+      ],
+      "missing_obvious_family_categories": [],
+      "operation_fit_coverage": [
+        "external_threading",
+        "face_grooving",
+        "face_milling",
+        "grooving",
+        "high_feed_milling",
+        "internal_threading",
+        "parting",
+        "profiling",
+        "roughing",
+        "shoulder_milling",
+        "specialty_milling",
+        "threading",
+        "turning"
+      ],
+      "reviewed_file_path": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed\\tungaloy_multifunction_families.json",
+      "strategy_fit_coverage": [
+        "grooving",
+        "high_feed",
+        "insert_grade_verification_required",
+        "manual_catalog_review_required",
+        "multifunction",
+        "production_milling",
+        "production_turning",
+        "threading",
+        "tooling_system"
+      ],
+      "tool_categories": [
+        "grooving_insert",
+        "grooving_toolholder",
+        "indexable_cutter",
+        "multifunction_tooling",
+        "threading_insert",
+        "threading_toolholder"
+      ],
+      "total_reviewed_records": 6
+    }
+  ],
+  "reviewed_root": "C:\\Users\\hayes\\Desktop\\Lets Have Some Fun\\CNC_Tool_Engine-main\\tool_data\\catalog_ingestion\\reviewed",
+  "total_reviewed_files": 9
+}
