@@ -56,16 +56,19 @@ Manufacturer Data Source
 ```
 tools/
   tooling_adapters/
-    __init__.py                  # namespace package marker
-    base_adapter.py              # shared contract, helpers, validation bridge
-    gtc_iso13399_adapter.py      # GTC / ISO 13399 XML adapter
+    __init__.py                                   # namespace package marker
+    base_adapter.py                               # shared contract, helpers, validation bridge
+    gtc_iso13399_adapter.py                       # GTC / ISO 13399 XML adapter
+    mitsubishi_materials_adapter.py               # Mitsubishi Materials JSON adapter
     samples/
-      sample_gtc_iso13399.xml    # synthetic test fixture (NOT manufacturer data)
+      sample_gtc_iso13399.xml                     # synthetic test fixture (NOT manufacturer data)
+      sample_mitsubishi_materials_structured.json # synthetic test fixture (NOT manufacturer data)
     output/
-      .gitkeep                   # output directory stub
-      <name>_records.json        # adapter output (staged, not yet in records/)
+      .gitkeep                                    # output directory stub
+      <name>_records.json                         # adapter output (staged, not yet in records/)
 
-  parse_gtc_iso13399_sample.py   # runner: parse sample, validate, write output
+  parse_gtc_iso13399_sample.py          # runner: parse sample, validate, write output
+  parse_mitsubishi_materials_sample.py  # runner: parse Mitsubishi sample, validate, write output
 ```
 
 ## Base Adapter (`base_adapter.py`)
@@ -115,6 +118,59 @@ Field mapping:
 
 **Rejection policy:** If any `<ToolItem>` child element tag contains a forbidden feed/speed term (after normalization), the entire record is rejected before any field is read. Rejection notices appear in `parse_errors`; `rejected_count` is incremented.
 
+## Mitsubishi Materials Adapter (`mitsubishi_materials_adapter.py`)
+
+Parses Mitsubishi-style structured JSON tooling records into normalized tooling search records.
+
+**Input format:** A JSON object with two top-level keys:
+- `catalog_header` — `manufacturer`, `catalog_label`, `catalog_url`, optional `issue_date`
+- `tool_records` — array of flat dicts with Mitsubishi-convention field names
+
+Field mapping:
+
+| JSON Key | Schema Field | Notes |
+|---|---|---|
+| `catalog_header.manufacturer` | `brand` | Defaults to `"Mitsubishi Materials Corporation"` |
+| `part_number` | `manufacturer_part_number` | |
+| `tool_type` | `tool_category` | Mapped via `_TOOL_CATEGORY_MAP` |
+| `series` | `series` | |
+| `family_name` | `family_name` | |
+| `designation` | `designation` | |
+| `grade` | `grade` | |
+| `chipbreaker` | `chipbreaker` | |
+| `coating` | `coating` | |
+| `material_groups` (array) | `material_fit` | Filtered to ISO codes via `normalize_material_fit()` |
+| `operations` (array) | `operation_fit` | Mapped via `_OPERATION_MAP` |
+| `geometry_tags` (array) | `geometry_tags` | Normalized snake_case |
+| `holder_compatibility` | `holder_compatibility` | Comma-split to list |
+| `coolant` | `coolant_capability` | Mapped via `_COOLANT_MAP` |
+| `catalog_header.catalog_label` | `source_label` | |
+| `catalog_header.catalog_url` | `source_url` | |
+| `source_page` | `source_page_reference` | |
+| `notes` | `notes` | |
+| *(forced)* | `dimensions` | Always `{}` — never imported |
+| *(forced)* | `cutting_data_status` | Always `"not_imported"` |
+| *(forced)* | `verification_status` | Always `"sample_family_level_not_catalog_verified"` |
+
+**Rejection policy:** If any JSON key in a `tool_records` entry contains a forbidden feed/speed term (after normalization), the entire record is rejected. Rejection notices appear in `parse_errors`; `rejected_count` is incremented.
+
+**`parse_mitsubishi_file(source)`** is the module-level convenience function. It instantiates the adapter, calls `parse()` and `validate_output()`, and returns a summary dict with `record_count`, `rejected_count`, `parse_errors`, `validation_errors`, and `records`.
+
+Running the sample:
+
+```bash
+# Parse and write output JSON
+python tools/parse_mitsubishi_materials_sample.py
+
+# Dry run (validate only, no file written)
+python tools/parse_mitsubishi_materials_sample.py --dry-run
+
+# Custom output path
+python tools/parse_mitsubishi_materials_sample.py --output path/to/custom.json
+```
+
+Output is written to `tools/tooling_adapters/output/mitsubishi_materials_sample_records.json`. Seven synthetic fixture records covering turning inserts, milling inserts, endmills, indexable drills, grooving inserts, and threading inserts. All marked as not manufacturer catalog data.
+
 ## What Is Never Imported
 
 The adapter layer enforces these constraints unconditionally:
@@ -140,9 +196,13 @@ The adapter layer enforces these constraints unconditionally:
 7. Run `python -m compileall . && pytest` before committing
 8. Output goes to `tools/tooling_adapters/output/` — not to `records/` directly
 
-## Sample Fixture
+## Sample Fixtures
 
-`tools/tooling_adapters/samples/sample_gtc_iso13399.xml` contains 5 synthetic records clearly marked as test fixture data. Records use fictional MPNs, grades, and catalog references. They must not be used for purchasing, machining, or catalog reference.
+`tools/tooling_adapters/samples/sample_gtc_iso13399.xml` contains 5 synthetic GTC records clearly marked as test fixture data.
+
+`tools/tooling_adapters/samples/sample_mitsubishi_materials_structured.json` contains 7 synthetic Mitsubishi-format records clearly marked as test fixture data.
+
+All fixture records use fictional MPNs, grades, and catalog references. They must not be used for purchasing, machining, or catalog reference.
 
 Running the sample:
 
