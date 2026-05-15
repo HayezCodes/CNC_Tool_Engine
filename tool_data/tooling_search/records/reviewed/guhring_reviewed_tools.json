@@ -1,0 +1,353 @@
+[
+  {
+    "brand": "Guhring KG",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-GUH-SCD-001",
+    "series": "RT100U Series",
+    "family_name": "Fixture solid carbide drill family \u2014 universal substrate",
+    "designation": "solid carbide drill, through-coolant, 8.0mm",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN-NanoCoating",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "throughcoolant",
+      "splitpoint",
+      "highhelix"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Cylindrical shank HA (DIN 6535)",
+      "hydraulic chuck",
+      "shrink-fit chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.D-14",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Guhring KG",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-GUH-HSS-002",
+    "series": "GT100 Series",
+    "family_name": "Fixture HSS-E cobalt drill family",
+    "designation": "HSS-E (Co8) twist drill, 8.0mm",
+    "grade": "FIXTURE-HSSE-Co8",
+    "chipbreaker": "",
+    "coating": "FIXTURE-Bright-Uncoated",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling"
+    ],
+    "geometry_tags": [
+      "hsscobalt",
+      "highcobaltcontent",
+      "splitpoint",
+      "generalpurpose"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Cylindrical shank",
+      "drill chuck",
+      "collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.D-48",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Guhring KG",
+    "tool_category": "tap",
+    "manufacturer_part_number": "FIXTURE-GUH-TAP-003",
+    "series": "Rekord Series",
+    "family_name": "Fixture spiral flute machine tap family",
+    "designation": "spiral flute machine tap M10x1.5",
+    "grade": "FIXTURE-HSSE-TiN",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "tapping",
+      "internal_threading",
+      "through_hole_tapping",
+      "blind_hole_tapping"
+    ],
+    "geometry_tags": [
+      "spiralflute",
+      "machinetap",
+      "metricthread",
+      "iso6h"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Tapping chuck (floating)",
+      "quick-change tap adapter",
+      "synchronous tap holder"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.T-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Guhring KG",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-GUH-TM-004",
+    "series": "3867 Series",
+    "family_name": "Fixture solid carbide thread mill family",
+    "designation": "solid carbide thread mill, M10x1.5",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "external_thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "threadmill",
+      "multiplethreadform",
+      "lefthandcut"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck",
+      "shrink-fit chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.TM-8",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Guhring KG",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-GUH-EM-005",
+    "series": "RF100 Series",
+    "family_name": "Fixture solid carbide square end mill family",
+    "designation": "solid carbide square end mill, 12mm, 4-flute",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "FIXTURE-Fire-AlCrN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "slot_milling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "squareend",
+      "fourflute",
+      "highperformance"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck",
+      "shrink-fit chuck",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.E-36",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Guhring KG",
+    "tool_category": "reamer",
+    "manufacturer_part_number": "FIXTURE-GUH-REA-006",
+    "series": "4165 Series",
+    "family_name": "Fixture solid carbide reamer family",
+    "designation": "solid carbide reamer, 8.0mm H7",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "reaming",
+      "finish_reaming",
+      "precision_reaming"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "straightflute",
+      "precisionreamer",
+      "h7tolerance"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Floating reamer holder",
+      "ER collet chuck",
+      "precision collet"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.R-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Guhring KG",
+    "tool_category": "countersink",
+    "manufacturer_part_number": "FIXTURE-GUH-CS-007",
+    "series": "CS100 Series",
+    "family_name": "Fixture solid carbide countersink family",
+    "designation": "solid carbide countersink, 90 degree, 12mm",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "countersinking",
+      "chamfering",
+      "deburring"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "90degree",
+      "countersink",
+      "singleflute"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Cylindrical shank",
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.CS-6",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Guhring KG",
+    "tool_category": "step_drill",
+    "manufacturer_part_number": "FIXTURE-GUH-STP-008",
+    "series": "SR Series",
+    "family_name": "Fixture solid carbide step drill family",
+    "designation": "solid carbide step drill, 6.8mm/8.5mm",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "step_drilling",
+      "pilot_drilling"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "stepdrill",
+      "twostep",
+      "combinedoperation"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Cylindrical shank",
+      "shrink-fit chuck",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Guhring Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.guhring.com/products",
+    "source_page_reference": "p.D-98",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]

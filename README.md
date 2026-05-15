@@ -68,6 +68,17 @@ A Mitsubishi Materials JSON adapter has been built and run through the complete 
 
 All records at every pipeline stage: no feeds/speeds, no dimensions, `cutting_data_status = not_imported`, `verification_status = sample_family_level_not_catalog_verified` (imported) or `reviewed_family_level_candidate` (reviewed). The Mitsubishi Materials adapter pilot is a pipeline proof-of-concept only. Adding real manufacturer catalog data requires separate sourcing, authorization, and re-running the full pipeline with actual catalog records.
 
+### Guhring Adapter Pilot
+
+A second adapter pilot for Guhring KG has been built and run through the same complete pipeline. Guhring covers tool types not addressed by insert-focused brands: drills (solid carbide and HSS-E cobalt), taps, thread mills, reamers, countersinks, endmills, and step drills — introducing seven new `tool_category` values to the search index.
+
+- **Adapter:** `tools/tooling_adapters/guhring_adapter.py`
+- **Fixture:** `tools/tooling_adapters/samples/sample_guhring_structured.json` — 8 synthetic records
+- **Imported records:** `tool_data/tooling_search/records/guhring_imported_tools.json` — 0 audit issues, searchable via Enterprise Tooling Search UI
+- **Reviewed records:** `tool_data/tooling_search/records/reviewed/guhring_reviewed_tools.json` — reviewed by Joshua Hayes, `reviewed_family_level_candidate`
+
+As with Mitsubishi, this is a pipeline proof-of-concept with synthetic fixtures only — not real catalog data.
+
 ## Install
 
 1. Create and activate a virtual environment.

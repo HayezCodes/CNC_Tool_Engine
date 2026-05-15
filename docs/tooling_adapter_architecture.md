@@ -60,15 +60,20 @@ tools/
     base_adapter.py                               # shared contract, helpers, validation bridge
     gtc_iso13399_adapter.py                       # GTC / ISO 13399 XML adapter
     mitsubishi_materials_adapter.py               # Mitsubishi Materials JSON adapter
+    guhring_adapter.py                            # Guhring KG JSON adapter
     samples/
       sample_gtc_iso13399.xml                     # synthetic test fixture (NOT manufacturer data)
       sample_mitsubishi_materials_structured.json # synthetic test fixture (NOT manufacturer data)
+      sample_guhring_structured.json              # synthetic test fixture (NOT manufacturer data)
     output/
       .gitkeep                                    # output directory stub
       <name>_records.json                         # adapter output (staged, not yet in records/)
 
   parse_gtc_iso13399_sample.py          # runner: parse sample, validate, write output
   parse_mitsubishi_materials_sample.py  # runner: parse Mitsubishi sample, validate, write output
+  parse_guhring_sample.py               # runner: parse Guhring sample, validate, write output
+  import_mitsubishi_adapter_output.py   # importer: adapter output → records/
+  import_guhring_adapter_output.py      # importer: adapter output → records/
 ```
 
 ## Base Adapter (`base_adapter.py`)
@@ -170,6 +175,44 @@ python tools/parse_mitsubishi_materials_sample.py --output path/to/custom.json
 ```
 
 Output is written to `tools/tooling_adapters/output/mitsubishi_materials_sample_records.json`. Seven synthetic fixture records covering turning inserts, milling inserts, endmills, indexable drills, grooving inserts, and threading inserts. All marked as not manufacturer catalog data.
+
+## Guhring Adapter (`guhring_adapter.py`)
+
+Parses Guhring-style structured JSON tooling records into normalized tooling search records. Guhring manufactures drills, taps, thread mills, reamers, countersinks, endmills, and step drills — tool categories not covered by insert-focused brands. The adapter uses the same JSON format as the Mitsubishi adapter (`catalog_header` + `tool_records` array) and the same field mapping conventions.
+
+**New tool categories introduced:**
+
+| tool_type value | schema tool_category |
+|---|---|
+| `SolidCarbideDrill`, `HSSCobaltDrill`, `HSSEDrill` | `drill` |
+| `MachineTap`, `SpiralTap`, `FormTap` | `tap` |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` |
+| `Reamer`, `SolidCarbideReamer` | `reamer` |
+| `Countersink`, `ChamferTool` | `countersink` |
+| `StepDrill`, `CombinationDrill` | `step_drill` |
+
+**New operations introduced:**
+
+| Input string | schema operation |
+|---|---|
+| `Tapping`, `ThroughHoleTapping`, `BlindHoleTapping` | `tapping`, `through_hole_tapping`, `blind_hole_tapping` |
+| `ThreadMilling`, `ExternalThreadMilling`, `InternalThreadMilling` | `thread_milling`, `external_thread_milling`, `internal_thread_milling` |
+| `Reaming`, `FinishReaming`, `PrecisionReaming` | `reaming`, `finish_reaming`, `precision_reaming` |
+| `Countersinking`, `Chamfering`, `Deburring` | `countersinking`, `chamfering`, `deburring` |
+| `StepDrilling`, `PilotDrilling` | `step_drilling`, `pilot_drilling` |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter — `part_number → manufacturer_part_number`, `tool_type → tool_category`, `material_groups → material_fit`, `operations → operation_fit`, `geometry_tags → geometry_tags`, `holder_compatibility → holder_compatibility`, `coolant → coolant_capability`. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_guhring_sample.py
+python tools/parse_guhring_sample.py --dry-run
+python tools/import_guhring_adapter_output.py
+python tools/import_guhring_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/guhring_sample_records.json` (8 synthetic fixture records). Imported records go to `tool_data/tooling_search/records/guhring_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/guhring_reviewed_tools.json`.
 
 ## What Is Never Imported
 
