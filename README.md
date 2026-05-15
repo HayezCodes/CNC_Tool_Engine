@@ -37,11 +37,20 @@ The catalog ingestion pipeline is a staged foundation for future manufacturer to
 First staged manufacturer data: Helical Solutions endmill family records.
 
 Staged records live separately from production recommendation data. Reviewed records can later feed the Brand Intelligence layer only after source citation and shop-safe validation.
-Reviewed catalog-family records can now lightly strengthen recommendation confidence while remaining family-level only.
 
 Reviewed catalog records are still family-level unless cutting data is separately validated.
 
 Reviewed Catalog Families are display/reference only and are not yet used in recommendation scoring.
+
+## Enterprise Tooling Search Foundation
+
+The enterprise tooling search foundation is a new, separate backend layer for future exact-tooling search and indexing work.
+
+- It is separate from the current recommendation logic and does not replace recommendation scoring.
+- It stores exact-tool-style records under `tool_data/tooling_search/` while reviewed family guidance remains separate.
+- It currently uses only a small, conservative sample record set to establish schema, search behavior, filtering, and match explanations.
+- Speeds and feeds are not imported in this phase.
+- Records must stay source-linked and explicitly verification-marked.
 
 ## Install
 
