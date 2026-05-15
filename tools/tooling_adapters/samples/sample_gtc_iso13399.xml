@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ============================================================
+  FIXTURE DATA — NOT MANUFACTURER DATA
+  ============================================================
+  This file is a synthetic test fixture for the GTC/ISO 13399
+  parser adapter. It uses a simplified GTC-style XML structure
+  with realistic ISO designations but fully fictional MPNs,
+  grades, and catalog references.
+
+  Do NOT use for purchasing, machining, or catalog reference.
+  Do NOT submit to any manufacturer or ERP system.
+  ============================================================
+-->
+<GenericToolCatalog version="2.0">
+
+  <CatalogHeader>
+    <ManufacturerName>Fixture Manufacturer Co</ManufacturerName>
+    <CatalogLabel>Fixture GTC Catalog 2025 — Parser Test Fixture</CatalogLabel>
+    <CatalogURL>https://example.com/fixture-gtc-catalog</CatalogURL>
+    <IssueDate>2025-01-01</IssueDate>
+  </CatalogHeader>
+
+  <ToolItems>
+
+    <!-- Record 1: Turning insert (CNMG style, general purpose) -->
+    <ToolItem>
+      <MPN>FIXTURE-GTC-TI-001</MPN>
+      <ToolCategory>TurningInsert</ToolCategory>
+      <Series>Fixture Turning Series A</Series>
+      <FamilyName>Fixture general-purpose turning insert family</FamilyName>
+      <Designation>CNMG 120408</Designation>
+      <Grade>FIXTURE-P25M</Grade>
+      <Chipbreaker>FIXTURE-MF</Chipbreaker>
+      <Coating>FIXTURE-CVD-TiCN-Al2O3</Coating>
+      <MaterialGroups>
+        <MaterialGroup>P</MaterialGroup>
+        <MaterialGroup>M</MaterialGroup>
+        <MaterialGroup>K</MaterialGroup>
+        <MaterialGroup>S</MaterialGroup>
+      </MaterialGroups>
+      <Operations>
+        <Operation>ExternalTurning</Operation>
+        <Operation>Facing</Operation>
+        <Operation>Roughing</Operation>
+        <Operation>MediumTurning</Operation>
+      </Operations>
+      <GeometryTags>
+        <GeometryTag>NegativeRake</GeometryTag>
+        <GeometryTag>80DegreeDiamond</GeometryTag>
+        <GeometryTag>GeneralPurpose</GeometryTag>
+        <GeometryTag>ProductionTurning</GeometryTag>
+      </GeometryTags>
+      <HolderCompatibility>CNMG compatible external turning holders</HolderCompatibility>
+      <CoolantCapability>VerifyByCatalog</CoolantCapability>
+      <SourcePageReference>p.42</SourcePageReference>
+      <Notes>Fixture record only. Grade, chipbreaker, and coating are not real catalog data.</Notes>
+    </ToolItem>
+
+    <!-- Record 2: Square shoulder milling insert -->
+    <ToolItem>
+      <MPN>FIXTURE-GTC-MI-002</MPN>
+      <ToolCategory>MillingInsert</ToolCategory>
+      <Series>Fixture Shoulder Mill Series B</Series>
+      <FamilyName>Fixture square shoulder milling insert family</FamilyName>
+      <Designation>APKT 11T308</Designation>
+      <Grade>FIXTURE-K20N</Grade>
+      <Chipbreaker>FIXTURE-MM</Chipbreaker>
+      <Coating>FIXTURE-PVD-TiAlN</Coating>
+      <MaterialGroups>
+        <MaterialGroup>P</MaterialGroup>
+        <MaterialGroup>M</MaterialGroup>
+        <MaterialGroup>K</MaterialGroup>
+        <MaterialGroup>N</MaterialGroup>
+      </MaterialGroups>
+      <Operations>
+        <Operation>ShoulderMilling</Operation>
+        <Operation>FaceMilling</Operation>
+        <Operation>SlotMilling</Operation>
+        <Operation>Ramping</Operation>
+      </Operations>
+      <GeometryTags>
+        <GeometryTag>SquareShoulder</GeometryTag>
+        <GeometryTag>PositiveRake</GeometryTag>
+        <GeometryTag>True90Degree</GeometryTag>
+      </GeometryTags>
+      <HolderCompatibility>Fixture shoulder milling cutter bodies only</HolderCompatibility>
+      <CoolantCapability>VerifyByCatalog</CoolantCapability>
+      <SourcePageReference>p.88</SourcePageReference>
+      <Notes>Fixture record only. Grade, designation, and holder details are not real catalog data.</Notes>
+    </ToolItem>
+
+    <!-- Record 3: Solid carbide endmill -->
+    <ToolItem>
+      <MPN>FIXTURE-GTC-EM-003</MPN>
+      <ToolCategory>SolidEndMill</ToolCategory>
+      <Series>Fixture Endmill Series C</Series>
+      <FamilyName>Fixture solid carbide square end mill family</FamilyName>
+      <Designation>solid carbide square end mill</Designation>
+      <Grade></Grade>
+      <Chipbreaker></Chipbreaker>
+      <Coating>FIXTURE-AlTiN</Coating>
+      <MaterialGroups>
+        <MaterialGroup>P</MaterialGroup>
+        <MaterialGroup>M</MaterialGroup>
+        <MaterialGroup>K</MaterialGroup>
+        <MaterialGroup>N</MaterialGroup>
+        <MaterialGroup>S</MaterialGroup>
+      </MaterialGroups>
+      <Operations>
+        <Operation>GeneralMilling</Operation>
+        <Operation>Profiling</Operation>
+        <Operation>Roughing</Operation>
+        <Operation>Finishing</Operation>
+        <Operation>SlotMilling</Operation>
+      </Operations>
+      <GeometryTags>
+        <GeometryTag>SolidCarbide</GeometryTag>
+        <GeometryTag>SquareEnd</GeometryTag>
+        <GeometryTag>HighPerformance</GeometryTag>
+      </GeometryTags>
+      <HolderCompatibility></HolderCompatibility>
+      <CoolantCapability>VerifyByCatalog</CoolantCapability>
+      <SourcePageReference>p.155</SourcePageReference>
+      <Notes>Fixture record only. Diameter range, helix angle, and exact coating not real catalog data.</Notes>
+    </ToolItem>
+
+    <!-- Record 4: Indexable drill -->
+    <ToolItem>
+      <MPN>FIXTURE-GTC-IDR-004</MPN>
+      <ToolCategory>IndexableDrill</ToolCategory>
+      <Series>Fixture Indexable Drill Series D</Series>
+      <FamilyName>Fixture indexable insert drill family</FamilyName>
+      <Designation>indexable drill platform</Designation>
+      <Grade></Grade>
+      <Chipbreaker></Chipbreaker>
+      <Coating></Coating>
+      <MaterialGroups>
+        <MaterialGroup>P</MaterialGroup>
+        <MaterialGroup>M</MaterialGroup>
+        <MaterialGroup>K</MaterialGroup>
+        <MaterialGroup>N</MaterialGroup>
+        <MaterialGroup>S</MaterialGroup>
+      </MaterialGroups>
+      <Operations>
+        <Operation>Drilling</Operation>
+        <Operation>ThroughHoleDrilling</Operation>
+        <Operation>BlindHoleDrilling</Operation>
+        <Operation>HighEfficiencyDrilling</Operation>
+      </Operations>
+      <GeometryTags>
+        <GeometryTag>IndexableDrill</GeometryTag>
+        <GeometryTag>ProductionDrilling</GeometryTag>
+        <GeometryTag>ReplaceableInsert</GeometryTag>
+      </GeometryTags>
+      <HolderCompatibility>Fixture cylindrical shank or modular holders</HolderCompatibility>
+      <CoolantCapability>VerifyByCatalog</CoolantCapability>
+      <SourcePageReference>p.210</SourcePageReference>
+      <Notes>Fixture record only. Diameter range, insert style, and coolant details are not real catalog data.</Notes>
+    </ToolItem>
+
+    <!-- Record 5: Grooving insert -->
+    <ToolItem>
+      <MPN>FIXTURE-GTC-GRV-005</MPN>
+      <ToolCategory>GroovingInsert</ToolCategory>
+      <Series>Fixture Grooving Series E</Series>
+      <FamilyName>Fixture external grooving and parting insert family</FamilyName>
+      <Designation>grooving insert</Designation>
+      <Grade>FIXTURE-M30</Grade>
+      <Chipbreaker>FIXTURE-GN</Chipbreaker>
+      <Coating>FIXTURE-CVD-TiC</Coating>
+      <MaterialGroups>
+        <MaterialGroup>P</MaterialGroup>
+        <MaterialGroup>M</MaterialGroup>
+        <MaterialGroup>K</MaterialGroup>
+        <MaterialGroup>N</MaterialGroup>
+        <MaterialGroup>S</MaterialGroup>
+      </MaterialGroups>
+      <Operations>
+        <Operation>Grooving</Operation>
+        <Operation>FaceGrooving</Operation>
+        <Operation>Parting</Operation>
+      </Operations>
+      <GeometryTags>
+        <GeometryTag>GroovingInsert</GeometryTag>
+        <GeometryTag>ExternalGrooving</GeometryTag>
+        <GeometryTag>Parting</GeometryTag>
+        <GeometryTag>ProductionTurning</GeometryTag>
+      </GeometryTags>
+      <HolderCompatibility>Fixture grooving blade or holder, matching width required</HolderCompatibility>
+      <CoolantCapability>Unknown</CoolantCapability>
+      <SourcePageReference>p.318</SourcePageReference>
+      <Notes>Fixture record only. Insert width, hand, and catalog reference are not real catalog data.</Notes>
+    </ToolItem>
+
+  </ToolItems>
+
+</GenericToolCatalog>
