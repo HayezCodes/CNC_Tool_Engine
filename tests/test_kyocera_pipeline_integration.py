@@ -1,19 +1,19 @@
-"""Integration tests: Kennametal adapter → import → audit → review → search."""
+"""Integration tests: Kyocera adapter → import → audit → review → search."""
 from __future__ import annotations
 import json
 from pathlib import Path
 
 _REPO = Path(__file__).resolve().parent.parent
-_ADAPTER_OUTPUT = _REPO / "tools" / "tooling_adapters" / "output" / "kennametal_sample_records.json"
-_IMPORTED = _REPO / "tool_data" / "tooling_search" / "records" / "kennametal_imported_tools.json"
-_REVIEWED = _REPO / "tool_data" / "tooling_search" / "records" / "reviewed" / "kennametal_reviewed_tooling_records.json"
+_ADAPTER_OUTPUT = _REPO / "tools" / "tooling_adapters" / "output" / "kyocera_sample_records.json"
+_IMPORTED = _REPO / "tool_data" / "tooling_search" / "records" / "kyocera_imported_tools.json"
+_REVIEWED = _REPO / "tool_data" / "tooling_search" / "records" / "reviewed" / "kyocera_reviewed_tooling_records.json"
 
-BRAND = "Kennametal"
+BRAND = "Kyocera"
 FORBIDDEN = {"feed", "speed", "sfm", "rpm", "ipr", "ipm", "vc", "fz"}
 EXPECTED_MPNS = {
-    "FIXTURE-KMT-TI-001", "FIXTURE-KMT-TI-002", "FIXTURE-KMT-MI-003", "FIXTURE-KMT-HFI-004",
-    "FIXTURE-KMT-SCD-005", "FIXTURE-KMT-SCE-006", "FIXTURE-KMT-GI-007",
-    "FIXTURE-KMT-THI-008", "FIXTURE-KMT-ID-009",
+    "FIXTURE-KYO-TI-001", "FIXTURE-KYO-TI-002", "FIXTURE-KYO-MI-003", "FIXTURE-KYO-HFI-004",
+    "FIXTURE-KYO-SCD-005", "FIXTURE-KYO-SCE-006", "FIXTURE-KYO-GI-007",
+    "FIXTURE-KYO-THI-008", "FIXTURE-KYO-BB-009",
 }
 
 
@@ -55,7 +55,7 @@ class TestImportedRecords:
         for r in _load(_IMPORTED): assert r["manufacturer_part_number"].startswith("FIXTURE-")
     def test_covers_expected_categories(self):
         expected = {"turning_insert", "milling_insert", "high_feed_insert", "drill",
-                    "indexable_drill", "endmill", "grooving_insert", "threading_insert"}
+                    "endmill", "grooving_insert", "threading_insert", "boring_bar"}
         found = {r["tool_category"] for r in _load(_IMPORTED)}
         assert expected.issubset(found)
 
@@ -85,19 +85,19 @@ class TestSearchable:
                            if r["brand"] == BRAND and r["manufacturer_part_number"].startswith("FIXTURE-")]
         assert len(fixture_records) == 9
 
-    def test_search_by_kennametal(self):
+    def test_search_by_kyocera(self):
         from grade_engine.tooling_search import search_tooling_records
-        results = search_tooling_records("Kennametal")
+        results = search_tooling_records("Kyocera")
         assert results and all(r["brand"] == BRAND for r in results)
 
     def test_filter_by_brand(self):
         from grade_engine.tooling_search import load_tooling_records, filter_tooling_records
-        results = filter_tooling_records(load_tooling_records(), {"brand": "kennametal"})
+        results = filter_tooling_records(load_tooling_records(), {"brand": "kyocera"})
         assert len(results) >= 9
 
-    def test_suggest_endmill_candidates(self):
+    def test_suggest_turning_candidates(self):
         from grade_engine.tooling_search import suggest_tool_candidates
-        results = suggest_tool_candidates("general_milling", "P", tool_category="endmill", limit=20)
+        results = suggest_tool_candidates("external_turning", "P", tool_category="turning_insert", limit=20)
         assert any(r["brand"] == BRAND for r in results)
 
     def test_cutting_data_in_index(self):

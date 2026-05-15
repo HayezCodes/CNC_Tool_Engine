@@ -1,0 +1,284 @@
+[
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-SMT-TI-001",
+    "series": "AC/WBN",
+    "family_name": "AC8035P turning insert",
+    "designation": "CNMG 431 EG",
+    "grade": "AC8035P",
+    "chipbreaker": "EG",
+    "coating": "PVD TiAlSiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "profiling"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "medium_cutting_edge"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNR/L"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.T-10",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-SMT-TI-002",
+    "series": "AC/WBN",
+    "family_name": "AC8025P turning insert",
+    "designation": "CNMG 432 GU",
+    "grade": "AC8025P",
+    "chipbreaker": "GU",
+    "coating": "CVD Al2O3",
+    "material_fit": [
+      "P",
+      "K"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "roughing",
+      "heavy_turning"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "reinforced_edge"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNR/L"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.T-16",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-SMT-MI-003",
+    "series": "SEXL/SNEX",
+    "family_name": "SEXL milling insert",
+    "designation": "SEXL 1204AFTN-ME",
+    "grade": "ACM300",
+    "chipbreaker": "ME",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "face_milling",
+      "shoulder_milling",
+      "general_milling"
+    ],
+    "geometry_tags": [
+      "double_sided",
+      "positive_rake"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "BNX/BNXD cutter body"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.M-22",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "high_feed_insert",
+    "manufacturer_part_number": "FIXTURE-SMT-HFI-004",
+    "series": "LNMX",
+    "family_name": "LNMX high-feed insert",
+    "designation": "LNMX 10T308-GX",
+    "grade": "ACM300",
+    "chipbreaker": "GX",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "high_feed_milling",
+      "roughing"
+    ],
+    "geometry_tags": [
+      "high_feed_geometry",
+      "positive_rake"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Sumitomo high-feed cutter"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.M-90",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "indexable_drill",
+    "manufacturer_part_number": "FIXTURE-SMT-ID-005",
+    "series": "MDW",
+    "family_name": "MDW modular drill",
+    "designation": "MDW2000HS20",
+    "grade": "AC8020P",
+    "chipbreaker": "",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "drilling",
+      "throughholedrilling"
+    ],
+    "geometry_tags": [
+      "modular_head",
+      "through_coolant"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "MDW shank body"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.D-50",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-SMT-SCE-006",
+    "series": "WEX-H",
+    "family_name": "WEX-H solid carbide endmill",
+    "designation": "WEX4160H-6",
+    "grade": "STD",
+    "chipbreaker": "",
+    "coating": "PVD TiAlSiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "high_helix"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.E-20",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-SMT-GI-007",
+    "series": "GY",
+    "family_name": "GY grooving insert",
+    "designation": "GY3100N-SE",
+    "grade": "AC8015P",
+    "chipbreaker": "SE",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting"
+    ],
+    "geometry_tags": [
+      "ground_top_face",
+      "through_coolant"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "KGDL toolholder"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.G-15",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-SMT-THI-008",
+    "series": "T-MAX",
+    "family_name": "Threading insert",
+    "designation": "16ER 1.50 ISO AC8015P",
+    "grade": "AC8015P",
+    "chipbreaker": "",
+    "coating": "PVD TiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_threading"
+    ],
+    "geometry_tags": [
+      "60_degree_thread_form"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "SER/L toolholder"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Sumitomo Electric Synthetic Fixture Catalog",
+    "source_url": "https://www.sumitomo-hardmetal.com/en/products/",
+    "source_page_reference": "p.H-08",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  }
+]

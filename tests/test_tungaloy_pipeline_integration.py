@@ -1,19 +1,19 @@
-"""Integration tests: Kennametal adapter → import → audit → review → search."""
+"""Integration tests: Tungaloy adapter → import → audit → review → search."""
 from __future__ import annotations
 import json
 from pathlib import Path
 
 _REPO = Path(__file__).resolve().parent.parent
-_ADAPTER_OUTPUT = _REPO / "tools" / "tooling_adapters" / "output" / "kennametal_sample_records.json"
-_IMPORTED = _REPO / "tool_data" / "tooling_search" / "records" / "kennametal_imported_tools.json"
-_REVIEWED = _REPO / "tool_data" / "tooling_search" / "records" / "reviewed" / "kennametal_reviewed_tooling_records.json"
+_ADAPTER_OUTPUT = _REPO / "tools" / "tooling_adapters" / "output" / "tungaloy_sample_records.json"
+_IMPORTED = _REPO / "tool_data" / "tooling_search" / "records" / "tungaloy_imported_tools.json"
+_REVIEWED = _REPO / "tool_data" / "tooling_search" / "records" / "reviewed" / "tungaloy_reviewed_tooling_records.json"
 
-BRAND = "Kennametal"
+BRAND = "Tungaloy"
 FORBIDDEN = {"feed", "speed", "sfm", "rpm", "ipr", "ipm", "vc", "fz"}
 EXPECTED_MPNS = {
-    "FIXTURE-KMT-TI-001", "FIXTURE-KMT-TI-002", "FIXTURE-KMT-MI-003", "FIXTURE-KMT-HFI-004",
-    "FIXTURE-KMT-SCD-005", "FIXTURE-KMT-SCE-006", "FIXTURE-KMT-GI-007",
-    "FIXTURE-KMT-THI-008", "FIXTURE-KMT-ID-009",
+    "FIXTURE-TNG-TI-001", "FIXTURE-TNG-TI-002", "FIXTURE-TNG-MI-003", "FIXTURE-TNG-HFI-004",
+    "FIXTURE-TNG-SCD-005", "FIXTURE-TNG-ID-006", "FIXTURE-TNG-SCE-007",
+    "FIXTURE-TNG-GI-008", "FIXTURE-TNG-THI-009",
 }
 
 
@@ -85,19 +85,19 @@ class TestSearchable:
                            if r["brand"] == BRAND and r["manufacturer_part_number"].startswith("FIXTURE-")]
         assert len(fixture_records) == 9
 
-    def test_search_by_kennametal(self):
+    def test_search_by_tungaloy(self):
         from grade_engine.tooling_search import search_tooling_records
-        results = search_tooling_records("Kennametal")
+        results = search_tooling_records("Tungaloy")
         assert results and all(r["brand"] == BRAND for r in results)
 
     def test_filter_by_brand(self):
         from grade_engine.tooling_search import load_tooling_records, filter_tooling_records
-        results = filter_tooling_records(load_tooling_records(), {"brand": "kennametal"})
+        results = filter_tooling_records(load_tooling_records(), {"brand": "tungaloy"})
         assert len(results) >= 9
 
-    def test_suggest_endmill_candidates(self):
+    def test_suggest_turning_candidates(self):
         from grade_engine.tooling_search import suggest_tool_candidates
-        results = suggest_tool_candidates("general_milling", "P", tool_category="endmill", limit=20)
+        results = suggest_tool_candidates("external_turning", "P", tool_category="turning_insert", limit=20)
         assert any(r["brand"] == BRAND for r in results)
 
     def test_cutting_data_in_index(self):

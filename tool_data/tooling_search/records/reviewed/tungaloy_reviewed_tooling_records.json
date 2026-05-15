@@ -1,0 +1,350 @@
+[
+  {
+    "brand": "Tungaloy",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-TNG-TI-001",
+    "series": "TungTurn",
+    "family_name": "TungTurn AH6235 turning insert",
+    "designation": "CNMG 431",
+    "grade": "AH6235",
+    "chipbreaker": "MF",
+    "coating": "PVD TiAlSiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "profiling"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "medium_cutting_edge"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNR/L"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.T-12",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-TNG-TI-002",
+    "series": "TungTurn",
+    "family_name": "TungTurn T9125 turning insert",
+    "designation": "WNMG 432",
+    "grade": "T9125",
+    "chipbreaker": "MR",
+    "coating": "CVD Al2O3/TiCN",
+    "material_fit": [
+      "P",
+      "K"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "medium_turning",
+      "roughing"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "wiper"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "DWLNR/L"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.T-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-TNG-MI-003",
+    "series": "TungMeister",
+    "family_name": "TungMeister AH3135 milling insert",
+    "designation": "AXMT 11T308",
+    "grade": "AH3135",
+    "chipbreaker": "PDER",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "positive_rake",
+      "sharp_edge"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "TungMeister modular heads"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.M-24",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "high_feed_insert",
+    "manufacturer_part_number": "FIXTURE-TNG-HFI-004",
+    "series": "DoFeedMill",
+    "family_name": "DoFeedMill AH3135 high-feed insert",
+    "designation": "LNMU 0303 ZER",
+    "grade": "AH3135",
+    "chipbreaker": "ZER",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "high_feed_milling",
+      "roughing",
+      "plunge_milling"
+    ],
+    "geometry_tags": [
+      "high_feed_geometry",
+      "positive_rake"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "DoFeedMill body"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.M-88",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-TNG-SCD-005",
+    "series": "TungDrill",
+    "family_name": "TungDrill solid carbide drill",
+    "designation": "SCD 060-030-060 AH8015",
+    "grade": "AH8015",
+    "chipbreaker": "",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "throughholedrilling"
+    ],
+    "geometry_tags": [
+      "through_coolant",
+      "140_degree_point"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.D-44",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "indexable_drill",
+    "manufacturer_part_number": "FIXTURE-TNG-ID-006",
+    "series": "TungDrill Quattro",
+    "family_name": "TungDrill Quattro indexable drill",
+    "designation": "TDQ180F20-2",
+    "grade": "AH9130",
+    "chipbreaker": "",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "drilling",
+      "blindholedrilling"
+    ],
+    "geometry_tags": [
+      "four_insert_design",
+      "through_coolant"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Cylindrical shank",
+      "weldon flat"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.D-72",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-TNG-SCE-007",
+    "series": "TungEnd",
+    "family_name": "TungEnd solid carbide endmill",
+    "designation": "TEM4160-160",
+    "grade": "AH8015",
+    "chipbreaker": "",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "variable_helix"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.E-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-TNG-GI-008",
+    "series": "TungCut",
+    "family_name": "TungCut grooving/parting insert",
+    "designation": "GBL3200",
+    "grade": "AH6235",
+    "chipbreaker": "BL",
+    "coating": "PVD TiAlSiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting"
+    ],
+    "geometry_tags": [
+      "ground_top_face",
+      "sharp_corner"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "GT40 toolholder"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.G-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Tungaloy",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-TNG-THI-009",
+    "series": "TungThread",
+    "family_name": "TungThread threading insert",
+    "designation": "16ER 1.50 ISO AH725",
+    "grade": "AH725",
+    "chipbreaker": "",
+    "coating": "PVD TiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_threading"
+    ],
+    "geometry_tags": [
+      "60_degree_thread_form",
+      "full_profile"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "SER/L toolholder"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Tungaloy Synthetic Fixture Catalog",
+    "source_url": "https://www.tungaloy.com/products/",
+    "source_page_reference": "p.H-12",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]

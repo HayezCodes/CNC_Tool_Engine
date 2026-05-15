@@ -1,0 +1,344 @@
+[
+  {
+    "brand": "Kyocera",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-KYO-TI-001",
+    "series": "Megacoat Nano",
+    "family_name": "PR1535 turning insert",
+    "designation": "CNMG 431 MG",
+    "grade": "PR1535",
+    "chipbreaker": "MG",
+    "coating": "Megacoat Nano PVD",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "profiling"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "medium_cutting_edge"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNR/L"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.T-14",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-KYO-TI-002",
+    "series": "Megacoat Nano",
+    "family_name": "CA6535 turning insert",
+    "designation": "CNMG 432 PP",
+    "grade": "CA6535",
+    "chipbreaker": "PP",
+    "coating": "CVD Al2O3",
+    "material_fit": [
+      "P",
+      "K"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "roughing",
+      "heavy_turning"
+    ],
+    "geometry_tags": [
+      "negative_rake",
+      "reinforced_edge"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNR/L"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.T-20",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-KYO-MI-003",
+    "series": "MFH Miracle",
+    "family_name": "MFH milling insert",
+    "designation": "BDMT 11T308ER",
+    "grade": "PR1510",
+    "chipbreaker": "ER",
+    "coating": "Miracle PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "face_milling",
+      "shoulder_milling",
+      "general_milling"
+    ],
+    "geometry_tags": [
+      "positive_rake",
+      "wiper"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "MFH cutter body"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.M-30",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "high_feed_insert",
+    "manufacturer_part_number": "FIXTURE-KYO-HFI-004",
+    "series": "MFH Raptor",
+    "family_name": "MFH Raptor high-feed insert",
+    "designation": "LNHU 0303ZER",
+    "grade": "PR1510",
+    "chipbreaker": "ZER",
+    "coating": "Miracle PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "high_feed_milling",
+      "roughing"
+    ],
+    "geometry_tags": [
+      "high_feed_geometry",
+      "positive_rake"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "MFH Raptor body"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.M-95",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-KYO-SCD-005",
+    "series": "MAS/MDS",
+    "family_name": "Solid carbide drill",
+    "designation": "SD0600-0600-060M",
+    "grade": "PR1230",
+    "chipbreaker": "",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling"
+    ],
+    "geometry_tags": [
+      "through_coolant",
+      "140_degree_point"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.D-28",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-KYO-SCE-006",
+    "series": "Miracle Endmill",
+    "family_name": "Miracle solid carbide endmill",
+    "designation": "VF4JB0600",
+    "grade": "PR1230",
+    "chipbreaker": "",
+    "coating": "Miracle PVD",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "variable_helix"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "shrink-fit"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.E-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-KYO-GI-007",
+    "series": "GBA",
+    "family_name": "GBA grooving insert",
+    "designation": "GBA32200-020",
+    "grade": "PR1025",
+    "chipbreaker": "020",
+    "coating": "PVD TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting"
+    ],
+    "geometry_tags": [
+      "ground_top_face"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "KGBS toolholder"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.G-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-KYO-THI-008",
+    "series": "Threading",
+    "family_name": "Threading insert",
+    "designation": "16ER 1.50 ISO PR1025",
+    "grade": "PR1025",
+    "chipbreaker": "",
+    "coating": "PVD TiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_threading"
+    ],
+    "geometry_tags": [
+      "60_degree_thread_form"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "SER/L toolholder"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.H-10",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Kyocera",
+    "tool_category": "boring_bar",
+    "manufacturer_part_number": "FIXTURE-KYO-BB-009",
+    "series": "S-STLCR",
+    "family_name": "Boring bar with CNMG inserts",
+    "designation": "S20Q-STLCR11-22",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "boring",
+      "internal_turning"
+    ],
+    "geometry_tags": [
+      "steel_shank",
+      "coolant_through"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "CNMG 11T3 inserts"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Kyocera Synthetic Fixture Catalog",
+    "source_url": "https://global.kyocera.com/prdct/cutting-tools/",
+    "source_page_reference": "p.B-14",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]
