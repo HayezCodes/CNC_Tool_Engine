@@ -1,0 +1,343 @@
+[
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-ISC-TI-001",
+    "series": "IC8000 Series",
+    "family_name": "Fixture general turning insert family \u2014 steel and stainless",
+    "designation": "CNMG 120408",
+    "grade": "FIXTURE-IC8250",
+    "chipbreaker": "FIXTURE-F3P",
+    "coating": "FIXTURE-SUMO-TEC-PVD-TiAlN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "profiling",
+      "medium_turning"
+    ],
+    "geometry_tags": [
+      "negativerake",
+      "80degreediamond",
+      "generalpurpose",
+      "indexableinsert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "DCLNL/R",
+      "PCLNL/R external turning toolholders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.T-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-ISC-TI-002",
+    "series": "IC9000 Series",
+    "family_name": "Fixture cast iron turning insert family",
+    "designation": "WNMG 080404",
+    "grade": "FIXTURE-IC9250",
+    "chipbreaker": "FIXTURE-NF",
+    "coating": "FIXTURE-CVD-TiCN-Al2O3",
+    "material_fit": [
+      "K"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "finishing",
+      "light_turning"
+    ],
+    "geometry_tags": [
+      "negativerake",
+      "80degreetrigon",
+      "finishinggeometry",
+      "indexableinsert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "MWLNL/R external turning toolholders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.T-34",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-ISC-MI-003",
+    "series": "HELIMILL Series",
+    "family_name": "Fixture helical milling insert family \u2014 square shoulder",
+    "designation": "APKT 1003PDR",
+    "grade": "FIXTURE-IC928",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN-Multilayer",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "shoulder_milling",
+      "face_milling",
+      "slot_milling",
+      "ramping"
+    ],
+    "geometry_tags": [
+      "positiverake",
+      "squareshoulder",
+      "true90degree",
+      "indexableinsert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture HELIMILL cutter body",
+      "matching bore and pitch"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.M-52",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "high_feed_insert",
+    "manufacturer_part_number": "FIXTURE-ISC-HF-004",
+    "series": "HELI-FEED Series",
+    "family_name": "Fixture high-feed milling insert family",
+    "designation": "HFPR 09T3",
+    "grade": "FIXTURE-IC5400",
+    "chipbreaker": "",
+    "coating": "FIXTURE-SUMO-TEC-AlCrN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "high_feed_milling",
+      "face_milling",
+      "ramping",
+      "plunge_milling"
+    ],
+    "geometry_tags": [
+      "highfeed",
+      "smalldepthofcut",
+      "highpenetrationrate",
+      "indexableinsert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture HELI-FEED cutter body",
+      "matching bore and tooth pitch"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.M-88",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "indexable_drill",
+    "manufacturer_part_number": "FIXTURE-ISC-IDR-005",
+    "series": "SUMOCHAM Series",
+    "family_name": "Fixture indexable drill system \u2014 replaceable tip",
+    "designation": "SUMOCHAM drill platform",
+    "grade": "FIXTURE-IC908",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling",
+      "high_efficiency_drilling"
+    ],
+    "geometry_tags": [
+      "indexabledrill",
+      "replaceabletip",
+      "throughcoolant",
+      "productiondrilling"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "SUMOCHAM drill body \u2014 cylindrical or modular shank"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.D-28",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-ISC-GRV-006",
+    "series": "NG Series",
+    "family_name": "Fixture external grooving and parting insert family",
+    "designation": "NG 3R",
+    "grade": "FIXTURE-IC354",
+    "chipbreaker": "FIXTURE-F",
+    "coating": "FIXTURE-PVD-TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "face_grooving",
+      "parting",
+      "circular_grooving"
+    ],
+    "geometry_tags": [
+      "groovinginsert",
+      "externalgrooving",
+      "parting",
+      "fullradius"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture NG blade holder or grooving bar",
+      "matching width"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.G-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-ISC-THR-007",
+    "series": "IQ Series",
+    "family_name": "Fixture threading insert family",
+    "designation": "threading insert",
+    "grade": "FIXTURE-IC830",
+    "chipbreaker": "",
+    "coating": "FIXTURE-TiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "external_threading",
+      "internal_threading"
+    ],
+    "geometry_tags": [
+      "threadinginsert",
+      "fullprofile",
+      "laydownstyle",
+      "metricthread"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture laydown threading toolholder",
+      "standard shank"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.N-16",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Iscar Ltd.",
+    "tool_category": "boring_bar",
+    "manufacturer_part_number": "FIXTURE-ISC-BB-008",
+    "series": "A-SCLCR Series",
+    "family_name": "Fixture indexable boring bar family",
+    "designation": "A-SCLCR boring bar, 25mm shank",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "boring",
+      "internal_turning",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "boringbar",
+      "indexableinsert",
+      "internalmachining",
+      "straightshank"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Boring bar holder",
+      "matching shank diameter",
+      "BT40 or CAT40 adapter"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Iscar Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.iscar.com/products.aspx",
+    "source_page_reference": "p.B-14",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]

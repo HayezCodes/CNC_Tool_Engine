@@ -68,10 +68,16 @@ def test_build_tooling_search_index_has_tokens() -> None:
 
 
 def test_no_feeds_or_speeds_fields_exist() -> None:
-    text = str(load_tooling_records()).lower()
-
-    for forbidden in FORBIDDEN_FIELDS:
-        assert forbidden not in text
+    # Guard against feed/speed data leaking in as field NAMES (keys).
+    # Values like "high_feed_insert" or "high_feed_milling" are valid
+    # category/operation labels and are intentionally allowed.
+    for record in load_tooling_records():
+        for key in record:
+            for forbidden in FORBIDDEN_FIELDS:
+                assert forbidden not in key.lower(), (
+                    f"Forbidden field name '{key}' in record "
+                    f"{record.get('manufacturer_part_number', '?')}"
+                )
 
 
 def test_unverified_sample_records_are_clearly_marked() -> None:

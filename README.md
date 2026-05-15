@@ -79,6 +79,17 @@ A second adapter pilot for Guhring KG has been built and run through the same co
 
 As with Mitsubishi, this is a pipeline proof-of-concept with synthetic fixtures only — not real catalog data.
 
+### Iscar Adapter Pilot
+
+A third adapter pilot for Iscar Ltd. focuses on indexable tooling normalization — turning inserts, milling inserts, high-feed milling inserts (mapped to a distinct `high_feed_insert` category), indexable drills (SUMOCHAM-style replaceable tips), grooving inserts, threading inserts, and boring bars.
+
+- **Adapter:** `tools/tooling_adapters/iscar_adapter.py` — maps Iscar's `chip_former` field to the schema `chipbreaker` field; distinguishes `high_feed_insert` from general `milling_insert`
+- **Fixture:** `tools/tooling_adapters/samples/sample_iscar_structured.json` — 8 synthetic records
+- **Imported records:** `tool_data/tooling_search/records/iscar_imported_tools.json` — 0 audit issues, searchable
+- **Reviewed records:** `tool_data/tooling_search/records/reviewed/iscar_reviewed_tools.json` — reviewed by Joshua Hayes, `reviewed_family_level_candidate`
+
+As with all pilots, this is a pipeline proof-of-concept with synthetic fixtures only — not real catalog data.
+
 ## Install
 
 1. Create and activate a virtual environment.

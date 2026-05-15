@@ -1,10 +1,15 @@
 {
   "audit_date": "2026-05-15",
   "records_dir": "C:\\Users\\hayes\\Desktop\\CNC_Tool_Engine-main\\tool_data\\tooling_search\\records",
-  "files_audited": 7,
+  "files_audited": 9,
   "file_summaries": [
     {
       "file": "guhring_imported_tools.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "iscar_imported_tools.json",
       "record_count": 8,
       "issue_count": 0
     },
@@ -16,6 +21,11 @@
     {
       "file": "mitsubishi_materials_imported_tools.json",
       "record_count": 7,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\guhring_reviewed_tools.json",
+      "record_count": 8,
       "issue_count": 0
     },
     {

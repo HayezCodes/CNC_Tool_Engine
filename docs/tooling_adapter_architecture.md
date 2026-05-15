@@ -61,10 +61,12 @@ tools/
     gtc_iso13399_adapter.py                       # GTC / ISO 13399 XML adapter
     mitsubishi_materials_adapter.py               # Mitsubishi Materials JSON adapter
     guhring_adapter.py                            # Guhring KG JSON adapter
+    iscar_adapter.py                              # Iscar Ltd. JSON adapter
     samples/
       sample_gtc_iso13399.xml                     # synthetic test fixture (NOT manufacturer data)
       sample_mitsubishi_materials_structured.json # synthetic test fixture (NOT manufacturer data)
       sample_guhring_structured.json              # synthetic test fixture (NOT manufacturer data)
+      sample_iscar_structured.json                # synthetic test fixture (NOT manufacturer data)
     output/
       .gitkeep                                    # output directory stub
       <name>_records.json                         # adapter output (staged, not yet in records/)
@@ -72,8 +74,10 @@ tools/
   parse_gtc_iso13399_sample.py          # runner: parse sample, validate, write output
   parse_mitsubishi_materials_sample.py  # runner: parse Mitsubishi sample, validate, write output
   parse_guhring_sample.py               # runner: parse Guhring sample, validate, write output
+  parse_iscar_sample.py                 # runner: parse Iscar sample, validate, write output
   import_mitsubishi_adapter_output.py   # importer: adapter output → records/
   import_guhring_adapter_output.py      # importer: adapter output → records/
+  import_iscar_adapter_output.py        # importer: adapter output → records/
 ```
 
 ## Base Adapter (`base_adapter.py`)
@@ -213,6 +217,56 @@ python tools/import_guhring_adapter_output.py --dry-run
 ```
 
 Output is written to `tools/tooling_adapters/output/guhring_sample_records.json` (8 synthetic fixture records). Imported records go to `tool_data/tooling_search/records/guhring_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/guhring_reviewed_tools.json`.
+
+## Iscar Adapter (`iscar_adapter.py`)
+
+Parses Iscar-style structured JSON tooling records into normalized tooling search records. Iscar specializes in indexable tooling across the full range of turning, milling, drilling, grooving, and threading operations.
+
+**Indexable tooling normalization notes:**
+
+Iscar uses `chip_former` as the field name for the insert's chipbreaker geometry code (e.g., F3P, NF, GF). The adapter maps `chip_former → chipbreaker` transparently. If both `chip_former` and `chipbreaker` keys appear in the source record, `chip_former` takes precedence.
+
+Boring bars in Iscar's system are toolholders that accept indexable inserts. They are recorded as `tool_category = "boring_bar"` to preserve that distinction from the insert itself — the toolholder and insert are separate records in a real catalog.
+
+SUMOCHAM indexable drills use a replaceable tip system. The record represents the tip/platform, not the assembled body-plus-tip combination. Physical dimensions (body diameter, flute length, etc.) are excluded — `dimensions = {}` as always.
+
+**High-feed milling insert normalization:**
+
+Iscar high-feed milling inserts (HELI-FEED, Hi-QuadF, and similar) have their own `tool_type = "HighFeedMillingInsert"` which maps to `tool_category = "high_feed_insert"`. This distinguishes them from general milling inserts in search and filter workflows — operators can filter specifically for high-feed tooling without being mixed with general face milling inserts.
+
+High-feed inserts typically operate at small depths of cut (ap ≤ 2mm) and high table feed rates by design. No feed or speed data is imported; the `high_feed_insert` category is purely a geometry/application classification.
+
+**Tool category mapping (Iscar-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | |
+| `MillingInsert`, `FaceMillingInsert`, `HelimillInsert` | `milling_insert` | |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | Distinct from milling_insert |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | SUMOCHAM tips |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | |
+| `ThreadingInsert` | `threading_insert` | |
+| `BoringBar`, `BoringToolholder` | `boring_bar` | Toolholder, not insert |
+
+**New operations introduced:**
+
+| Input string | schema operation |
+|---|---|
+| `HighFeedMilling` | `high_feed_milling` |
+| `CircularGrooving` | `circular_grooving` |
+| `LightTurning`, `HeavyTurning` | `light_turning`, `heavy_turning` |
+| `Plunging` | `plunge_milling` |
+
+Running the sample:
+
+```bash
+python tools/parse_iscar_sample.py
+python tools/parse_iscar_sample.py --dry-run
+python tools/import_iscar_adapter_output.py
+python tools/import_iscar_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/iscar_sample_records.json` (8 synthetic fixture records: 2 turning inserts, 1 milling insert, 1 high-feed insert, 1 indexable drill, 1 grooving insert, 1 threading insert, 1 boring bar). Imported records go to `tool_data/tooling_search/records/iscar_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/iscar_reviewed_tools.json`.
 
 ## What Is Never Imported
 
