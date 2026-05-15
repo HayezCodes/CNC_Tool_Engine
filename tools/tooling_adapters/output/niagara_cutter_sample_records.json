@@ -1,0 +1,290 @@
+[
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-NIA-SCE-001",
+    "series": "N55000",
+    "family_name": "4-flute general purpose square endmill",
+    "designation": "N55004",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "square_end"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.E-10",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-NIA-SCE-002",
+    "series": "N50000",
+    "family_name": "2-flute aluminum endmill",
+    "designation": "N50002",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "ZrN",
+    "material_fit": [
+      "N"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "slot_milling",
+      "roughing"
+    ],
+    "geometry_tags": [
+      "two_flute",
+      "high_helix",
+      "polished_flutes"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.E-24",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-NIA-SCE-003",
+    "series": "N60000",
+    "family_name": "High performance 5-flute endmill",
+    "designation": "N60005",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "finishing",
+      "dynamic_milling"
+    ],
+    "geometry_tags": [
+      "five_flute",
+      "variable_helix",
+      "variable_pitch"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "shrink-fit"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.E-38",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-NIA-SCE-004",
+    "series": "N45000",
+    "family_name": "Roughing endmill",
+    "designation": "N45004",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "roughing",
+      "general_milling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "rougher",
+      "chipbreaker_geometry"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.E-52",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-NIA-SCD-005",
+    "series": "N70000",
+    "family_name": "Solid carbide drill",
+    "designation": "N70000",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling"
+    ],
+    "geometry_tags": [
+      "through_coolant",
+      "140_degree_point"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.D-12",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "reamer",
+    "manufacturer_part_number": "FIXTURE-NIA-RMR-006",
+    "series": "Reamer",
+    "family_name": "Solid carbide reamer",
+    "designation": "N80000",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "reaming"
+    ],
+    "geometry_tags": [
+      "straight_flute",
+      "h7_tolerance"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.R-10",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-NIA-TM-007",
+    "series": "Thread Mill",
+    "family_name": "Single-profile thread mill",
+    "designation": "N85000",
+    "grade": "Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "single_profile",
+      "thread_mill"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.H-14",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Niagara Cutter",
+    "tool_category": "tap",
+    "manufacturer_part_number": "FIXTURE-NIA-TAP-008",
+    "series": "Tap",
+    "family_name": "Spiral flute tap",
+    "designation": "N90000",
+    "grade": "HSS-E",
+    "chipbreaker": "",
+    "coating": "TiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "tapping"
+    ],
+    "geometry_tags": [
+      "spiral_flute",
+      "through_hole"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Tap chuck",
+      "torque adapter"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Niagara Cutter Synthetic Fixture Catalog",
+    "source_url": "https://www.niagaracutter.com/products/",
+    "source_page_reference": "p.T-18",
+    "verification_status": "sample_family_level_not_catalog_verified",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data."
+  }
+]

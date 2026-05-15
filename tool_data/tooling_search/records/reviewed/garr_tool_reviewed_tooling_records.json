@@ -1,0 +1,310 @@
+[
+  {
+    "brand": "Garr Tool",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-GRT-SCE-001",
+    "series": "Series 800",
+    "family_name": "4-flute square endmill",
+    "designation": "802040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "shoulder_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "square_end"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.E-10",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Garr Tool",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-GRT-SCE-002",
+    "series": "Series 700",
+    "family_name": "2-flute aluminum endmill",
+    "designation": "702040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "ZrN",
+    "material_fit": [
+      "N"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "two_flute",
+      "high_helix",
+      "polished_flutes"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.E-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Garr Tool",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-GRT-SCE-003",
+    "series": "Series 930",
+    "family_name": "Ball nose endmill",
+    "designation": "932040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "profiling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "ball_nose",
+      "two_flute"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "shrink-fit"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.E-34",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Garr Tool",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-GRT-SCE-004",
+    "series": "Series 420",
+    "family_name": "Roughing endmill",
+    "designation": "424040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "roughing"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "rougher",
+      "chipbreaker_geometry"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet",
+      "hydraulic chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.E-48",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Garr Tool",
+    "tool_category": "drill",
+    "manufacturer_part_number": "FIXTURE-GRT-SCD-005",
+    "series": "Series 650",
+    "family_name": "Solid carbide drill",
+    "designation": "654040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "drilling"
+    ],
+    "geometry_tags": [
+      "through_coolant",
+      "135_degree_point"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.D-10",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Garr Tool",
+    "tool_category": "reamer",
+    "manufacturer_part_number": "FIXTURE-GRT-RMR-006",
+    "series": "Series 550",
+    "family_name": "Solid carbide reamer",
+    "designation": "554040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "reaming"
+    ],
+    "geometry_tags": [
+      "straight_flute",
+      "h7_tolerance"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.R-08",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Garr Tool",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-GRT-TM-007",
+    "series": "Series 850",
+    "family_name": "Thread mill",
+    "designation": "854040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "single_profile",
+      "thread_mill"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.H-12",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Garr Tool",
+    "tool_category": "countersink",
+    "manufacturer_part_number": "FIXTURE-GRT-CSK-008",
+    "series": "Series 750",
+    "family_name": "Countersink",
+    "designation": "754040",
+    "grade": "Ultra Micro Grain Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "countersinking",
+      "chamfering"
+    ],
+    "geometry_tags": [
+      "90_degree",
+      "single_flute"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Garr Tool Synthetic Fixture Catalog",
+    "source_url": "https://www.garrtool.com/products/",
+    "source_page_reference": "p.C-06",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]

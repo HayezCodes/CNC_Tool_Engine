@@ -1,0 +1,311 @@
+[
+  {
+    "brand": "Micro 100",
+    "tool_category": "boring_bar",
+    "manufacturer_part_number": "FIXTURE-M100-BB-001",
+    "series": "QB",
+    "family_name": "QB solid carbide boring bar",
+    "designation": "QB-010-10",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "Uncoated",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "boring",
+      "internal_turning"
+    ],
+    "geometry_tags": [
+      "solid_carbide_shank",
+      "right_hand"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "VDI",
+      "BMT tool holders"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.B-10",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Micro 100",
+    "tool_category": "boring_bar",
+    "manufacturer_part_number": "FIXTURE-M100-BB-002",
+    "series": "QSSR",
+    "family_name": "QSSR boring bar for small diameter",
+    "designation": "QSSR-010-01",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "Uncoated",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "boring",
+      "internal_turning"
+    ],
+    "geometry_tags": [
+      "solid_carbide_shank",
+      "small_diameter",
+      "right_hand"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "VDI",
+      "BMT tool holders"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.B-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Micro 100",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-M100-GI-003",
+    "series": "QGE",
+    "family_name": "QGE external grooving tool",
+    "designation": "QGE-020-10R",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "parting"
+    ],
+    "geometry_tags": [
+      "external_grooving",
+      "right_hand"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "QGE toolholder"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.G-10",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Micro 100",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-M100-GI-004",
+    "series": "QFG",
+    "family_name": "QFG face grooving tool",
+    "designation": "QFG-080-10",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "face_grooving"
+    ],
+    "geometry_tags": [
+      "face_grooving",
+      "neutral"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "QFG toolholder"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.G-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Micro 100",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-M100-THI-005",
+    "series": "QXT",
+    "family_name": "QXT external threading tool",
+    "designation": "QXT-025-2060",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M"
+    ],
+    "operation_fit": [
+      "external_threading"
+    ],
+    "geometry_tags": [
+      "60_degree_thread_form",
+      "right_hand"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "QXT toolholder"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.H-14",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Micro 100",
+    "tool_category": "thread_mill",
+    "manufacturer_part_number": "FIXTURE-M100-TM-006",
+    "series": "TMFC",
+    "family_name": "TMFC single-point thread mill",
+    "designation": "TMFC-075-56",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "thread_milling",
+      "internal_thread_milling"
+    ],
+    "geometry_tags": [
+      "single_profile",
+      "thread_mill"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.H-28",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Micro 100",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-M100-SCE-007",
+    "series": "SE",
+    "family_name": "SE square endmill",
+    "designation": "SE-025-4",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "four_flute",
+      "square_end"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.E-10",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Micro 100",
+    "tool_category": "countersink",
+    "manufacturer_part_number": "FIXTURE-M100-CSK-008",
+    "series": "CSC",
+    "family_name": "CSC countersink",
+    "designation": "CSC-090-4",
+    "grade": "Solid Carbide",
+    "chipbreaker": "",
+    "coating": "AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "countersinking",
+      "chamfering"
+    ],
+    "geometry_tags": [
+      "90_degree",
+      "four_flute"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "ER collet chuck"
+    ],
+    "coolant_capability": "external_only",
+    "source_label": "Micro 100 Synthetic Fixture Catalog",
+    "source_url": "https://www.micro100.com/products/",
+    "source_page_reference": "p.C-08",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic fixture for pipeline testing. Not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]
