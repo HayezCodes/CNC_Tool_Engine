@@ -81,6 +81,10 @@ DRILL_TYPE_HINTS = {
 }
 
 TURNING_INTENTS = ["Roughing", "Medium / General", "Finishing"]
+ENGINE_VERIFICATION_NOTE = (
+    "Family-level planning guidance only. Verify exact tool geometry, size, and cutting data with the "
+    "manufacturer catalog and your machine setup."
+)
 
 
 def load_json(relative_path: str) -> Any:
@@ -280,33 +284,112 @@ def render_empty_state(module_label: str, material_group: str, note: str | None 
         st.caption(note)
 
 
-def render_reason_list(reasons: list[str]) -> None:
-    if reasons:
-        st.caption("Why it fits: " + " | ".join(clean_text(reason) for reason in reasons[:4]))
+def extract_short_sentence(text: str) -> str:
+    cleaned = clean_text(text or "")
+    if not cleaned:
+        return "Not listed."
+    for separator in [". ", "; ", " | "]:
+        if separator in cleaned:
+            first = cleaned.split(separator, 1)[0].strip()
+            if first and first[-1] not in ".!?":
+                first += "."
+            return first
+    if cleaned[-1] not in ".!?":
+        cleaned += "."
+    return cleaned
 
 
-def render_reviewed_catalog_support(record: dict[str, Any]) -> None:
+def format_reason_text(reasons: list[str], limit: int = 3) -> str:
+    trimmed = [clean_text(reason) for reason in reasons if reason][:limit]
+    return " | ".join(trimmed) if trimmed else "Family aligns with the selected planning direction."
+
+
+def render_verification_note(note: str = ENGINE_VERIFICATION_NOTE) -> None:
+    st.caption("Verification note: " + clean_text(note))
+
+
+def render_reviewed_catalog_support(record: dict[str, Any], expanded: bool = False) -> None:
     support = record.get("reviewed_catalog_support")
     if not support:
         return
-    st.caption("Reviewed Catalog Support")
-    if support.get("supporting_families"):
-        st.caption("Families: " + compact_list(support["supporting_families"]))
-    if support.get("matched_reasons"):
-        st.caption("Matched reasons: " + compact_list(support["matched_reasons"]))
-    if support.get("confidence_level"):
-        st.caption("Confidence level: " + clean_text(support["confidence_level"]))
+    with st.expander("Reviewed Catalog Support", expanded=expanded):
+        if support.get("supporting_families"):
+            st.write("Supporting families: " + compact_list(support["supporting_families"]))
+        if support.get("matched_reasons"):
+            st.write("Matched reasons: " + compact_list(support["matched_reasons"]))
+        if support.get("confidence_level"):
+            st.write("Confidence level: " + clean_text(support["confidence_level"]))
+        render_verification_note(support.get("verification_note", ENGINE_VERIFICATION_NOTE))
+
+
+def render_family_recommendation_card(
+    *,
+    header: str,
+    direction: str,
+    family_value: str,
+    why_this_fits: str,
+    risks: list[str] | None = None,
+    summary: str | None = None,
+    family_label: str = "Suggested tool/insert family",
+    reviewed_support_record: dict[str, Any] | None = None,
+    source_lines: list[str] | None = None,
+    raw_scoring_lines: list[str] | None = None,
+    verification_note: str = ENGINE_VERIFICATION_NOTE,
+) -> None:
+    with st.container(border=True):
+        st.markdown(f"#### {clean_text(header)}")
+        if summary:
+            st.write(clean_text(summary))
+        st.write(f"**Recommended direction:** {clean_text(direction)}")
+        st.write(f"**{clean_text(family_label)}:** {clean_text(family_value)}")
+        st.write(f"**Why this fits:** {clean_text(why_this_fits)}")
+        if risks:
+            st.warning("Risks / cautions: " + " | ".join(clean_text(risk) for risk in risks))
+        if reviewed_support_record:
+            render_reviewed_catalog_support(reviewed_support_record)
+        if source_lines:
+            with st.expander("Source/details"):
+                for line in source_lines:
+                    st.write(clean_text(line))
+        if raw_scoring_lines:
+            with st.expander("Raw scoring details"):
+                for line in raw_scoring_lines:
+                    st.write(clean_text(line))
+        render_verification_note(verification_note)
+
+
+def render_engine_basis(common: dict[str, Any], behavior: dict[str, Any]) -> None:
+    render_metric_strip(
+        [
+            ("Zone", common["application_zone"]),
+            ("Toughness Bias", behavior["required_toughness"]),
+            ("Wear Bias", behavior["required_wear_resistance"]),
+            ("Coating Dir.", clean_text(behavior["preferred_coating"])),
+            ("Geometry / Chipbreaker", clean_text(behavior["chipbreaker_hint"]["family"])),
+        ]
+    )
+    st.write(extract_short_sentence(behavior["recommendation_summary"]))
+    with st.expander("Source/details"):
+        st.write("Geometry direction: " + display_text(behavior.get("geometry_hint")))
+        st.write("Starting identity: " + display_text(behavior.get("insert_identity", {}).get("identity_summary")))
+        if behavior["risk_flags"]:
+            st.write("Setup watch-outs: " + " | ".join(clean_text(flag) for flag in behavior["risk_flags"]))
+    render_verification_note()
 
 
 def render_tool_engine_result(result: dict[str, Any], metrics: list[tuple[str, str]]) -> None:
     with st.container(border=True):
         st.markdown(f"### {clean_text(result['recommendation_title'])}")
         st.write(clean_text(result["recommendation_summary"]))
-        st.write(clean_text(result["tool_direction"]))
-        st.caption(f"Geometry direction: {clean_text(result['geometry_hint'])}")
+        st.write(f"**Recommended direction:** {clean_text(result.get('tool_direction', result['recommendation_title']))}")
+        if result.get("recommendation_fit_sentence"):
+            st.write(f"**Why this fits:** {clean_text(result['recommendation_fit_sentence'])}")
         render_metric_strip([(clean_text(label), clean_text(value)) for label, value in metrics])
         if result["risk_flags"]:
-            st.warning("Watch-outs: " + " | ".join(clean_text(flag) for flag in result["risk_flags"]))
+            st.warning("Risks / cautions: " + " | ".join(clean_text(flag) for flag in result["risk_flags"]))
+        render_verification_note()
+        with st.expander("Source/details"):
+            st.write("Geometry / chipbreaker direction: " + display_text(result.get("geometry_hint")))
         with st.expander("Engine reasoning"):
             for step in result["reasoning_steps"]:
                 st.write(f"- {clean_text(step)}")
@@ -459,13 +542,16 @@ def render_lookup_brand_intelligence(query: str) -> None:
         if inferred["recommended_brands"]:
             st.markdown("##### Recommended Brand Families")
             for item in inferred["recommended_brands"]:
-                with st.container(border=True):
-                    st.write(f"**{clean_text(item['brand'])}** | Score: {item['score']}")
-                    if item.get("reasons"):
-                        st.caption("Why: " + " | ".join(clean_text(reason) for reason in item["reasons"][:3]))
-                    render_reviewed_catalog_support(item)
-                    if item.get("shop_use_notes"):
-                        st.caption(clean_text(item["shop_use_notes"][0]))
+                render_family_recommendation_card(
+                    header=clean_text(item["brand"]),
+                    direction="Use this brand as a family-level starting point for the matched lookup context.",
+                    family_value=compact_list(item.get("best_fit_operations", [])),
+                    family_label="Suggested family focus",
+                    why_this_fits=format_reason_text(item.get("reasons", [])),
+                    reviewed_support_record=item,
+                    source_lines=[clean_text(note) for note in item.get("shop_use_notes", [])[:2]],
+                    raw_scoring_lines=[f"Score: {item['score']}"],
+                )
 
         if inferred["endmill_candidates"]:
             st.markdown("##### Endmill Candidates")
@@ -473,7 +559,6 @@ def render_lookup_brand_intelligence(query: str) -> None:
                 with st.container(border=True):
                     st.write(f"**{clean_text(item['brand'])}** — {clean_text(item['family_name'])}")
                     st.caption("Fit: " + compact_list(item.get("operation_fit", [])))
-                    render_reviewed_catalog_support(item)
                     if item.get("cautions"):
                         st.caption(clean_text(item["cautions"][0]))
 
@@ -483,7 +568,6 @@ def render_lookup_brand_intelligence(query: str) -> None:
                 with st.container(border=True):
                     st.write(f"**{clean_text(item['brand'])}** | Score: {item['score']}")
                     st.caption("Application fit: " + compact_list(item.get("application_fit", [])))
-                    render_reviewed_catalog_support(item)
                     if item.get("shop_use_notes"):
                         st.caption(clean_text(item["shop_use_notes"][0]))
 
@@ -562,7 +646,6 @@ def render_brand_intelligence() -> None:
                 st.caption(clean_text(recommendation["source_status"]))
             if recommendation.get("reasons"):
                 st.write("Why it fits: " + " | ".join(clean_text(reason) for reason in recommendation["reasons"]))
-            render_reviewed_catalog_support(recommendation)
             detail_cols = st.columns(3)
             with detail_cols[0]:
                 st.write(f"Best-fit operations: {compact_list(recommendation.get('best_fit_operations', []))}")
@@ -614,9 +697,6 @@ def render_brand_intelligence() -> None:
             st.write("Endmill candidates: " + compact_list([item["brand"] for item in solution["endmill_candidates"]]))
         if solution["insert_candidates"]:
             st.write("Insert candidates: " + compact_list([item["brand"] for item in solution["insert_candidates"]]))
-        top_reviewed_support = solution.get("reviewed_catalog_support", {}).get("brand_boosts", [])[:3]
-        if top_reviewed_support:
-            st.caption("Reviewed Catalog Support: " + compact_list([item["brand"] for item in top_reviewed_support]))
         for caution in solution["cautions"]:
             st.caption(clean_text(caution))
         st.caption(clean_text(solution["verification_note"]))
@@ -678,8 +758,10 @@ def render_reviewed_catalog_families() -> None:
 
 def build_common_inputs() -> dict[str, Any]:
     st.subheader("Machining Conditions")
-    c1, c2, c3 = st.columns(3)
+    st.caption("Tell the engine about the material, setup, machine situation, and what matters most. The answer cards below stay focused on the recommendation first.")
+    c1, c2, c3, c4 = st.columns(4)
     with c1:
+        st.markdown("#### Material")
         material_group = st.selectbox(
             "Material Group",
             MATERIAL_GROUPS,
@@ -688,16 +770,16 @@ def build_common_inputs() -> dict[str, Any]:
         )
         application_zone = st.selectbox("Application Zone", APPLICATION_ZONES, index=1)
     with c2:
+        st.markdown("#### Setup")
         interrupted_cut = st.selectbox("Interrupted Cut", INTERRUPTED_CUT, index=0)
         stickout = st.selectbox("Stickout", STICKOUT, index=1)
     with c3:
+        st.markdown("#### Machine / Rigidity")
         workholding = st.selectbox("Workholding", WORKHOLDING, index=0)
         cutting_speed_band = st.selectbox("Cutting Speed Band", CUTTING_SPEED_BAND, index=1)
-
-    c4, c5 = st.columns(2)
     with c4:
+        st.markdown("#### Goal / Priority")
         doc_band = st.selectbox("DOC Band", DOC_BAND, index=1)
-    with c5:
         finish_priority = st.selectbox("Finish Priority", FINISH_PRIORITY, index=1)
 
     return {
@@ -805,34 +887,38 @@ def recommend_turning(common: dict[str, Any]) -> None:
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get("brand", ""), x[1].get("designation_family", "")))
 
-    st.subheader("Turning Recommendation")
+    st.subheader("Recommended Turning Direction")
     with st.container(border=True):
         st.markdown(f"### {clean_text(result['recommendation_title'])}")
         st.write(clean_text(result["recommendation_summary"]))
-        st.write(clean_text(result["recommendation_fit_sentence"]))
+        st.write(f"**Recommended direction:** {clean_text(result.get('tool_direction', result['recommendation_title']))}")
+        st.write(f"**Suggested tool/insert family:** {clean_text(identity['identity_summary'])}")
+        st.write(f"**Why this fits:** {clean_text(result['recommendation_fit_sentence'])}")
         render_metric_strip(
             [
-                ("Toughness", result["required_toughness"]),
-                ("Wear", result["required_wear_resistance"]),
-                ("Coating", clean_text(result["preferred_coating"])),
+                ("Turning Intent", clean_text(turning_intent)),
                 ("Insert Shape", clean_text(identity["shape"])),
+                ("Chipbreaker", clean_text(result["chipbreaker_hint"]["family"])),
+                ("Coating", clean_text(result["preferred_coating"])),
             ]
         )
-        st.caption(
-            f"Starting insert direction: {clean_text(identity['identity_summary'])}. "
-            f"Chipbreaker bias: {clean_text(result['chipbreaker_hint']['family'])}."
-        )
-        st.caption(
-            f"Turning intent: {clean_text(turning_intent)} | "
-            f"{clean_text(intent_profile['intent_caption'])} "
-            f"Edge direction: {clean_text(intent_profile['edge_direction'])} "
-            f"Nose-radius direction: {clean_text(intent_profile['nose_radius_direction'])}"
-        )
-        st.info(clean_text(intent_note))
-        if common["material_group"] == "P":
-            st.info(clean_text(p_steel_shop_note))
         if result["risk_flags"]:
-            st.warning("Watch-outs: " + " | ".join(clean_text(flag) for flag in result["risk_flags"]))
+            st.warning("Risks / cautions: " + " | ".join(clean_text(flag) for flag in result["risk_flags"]))
+        render_verification_note()
+        with st.expander("Source/details"):
+            st.write(
+                f"Starting insert direction: {clean_text(identity['identity_summary'])}. "
+                f"Chipbreaker bias: {clean_text(result['chipbreaker_hint']['family'])}."
+            )
+            st.write(
+                f"Turning intent: {clean_text(turning_intent)} | "
+                f"{clean_text(intent_profile['intent_caption'])} "
+                f"Edge direction: {clean_text(intent_profile['edge_direction'])} "
+                f"Nose-radius direction: {clean_text(intent_profile['nose_radius_direction'])}"
+            )
+            st.write(clean_text(intent_note))
+            if common["material_group"] == "P":
+                st.write(clean_text(p_steel_shop_note))
 
     eq = get_equivalent_bucket(common["material_group"], common["application_zone"])
     grades = get_grade_rows(common["material_group"], common["application_zone"], "turning_insert")
@@ -854,22 +940,21 @@ def recommend_turning(common: dict[str, Any]) -> None:
         else:
             st.write("No grade rows found.")
 
-    st.markdown("#### Top turning families")
-    if not scored:
-        render_empty_state("turning", common["material_group"])
-        return
-
+    st.markdown("#### Suggested Turning Families")
     for score, row, reasons in scored[:5]:
-        with st.container(border=True):
-            st.write(f"**{clean_text(row.get('brand', ''))} — {clean_text(row.get('series', ''))}**")
-            st.write(f"Family: {clean_text(row.get('designation_family', row.get('id', '')))}")
-            st.write(f"Fit score: {score}")
-            st.write(f"Materials: {compact_list(row.get('materials', {}).get('iso_groups', []))}")
-            st.write(f"Chipbreaker: {clean_text(row.get('geometry', {}).get('chipbreaker', 'Not listed'))}")
-            st.write(f"Recommended grades: {compact_list(row.get('recommended_grades', []))}")
-            render_reason_list(reasons)
-            if row.get('notes'):
-                st.write(clean_text(row['notes']))
+        render_family_recommendation_card(
+            header=f"{clean_text(row.get('brand', ''))} - {clean_text(row.get('series', ''))}",
+            direction=f"{operation} family with {clean_text(row.get('geometry', {}).get('chipbreaker', 'general'))} chipbreaker direction.",
+            family_value=clean_text(row.get('designation_family', row.get('id', ''))),
+            why_this_fits=format_reason_text(reasons),
+            source_lines=[
+                f"Materials: {compact_list(row.get('materials', {}).get('iso_groups', []))}",
+                f"Chipbreaker: {clean_text(row.get('geometry', {}).get('chipbreaker', 'Not listed'))}",
+                f"Recommended grades: {compact_list(row.get('recommended_grades', []))}",
+                clean_text(row.get('notes', '')),
+            ],
+            raw_scoring_lines=[f"Fit score: {score}"],
+        )
 
 
 def recommend_drilling(common: dict[str, Any]) -> None:
@@ -951,7 +1036,7 @@ def recommend_drilling(common: dict[str, Any]) -> None:
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get("brand", ""), x[1].get("series", "")))
 
-    st.subheader("Drilling Recommendation")
+    st.subheader("Recommended Drilling Direction")
     render_tool_engine_result(
         engine_result,
         [
@@ -971,24 +1056,22 @@ def recommend_drilling(common: dict[str, Any]) -> None:
         return
 
     for score, row, reasons in scored[:6]:
-        with st.container(border=True):
-            st.write(f"**{clean_text(row.get('brand', ''))} — {clean_text(row.get('series', ''))}**")
-            geom = row.get("geometry", {})
-            st.write(f"Type: {clean_text(row.get('subcategory', row.get('tool_category', 'drill')))}")
-            if geom.get("diameter_range_mm"):
-                st.write(f"Diameter range: {geom['diameter_range_mm'][0]} to {geom['diameter_range_mm'][1]} mm")
-            if geom.get("available_l_d"):
-                st.write(f"Available L/D: {geom['available_l_d']}")
-            elif geom.get("l_d"):
-                st.write(f"L/D: {geom['l_d']}")
-            coolant = geom.get("coolant")
-            if coolant:
-                st.write(f"Coolant: {clean_text(coolant)}")
-            grade = row.get("grade_or_coating") or row.get("insert_system", {}).get("grade")
-            if grade:
-                st.write(f"Grade / coating: {clean_text(grade)}")
-            st.write(f"Fit score: {score}")
-            render_reason_list(reasons)
+        geom = row.get("geometry", {})
+        grade = row.get("grade_or_coating") or row.get("insert_system", {}).get("grade")
+        render_family_recommendation_card(
+            header=f"{clean_text(row.get('brand', ''))} - {clean_text(row.get('series', ''))}",
+            direction=f"{clean_text(engine_result['drill_type'])} family aligned to {ld}xD holemaking.",
+            family_value=clean_text(row.get('subcategory', row.get('tool_category', 'drill'))),
+            why_this_fits=format_reason_text(reasons),
+            source_lines=[
+                f"Diameter range: {geom['diameter_range_mm'][0]} to {geom['diameter_range_mm'][1]} mm" if geom.get("diameter_range_mm") else "",
+                f"Available L/D: {geom['available_l_d']}" if geom.get("available_l_d") else "",
+                f"L/D: {geom['l_d']}" if geom.get("l_d") and not geom.get("available_l_d") else "",
+                f"Coolant: {clean_text(geom.get('coolant', ''))}" if geom.get("coolant") else "",
+                f"Grade / coating: {clean_text(grade)}" if grade else "",
+            ],
+            raw_scoring_lines=[f"Fit score: {score}"],
+        )
 
 
 def recommend_milling(common: dict[str, Any], mode: str) -> None:
@@ -1086,7 +1169,7 @@ def recommend_milling(common: dict[str, Any], mode: str) -> None:
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get("brand", ""), x[1].get("series", "")))
 
-    title = "Endmill Recommendation" if mode == "ENDMILL" else "Face Mill Recommendation"
+    title = "Recommended Endmill Direction" if mode == "ENDMILL" else "Recommended Face Mill Direction"
     st.subheader(title)
     if mode == "ENDMILL":
         render_tool_engine_result(
@@ -1113,19 +1196,21 @@ def recommend_milling(common: dict[str, Any], mode: str) -> None:
         return
 
     for score, row, reasons in scored[:6]:
-        with st.container(border=True):
-            st.write(f"**{clean_text(row.get('brand', ''))} — {clean_text(row.get('series', ''))}**")
-            st.write(f"Category: {clean_text(row.get('subcategory', row.get('tool_category', 'milling')))}")
-            geom = row.get('geometry', {})
-            if geom.get('flute_count'):
-                st.write(f"Flutes: {geom['flute_count']}")
-            if geom.get('cutting_edges_per_insert'):
-                st.write(f"Edges / insert: {geom['cutting_edges_per_insert']}")
-            app = row.get('application', {})
-            if app:
-                st.write(f"Application: {format_mapping(app)}")
-            st.write(f"Fit score: {score}")
-            render_reason_list(reasons)
+        geom = row.get('geometry', {})
+        app = row.get('application', {})
+        family_direction = operation_label if mode == 'ENDMILL' else engine_result['cutter_style'].replace('_', ' ')
+        render_family_recommendation_card(
+            header=f"{clean_text(row.get('brand', ''))} - {clean_text(row.get('series', ''))}",
+            direction=f"{family_direction} milling family aligned to the selected planning direction.",
+            family_value=clean_text(row.get('subcategory', row.get('tool_category', 'milling'))),
+            why_this_fits=format_reason_text(reasons),
+            source_lines=[
+                f"Flutes: {geom['flute_count']}" if geom.get('flute_count') else "",
+                f"Edges / insert: {geom['cutting_edges_per_insert']}" if geom.get('cutting_edges_per_insert') else "",
+                f"Application: {format_mapping(app)}" if app else "",
+            ],
+            raw_scoring_lines=[f"Fit score: {score}"],
+        )
 
 
 def recommend_grooving(common: dict[str, Any]) -> None:
@@ -1176,7 +1261,7 @@ def recommend_grooving(common: dict[str, Any]) -> None:
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get('brand', ''), x[1].get('series', '')))
     grades = get_grade_rows(common["material_group"], common["application_zone"], "grooving_insert")
-    st.subheader("Grooving Recommendation")
+    st.subheader("Recommended Grooving Direction")
     render_tool_engine_result(
         engine_result,
         [
@@ -1192,14 +1277,17 @@ def recommend_grooving(common: dict[str, Any]) -> None:
         return
 
     for score, row, reasons in scored[:6]:
-        with st.container(border=True):
-            st.write(f"**{clean_text(row.get('brand', ''))} — {clean_text(row.get('series', ''))}**")
-            st.write(f"Family: {clean_text(row.get('designation_family', row.get('id', '')))}")
-            geom = row.get('geometry', {})
-            if geom:
-                st.write(f"Geometry: {format_mapping(geom)}")
-            st.write(f"Fit score: {score}")
-            render_reason_list(reasons)
+        geom = row.get('geometry', {})
+        render_family_recommendation_card(
+            header=f"{clean_text(row.get('brand', ''))} - {clean_text(row.get('series', ''))}",
+            direction=f"{operation_label} family aligned to the selected grooving direction.",
+            family_value=clean_text(row.get('designation_family', row.get('id', ''))),
+            why_this_fits=format_reason_text(reasons),
+            source_lines=[
+                f"Geometry: {format_mapping(geom)}" if geom else "",
+            ],
+            raw_scoring_lines=[f"Fit score: {score}"],
+        )
     with st.expander("Matching grooving grades"):
         if grades:
             st.dataframe(
@@ -1255,7 +1343,7 @@ def recommend_threading(common: dict[str, Any]) -> None:
             score += match_terms(blob, ["precision", "266"])
         scored.append((score, row, reasons))
     scored.sort(key=lambda x: (-x[0], x[1].get('brand', ''), x[1].get('designation_family', '')))
-    st.subheader("Threading Recommendation")
+    st.subheader("Recommended Threading Direction")
     render_tool_engine_result(
         engine_result,
         [
@@ -1270,13 +1358,17 @@ def recommend_threading(common: dict[str, Any]) -> None:
         return
 
     for score, row, reasons in scored[:6]:
-        with st.container(border=True):
-            st.write(f"**{clean_text(row.get('brand', ''))} — {clean_text(row.get('series', ''))}**")
-            st.write(f"Family: {clean_text(row.get('designation_family', row.get('id', '')))}")
-            st.write(f"Operations: {compact_list(row.get('application', {}).get('operations', []))}")
-            st.write(f"Recommended grades in dataset: {compact_list(row.get('recommended_grades', []))}")
-            st.write(f"Fit score: {score}")
-            render_reason_list(reasons)
+        render_family_recommendation_card(
+            header=f"{clean_text(row.get('brand', ''))} - {clean_text(row.get('series', ''))}",
+            direction=f"{thread_label} family aligned to the selected thread direction.",
+            family_value=clean_text(row.get('designation_family', row.get('id', ''))),
+            why_this_fits=format_reason_text(reasons),
+            source_lines=[
+                f"Operations: {compact_list(row.get('application', {}).get('operations', []))}",
+                f"Recommended grades in dataset: {compact_list(row.get('recommended_grades', []))}",
+            ],
+            raw_scoring_lines=[f"Fit score: {score}"],
+        )
     with st.expander("Matching threading grades"):
         if grades:
             st.dataframe(
@@ -1334,24 +1426,9 @@ if family in {"BURNISHING", "WORKHOLDING", "TOOL_LOOKUP", "BRAND_INTELLIGENCE"}:
     st.stop()
 
 common = build_common_inputs()
-with st.expander("Recommendation Basis", expanded=True):
+with st.expander("Engine Basis", expanded=False):
     behavior = resolve_grade_behavior(common)
-    render_metric_strip([
-        ("Zone", common["application_zone"]),
-        ("Toughness", behavior["required_toughness"]),
-        ("Wear", behavior["required_wear_resistance"]),
-        ("Coating", behavior["preferred_coating"]),
-    ])
-    st.write("These selected conditions steer the engine toward a starting family, coating direction, and insert behavior before the catalog shortlist is ranked.")
-    st.write(clean_text(behavior["recommendation_summary"]))
-    st.write(clean_text(behavior["recommendation_fit_sentence"]))
-    st.caption(
-        f"Chipbreaker direction: {clean_text(behavior['chipbreaker_hint']['family'])} | "
-        f"Geometry direction: {behavior['geometry_hint']['geometry']} | "
-        f"Starting identity: {behavior['insert_identity']['identity_summary']}"
-    )
-    if behavior["risk_flags"]:
-        st.warning("Setup watch-outs: " + " | ".join(behavior["risk_flags"]))
+    render_engine_basis(common, behavior)
 
 if family == "TURNING_INSERT":
     recommend_turning(common)
