@@ -53,6 +53,21 @@ The enterprise tooling search foundation is a new, separate backend layer for fu
 - Speeds and feeds are not imported in this phase.
 - Records must stay source-linked and explicitly verification-marked.
 
+## Manufacturer Adapter Pipeline
+
+A structured adapter pipeline now exists for ingesting machine-readable manufacturer tooling data (ISO 13399, GTC XML, structured JSON, and similar formats) into the Enterprise Tooling Search system.
+
+### Mitsubishi Materials Adapter Pilot
+
+A Mitsubishi Materials JSON adapter has been built and run through the complete import/audit/review/search pipeline end-to-end. This pilot proves the pipeline works — it is **not real catalog data**:
+
+- **Adapter:** `tools/tooling_adapters/mitsubishi_materials_adapter.py` — parses Mitsubishi-format JSON into normalized tooling search records
+- **Fixture:** `tools/tooling_adapters/samples/sample_mitsubishi_materials_structured.json` — 7 synthetic records, clearly marked as test fixtures (not manufacturer data)
+- **Imported records:** `tool_data/tooling_search/records/mitsubishi_materials_imported_tools.json` — passes import validation and audit (0 issues), searchable via the Enterprise Tooling Search UI
+- **Reviewed records:** `tool_data/tooling_search/records/reviewed/mitsubishi_materials_reviewed_tools.json` — reviewed by Joshua Hayes, status `reviewed_family_level_candidate`
+
+All records at every pipeline stage: no feeds/speeds, no dimensions, `cutting_data_status = not_imported`, `verification_status = sample_family_level_not_catalog_verified` (imported) or `reviewed_family_level_candidate` (reviewed). The Mitsubishi Materials adapter pilot is a pipeline proof-of-concept only. Adding real manufacturer catalog data requires separate sourcing, authorization, and re-running the full pipeline with actual catalog records.
+
 ## Install
 
 1. Create and activate a virtual environment.

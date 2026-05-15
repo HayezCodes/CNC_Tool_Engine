@@ -1,0 +1,293 @@
+[
+  {
+    "brand": "Mitsubishi Materials Corporation",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-MMC-TI-001",
+    "series": "MC6000 Series",
+    "family_name": "Fixture general-purpose turning insert family",
+    "designation": "CNMG 120408",
+    "grade": "FIXTURE-MC6015",
+    "chipbreaker": "FIXTURE-MA",
+    "coating": "FIXTURE-CVD-TiCN-Al2O3",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "facing",
+      "roughing",
+      "medium_turning"
+    ],
+    "geometry_tags": [
+      "negativerake",
+      "80degreediamond",
+      "generalpurpose"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "PCLNL/R and DCLNL/R compatible external turning holders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Mitsubishi Materials Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.mitsubishicarbide.com/en/product",
+    "source_page_reference": "p.T-15",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Mitsubishi Materials Corporation",
+    "tool_category": "turning_insert",
+    "manufacturer_part_number": "FIXTURE-MMC-TI-002",
+    "series": "MC7000 Series",
+    "family_name": "Fixture high-toughness turning insert family",
+    "designation": "WNMG 080408",
+    "grade": "FIXTURE-MC7015",
+    "chipbreaker": "FIXTURE-MV",
+    "coating": "FIXTURE-PVD-TiAlN",
+    "material_fit": [
+      "P",
+      "M",
+      "S"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "profiling",
+      "finishing"
+    ],
+    "geometry_tags": [
+      "negativerake",
+      "80degreetrigon",
+      "finishinggeometry"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "MWLNL/R compatible external turning holders"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Mitsubishi Materials Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.mitsubishicarbide.com/en/product",
+    "source_page_reference": "p.T-22",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Mitsubishi Materials Corporation",
+    "tool_category": "milling_insert",
+    "manufacturer_part_number": "FIXTURE-MMC-MI-003",
+    "series": "AXD Series",
+    "family_name": "Fixture square shoulder milling insert family",
+    "designation": "APKT 11T308",
+    "grade": "FIXTURE-VP15TF",
+    "chipbreaker": "FIXTURE-MP",
+    "coating": "FIXTURE-PVD-TiAlN-MultiLayer",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N"
+    ],
+    "operation_fit": [
+      "shoulder_milling",
+      "face_milling",
+      "slot_milling",
+      "ramping"
+    ],
+    "geometry_tags": [
+      "positiverake",
+      "squareshoulder",
+      "true90degree"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture AXD series shoulder milling cutter bodies only"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Mitsubishi Materials Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.mitsubishicarbide.com/en/product",
+    "source_page_reference": "p.M-44",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Mitsubishi Materials Corporation",
+    "tool_category": "endmill",
+    "manufacturer_part_number": "FIXTURE-MMC-EM-004",
+    "series": "MSTAR Series",
+    "family_name": "Fixture solid carbide end mill family",
+    "designation": "solid carbide square end mill",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "FIXTURE-DLC-AlTiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "roughing",
+      "finishing",
+      "slot_milling"
+    ],
+    "geometry_tags": [
+      "solidcarbide",
+      "squareend",
+      "highperformance",
+      "variablehelix"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Mitsubishi Materials Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.mitsubishicarbide.com/en/product",
+    "source_page_reference": "p.E-88",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Mitsubishi Materials Corporation",
+    "tool_category": "indexable_drill",
+    "manufacturer_part_number": "FIXTURE-MMC-IDR-005",
+    "series": "SRM Series",
+    "family_name": "Fixture indexable insert drill family",
+    "designation": "indexable drill platform",
+    "grade": "",
+    "chipbreaker": "",
+    "coating": "",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "drilling",
+      "through_hole_drilling",
+      "blind_hole_drilling"
+    ],
+    "geometry_tags": [
+      "indexabledrill",
+      "productiondrilling",
+      "replaceableinsert"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture cylindrical or modular shank holders"
+    ],
+    "coolant_capability": "through_coolant_capable",
+    "source_label": "Mitsubishi Materials Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.mitsubishicarbide.com/en/product",
+    "source_page_reference": "p.D-32",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Mitsubishi Materials Corporation",
+    "tool_category": "grooving_insert",
+    "manufacturer_part_number": "FIXTURE-MMC-GRV-006",
+    "series": "GW Series",
+    "family_name": "Fixture external grooving and parting insert family",
+    "designation": "grooving insert",
+    "grade": "FIXTURE-VP20RT",
+    "chipbreaker": "FIXTURE-GH",
+    "coating": "FIXTURE-CVD-TiC",
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "grooving",
+      "face_grooving",
+      "parting"
+    ],
+    "geometry_tags": [
+      "groovinginsert",
+      "externalgrooving",
+      "parting"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture GW blade or grooving holder",
+      "matching width required"
+    ],
+    "coolant_capability": "unknown",
+    "source_label": "Mitsubishi Materials Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.mitsubishicarbide.com/en/product",
+    "source_page_reference": "p.G-18",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  },
+  {
+    "brand": "Mitsubishi Materials Corporation",
+    "tool_category": "threading_insert",
+    "manufacturer_part_number": "FIXTURE-MMC-THR-007",
+    "series": "MP-TH Series",
+    "family_name": "Fixture threading insert family",
+    "designation": "threading insert",
+    "grade": "FIXTURE-VP10RT",
+    "chipbreaker": "",
+    "coating": "FIXTURE-PVD-TiN",
+    "material_fit": [
+      "P",
+      "M",
+      "K"
+    ],
+    "operation_fit": [
+      "external_threading",
+      "internal_threading"
+    ],
+    "geometry_tags": [
+      "threadinginsert",
+      "fullprofile",
+      "laydownstyle"
+    ],
+    "dimensions": {},
+    "holder_compatibility": [
+      "Fixture laydown threading toolholder",
+      "standard shank"
+    ],
+    "coolant_capability": "verify_by_catalog",
+    "source_label": "Mitsubishi Materials Cutting Tools \u2014 Adapter Test Fixture 2025",
+    "source_url": "https://www.mitsubishicarbide.com/en/product",
+    "source_page_reference": "p.N-12",
+    "verification_status": "reviewed_family_level_candidate",
+    "cutting_data_status": "not_imported",
+    "notes": "Synthetic adapter fixture for parser testing; not manufacturer catalog data.",
+    "reviewer": "Joshua Hayes",
+    "review_date": "2026-05-15",
+    "review_notes": "Synthetic adapter fixture reviewed only to prove the import/audit/review/search pipeline. Not manufacturer catalog data."
+  }
+]

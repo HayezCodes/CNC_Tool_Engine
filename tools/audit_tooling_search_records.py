@@ -116,8 +116,12 @@ def audit_tooling_search_records(records_dir: Path | None = None) -> dict[str, A
     records_dir = records_dir or RECORDS_DIR
     all_issues: list[dict[str, Any]] = []
     file_summaries: list[dict[str, Any]] = []
-    # (brand, mpn) -> list of location dicts for duplicate detection
+    # (brand, mpn) -> list of location dicts for duplicate detection.
+    # Only top-level files are included: records in records/reviewed/ are a staging
+    # tier and their MPNs are expected to duplicate top-level records while awaiting
+    # promotion.
     seen_pairs: dict[tuple[str, str], list[dict[str, Any]]] = {}
+    top_level_files = set(records_dir.glob("*.json"))
 
     json_files = sorted(records_dir.rglob("*.json"))
 
@@ -149,7 +153,7 @@ def audit_tooling_search_records(records_dir: Path | None = None) -> dict[str, A
 
             brand = str(record.get("brand", "")).strip()
             mpn = str(record.get("manufacturer_part_number", "")).strip()
-            if brand and mpn:
+            if brand and mpn and json_path in top_level_files:
                 location = {"file": json_path.name, "record_index": idx}
                 seen_pairs.setdefault((brand, mpn), []).append(location)
 
