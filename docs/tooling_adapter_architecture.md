@@ -63,12 +63,14 @@ tools/
     guhring_adapter.py                            # Guhring KG JSON adapter
     iscar_adapter.py                              # Iscar Ltd. JSON adapter
     walter_adapter.py                             # Walter AG JSON adapter
+    dormer_pramet_adapter.py                      # Dormer Pramet JSON adapter
     samples/
       sample_gtc_iso13399.xml                     # synthetic test fixture (NOT manufacturer data)
       sample_mitsubishi_materials_structured.json # synthetic test fixture (NOT manufacturer data)
       sample_guhring_structured.json              # synthetic test fixture (NOT manufacturer data)
       sample_iscar_structured.json                # synthetic test fixture (NOT manufacturer data)
       sample_walter_structured.json               # synthetic test fixture (NOT manufacturer data)
+      sample_dormer_pramet_structured.json        # synthetic test fixture (NOT manufacturer data)
     output/
       .gitkeep                                    # output directory stub
       <name>_records.json                         # adapter output (staged, not yet in records/)
@@ -78,10 +80,12 @@ tools/
   parse_guhring_sample.py               # runner: parse Guhring sample, validate, write output
   parse_iscar_sample.py                 # runner: parse Iscar sample, validate, write output
   parse_walter_sample.py                # runner: parse Walter sample, validate, write output
+  parse_dormer_pramet_sample.py         # runner: parse Dormer Pramet sample, validate, write output
   import_mitsubishi_adapter_output.py   # importer: adapter output → records/
   import_guhring_adapter_output.py      # importer: adapter output → records/
   import_iscar_adapter_output.py        # importer: adapter output → records/
   import_walter_adapter_output.py       # importer: adapter output → records/
+  import_dormer_pramet_adapter_output.py # importer: adapter output → records/
 ```
 
 ## Base Adapter (`base_adapter.py`)
@@ -328,6 +332,61 @@ python tools/import_walter_adapter_output.py --dry-run
 ```
 
 Output is written to `tools/tooling_adapters/output/walter_sample_records.json` (9 synthetic fixture records: 1 turning insert, 2 milling inserts (shoulder + face), 1 solid carbide drill, 1 indexable drill, 1 thread mill, 1 grooving insert, 1 endmill, 1 boring bar). Imported records go to `tool_data/tooling_search/records/walter_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/walter_reviewed_tooling_records.json`.
+
+## Dormer Pramet Adapter (`dormer_pramet_adapter.py`)
+
+Parses Dormer Pramet-style structured JSON tooling records into normalized tooling search records. Dormer Pramet was formed in 2014 from the merger of Dormer Tools (round tools: drills, taps, reamers, countersinks, endmills, thread mills) and Pramet Tools (Czech indexable tooling brand: turning inserts, milling inserts, grooving inserts). The adapter handles both sub-brands through a single normalized schema path — `tool_category` distinguishes round tools from indexable tooling.
+
+**Dormer round-tool normalization:**
+
+Dormer round tools cover the full range of hole-making and finishing operations. Solid carbide (`SolidCarbideDrill`) and HSS-cobalt (`HSSCobaltDrill`, `HSSEDrill`) drills both map to `tool_category = "drill"`. Tap variants (`SpiralTap`, `MachineTap`, `FormTap`) all map to `tap`. Thread mills map to `thread_mill`. Reamers map to `reamer`. Countersinks and chamfer tools map to `countersink`. Endmills map to `endmill`.
+
+**Pramet indexable-tool normalization:**
+
+Pramet indexable tooling (turning inserts, milling inserts, grooving/parting inserts) normalizes identically to other indexable brands — `TurningInsert → turning_insert`, `MillingInsert → milling_insert`, `GroovingInsert / PartingInsert → grooving_insert`. Chipbreaker codes from Pramet's insert designation system are preserved in the `chipbreaker` field without translation.
+
+**Tapping/threading/reaming operation mapping:**
+
+| Input string | schema operation |
+|---|---|
+| `Tapping` | `tapping` |
+| `ThroughHoleTapping` | `through_hole_tapping` |
+| `BlindHoleTapping` | `blind_hole_tapping` |
+| `ThreadMilling`, `ExternalThreadMilling`, `InternalThreadMilling` | `thread_milling`, `external_thread_milling`, `internal_thread_milling` |
+| `Reaming`, `FinishReaming`, `PrecisionReaming` | `reaming`, `finish_reaming`, `precision_reaming` |
+| `Countersinking`, `Chamfering`, `Deburring` | `countersinking`, `chamfering`, `deburring` |
+
+**Tool category mapping (Dormer Pramet-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `SolidCarbideDrill`, `HSSCobaltDrill`, `HSSEDrill`, `HSSDrill` | `drill` | Dormer round tools |
+| `SpiralTap`, `MachineTap`, `FormTap`, `ExtrusionTap` | `tap` | Dormer taps |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | Dormer thread mills |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | Dormer reamers |
+| `Countersink`, `ChamferTool` | `countersink` | Dormer countersinks |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | Dormer endmills |
+| `StepDrill`, `CombinationDrill` | `step_drill` | Dormer step drills |
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | Pramet indexable |
+| `MillingInsert`, `ShoulderMillingInsert`, `FaceMillingInsert` | `milling_insert` | Pramet indexable |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | Pramet indexable |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | Pramet indexable |
+| `ThreadingInsert` | `threading_insert` | Pramet indexable |
+| `BoringBar`, `BoringToolholder` | `boring_bar` | Pramet indexable |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | Pramet indexable |
+
+**Field mapping:** identical to all other JSON adapters — `part_number → manufacturer_part_number`, `tool_type → tool_category`, `material_groups → material_fit`, `operations → operation_fit`, `geometry_tags → geometry_tags`, `holder_compatibility → holder_compatibility`, `coolant → coolant_capability`. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_dormer_pramet_sample.py
+python tools/parse_dormer_pramet_sample.py --dry-run
+python tools/import_dormer_pramet_adapter_output.py
+python tools/import_dormer_pramet_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/dormer_pramet_sample_records.json` (10 synthetic fixture records: 2 drills (solid carbide + HSS-cobalt), 1 tap, 1 thread mill, 1 reamer, 1 countersink, 1 endmill, 1 Pramet turning insert, 1 Pramet milling insert, 1 Pramet grooving insert). Imported records go to `tool_data/tooling_search/records/dormer_pramet_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/dormer_pramet_reviewed_tooling_records.json`.
 
 ## What Is Never Imported
 

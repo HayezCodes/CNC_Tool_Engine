@@ -101,6 +101,17 @@ A fourth adapter pilot for Walter AG covers the full Walter tooling portfolio �
 
 As with all pilots, this is a pipeline proof-of-concept with synthetic fixtures only — not real catalog data.
 
+### Dormer Pramet Adapter Pilot
+
+A fifth adapter pilot for Dormer Pramet covers both the Dormer round-tool segment (solid carbide drills, HSS-cobalt drills, taps, thread mills, reamers, countersinks, endmills) and the Pramet indexable-tooling segment (turning inserts, milling inserts, grooving/parting inserts). This pilot proves that a single adapter can normalize across two distinct tooling segments under one brand, with `tool_category` distinguishing round tools from indexable tooling.
+
+- **Adapter:** `tools/tooling_adapters/dormer_pramet_adapter.py`
+- **Fixture:** `tools/tooling_adapters/samples/sample_dormer_pramet_structured.json` — 10 synthetic records, clearly marked as test fixtures (not manufacturer data)
+- **Imported records:** `tool_data/tooling_search/records/dormer_pramet_imported_tools.json` — 0 audit issues, searchable
+- **Reviewed records:** `tool_data/tooling_search/records/reviewed/dormer_pramet_reviewed_tooling_records.json` — reviewed by Joshua Hayes, `reviewed_family_level_candidate`
+
+As with all pilots, this is a pipeline proof-of-concept with synthetic fixtures only — not real catalog data.
+
 ## Install
 
 1. Create and activate a virtual environment.
