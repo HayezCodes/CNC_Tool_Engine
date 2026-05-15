@@ -5,6 +5,7 @@ from grade_engine.brand_intelligence import (
     recommend_endmill_families,
     recommend_insert_grade_families,
 )
+from grade_engine.reviewed_catalog_boosting import calculate_reviewed_family_boost
 
 
 PROBLEM_DIRECTIONS = {
@@ -77,12 +78,19 @@ def solve_operation_problem(
         insert_candidates = recommend_insert_grade_families(insert_operation, material_group, effective_priority)[:5]
 
     cautions = _build_cautions(problem_key, setup_rigidity)
+    reviewed_catalog_support = calculate_reviewed_family_boost(
+        "small_bore" if problem_key == "small_bore_access" else operation_key,
+        material_group,
+        strategy=effective_priority,
+        problem_type=problem_key,
+    )
     return {
         "problem_type": problem_key,
         "recommended_direction": direction,
         "brand_family_candidates": brand_candidates,
         "endmill_candidates": endmill_candidates,
         "insert_candidates": insert_candidates,
+        "reviewed_catalog_support": reviewed_catalog_support,
         "cautions": cautions,
         "verification_note": "Family-level guidance only. Verify exact tool selection, geometry, dimensions, grade, chipbreaker, holder compatibility, and cutting data with the manufacturer catalog.",
     }

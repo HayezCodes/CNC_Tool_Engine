@@ -2,6 +2,11 @@ import json
 from pathlib import Path
 from typing import Any
 
+from grade_engine.reviewed_catalog_boosting import (
+    calculate_reviewed_family_boost,
+    merge_reviewed_boosts_into_recommendations,
+)
+
 
 DEFAULT_DATA_ROOT = Path(__file__).resolve().parent.parent / "tool_data"
 BRAND_DATA_PATH = Path("brand_intelligence") / "tool_brands.json"
@@ -155,7 +160,9 @@ def recommend_brand_families(
                 }
             )
 
-    return sorted(recommendations, key=lambda item: (-item["score"], item["brand"]))
+    recommendations = sorted(recommendations, key=lambda item: (-item["score"], item["brand"]))
+    reviewed_boosts = calculate_reviewed_family_boost(operation, material_group, strategy=priority_key)
+    return merge_reviewed_boosts_into_recommendations(recommendations, reviewed_boosts)
 
 
 def recommend_endmill_families(
@@ -228,7 +235,9 @@ def recommend_endmill_families(
                 }
             )
 
-    return sorted(recommendations, key=lambda item: (-item["score"], item["brand"]))
+    recommendations = sorted(recommendations, key=lambda item: (-item["score"], item["brand"]))
+    reviewed_boosts = calculate_reviewed_family_boost(operation, material_group, strategy=strategy_key or priority_key)
+    return merge_reviewed_boosts_into_recommendations(recommendations, reviewed_boosts)
 
 
 def recommend_insert_grade_families(
@@ -291,7 +300,9 @@ def recommend_insert_grade_families(
                 }
             )
 
-    return sorted(recommendations, key=lambda item: (-item["score"], item["brand"]))
+    recommendations = sorted(recommendations, key=lambda item: (-item["score"], item["brand"]))
+    reviewed_boosts = calculate_reviewed_family_boost(operation, material_group, strategy=priority_key)
+    return merge_reviewed_boosts_into_recommendations(recommendations, reviewed_boosts)
 
 
 def infer_brand_intelligence_from_query(query: str) -> dict:
