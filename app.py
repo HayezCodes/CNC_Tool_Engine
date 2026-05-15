@@ -35,6 +35,11 @@ from grade_engine.tool_engines import (
     resolve_threading_engine,
 )
 from grade_engine.problem_solver import solve_operation_problem
+from grade_engine.tooling_search import (
+    explain_tool_match,
+    load_tooling_records,
+    search_tooling_records,
+)
 from tool_lookup.cross_reference import cross_reference_tool
 from tool_lookup.index import load_lookup_records
 
@@ -1401,14 +1406,189 @@ def recommend_workholding() -> None:
             st.write(f"Performance profile: {format_mapping(row.get('performance_profile', {}))}")
 
 
+def _render_tooling_search_card(record: dict[str, Any], reasons: list[str]) -> None:
+    with st.container(border=True):
+        h1, h2 = st.columns([3, 1])
+        with h1:
+            st.markdown(f"#### {clean_text(record['brand'])} — {clean_text(record['manufacturer_part_number'])}")
+        with h2:
+            st.caption(titleize_token(record.get("tool_category", "")))
+
+        id_parts: list[str] = []
+        if record.get("series"):
+            id_parts.append(f"Series: {clean_text(record['series'])}")
+        if record.get("family_name"):
+            id_parts.append(f"Family: {clean_text(record['family_name'])}")
+        if record.get("designation"):
+            id_parts.append(f"Designation: {clean_text(record['designation'])}")
+        if id_parts:
+            st.write(" | ".join(id_parts))
+
+        grade_parts: list[str] = []
+        if record.get("grade"):
+            grade_parts.append(f"Grade: {clean_text(record['grade'])}")
+        if record.get("chipbreaker"):
+            grade_parts.append(f"Chipbreaker: {clean_text(record['chipbreaker'])}")
+        if record.get("coating"):
+            grade_parts.append(f"Coating: {clean_text(record['coating'])}")
+        if grade_parts:
+            st.write(" | ".join(grade_parts))
+
+        fit_c1, fit_c2 = st.columns(2)
+        with fit_c1:
+            if record.get("material_fit"):
+                st.write(f"Materials: {compact_list(record['material_fit'])}")
+        with fit_c2:
+            if record.get("operation_fit"):
+                st.write(f"Operations: {compact_list(record['operation_fit'][:5])}")
+
+        if reasons:
+            st.caption("Match: " + " | ".join(clean_text(r) for r in reasons[:4]))
+
+        vstatus = record.get("verification_status", "")
+        cds = record.get("cutting_data_status", "")
+        status_parts: list[str] = []
+        if vstatus:
+            status_parts.append(titleize_token(vstatus))
+        if cds:
+            status_parts.append(f"Cutting data: {titleize_token(cds)}")
+        if status_parts:
+            st.caption(" | ".join(status_parts))
+
+        if record.get("source_url"):
+            ref = f" (p. {clean_text(record['source_page_reference'])})" if record.get("source_page_reference") else ""
+            label = clean_text(record.get("source_label") or "Catalog source")
+            st.caption(f"Source: [{label}]({record['source_url']}){ref}")
+
+        detail_lines: list[str] = []
+        if record.get("geometry_tags"):
+            detail_lines.append(f"Geometry tags: {compact_list(record['geometry_tags'])}")
+        if record.get("holder_compatibility"):
+            detail_lines.append(f"Holder: {compact_list(record['holder_compatibility'])}")
+        if record.get("coolant_capability") and record["coolant_capability"] != "unknown":
+            detail_lines.append(f"Coolant: {titleize_token(record['coolant_capability'])}")
+        if record.get("notes"):
+            detail_lines.append(f"Notes: {clean_text(record['notes'])}")
+
+        if detail_lines:
+            with st.expander("Details"):
+                for line in detail_lines:
+                    st.write(line)
+
+        with st.expander("Raw record"):
+            st.json({k: v for k, v in record.items() if not k.startswith("_")})
+
+
+def render_tooling_search() -> None:
+    st.subheader("Enterprise Tooling Search")
+    st.caption(
+        "Search normalized tooling records by part number, family, designation, grade, or keyword. "
+        "Filters narrow by category, material, operation, and more."
+    )
+    st.info(
+        "Records are family-level reference only — no feeds, speeds, or certified cutting data. "
+        "Verify all selections with the manufacturer catalog."
+    )
+
+    all_records = load_tooling_records()
+    if not all_records:
+        st.warning("No tooling search records loaded. Add records to tool_data/tooling_search/records/ to begin.")
+        return
+
+    brands = sorted({r["brand"] for r in all_records if r["brand"]})
+    categories = sorted({r["tool_category"] for r in all_records if r["tool_category"]})
+    operations = sorted({op for r in all_records for op in r.get("operation_fit", []) if op})
+    geometry_tags = sorted({tag for r in all_records for tag in r.get("geometry_tags", []) if tag})
+
+    query = st.text_input("Search", placeholder="CNMG 120408, CoroTurn, GC4325, TiAlN, turning insert…")
+
+    fc1, fc2, fc3, fc4 = st.columns(4)
+    with fc1:
+        brand_f = st.selectbox("Brand", ["Any"] + brands)
+    with fc2:
+        category_f = st.selectbox(
+            "Tool Category",
+            ["Any"] + categories,
+            format_func=lambda v: "Any" if v == "Any" else titleize_token(v),
+        )
+    with fc3:
+        material_f = st.selectbox(
+            "Material Group",
+            ["Any", "P", "M", "K", "N", "S", "H"],
+            format_func=lambda v: "Any" if v == "Any" else MATERIAL_GROUP_LABELS.get(v, v),
+        )
+    with fc4:
+        operation_f = st.selectbox(
+            "Operation",
+            ["Any"] + operations,
+            format_func=lambda v: "Any" if v == "Any" else titleize_token(v),
+        )
+
+    fc5, fc6, fc7, fc8 = st.columns(4)
+    with fc5:
+        grade_f = st.text_input("Grade contains", placeholder="GC4325, TT8020…")
+    with fc6:
+        chipbreaker_f = st.text_input("Chipbreaker contains", placeholder="MF, PM…")
+    with fc7:
+        coating_f = st.text_input("Coating contains", placeholder="TiAlN, CVD…")
+    with fc8:
+        geometry_tag_f = st.selectbox(
+            "Geometry Tag",
+            ["Any"] + geometry_tags,
+            format_func=lambda v: "Any" if v == "Any" else titleize_token(v),
+        )
+
+    filters: dict[str, Any] = {}
+    if brand_f != "Any":
+        filters["brand"] = brand_f
+    if category_f != "Any":
+        filters["tool_category"] = category_f
+    if material_f != "Any":
+        filters["material_group"] = material_f
+    if operation_f != "Any":
+        filters["operation"] = operation_f
+    if grade_f.strip():
+        filters["grade"] = grade_f.strip()
+    if chipbreaker_f.strip():
+        filters["chipbreaker"] = chipbreaker_f.strip()
+    if coating_f.strip():
+        filters["coating"] = coating_f.strip()
+    if geometry_tag_f != "Any":
+        filters["geometry_tag"] = geometry_tag_f
+
+    if not query.strip() and not filters:
+        st.info(
+            f"{len(all_records)} record(s) available across {len(brands)} brand(s). "
+            "Enter a search term or apply a filter to find tools."
+        )
+        return
+
+    results = search_tooling_records(query, filters or None)
+
+    if not results:
+        st.warning("No tooling records match this search and filter combination.")
+        return
+
+    shown = results[:20]
+    suffix = f" — showing first {len(shown)}" if len(results) > len(shown) else ""
+    st.write(f"**{len(results)}** record(s) found{suffix}.")
+
+    for record in shown:
+        reasons = explain_tool_match(record, query, filters or None)
+        _render_tooling_search_card(record, reasons)
+
+
 st.set_page_config(page_title="CNC Tooling Decision Engine", layout="wide")
 st.title("CNC Tooling Decision Engine")
 st.caption("Catalog-backed family selection and grade-behavior guidance for turning, drilling, milling, grooving, and threading demos.")
 st.info("Demo note: this app is built to recommend credible tool families and grade direction. It is not a full SKU-complete selector.")
 
-mode = st.radio("Mode", ["Decision Engine", "Catalog Data Explorer"], horizontal=True)
+mode = st.radio("Mode", ["Decision Engine", "Tooling Search", "Catalog Data Explorer"], horizontal=True)
 if mode == "Catalog Data Explorer":
     render_catalog_explorer()
+    st.stop()
+if mode == "Tooling Search":
+    render_tooling_search()
     st.stop()
 
 family = st.selectbox("Module", list(FAMILY_LABELS.keys()), format_func=lambda x: FAMILY_LABELS[x])

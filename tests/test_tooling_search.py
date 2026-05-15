@@ -212,3 +212,89 @@ def test_total_record_count_includes_all_brands() -> None:
     assert "Kennametal" in brands
     assert "Seco Tools" in brands
     assert len(records) >= 30
+
+
+# ── Tooling Search UI smoke tests ─────────────────────────────────────────────
+# These exercise the filter/search/explain combinations that the UI calls so
+# regressions in the backend are caught without needing to run Streamlit.
+
+def test_ui_brand_and_category_filter_returns_subset() -> None:
+    results = search_tooling_records("", {"brand": "Sandvik Coromant", "tool_category": "turning_insert"})
+
+    assert results
+    assert all(r["brand"] == "Sandvik Coromant" for r in results)
+    assert all(r["tool_category"] == "turning_insert" for r in results)
+
+
+def test_ui_material_and_operation_filter_returns_records() -> None:
+    results = search_tooling_records("", {"material_group": "P", "operation": "external_turning"})
+
+    assert results
+    assert all("P" in r["material_fit"] for r in results)
+    assert all("external_turning" in r["operation_fit"] for r in results)
+
+
+def test_ui_text_query_with_material_filter() -> None:
+    results = search_tooling_records("Sandvik", {"material_group": "P"})
+
+    assert results
+    assert all("P" in r["material_fit"] for r in results)
+    assert all(r["brand"] == "Sandvik Coromant" for r in results)
+
+
+def test_ui_grade_filter_narrows_results() -> None:
+    all_records = load_tooling_records()
+    grades = [r["grade"] for r in all_records if r.get("grade")]
+    if not grades:
+        return
+    sample_grade_prefix = grades[0][:4]
+    results = search_tooling_records("", {"grade": sample_grade_prefix})
+
+    assert isinstance(results, list)
+
+
+def test_ui_explain_tool_match_returns_reasons_for_brand_query() -> None:
+    records = load_tooling_records()
+    sandvik = [r for r in records if r["brand"] == "Sandvik Coromant"]
+    assert sandvik, "Need at least one Sandvik record"
+
+    reasons = explain_tool_match(sandvik[0], "Sandvik", {"tool_category": "turning_insert"})
+
+    assert reasons
+    assert any("brand" in r.lower() for r in reasons)
+
+
+def test_ui_explain_tool_match_includes_filter_reasons() -> None:
+    records = load_tooling_records()
+    p_records = [r for r in records if "P" in r.get("material_fit", [])]
+    assert p_records
+
+    reasons = explain_tool_match(p_records[0], "", {"material_group": "P"})
+
+    assert any("material" in r.lower() for r in reasons)
+
+
+def test_ui_no_query_no_filters_returns_all_records() -> None:
+    results = search_tooling_records("", None)
+
+    assert len(results) == len(load_tooling_records())
+
+
+def test_ui_empty_result_set_on_impossible_filter() -> None:
+    results = search_tooling_records("", {"brand": "ZZZNOMATCH__BRAND"})
+
+    assert results == []
+
+
+def test_ui_result_cards_have_required_display_fields() -> None:
+    results = search_tooling_records("Sandvik", None)
+
+    assert results
+    for record in results[:5]:
+        assert "brand" in record
+        assert "manufacturer_part_number" in record
+        assert "tool_category" in record
+        assert isinstance(record.get("material_fit"), list)
+        assert isinstance(record.get("operation_fit"), list)
+        assert "verification_status" in record
+        assert "cutting_data_status" in record
