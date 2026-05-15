@@ -1,0 +1,79 @@
+[
+  {
+    "id": "cogsdill_sr_roll_a_finish",
+    "brand": "Cogsdill",
+    "series": "SR Roll-a-Finish",
+    "tool_category": "burnishing_tool",
+    "subcategory": "internal_roller_burnishing",
+    "application": {
+      "operations": [
+        "surface_finishing",
+        "sizing",
+        "work_hardening"
+      ]
+    }
+  },
+  {
+    "id": "cogsdill_u_series",
+    "brand": "Cogsdill",
+    "series": "U Series Roll-a-Finish",
+    "tool_category": "burnishing_tool",
+    "subcategory": "internal_roller_burnishing",
+    "application": {
+      "operations": [
+        "surface_finishing",
+        "sizing"
+      ]
+    }
+  },
+  {
+    "id": "cogsdill_aex_series",
+    "brand": "Cogsdill",
+    "series": "AEX Series",
+    "tool_category": "burnishing_tool",
+    "subcategory": "external_roller_burnishing",
+    "application": {
+      "operations": [
+        "surface_finishing",
+        "sizing"
+      ]
+    }
+  },
+  {
+    "id": "cogsdill_diamond",
+    "brand": "Cogsdill",
+    "series": "Diamond Burnishing Tools",
+    "tool_category": "burnishing_tool",
+    "subcategory": "single_contact_burnishing",
+    "application": {
+      "operations": [
+        "surface_finishing"
+      ]
+    }
+  },
+  {
+    "id": "cogsdill_universal",
+    "brand": "Cogsdill",
+    "series": "Universal Burnishing Tools",
+    "tool_category": "burnishing_tool",
+    "subcategory": "single_contact_burnishing",
+    "application": {
+      "operations": [
+        "surface_finishing"
+      ]
+    }
+  },
+  {
+    "id": "cogsdill_chamber",
+    "brand": "Cogsdill",
+    "series": "Gun Chamber Burnishing Tool",
+    "tool_category": "burnishing_tool",
+    "subcategory": "specialty_chamber_burnishing",
+    "application": {
+      "operations": [
+        "surface_finishing",
+        "chamber_finishing"
+      ]
+    }
+  }
+]

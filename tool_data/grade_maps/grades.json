@@ -1,0 +1,994 @@
+[
+  {
+    "id": "kyocera_pr1025",
+    "brand": "Kyocera",
+    "grade": "PR1025",
+    "primary_iso_group": "P",
+    "zone": "WEAR",
+    "coating": "PVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "stable_finishing",
+      "steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_pr1005",
+    "brand": "Kyocera",
+    "grade": "PR1005",
+    "primary_iso_group": "P",
+    "zone": "WEAR",
+    "coating": "PVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "light_finishing",
+      "steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_pr1115",
+    "brand": "Kyocera",
+    "grade": "PR1115",
+    "primary_iso_group": "P",
+    "zone": "BALANCED",
+    "coating": "PVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "general_steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_pr1125",
+    "brand": "Kyocera",
+    "grade": "PR1125",
+    "primary_iso_group": "P",
+    "zone": "TOUGH",
+    "coating": "PVD",
+    "toughness_level": 4,
+    "wear_level": 3,
+    "tags": [
+      "general_to_rough_steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_ca5515",
+    "brand": "Kyocera",
+    "grade": "CA5515",
+    "primary_iso_group": "P",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 3,
+    "tags": [
+      "general_turning_steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_ca5525",
+    "brand": "Kyocera",
+    "grade": "CA5525",
+    "primary_iso_group": "P",
+    "zone": "TOUGH",
+    "coating": "CVD",
+    "toughness_level": 4,
+    "wear_level": 2,
+    "tags": [
+      "roughing_steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_ca5535",
+    "brand": "Kyocera",
+    "grade": "CA5535",
+    "primary_iso_group": "P",
+    "zone": "TOUGH",
+    "coating": "CVD",
+    "toughness_level": 5,
+    "wear_level": 2,
+    "tags": [
+      "heavy_roughing_steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_pv7020",
+    "brand": "Kyocera",
+    "grade": "PV7020",
+    "primary_iso_group": "M",
+    "zone": "BALANCED",
+    "coating": "PVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "stainless_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_pr930",
+    "brand": "Kyocera",
+    "grade": "PR930",
+    "primary_iso_group": "M",
+    "zone": "BALANCED",
+    "coating": "PVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "stainless_and_threading"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_ca6515",
+    "brand": "Kyocera",
+    "grade": "CA6515",
+    "primary_iso_group": "M",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "stable_stainless"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_ca6525",
+    "brand": "Kyocera",
+    "grade": "CA6525",
+    "primary_iso_group": "M",
+    "zone": "TOUGH",
+    "coating": "CVD",
+    "toughness_level": 4,
+    "wear_level": 2,
+    "tags": [
+      "rough_stainless"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_ca4115",
+    "brand": "Kyocera",
+    "grade": "CA4115",
+    "primary_iso_group": "K",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "cast_iron_finishing"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_ca4120",
+    "brand": "Kyocera",
+    "grade": "CA4120",
+    "primary_iso_group": "K",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "cast_iron_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_cr7015",
+    "brand": "Kyocera",
+    "grade": "CR7015",
+    "primary_iso_group": "K",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "stable_cast_iron"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_kpd001",
+    "brand": "Kyocera",
+    "grade": "KPD001",
+    "primary_iso_group": "N",
+    "zone": "WEAR",
+    "coating": "PCD",
+    "toughness_level": 1,
+    "wear_level": 5,
+    "tags": [
+      "nonferrous_finishing"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_kpd010",
+    "brand": "Kyocera",
+    "grade": "KPD010",
+    "primary_iso_group": "N",
+    "zone": "BALANCED",
+    "coating": "PCD",
+    "toughness_level": 2,
+    "wear_level": 4,
+    "tags": [
+      "general_nonferrous"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_kw10",
+    "brand": "Kyocera",
+    "grade": "KW10",
+    "primary_iso_group": "N",
+    "zone": "BALANCED",
+    "coating": "UNCOATED",
+    "toughness_level": 2,
+    "wear_level": 3,
+    "tags": [
+      "general_nonferrous"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_pr660",
+    "brand": "Kyocera",
+    "grade": "PR660",
+    "primary_iso_group": "S",
+    "zone": "TOUGH",
+    "coating": "PVD",
+    "toughness_level": 5,
+    "wear_level": 2,
+    "tags": [
+      "titanium_nickel_alloys"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_pr905",
+    "brand": "Kyocera",
+    "grade": "PR905",
+    "primary_iso_group": "S",
+    "zone": "WEAR",
+    "coating": "PVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "stable_superalloy"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_kbn10b",
+    "brand": "Kyocera",
+    "grade": "KBN10B",
+    "primary_iso_group": "H",
+    "zone": "WEAR",
+    "coating": "CBN",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "hardened_finishing"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_kbn25b",
+    "brand": "Kyocera",
+    "grade": "KBN25B",
+    "primary_iso_group": "H",
+    "zone": "BALANCED",
+    "coating": "CBN",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "general_hardened"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "kyocera_kbn510",
+    "brand": "Kyocera",
+    "grade": "KBN510",
+    "primary_iso_group": "H",
+    "zone": "TOUGH",
+    "coating": "CBN",
+    "toughness_level": 4,
+    "wear_level": 3,
+    "tags": [
+      "interrupted_hardened"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc4205",
+    "brand": "Sandvik Coromant",
+    "grade": "GC4205",
+    "primary_iso_group": "P",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "steel_finishing"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc4215",
+    "brand": "Sandvik Coromant",
+    "grade": "GC4215",
+    "primary_iso_group": "P",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "steel_semi_finish"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc4225",
+    "brand": "Sandvik Coromant",
+    "grade": "GC4225",
+    "primary_iso_group": "P",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 3,
+    "tags": [
+      "general_steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc4235",
+    "brand": "Sandvik Coromant",
+    "grade": "GC4235",
+    "primary_iso_group": "P",
+    "zone": "TOUGH",
+    "coating": "CVD",
+    "toughness_level": 5,
+    "wear_level": 2,
+    "tags": [
+      "roughing_interrupted_steel"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc1115",
+    "brand": "Sandvik Coromant",
+    "grade": "GC1115",
+    "primary_iso_group": "M",
+    "zone": "WEAR",
+    "coating": "PVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "stainless_finishing"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc2015",
+    "brand": "Sandvik Coromant",
+    "grade": "GC2015",
+    "primary_iso_group": "M",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "stainless_stable"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc2025",
+    "brand": "Sandvik Coromant",
+    "grade": "GC2025",
+    "primary_iso_group": "M",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 3,
+    "tags": [
+      "stainless_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc2220",
+    "brand": "Sandvik Coromant",
+    "grade": "GC2220",
+    "primary_iso_group": "M",
+    "zone": "TOUGH",
+    "coating": "CVD",
+    "toughness_level": 4,
+    "wear_level": 2,
+    "tags": [
+      "stainless_roughing"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc3205",
+    "brand": "Sandvik Coromant",
+    "grade": "GC3205",
+    "primary_iso_group": "K",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "cast_iron_finish"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc3210",
+    "brand": "Sandvik Coromant",
+    "grade": "GC3210",
+    "primary_iso_group": "K",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "nodular_cast_iron_high_reliability"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc3215",
+    "brand": "Sandvik Coromant",
+    "grade": "GC3215",
+    "primary_iso_group": "K",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "general_cast_iron"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc3225",
+    "brand": "Sandvik Coromant",
+    "grade": "GC3225",
+    "primary_iso_group": "K",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 3,
+    "tags": [
+      "cast_iron_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_h10a",
+    "brand": "Sandvik Coromant",
+    "grade": "H10A",
+    "primary_iso_group": "N",
+    "zone": "WEAR",
+    "coating": "UNCOATED",
+    "toughness_level": 1,
+    "wear_level": 4,
+    "tags": [
+      "aluminum"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_h13a",
+    "brand": "Sandvik Coromant",
+    "grade": "H13A",
+    "primary_iso_group": "N",
+    "zone": "BALANCED",
+    "coating": "UNCOATED",
+    "toughness_level": 2,
+    "wear_level": 3,
+    "tags": [
+      "general_nonferrous"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc1105",
+    "brand": "Sandvik Coromant",
+    "grade": "GC1105",
+    "primary_iso_group": "S",
+    "zone": "WEAR",
+    "coating": "PVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "hrsa_finishing"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_gc1115",
+    "brand": "Sandvik Coromant",
+    "grade": "GC1115",
+    "primary_iso_group": "S",
+    "zone": "BALANCED",
+    "coating": "PVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "hrsa_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_s05f",
+    "brand": "Sandvik Coromant",
+    "grade": "S05F",
+    "primary_iso_group": "S",
+    "zone": "TOUGH",
+    "coating": "WHISKER_CERAMIC",
+    "toughness_level": 4,
+    "wear_level": 3,
+    "tags": [
+      "hrsa_heavy_or_heat"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_cb7015",
+    "brand": "Sandvik Coromant",
+    "grade": "CB7015",
+    "primary_iso_group": "H",
+    "zone": "WEAR",
+    "coating": "CBN",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "hardened_finish"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "sandvik_coromant_cb7025",
+    "brand": "Sandvik Coromant",
+    "grade": "CB7025",
+    "primary_iso_group": "H",
+    "zone": "BALANCED",
+    "coating": "CBN",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "hardened_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic8150",
+    "brand": "ISCAR",
+    "grade": "IC8150",
+    "primary_iso_group": "P",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "steel_finish"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic8250",
+    "brand": "ISCAR",
+    "grade": "IC8250",
+    "primary_iso_group": "P",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 3,
+    "tags": [
+      "steel_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic808",
+    "brand": "ISCAR",
+    "grade": "IC808",
+    "primary_iso_group": "P",
+    "zone": "BALANCED",
+    "coating": "PVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "steel_mixed"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic807",
+    "brand": "ISCAR",
+    "grade": "IC807",
+    "primary_iso_group": "P",
+    "zone": "TOUGH",
+    "coating": "PVD",
+    "toughness_level": 5,
+    "wear_level": 2,
+    "tags": [
+      "steel_interrupted"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic806",
+    "brand": "ISCAR",
+    "grade": "IC806",
+    "primary_iso_group": "P",
+    "zone": "WEAR",
+    "coating": "PVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "steel_fine_finish"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic8150",
+    "brand": "ISCAR",
+    "grade": "IC8150",
+    "primary_iso_group": "M",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "stainless_stable"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic8250",
+    "brand": "ISCAR",
+    "grade": "IC8250",
+    "primary_iso_group": "M",
+    "zone": "BALANCED",
+    "coating": "CVD",
+    "toughness_level": 3,
+    "wear_level": 3,
+    "tags": [
+      "stainless_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic807",
+    "brand": "ISCAR",
+    "grade": "IC807",
+    "primary_iso_group": "M",
+    "zone": "TOUGH",
+    "coating": "PVD",
+    "toughness_level": 5,
+    "wear_level": 2,
+    "tags": [
+      "stainless_interrupted"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic8150",
+    "brand": "ISCAR",
+    "grade": "IC8150",
+    "primary_iso_group": "K",
+    "zone": "WEAR",
+    "coating": "CVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "cast_iron_finish"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic808",
+    "brand": "ISCAR",
+    "grade": "IC808",
+    "primary_iso_group": "K",
+    "zone": "BALANCED",
+    "coating": "PVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "cast_iron_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic20",
+    "brand": "ISCAR",
+    "grade": "IC20",
+    "primary_iso_group": "N",
+    "zone": "BALANCED",
+    "coating": "UNCOATED",
+    "toughness_level": 2,
+    "wear_level": 3,
+    "tags": [
+      "nonferrous"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic807",
+    "brand": "ISCAR",
+    "grade": "IC807",
+    "primary_iso_group": "S",
+    "zone": "TOUGH",
+    "coating": "PVD",
+    "toughness_level": 5,
+    "wear_level": 2,
+    "tags": [
+      "superalloy"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic808",
+    "brand": "ISCAR",
+    "grade": "IC808",
+    "primary_iso_group": "S",
+    "zone": "BALANCED",
+    "coating": "PVD",
+    "toughness_level": 3,
+    "wear_level": 4,
+    "tags": [
+      "superalloy_general"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  },
+  {
+    "id": "iscar_ic806",
+    "brand": "ISCAR",
+    "grade": "IC806",
+    "primary_iso_group": "S",
+    "zone": "WEAR",
+    "coating": "PVD",
+    "toughness_level": 2,
+    "wear_level": 5,
+    "tags": [
+      "superalloy_finish"
+    ],
+    "tool_categories": [
+      "turning_insert",
+      "grooving_insert",
+      "threading_insert"
+    ]
+  }
+]

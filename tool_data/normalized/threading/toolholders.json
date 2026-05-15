@@ -1,0 +1,34 @@
+[
+  {
+    "id": "sandvik_corothread_266_holder",
+    "brand": "Sandvik Coromant",
+    "series": "CoroThread 266",
+    "tool_category": "threading_holder",
+    "designation": "CoroThread 266 holders",
+    "compatibility": {
+      "insert_families": [
+        "CoroThread 266"
+      ],
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ]
+    }
+  },
+  {
+    "id": "iscar_threading_holder",
+    "brand": "ISCAR",
+    "series": "Threading",
+    "tool_category": "threading_holder",
+    "designation": "ISCAR laydown threading holders",
+    "compatibility": {
+      "insert_families": [
+        "Laydown Threading"
+      ],
+      "operations": [
+        "external_threading",
+        "internal_threading"
+      ]
+    }
+  }
+]

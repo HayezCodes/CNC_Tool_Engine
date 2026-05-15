@@ -1,0 +1,247 @@
+[
+  {
+    "brand": "Micro 100",
+    "catalog_number": "",
+    "coating_or_grade": "verify carbide substrate and coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level solid carbide boring bar category only; verify shank style, minimum bore, reach, hand, and insert/form details by catalog",
+    "family_name": "Solid carbide boring bar families",
+    "geometry_tags": [
+      "boring_bar",
+      "solid_carbide",
+      "small_id_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "boring",
+      "internal_turning",
+      "small_id_turning",
+      "profiling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for boring bars, miniature turning, grooving, and small-ID tooling. Exact geometry, dimensions, hand, thread/groove forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Micro 100 Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.micro100.com/catalog",
+    "strategy_fit": [
+      "small_id_access",
+      "rigidity_priority",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "boring_bar",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Micro 100",
+    "catalog_number": "",
+    "coating_or_grade": "verify insert compatibility and holder style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level indexable boring bar category only; verify insert style, shank size, bore range, hand, and reach by catalog",
+    "family_name": "Indexable boring bar families",
+    "geometry_tags": [
+      "boring_bar",
+      "indexable",
+      "small_id_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "boring",
+      "internal_turning",
+      "shoulder_turning",
+      "small_id_turning"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for boring bars, miniature turning, grooving, and small-ID tooling. Exact geometry, dimensions, hand, thread/groove forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Micro 100 Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.micro100.com/catalog",
+    "strategy_fit": [
+      "indexable_turning",
+      "small_id_access",
+      "production_turning"
+    ],
+    "tool_category": "boring_bar",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Micro 100",
+    "catalog_number": "",
+    "coating_or_grade": "verify solid carbide, brazed, or insert style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level miniature internal turning category only; verify minimum bore, hand, reach, nose form, and application limits by catalog",
+    "family_name": "Miniature internal turning tool families",
+    "geometry_tags": [
+      "miniature_turning",
+      "small_id_candidate",
+      "clearance_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "internal_turning",
+      "profiling",
+      "facing",
+      "small_feature_turning"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for boring bars, miniature turning, grooving, and small-ID tooling. Exact geometry, dimensions, hand, thread/groove forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Micro 100 Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.micro100.com/catalog",
+    "strategy_fit": [
+      "miniature_work",
+      "small_feature_access",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "miniature_turning_tool",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Micro 100",
+    "catalog_number": "",
+    "coating_or_grade": "verify insert or form style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level internal grooving category only; verify groove style, minimum bore, insert/form width range, and reach by catalog",
+    "family_name": "Internal grooving tool families",
+    "geometry_tags": [
+      "internal_grooving",
+      "small_id_candidate",
+      "groove_form_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "internal_grooving",
+      "grooving",
+      "face_grooving",
+      "profiling"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for boring bars, miniature turning, grooving, and small-ID tooling. Exact geometry, dimensions, hand, thread/groove forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Micro 100 Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.micro100.com/catalog",
+    "strategy_fit": [
+      "grooving",
+      "small_id_access",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "grooving_tool",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Micro 100",
+    "catalog_number": "",
+    "coating_or_grade": "verify thread form and holder style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level miniature internal threading category only; verify thread form, pitch range, bore access, hand, and reach by catalog",
+    "family_name": "Miniature internal threading tool families",
+    "geometry_tags": [
+      "internal_threading",
+      "small_id_candidate",
+      "thread_form_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "internal_threading",
+      "threading",
+      "small_feature_turning"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for boring bars, miniature turning, grooving, and small-ID tooling. Exact geometry, dimensions, hand, thread/groove forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Micro 100 Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.micro100.com/catalog",
+    "strategy_fit": [
+      "threading",
+      "small_id_access",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "threading_tool",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Micro 100",
+    "catalog_number": "",
+    "coating_or_grade": "verify geometry family and substrate by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level multifunction small-ID turning category only; verify exact form, groove/thread compatibility, bore access, and application limits by catalog",
+    "family_name": "Small-ID multifunction turning tool families",
+    "geometry_tags": [
+      "specialty_turning",
+      "multifunction_candidate",
+      "small_id_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "small_feature_turning",
+      "grooving",
+      "profiling",
+      "specialty_turning"
+    ],
+    "review_date": "2026-05-15",
+    "review_notes": "Reviewed as family-level guidance only for boring bars, miniature turning, grooving, and small-ID tooling. Exact geometry, dimensions, hand, thread/groove forms, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Micro 100 Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.micro100.com/catalog",
+    "strategy_fit": [
+      "multifunction",
+      "small_id_access",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "specialty_turning",
+    "verification_status": "reviewed_family_level"
+  }
+]

@@ -1,0 +1,189 @@
+[
+  {
+    "brand": "Garr Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family and flute style by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level high-performance square end mill category only; verify flute count, reach, and corner style by catalog",
+    "family_name": "High-performance square end mill families",
+    "geometry_tags": [
+      "square_end",
+      "solid_carbide",
+      "high_performance"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "slotting",
+      "profiling",
+      "roughing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Garr Tool Full Catalog 2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.garrtool.com/downloads/",
+    "strategy_fit": [
+      "high_performance",
+      "production_milling",
+      "material_removal_priority"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Garr Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify roughing geometry and coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level roughing end mill category only; verify flute count, chipbreaker style, reach, and material application by catalog",
+    "family_name": "High-efficiency roughing end mill families",
+    "geometry_tags": [
+      "roughing",
+      "high_efficiency",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "roughing",
+      "dynamic_milling",
+      "pocketing",
+      "profiling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Garr Tool Full Catalog 2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.garrtool.com/downloads/",
+    "strategy_fit": [
+      "high_efficiency",
+      "roughing",
+      "radial_engagement_strategy"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Garr Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify finishing geometry and coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level finishing end mill category only; verify flute count, reach, corner style, and finish geometry by catalog",
+    "family_name": "Variable helix finishing end mill families",
+    "geometry_tags": [
+      "variable_helix",
+      "finishing",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "finishing",
+      "profiling",
+      "wall_finishing",
+      "floor_finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Garr Tool Full Catalog 2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.garrtool.com/downloads/",
+    "strategy_fit": [
+      "finishing",
+      "surface_finish_priority",
+      "chatter_reduction_candidate"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Garr Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify corner radius family and coating by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level corner radius end mill category only; verify radius range, flute count, reach, and application by catalog",
+    "family_name": "Corner radius end mill families",
+    "geometry_tags": [
+      "corner_radius",
+      "solid_carbide",
+      "edge_strength_candidate"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "general_milling",
+      "profiling",
+      "roughing",
+      "finishing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Garr Tool Full Catalog 2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.garrtool.com/downloads/",
+    "strategy_fit": [
+      "edge_strength_priority",
+      "high_performance",
+      "production_milling"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Garr Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family and substrate by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level difficult-material finishing category only; verify flute count, reach, corner style, and target materials by catalog",
+    "family_name": "Aerospace and hard-metal finishing end mill families",
+    "geometry_tags": [
+      "finishing",
+      "difficult_material_candidate",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "M",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "finishing",
+      "profiling",
+      "contouring",
+      "shoulder_milling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Garr Tool Full Catalog 2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.garrtool.com/downloads/",
+    "strategy_fit": [
+      "finishing",
+      "difficult_material_focus",
+      "high_performance"
+    ],
+    "tool_category": "endmill",
+    "verification_status": "staged_unreviewed"
+  }
+]

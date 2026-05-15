@@ -1,0 +1,72 @@
+[
+  {
+    "id": "iscar_ankx",
+    "brand": "ISCAR",
+    "series": "HELIDO H490",
+    "tool_category": "milling_insert",
+    "designation_family": "ANKX",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    }
+  },
+  {
+    "id": "iscar_snmu",
+    "brand": "ISCAR",
+    "series": "S890",
+    "tool_category": "milling_insert",
+    "designation_family": "SNMU",
+    "geometry": {
+      "cutting_edges_per_insert": 8
+    }
+  },
+  {
+    "id": "iscar_onmu",
+    "brand": "ISCAR",
+    "series": "45 degree",
+    "tool_category": "milling_insert",
+    "designation_family": "ONMU",
+    "geometry": {
+      "cutting_edges_per_insert": 16
+    }
+  },
+  {
+    "id": "iscar_wxcu",
+    "brand": "ISCAR",
+    "series": "HELIDO 600",
+    "tool_category": "milling_insert",
+    "designation_family": "WXCU",
+    "geometry": {
+      "cutting_edges_per_insert": 6
+    }
+  },
+  {
+    "id": "iscar_lnmt",
+    "brand": "ISCAR",
+    "series": "T490",
+    "tool_category": "milling_insert",
+    "designation_family": "LNMT",
+    "geometry": {
+      "cutting_edges_per_insert": 4
+    }
+  },
+  {
+    "id": "iscar_tpkt",
+    "brand": "ISCAR",
+    "series": "HELIIQMILL 390",
+    "tool_category": "milling_insert",
+    "designation_family": "TPKT",
+    "geometry": {
+      "cutting_edges_per_insert": 3
+    }
+  },
+  {
+    "id": "iscar_tnkx",
+    "brand": "ISCAR",
+    "series": "HELIDO H690",
+    "tool_category": "milling_insert",
+    "designation_family": "TNKX",
+    "geometry": {
+      "cutting_edges_per_insert": 6
+    }
+  }
+]

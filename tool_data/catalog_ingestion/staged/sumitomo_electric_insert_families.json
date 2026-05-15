@@ -1,0 +1,232 @@
+[
+  {
+    "brand": "Sumitomo Electric",
+    "catalog_number": "",
+    "coating_or_grade": "verify insert grade families and chipbreaker groups by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level turning insert category only; verify shape, relief, chipbreaker family, grade family, and ISO application by catalog",
+    "family_name": "General-purpose turning insert families",
+    "geometry_tags": [
+      "turning_insert",
+      "chipbreaker_requires_review",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "internal_turning",
+      "profiling",
+      "facing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Sumitomo Electric Hardmetal Cutting Tools General Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.sumitool.com/en/downloads/cutting-tools/general-catalog/",
+    "strategy_fit": [
+      "general_purpose",
+      "production_turning",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "turning_insert",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "catalog_number": "",
+    "coating_or_grade": "verify roughing grade families and chipbreaker groups by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level roughing turning insert category only; verify shape, chipbreaker family, grade family, and holder compatibility by catalog",
+    "family_name": "Heavy roughing turning insert families",
+    "geometry_tags": [
+      "turning_insert",
+      "roughing",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "S"
+    ],
+    "operation_fit": [
+      "external_turning",
+      "roughing",
+      "shoulder_turning",
+      "facing"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Sumitomo Electric Hardmetal Cutting Tools General Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.sumitool.com/en/downloads/cutting-tools/general-catalog/",
+    "strategy_fit": [
+      "roughing",
+      "production_turning",
+      "edge_strength_priority"
+    ],
+    "tool_category": "turning_insert",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "catalog_number": "",
+    "coating_or_grade": "verify finishing grade families and chipbreaker groups by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level finishing turning insert category only; verify nose style, chipbreaker family, grade family, and holder compatibility by catalog",
+    "family_name": "Finishing and profiling turning insert families",
+    "geometry_tags": [
+      "turning_insert",
+      "finishing",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "finishing",
+      "profiling",
+      "facing",
+      "copy_turning"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Sumitomo Electric Hardmetal Cutting Tools General Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.sumitool.com/en/downloads/cutting-tools/general-catalog/",
+    "strategy_fit": [
+      "finishing",
+      "surface_finish_priority",
+      "production_turning"
+    ],
+    "tool_category": "turning_insert",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "catalog_number": "",
+    "coating_or_grade": "verify milling insert grade families and cutter systems by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level shoulder milling insert category only; verify insert style, cutter system, grade family, and application range by catalog",
+    "family_name": "Shoulder milling insert families",
+    "geometry_tags": [
+      "milling_insert",
+      "shoulder_milling",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "shoulder_milling",
+      "face_milling",
+      "slotting",
+      "general_milling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Sumitomo Electric Hardmetal Cutting Tools General Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.sumitool.com/en/downloads/cutting-tools/general-catalog/",
+    "strategy_fit": [
+      "production_milling",
+      "general_purpose",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "milling_insert",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "catalog_number": "",
+    "coating_or_grade": "verify face mill insert grade families and cutter systems by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level face milling insert category only; verify insert style, cutter system, grade family, and target materials by catalog",
+    "family_name": "Face milling insert families",
+    "geometry_tags": [
+      "milling_insert",
+      "face_milling",
+      "grade_family_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S"
+    ],
+    "operation_fit": [
+      "face_milling",
+      "roughing",
+      "finishing",
+      "general_milling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Sumitomo Electric Hardmetal Cutting Tools General Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.sumitool.com/en/downloads/cutting-tools/general-catalog/",
+    "strategy_fit": [
+      "production_milling",
+      "face_milling",
+      "insert_grade_verification_required"
+    ],
+    "tool_category": "milling_insert",
+    "verification_status": "staged_unreviewed"
+  },
+  {
+    "brand": "Sumitomo Electric",
+    "catalog_number": "",
+    "coating_or_grade": "verify cutter platform and insert compatibility by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level indexable cutter system category only; verify cutter platform, insert family, entering angle, and target operations by catalog",
+    "family_name": "Indexable milling cutter system families",
+    "geometry_tags": [
+      "indexable_cutter",
+      "system_platform",
+      "insert_compatibility_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "face_milling",
+      "shoulder_milling",
+      "high_feed_milling",
+      "copy_milling"
+    ],
+    "review_notes": "Family-level staged data needs human catalog review before production use.",
+    "source_label": "Sumitomo Electric Hardmetal Cutting Tools General Catalog 2025-2026",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.sumitool.com/en/downloads/cutting-tools/general-catalog/",
+    "strategy_fit": [
+      "production_milling",
+      "cutter_platform",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "indexable_cutter",
+    "verification_status": "staged_unreviewed"
+  }
+]

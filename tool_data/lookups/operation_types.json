@@ -1,0 +1,53 @@
+{
+  "turning": [
+    "longitudinal_turning",
+    "profiling",
+    "facing",
+    "plunging",
+    "heavy_turning",
+    "small_part_turning"
+  ],
+  "grooving": [
+    "od_grooving",
+    "id_grooving",
+    "face_grooving",
+    "parting",
+    "undercutting",
+    "profiling"
+  ],
+  "threading": [
+    "external_threading",
+    "internal_threading",
+    "partial_profile",
+    "full_profile"
+  ],
+  "drilling": [
+    "general_drilling",
+    "deep_hole_drilling",
+    "pilot_drilling",
+    "high_feed_drilling",
+    "indexable_drilling"
+  ],
+  "milling": [
+    "shoulder_milling",
+    "face_milling",
+    "slotting",
+    "plunge_milling",
+    "high_feed_milling",
+    "profiling",
+    "trochoidal_milling",
+    "thread_milling"
+  ],
+  "burnishing": [
+    "surface_finishing",
+    "sizing",
+    "work_hardening",
+    "replacement_for_honing"
+  ],
+  "workholding": [
+    "od_clamping",
+    "id_clamping",
+    "quick_jaw_change",
+    "high_low_clamping"
+  ]
+}

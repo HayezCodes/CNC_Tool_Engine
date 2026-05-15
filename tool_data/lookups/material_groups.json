@@ -1,0 +1,90 @@
+{
+  "P": {
+    "name": "Steel",
+    "subgroups": [
+      "free_machining_steel",
+      "low_carbon_steel",
+      "medium_carbon_steel",
+      "alloy_steel",
+      "high_strength_alloy",
+      "structural_steel",
+      "tool_steel"
+    ],
+    "characteristics": [
+      "continuous_chip",
+      "moderate_heat",
+      "general_purpose"
+    ]
+  },
+  "M": {
+    "name": "Stainless Steel",
+    "subgroups": [
+      "austenitic",
+      "martensitic",
+      "duplex",
+      "cast_stainless"
+    ],
+    "characteristics": [
+      "work_hardening",
+      "sticky",
+      "heat_resistant"
+    ]
+  },
+  "K": {
+    "name": "Cast Iron",
+    "subgroups": [
+      "gray_cast_iron",
+      "nodular_cast_iron",
+      "ductile_cast_iron",
+      "chilled_cast_iron"
+    ],
+    "characteristics": [
+      "abrasive",
+      "short_chip",
+      "brittle"
+    ]
+  },
+  "N": {
+    "name": "Non-Ferrous",
+    "subgroups": [
+      "aluminum",
+      "copper",
+      "brass",
+      "plastics",
+      "graphite",
+      "composites"
+    ],
+    "characteristics": [
+      "soft",
+      "built_up_edge",
+      "low_cutting_force"
+    ]
+  },
+  "S": {
+    "name": "Super Alloys",
+    "subgroups": [
+      "titanium",
+      "nickel_alloy",
+      "cobalt_alloy",
+      "heat_resistant_alloy"
+    ],
+    "characteristics": [
+      "heat_resistant",
+      "tough",
+      "notch_wear"
+    ]
+  },
+  "H": {
+    "name": "Hardened Materials",
+    "subgroups": [
+      "hardened_steel",
+      "tool_steel_hardened",
+      "chilled_cast_iron"
+    ],
+    "characteristics": [
+      "hard",
+      "abrasive",
+      "edge_security_critical"
+    ]
+  }
+}

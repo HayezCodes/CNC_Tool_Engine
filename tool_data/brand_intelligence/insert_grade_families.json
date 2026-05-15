@@ -1,0 +1,58 @@
+[
+  {
+    "brand": "Sumitomo Electric",
+    "insert_focus": ["turning", "milling", "drilling"],
+    "material_fit": ["P", "M", "S", "H"],
+    "application_fit": ["production_turning", "general_turning", "interrupted_cut_candidate"],
+    "grade_behavior_tags": ["wear_resistance_candidate", "toughness_candidate", "production_stability"],
+    "chipbreaker_behavior_tags": ["finishing_candidate", "medium_turning_candidate", "roughing_candidate"],
+    "shop_use_notes": [
+      "Use as a production insert candidate when consistency and insert life matter.",
+      "Verify exact grade, chipbreaker, and application range from official catalog."
+    ],
+    "source_status": "family_level_insert_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Kyocera",
+    "insert_focus": ["turning", "milling", "drilling", "grooving", "threading"],
+    "material_fit": ["P", "M", "K", "N", "S", "H"],
+    "application_fit": ["production_turning", "general_turning", "interrupted_cut_candidate", "cost_effective_insert_candidate"],
+    "grade_behavior_tags": ["wear_resistance_candidate", "toughness_candidate", "cost_effective_candidate"],
+    "chipbreaker_behavior_tags": ["finishing_candidate", "medium_turning_candidate", "roughing_candidate"],
+    "shop_use_notes": [
+      "Use as a broad production and cost-conscious insert family candidate.",
+      "Verify exact grade, chipbreaker, holder, and material range from current catalog."
+    ],
+    "source_status": "family_level_insert_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Tungaloy",
+    "insert_focus": ["turning", "milling", "grooving", "threading"],
+    "material_fit": ["P", "M", "K", "S", "H"],
+    "application_fit": ["production_turning", "general_turning", "grooving", "threading", "high_feed_milling", "interrupted_cut_candidate"],
+    "grade_behavior_tags": ["wear_resistance_candidate", "toughness_candidate", "production_stability"],
+    "chipbreaker_behavior_tags": ["finishing_candidate", "medium_turning_candidate", "roughing_candidate", "grooving_candidate"],
+    "shop_use_notes": [
+      "Use as a production insert candidate for turning, grooving, threading, and high-feed/indexable milling families.",
+      "Verify exact insert grade, chipbreaker, cutter body, and application limits from official catalog."
+    ],
+    "source_status": "family_level_insert_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  },
+  {
+    "brand": "Sandvik Coromant",
+    "insert_focus": ["turning", "milling", "drilling", "grooving", "threading"],
+    "material_fit": ["P", "M", "K", "N", "S", "H"],
+    "application_fit": ["production_turning", "general_turning", "interrupted_cut_candidate", "high_feed_milling"],
+    "grade_behavior_tags": ["wear_resistance_candidate", "toughness_candidate", "production_stability"],
+    "chipbreaker_behavior_tags": ["finishing_candidate", "medium_turning_candidate", "roughing_candidate", "chip_control_candidate"],
+    "shop_use_notes": [
+      "Use as a broad premium insert family candidate where the existing lookup data already includes Sandvik Coromant records.",
+      "Do not treat this as an equivalency claim; verify the exact grade and chipbreaker from the current catalog."
+    ],
+    "source_status": "family_level_insert_guidance",
+    "verification_level": "needs_catalog_specific_validation"
+  }
+]

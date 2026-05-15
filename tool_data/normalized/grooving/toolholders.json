@@ -1,0 +1,117 @@
+[
+  {
+    "id": "cx-tlsr_l",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok",
+    "tool_category": "grooving_holder",
+    "designation": "Cx-TLSR/L",
+    "geometry": {
+      "holder_style": "capto_or_shank"
+    },
+    "compatibility": {
+      "insert_families": [
+        "TLG",
+        "TLR"
+      ],
+      "operations": [
+        "grooving"
+      ]
+    }
+  },
+  {
+    "id": "cx-tler_l",
+    "brand": "Sandvik Coromant",
+    "series": "Top-Lok",
+    "tool_category": "grooving_holder",
+    "designation": "Cx-TLER/L",
+    "geometry": {
+      "holder_style": "capto_or_shank"
+    },
+    "compatibility": {
+      "insert_families": [
+        "TLG",
+        "TLR"
+      ],
+      "operations": [
+        "face_grooving"
+      ]
+    }
+  },
+  {
+    "id": "wmt_integral_shank",
+    "brand": "WIDIA",
+    "series": "WMT",
+    "tool_category": "grooving_holder",
+    "designation": "WMT integral shank",
+    "geometry": {
+      "holder_style": "integral_shank"
+    },
+    "compatibility": {
+      "insert_families": [
+        "WMT"
+      ],
+      "operations": [
+        "cutoff",
+        "grooving",
+        "turning"
+      ]
+    }
+  },
+  {
+    "id": "ranger_adjustable_cartridge",
+    "brand": "WIDIA",
+    "series": "Ranger",
+    "tool_category": "grooving_holder",
+    "designation": "Ranger adjustable cartridge",
+    "geometry": {
+      "holder_style": "cartridge"
+    },
+    "compatibility": {
+      "insert_families": [
+        "Ranger"
+      ],
+      "operations": [
+        "face_grooving"
+      ]
+    }
+  },
+  {
+    "id": "s-loc_boring_holder",
+    "brand": "WIDIA",
+    "series": "S-LOC",
+    "tool_category": "grooving_holder",
+    "designation": "S-LOC boring holder",
+    "geometry": {
+      "holder_style": "small_bore_id"
+    },
+    "compatibility": {
+      "insert_families": [
+        "S-LOC"
+      ],
+      "operations": [
+        "id_grooving",
+        "threading"
+      ]
+    }
+  },
+  {
+    "id": "self-grip_blade",
+    "brand": "ISCAR",
+    "series": "Self-Grip",
+    "tool_category": "grooving_holder",
+    "designation": "Self-Grip blade",
+    "geometry": {
+      "holder_style": "blade"
+    },
+    "compatibility": {
+      "insert_families": [
+        "GTN",
+        "GFN"
+      ],
+      "operations": [
+        "parting",
+        "grooving"
+      ]
+    }
+  }
+]

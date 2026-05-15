@@ -1,0 +1,248 @@
+[
+  {
+    "brand": "Harvey Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level chamfer mill category only; verify angle, diameter, flute count, reach, and material application by catalog",
+    "family_name": "Chamfer mill families",
+    "geometry_tags": [
+      "chamfer_mill",
+      "angle_geometry_requires_review",
+      "specialty_cutter"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "chamfer",
+      "deburring",
+      "edge_breaking",
+      "spotting"
+    ],
+    "review_date": "2026-05-13",
+    "review_notes": "Reviewed as family-level guidance only. Exact geometry, dimensions, coating, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Harvey Tool 2026 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.harveytool.com/catalog-request",
+    "strategy_fit": [
+      "specialty_milling",
+      "edge_preparation",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "chamfer_mill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Harvey Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level keyseat cutter category only; verify cutter width, diameter, neck clearance, reach, and arbor/shank details by catalog",
+    "family_name": "Keyseat cutter families",
+    "geometry_tags": [
+      "keyseat_cutter",
+      "slotting_candidate",
+      "clearance_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "keyseat",
+      "keyway",
+      "slotting",
+      "undercutting"
+    ],
+    "review_date": "2026-05-13",
+    "review_notes": "Reviewed as family-level guidance only. Exact geometry, dimensions, coating, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Harvey Tool 2026 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.harveytool.com/catalog-request",
+    "strategy_fit": [
+      "specialty_feature",
+      "slotting",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "keyseat_cutter",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Harvey Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level thread mill category only; verify thread form, pitch range, cutter diameter, reach, and programming requirements by catalog",
+    "family_name": "Thread mill families",
+    "geometry_tags": [
+      "thread_mill",
+      "thread_form_requires_review",
+      "solid_carbide"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "threading",
+      "internal_threading",
+      "external_threading",
+      "thread_milling"
+    ],
+    "review_date": "2026-05-13",
+    "review_notes": "Reviewed as family-level guidance only. Exact geometry, dimensions, coating, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Harvey Tool 2026 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.harveytool.com/catalog-request",
+    "strategy_fit": [
+      "thread_milling",
+      "specialty_feature",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "thread_mill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Harvey Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level miniature end mill category only; verify diameter, reach, flute count, neck clearance, and deflection risk by catalog",
+    "family_name": "Miniature end mill families",
+    "geometry_tags": [
+      "miniature_endmill",
+      "small_feature_candidate",
+      "deflection_risk_requires_review"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "miniature_milling",
+      "small_feature_milling",
+      "profiling",
+      "finishing"
+    ],
+    "review_date": "2026-05-13",
+    "review_notes": "Reviewed as family-level guidance only. Exact geometry, dimensions, coating, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Harvey Tool 2026 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.harveytool.com/catalog-request",
+    "strategy_fit": [
+      "miniature_work",
+      "small_feature_access",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "miniature_endmill",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Harvey Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level undercutting tool category only; verify cutter form, neck clearance, reach, shank clearance, and application limits by catalog",
+    "family_name": "Undercutting tool families",
+    "geometry_tags": [
+      "undercut_tool",
+      "clearance_requires_review",
+      "specialty_cutter"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "undercutting",
+      "relief_milling",
+      "back_chamfering",
+      "specialty_milling"
+    ],
+    "review_date": "2026-05-13",
+    "review_notes": "Reviewed as family-level guidance only. Exact geometry, dimensions, coating, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Harvey Tool 2026 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.harveytool.com/catalog-request",
+    "strategy_fit": [
+      "specialty_feature",
+      "clearance_priority",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "undercut_tool",
+    "verification_status": "reviewed_family_level"
+  },
+  {
+    "brand": "Harvey Tool",
+    "catalog_number": "",
+    "coating_or_grade": "verify coating family by catalog",
+    "cutting_data_status": "not_imported",
+    "dimension_summary": "family-level specialty milling category only; verify exact cutter form, clearance, reach, coating, and application by catalog",
+    "family_name": "Specialty milling cutter families",
+    "geometry_tags": [
+      "specialty_milling",
+      "geometry_requires_review",
+      "catalog_review_required"
+    ],
+    "material_fit": [
+      "P",
+      "M",
+      "K",
+      "N",
+      "S",
+      "H"
+    ],
+    "operation_fit": [
+      "specialty_milling",
+      "feature_milling",
+      "profiling",
+      "problem_solving"
+    ],
+    "review_date": "2026-05-13",
+    "review_notes": "Reviewed as family-level guidance only. Exact geometry, dimensions, coating, catalog numbers, and cutting data must still be verified from the manufacturer catalog before production use.",
+    "reviewer": "Joshua Hayes",
+    "source_label": "Harvey Tool 2026 Product Catalog",
+    "source_page_reference": "",
+    "source_type": "official_catalog_page",
+    "source_url": "https://www.harveytool.com/catalog-request",
+    "strategy_fit": [
+      "specialty_feature",
+      "problem_solving",
+      "manual_catalog_review_required"
+    ],
+    "tool_category": "specialty_milling",
+    "verification_status": "reviewed_family_level"
+  }
+]

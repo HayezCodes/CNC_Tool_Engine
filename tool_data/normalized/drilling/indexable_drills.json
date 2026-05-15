@@ -1,0 +1,538 @@
+[
+  {
+    "id": "generic_indexable_drill",
+    "brand": "Allied Machine & Engineering",
+    "series": "T-A/GEN3",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": "indexable_range",
+      "l_d": null,
+      "shank_type": "spade_or_indexable"
+    },
+    "insert_system": {
+      "grade": "various",
+      "breaker": "various"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_drs",
+    "brand": "Kyocera",
+    "series": "DRS",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        10.0,
+        12.5
+      ],
+      "l_d": 2,
+      "sleeve": "adjustable"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_drz",
+    "brand": "Kyocera",
+    "series": "DRZ",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        13.0,
+        59.0
+      ],
+      "l_d": 4
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_she",
+    "brand": "Kyocera",
+    "series": "SHE",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        60.0,
+        999.0
+      ],
+      "mount": "cartridge"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "large_diameter"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "kyocera_shem",
+    "brand": "Kyocera",
+    "series": "SHEM",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        13.0,
+        59.0
+      ],
+      "l_d": 3
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "taf_2d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        20.0,
+        56.0
+      ],
+      "l_d": 2,
+      "shank_type": "flange"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "U1/U2/U3"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "taf_3d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        20.0,
+        56.0
+      ],
+      "l_d": 3,
+      "shank_type": "flange"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "U1/U2/U3"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "taf_4d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAF",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        20.0,
+        56.0
+      ],
+      "l_d": 4,
+      "shank_type": "flange"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "U1/U2/U3"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "taw_3d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        10.0,
+        30.4
+      ],
+      "l_d": 3,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF/DP5010/VP10H",
+      "breaker": "general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "taw_5d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        10.0,
+        30.4
+      ],
+      "l_d": 5,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF/DP5010/VP10H",
+      "breaker": "general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "taw_8d",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        14.0,
+        30.4
+      ],
+      "l_d": 8,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF/DP5010/VP10H",
+      "breaker": "general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "tawsb_bridge_construction",
+    "brand": "Mitsubishi Materials",
+    "series": "TAW",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        24.5,
+        26.7
+      ],
+      "l_d": 3,
+      "shank_type": "straight"
+    },
+    "insert_system": {
+      "grade": "VP15TF",
+      "breaker": "bridge"
+    },
+    "materials": {
+      "iso_groups": [
+        "P"
+      ]
+    },
+    "application": {
+      "operations": [],
+      "strategy": ""
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_800",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 800",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "tip_style": "indexable_insert_head"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_801",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 801",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "tip_style": "asymmetrical_indexable"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "indexable_general"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_805",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 805",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "hole_depth_x_d": 15,
+      "tip_style": "indexable_insert"
+    },
+    "application": {
+      "operations": [
+        "drilling",
+        "deep_hole_drilling"
+      ],
+      "strategy": "deep_hole_conventional_machine"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": [
+      "1025"
+    ]
+  },
+  {
+    "id": "sandvik_corodrill_818",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 818",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        40.0,
+        301.75
+      ],
+      "hole_tolerance": "IT10"
+    },
+    "application": {
+      "operations": [
+        "counterboring",
+        "drilling",
+        "deep_hole_drilling"
+      ],
+      "strategy": "large_diameter_counterboring"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_870",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 870",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "tip_style": "exchangeable_tip"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "exchangeable_tip"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_880",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 880",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "tip_style": "indexable_insert"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "large_diameter"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K"
+      ]
+    },
+    "recommended_grades": []
+  },
+  {
+    "id": "sandvik_corodrill_881",
+    "brand": "Sandvik Coromant",
+    "series": "CoroDrill 881",
+    "tool_category": "indexable_drill",
+    "geometry": {
+      "diameter_range_mm": [
+        14.0,
+        23.5
+      ],
+      "l_d_range": [
+        2,
+        5
+      ],
+      "tip_style": "indexable_insert"
+    },
+    "application": {
+      "operations": [
+        "drilling"
+      ],
+      "strategy": "small_hole_indexable"
+    },
+    "materials": {
+      "iso_groups": [
+        "P",
+        "M",
+        "K",
+        "N",
+        "S",
+        "H"
+      ]
+    },
+    "recommended_grades": [
+      "1044",
+      "4024",
+      "4044"
+    ]
+  }
+]

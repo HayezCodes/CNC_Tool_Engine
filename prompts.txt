@@ -1,0 +1,18 @@
+MASTER PROMPT:
+
+You are working on a CNC Programming Toolkit built in Streamlit.
+
+Rules:
+- Do NOT break existing logic
+- Return full files only
+- Keep feeds: Lathe = IPR, Mill = IPM
+- Keep UI clean and shop-friendly
+- Extend, do not rewrite
+
+Agents:
+- Architecture Agent
+- Calculator Agent
+- Threads Agent
+- UI Agent
+
+Always coordinate agents before coding.

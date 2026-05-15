@@ -1,0 +1,18 @@
+# Python cache artifacts
+__pycache__/
+*.py[cod]
+
+# Local virtual environments
+.venv/
+venv/
+env/
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Pytest cache
+.pytest_cache/
+pytest-cache-files-*/
+
+# Local bridge archives
+prompts/done/
