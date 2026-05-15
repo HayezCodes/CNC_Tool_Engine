@@ -276,3 +276,47 @@ def explain_tool_match(record: dict, query: str, filters: dict | None = None) ->
         reasons.append(f"verification status: {record['verification_status']}")
 
     return reasons or ["record available in tooling search foundation"]
+
+
+def suggest_tool_candidates(
+    operation: str,
+    material_group: str,
+    tool_category: str | None = None,
+    brand: str | None = None,
+    limit: int = 5,
+) -> list[dict[str, Any]]:
+    """Return exact-tool candidate records from the Enterprise Tooling Search index.
+
+    Filters by operation_fit (operation) and material_fit (material_group).
+    Optional tool_category and brand filters narrow results further. Records are
+    ranked by match strength (operation/material presence plus field completeness)
+    and returned up to limit.
+
+    No forbidden feed/speed keys are ever returned — records come from the
+    normalized index which enforces cutting_data_status = not_imported.
+    """
+    filters: dict[str, Any] = {
+        "operation": operation,
+        "material_group": material_group,
+    }
+    if tool_category:
+        filters["tool_category"] = tool_category
+    if brand:
+        filters["brand"] = brand
+
+    matched = filter_tooling_records(load_tooling_records(), filters)
+
+    def _score(record: dict[str, Any]) -> int:
+        score = 0
+        norm_op = normalize_tool_query(operation).replace(" ", "_")
+        if norm_op in record.get("operation_fit", []):
+            score += 3
+        if str(material_group).strip().upper() in record.get("material_fit", []):
+            score += 2
+        for field in ("grade", "chipbreaker", "coating", "series", "family_name", "designation"):
+            if record.get(field):
+                score += 1
+        return score
+
+    matched.sort(key=lambda r: (-_score(r), r.get("brand", ""), r.get("manufacturer_part_number", "")))
+    return matched[:limit]

@@ -38,7 +38,9 @@ from grade_engine.problem_solver import solve_operation_problem
 from grade_engine.tooling_search import (
     explain_tool_match,
     load_tooling_records,
+    normalize_tool_query,
     search_tooling_records,
+    suggest_tool_candidates,
 )
 from tool_lookup.cross_reference import cross_reference_tool
 from tool_lookup.index import load_lookup_records
@@ -960,6 +962,21 @@ def recommend_turning(common: dict[str, Any]) -> None:
             ],
             raw_scoring_lines=[f"Fit score: {score}"],
         )
+    _turning_op_map = {
+        "Longitudinal turning": "external_turning",
+        "Facing": "facing",
+        "Profiling": "profiling",
+        "Plunging": "plunging",
+    }
+    _render_exact_tool_candidates_expander(
+        suggest_tool_candidates(
+            _turning_op_map.get(operation, "external_turning"),
+            common["material_group"],
+            tool_category="turning_insert",
+        ),
+        operation,
+        common["material_group"],
+    )
 
 
 def recommend_drilling(common: dict[str, Any]) -> None:
@@ -1077,6 +1094,16 @@ def recommend_drilling(common: dict[str, Any]) -> None:
             ],
             raw_scoring_lines=[f"Fit score: {score}"],
         )
+    _drill_cat = "drill" if drill_type == "Solid Carbide Drill" else "indexable_drill"
+    _render_exact_tool_candidates_expander(
+        suggest_tool_candidates(
+            "drilling",
+            common["material_group"],
+            tool_category=_drill_cat,
+        ),
+        "drilling",
+        common["material_group"],
+    )
 
 
 def recommend_milling(common: dict[str, Any], mode: str) -> None:
@@ -1216,6 +1243,34 @@ def recommend_milling(common: dict[str, Any], mode: str) -> None:
             ],
             raw_scoring_lines=[f"Fit score: {score}"],
         )
+    if mode == "ENDMILL":
+        _mill_op_map = {
+            "Profiling": "profiling",
+            "Slotting": "slot_milling",
+            "High Velocity": "general_milling",
+            "Roughing": "roughing",
+            "Finishing": "finishing",
+        }
+        _mill_op = _mill_op_map.get(operation_label, "general_milling")
+        _mill_cat = "endmill"
+    else:
+        _mill_op_map = {
+            "Facing": "face_milling",
+            "Shoulder Milling": "shoulder_milling",
+            "Plunge Milling": "plunge_milling",
+            "Slotting": "slot_milling",
+        }
+        _mill_op = _mill_op_map.get(operation_label, "face_milling")
+        _mill_cat = "milling_insert"
+    _render_exact_tool_candidates_expander(
+        suggest_tool_candidates(
+            _mill_op,
+            common["material_group"],
+            tool_category=_mill_cat,
+        ),
+        operation_label,
+        common["material_group"],
+    )
 
 
 def recommend_grooving(common: dict[str, Any]) -> None:
@@ -1293,6 +1348,21 @@ def recommend_grooving(common: dict[str, Any]) -> None:
             ],
             raw_scoring_lines=[f"Fit score: {score}"],
         )
+    _grooving_op_map = {
+        "Grooving": "grooving",
+        "Parting": "parting",
+        "Face Grooving": "face_grooving",
+        "Undercutting": "grooving",
+    }
+    _render_exact_tool_candidates_expander(
+        suggest_tool_candidates(
+            _grooving_op_map.get(operation_label, "grooving"),
+            common["material_group"],
+            tool_category="grooving_insert",
+        ),
+        operation_label,
+        common["material_group"],
+    )
     with st.expander("Matching grooving grades"):
         if grades:
             st.dataframe(
@@ -1374,6 +1444,15 @@ def recommend_threading(common: dict[str, Any]) -> None:
             ],
             raw_scoring_lines=[f"Fit score: {score}"],
         )
+    _render_exact_tool_candidates_expander(
+        suggest_tool_candidates(
+            thread_type,
+            common["material_group"],
+            tool_category="threading_insert",
+        ),
+        thread_label,
+        common["material_group"],
+    )
     with st.expander("Matching threading grades"):
         if grades:
             st.dataframe(
@@ -1404,6 +1483,37 @@ def recommend_workholding() -> None:
             st.write(f"**{clean_text(row.get('brand', ''))} — {clean_text(row.get('series', ''))}**")
             st.write(f"Designation: {clean_text(row.get('designation', row.get('id', '')))}")
             st.write(f"Performance profile: {format_mapping(row.get('performance_profile', {}))}")
+
+
+def _render_exact_tool_candidates_expander(
+    candidates: list[dict[str, Any]],
+    operation: str,
+    material_group: str,
+) -> None:
+    with st.expander("Exact Tool Candidates"):
+        if not candidates:
+            st.caption(
+                "No exact-tool candidates matched yet. "
+                "Use Tooling Search for manual lookup."
+            )
+            return
+        st.caption(
+            f"Supplemental exact-tool candidates from the Enterprise Tooling Search index — "
+            f"matched to **{operation}** / **{material_group}**. "
+            "Verification status and cutting data status are shown on each card. "
+            "These do not replace the recommendation families above."
+        )
+        norm_op = normalize_tool_query(operation).replace(" ", "_")
+        mat = str(material_group).strip().upper()
+        for record in candidates:
+            reasons: list[str] = []
+            if norm_op in record.get("operation_fit", []):
+                reasons.append(f"operation matched: {norm_op}")
+            if mat in record.get("material_fit", []):
+                reasons.append(f"material matched: {mat}")
+            if not reasons:
+                reasons.append("matched from Enterprise Tooling Search index")
+            _render_tooling_search_card(record, reasons)
 
 
 def _render_tooling_search_card(record: dict[str, Any], reasons: list[str]) -> None:
