@@ -1,7 +1,7 @@
 {
   "audit_date": "2026-05-15",
   "records_dir": "C:\\Users\\hayes\\Desktop\\CNC_Tool_Engine-main\\tool_data\\tooling_search\\records",
-  "files_audited": 13,
+  "files_audited": 38,
   "file_summaries": [
     {
       "file": "dormer_pramet_imported_tools.json",
@@ -9,7 +9,22 @@
       "issue_count": 0
     },
     {
+      "file": "garr_tool_imported_tools.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
       "file": "guhring_imported_tools.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "harvey_tool_imported_tools.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "helical_solutions_imported_tools.json",
       "record_count": 8,
       "issue_count": 0
     },
@@ -19,8 +34,23 @@
       "issue_count": 0
     },
     {
+      "file": "kennametal_imported_tools.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
       "file": "kennametal_tooling_records.json",
       "record_count": 11,
+      "issue_count": 0
+    },
+    {
+      "file": "kyocera_imported_tools.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
+      "file": "micro_100_imported_tools.json",
+      "record_count": 8,
       "issue_count": 0
     },
     {
@@ -29,7 +59,32 @@
       "issue_count": 0
     },
     {
+      "file": "niagara_cutter_imported_tools.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\dormer_pramet_reviewed_tooling_records.json",
+      "record_count": 10,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\garr_tool_reviewed_tooling_records.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
       "file": "reviewed\\guhring_reviewed_tools.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\harvey_tool_reviewed_tooling_records.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\helical_solutions_reviewed_tooling_records.json",
       "record_count": 8,
       "issue_count": 0
     },
@@ -39,12 +94,57 @@
       "issue_count": 0
     },
     {
+      "file": "reviewed\\kennametal_reviewed_tooling_records.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\kyocera_reviewed_tooling_records.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\micro_100_reviewed_tooling_records.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
       "file": "reviewed\\mitsubishi_materials_reviewed_tools.json",
       "record_count": 7,
       "issue_count": 0
     },
     {
+      "file": "reviewed\\niagara_cutter_reviewed_tooling_records.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\sandvik_coromant_reviewed_tooling_records.json",
+      "record_count": 10,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\seco_tools_reviewed_tooling_records.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\sumitomo_electric_reviewed_tooling_records.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\tungaloy_reviewed_tooling_records.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
       "file": "reviewed\\walter_reviewed_tooling_records.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
+      "file": "reviewed\\yg_1_reviewed_tooling_records.json",
       "record_count": 9,
       "issue_count": 0
     },
@@ -54,8 +154,18 @@
       "issue_count": 0
     },
     {
+      "file": "sandvik_coromant_imported_tools.json",
+      "record_count": 10,
+      "issue_count": 0
+    },
+    {
       "file": "sandvik_coromant_tooling_records.json",
       "record_count": 12,
+      "issue_count": 0
+    },
+    {
+      "file": "seco_imported_tools.json",
+      "record_count": 9,
       "issue_count": 0
     },
     {
@@ -64,7 +174,22 @@
       "issue_count": 0
     },
     {
+      "file": "sumitomo_electric_imported_tools.json",
+      "record_count": 8,
+      "issue_count": 0
+    },
+    {
+      "file": "tungaloy_imported_tools.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
       "file": "walter_imported_tools.json",
+      "record_count": 9,
+      "issue_count": 0
+    },
+    {
+      "file": "yg1_imported_tools.json",
       "record_count": 9,
       "issue_count": 0
     }
