@@ -56,36 +56,84 @@ Manufacturer Data Source
 ```
 tools/
   tooling_adapters/
-    __init__.py                                   # namespace package marker
-    base_adapter.py                               # shared contract, helpers, validation bridge
-    gtc_iso13399_adapter.py                       # GTC / ISO 13399 XML adapter
-    mitsubishi_materials_adapter.py               # Mitsubishi Materials JSON adapter
-    guhring_adapter.py                            # Guhring KG JSON adapter
-    iscar_adapter.py                              # Iscar Ltd. JSON adapter
-    walter_adapter.py                             # Walter AG JSON adapter
-    dormer_pramet_adapter.py                      # Dormer Pramet JSON adapter
+    __init__.py                                        # namespace package marker
+    base_adapter.py                                    # shared contract, helpers, validation bridge
+    gtc_iso13399_adapter.py                            # GTC / ISO 13399 XML adapter
+    mitsubishi_materials_adapter.py                    # Mitsubishi Materials JSON adapter
+    guhring_adapter.py                                 # Guhring KG JSON adapter
+    iscar_adapter.py                                   # Iscar Ltd. JSON adapter
+    walter_adapter.py                                  # Walter AG JSON adapter
+    dormer_pramet_adapter.py                           # Dormer Pramet JSON adapter
+    sandvik_coromant_adapter.py                        # Sandvik Coromant JSON adapter
+    seco_adapter.py                                    # Seco Tools JSON adapter
+    kennametal_adapter.py                              # Kennametal JSON adapter
+    tungaloy_adapter.py                                # Tungaloy JSON adapter
+    kyocera_adapter.py                                 # Kyocera JSON adapter
+    sumitomo_electric_adapter.py                       # Sumitomo Electric JSON adapter
+    yg1_adapter.py                                     # YG-1 JSON adapter
+    helical_solutions_adapter.py                       # Helical Solutions JSON adapter
+    harvey_tool_adapter.py                             # Harvey Tool JSON adapter
+    niagara_cutter_adapter.py                          # Niagara Cutter JSON adapter
+    garr_tool_adapter.py                               # Garr Tool JSON adapter
+    micro_100_adapter.py                               # Micro 100 JSON adapter
     samples/
-      sample_gtc_iso13399.xml                     # synthetic test fixture (NOT manufacturer data)
-      sample_mitsubishi_materials_structured.json # synthetic test fixture (NOT manufacturer data)
-      sample_guhring_structured.json              # synthetic test fixture (NOT manufacturer data)
-      sample_iscar_structured.json                # synthetic test fixture (NOT manufacturer data)
-      sample_walter_structured.json               # synthetic test fixture (NOT manufacturer data)
-      sample_dormer_pramet_structured.json        # synthetic test fixture (NOT manufacturer data)
+      sample_gtc_iso13399.xml                          # synthetic test fixture (NOT manufacturer data)
+      sample_mitsubishi_materials_structured.json      # synthetic test fixture (NOT manufacturer data)
+      sample_guhring_structured.json                   # synthetic test fixture (NOT manufacturer data)
+      sample_iscar_structured.json                     # synthetic test fixture (NOT manufacturer data)
+      sample_walter_structured.json                    # synthetic test fixture (NOT manufacturer data)
+      sample_dormer_pramet_structured.json             # synthetic test fixture (NOT manufacturer data)
+      sample_sandvik_coromant_structured.json          # synthetic test fixture (NOT manufacturer data)
+      sample_seco_structured.json                      # synthetic test fixture (NOT manufacturer data)
+      sample_kennametal_structured.json                # synthetic test fixture (NOT manufacturer data)
+      sample_tungaloy_structured.json                  # synthetic test fixture (NOT manufacturer data)
+      sample_kyocera_structured.json                   # synthetic test fixture (NOT manufacturer data)
+      sample_sumitomo_electric_structured.json         # synthetic test fixture (NOT manufacturer data)
+      sample_yg1_structured.json                       # synthetic test fixture (NOT manufacturer data)
+      sample_helical_solutions_structured.json         # synthetic test fixture (NOT manufacturer data)
+      sample_harvey_tool_structured.json               # synthetic test fixture (NOT manufacturer data)
+      sample_niagara_cutter_structured.json            # synthetic test fixture (NOT manufacturer data)
+      sample_garr_tool_structured.json                 # synthetic test fixture (NOT manufacturer data)
+      sample_micro_100_structured.json                 # synthetic test fixture (NOT manufacturer data)
     output/
-      .gitkeep                                    # output directory stub
-      <name>_records.json                         # adapter output (staged, not yet in records/)
+      .gitkeep                                         # output directory stub
+      <name>_records.json                              # adapter output (staged, not yet in records/)
 
-  parse_gtc_iso13399_sample.py          # runner: parse sample, validate, write output
-  parse_mitsubishi_materials_sample.py  # runner: parse Mitsubishi sample, validate, write output
-  parse_guhring_sample.py               # runner: parse Guhring sample, validate, write output
-  parse_iscar_sample.py                 # runner: parse Iscar sample, validate, write output
-  parse_walter_sample.py                # runner: parse Walter sample, validate, write output
-  parse_dormer_pramet_sample.py         # runner: parse Dormer Pramet sample, validate, write output
-  import_mitsubishi_adapter_output.py   # importer: adapter output → records/
-  import_guhring_adapter_output.py      # importer: adapter output → records/
-  import_iscar_adapter_output.py        # importer: adapter output → records/
-  import_walter_adapter_output.py       # importer: adapter output → records/
-  import_dormer_pramet_adapter_output.py # importer: adapter output → records/
+  parse_gtc_iso13399_sample.py               # runner: parse sample, validate, write output
+  parse_mitsubishi_materials_sample.py       # runner: parse Mitsubishi sample, validate, write output
+  parse_guhring_sample.py                    # runner: parse Guhring sample
+  parse_iscar_sample.py                      # runner: parse Iscar sample
+  parse_walter_sample.py                     # runner: parse Walter sample
+  parse_dormer_pramet_sample.py              # runner: parse Dormer Pramet sample
+  parse_sandvik_coromant_sample.py           # runner: parse Sandvik Coromant sample
+  parse_seco_sample.py                       # runner: parse Seco Tools sample
+  parse_kennametal_sample.py                 # runner: parse Kennametal sample
+  parse_tungaloy_sample.py                   # runner: parse Tungaloy sample
+  parse_kyocera_sample.py                    # runner: parse Kyocera sample
+  parse_sumitomo_electric_sample.py          # runner: parse Sumitomo Electric sample
+  parse_yg1_sample.py                        # runner: parse YG-1 sample
+  parse_helical_solutions_sample.py          # runner: parse Helical Solutions sample
+  parse_harvey_tool_sample.py                # runner: parse Harvey Tool sample
+  parse_niagara_cutter_sample.py             # runner: parse Niagara Cutter sample
+  parse_garr_tool_sample.py                  # runner: parse Garr Tool sample
+  parse_micro_100_sample.py                  # runner: parse Micro 100 sample
+  import_mitsubishi_adapter_output.py        # importer: adapter output → records/
+  import_guhring_adapter_output.py           # importer: adapter output → records/
+  import_iscar_adapter_output.py             # importer: adapter output → records/
+  import_walter_adapter_output.py            # importer: adapter output → records/
+  import_dormer_pramet_adapter_output.py     # importer: adapter output → records/
+  import_sandvik_coromant_adapter_output.py  # importer: adapter output → records/
+  import_seco_adapter_output.py              # importer: adapter output → records/
+  import_kennametal_adapter_output.py        # importer: adapter output → records/
+  import_tungaloy_adapter_output.py          # importer: adapter output → records/
+  import_kyocera_adapter_output.py           # importer: adapter output → records/
+  import_sumitomo_electric_adapter_output.py # importer: adapter output → records/
+  import_yg1_adapter_output.py               # importer: adapter output → records/
+  import_helical_solutions_adapter_output.py # importer: adapter output → records/
+  import_harvey_tool_adapter_output.py       # importer: adapter output → records/
+  import_niagara_cutter_adapter_output.py    # importer: adapter output → records/
+  import_garr_tool_adapter_output.py         # importer: adapter output → records/
+  import_micro_100_adapter_output.py         # importer: adapter output → records/
 ```
 
 ## Base Adapter (`base_adapter.py`)
@@ -387,6 +435,456 @@ python tools/import_dormer_pramet_adapter_output.py --dry-run
 ```
 
 Output is written to `tools/tooling_adapters/output/dormer_pramet_sample_records.json` (10 synthetic fixture records: 2 drills (solid carbide + HSS-cobalt), 1 tap, 1 thread mill, 1 reamer, 1 countersink, 1 endmill, 1 Pramet turning insert, 1 Pramet milling insert, 1 Pramet grooving insert). Imported records go to `tool_data/tooling_search/records/dormer_pramet_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/dormer_pramet_reviewed_tooling_records.json`.
+
+## Sandvik Coromant Adapter (`sandvik_coromant_adapter.py`)
+
+Parses Sandvik Coromant-style structured JSON tooling records into normalized tooling search records. Sandvik Coromant (part of Sandvik AB) is a Swedish precision tooling manufacturer and one of the world's largest cutting tool suppliers. Key product families: CoroTurn turning inserts and toolholders, CoroMill milling inserts and cutters, CoroDrill solid carbide and indexable drilling, CoroThread threading inserts, CoroCut grooving and parting, Silent Tools vibration-damped boring bars (SilentToolsBar), and CoroMill Plura solid carbide endmills. Grades use the Tiger·tec Silver PVD/CVD coating families (GC4000 series).
+
+**Silent Tools boring bar normalization:**
+
+Sandvik's vibration-damped boring bars use the `SilentToolsBar` type in addition to the standard `BoringBar`. Both map to `tool_category = "boring_bar"`, preserving the application classification while allowing `geometry_tags` (e.g., `vibration_damped`) to carry the sub-type distinction.
+
+**Tool category mapping (Sandvik Coromant-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | CoroTurn family |
+| `MillingInsert`, `ShoulderMillingInsert`, `FaceMillingInsert`, `IndexableMillingInsert` | `milling_insert` | CoroMill family |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | |
+| `SolidCarbideDrill`, `HSSDrill` | `drill` | CoroDrill solid family |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | CoroDrill indexable family |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | CoroMill Plura |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | CoroCut family |
+| `ThreadingInsert` | `threading_insert` | CoroThread family |
+| `BoringBar`, `SilentToolsBar` | `boring_bar` | Silent Tools vibration-damped |
+| `SpiralTap`, `MachineTap` | `tap` | |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter — same JSON format (`catalog_header` + `tool_records`), same field conventions. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_sandvik_coromant_sample.py
+python tools/parse_sandvik_coromant_sample.py --dry-run
+python tools/import_sandvik_coromant_adapter_output.py
+python tools/import_sandvik_coromant_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/sandvik_coromant_sample_records.json` (10 synthetic fixture records: 2 turning inserts, 2 milling inserts, 1 high-feed insert, 1 solid carbide drill, 1 endmill, 1 grooving insert, 1 threading insert, 1 boring bar). Imported records go to `tool_data/tooling_search/records/sandvik_coromant_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/sandvik_coromant_reviewed_tooling_records.json`.
+
+## Seco Tools Adapter (`seco_adapter.py`)
+
+Parses Seco Tools-style structured JSON tooling records into normalized tooling search records. Seco Tools (part of Seco Tools AB, owned by Sandvik AB) is a Swedish cutting tool manufacturer. Key product families: Duratomic turning inserts (TC/TP coating series), Turbo milling inserts, Feedmax solid carbide drills, Jabro solid carbide endmills, MDT grooving and parting inserts, and Snap Tap threading inserts.
+
+**Tool category mapping (Seco-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | Duratomic family |
+| `MillingInsert`, `ShoulderMillingInsert`, `FaceMillingInsert`, `IndexableMillingInsert` | `milling_insert` | Turbo family |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | |
+| `SolidCarbideDrill`, `HSSDrill`, `HSSCobaltDrill` | `drill` | Feedmax family |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | Jabro family |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | MDT family |
+| `ThreadingInsert` | `threading_insert` | Snap Tap family |
+| `BoringBar` | `boring_bar` | |
+| `SpiralTap`, `MachineTap` | `tap` | |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_seco_sample.py
+python tools/parse_seco_sample.py --dry-run
+python tools/import_seco_adapter_output.py
+python tools/import_seco_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/seco_sample_records.json` (9 synthetic fixture records). Imported records go to `tool_data/tooling_search/records/seco_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/seco_reviewed_tooling_records.json`.
+
+## Kennametal Adapter (`kennametal_adapter.py`)
+
+Parses Kennametal-style structured JSON tooling records into normalized tooling search records. Kennametal Inc. is a US-based cutting tool and tooling systems manufacturer. Key product families: Beyond coating turning inserts (KC5010/KC5025 grades), HARVI solid carbide endmills, GO Drill solid carbide drills, KGOP grooving inserts, KM quick-change toolholding, Mill 4-12 milling inserts, and threading inserts.
+
+**Tool category mapping (Kennametal-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | Beyond coating grades |
+| `MillingInsert`, `ShoulderMillingInsert`, `FaceMillingInsert`, `IndexableMillingInsert` | `milling_insert` | Mill 4-12 family |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | |
+| `SolidCarbideDrill`, `HSSDrill`, `HSSCobaltDrill` | `drill` | GO Drill family |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | HARVI family |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | KGOP family |
+| `ThreadingInsert` | `threading_insert` | |
+| `BoringBar`, `BoringToolholder` | `boring_bar` | |
+| `SpiralTap`, `MachineTap` | `tap` | |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_kennametal_sample.py
+python tools/parse_kennametal_sample.py --dry-run
+python tools/import_kennametal_adapter_output.py
+python tools/import_kennametal_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/kennametal_sample_records.json` (9 synthetic fixture records). Imported records go to `tool_data/tooling_search/records/kennametal_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/kennametal_reviewed_tooling_records.json`.
+
+## Tungaloy Adapter (`tungaloy_adapter.py`)
+
+Parses Tungaloy-style structured JSON tooling records into normalized tooling search records. Tungaloy Corporation (part of IMC Group) is a Japanese cutting tool manufacturer. Key product families: TungTurn turning inserts (AH/T9000-series grades), TungMeister milling inserts, DoFeedMill high-feed milling inserts, TungDrill Quattro indexable drills, TungEnd solid carbide endmills, TungCut grooving and parting inserts, TungThread threading inserts, and EZBore boring bars.
+
+**DoFeedMill high-feed insert normalization:**
+
+Tungaloy's DoFeedMill inserts use `HighFeedMillingInsert` as the `tool_type`. These map to `tool_category = "high_feed_insert"`, consistent with how other adapters classify high-feed geometry. The DoFeedMill's distinctive large corner radius and shallow depth-of-cut design is preserved in `geometry_tags` rather than the category name.
+
+**Tool category mapping (Tungaloy-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | TungTurn family |
+| `MillingInsert`, `IndexableMillingInsert`, `FaceMillingInsert`, `ShoulderMillingInsert` | `milling_insert` | TungMeister family |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | DoFeedMill |
+| `SolidCarbideDrill`, `HSSDrill` | `drill` | |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | TungDrill Quattro |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | TungEnd family |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | TungCut family |
+| `ThreadingInsert` | `threading_insert` | TungThread family |
+| `BoringBar` | `boring_bar` | EZBore family |
+| `SpiralTap`, `MachineTap` | `tap` | |
+| `ThreadMill` | `thread_mill` | |
+| `Reamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_tungaloy_sample.py
+python tools/parse_tungaloy_sample.py --dry-run
+python tools/import_tungaloy_adapter_output.py
+python tools/import_tungaloy_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/tungaloy_sample_records.json` (9 synthetic fixture records: 2 turning inserts, 1 milling insert, 1 high-feed insert, 1 solid carbide drill, 1 indexable drill, 1 endmill, 1 grooving insert, 1 threading insert). Imported records go to `tool_data/tooling_search/records/tungaloy_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/tungaloy_reviewed_tooling_records.json`.
+
+## Kyocera Adapter (`kyocera_adapter.py`)
+
+Parses Kyocera-style structured JSON tooling records into normalized tooling search records. Kyocera Corporation (Kyocera Precision Tools) is a Japanese cutting tool manufacturer. Key product families: PR/CA/PV-series Megacoat Nano turning inserts, MFH Miracle milling inserts, MFH Raptor high-feed inserts, MAS/MDS solid carbide drills, solid carbide endmills, GBA/GBR grooving inserts, threading inserts, and S-STLCR-series boring bars.
+
+**Megacoat Nano grade normalization:**
+
+Kyocera's Megacoat Nano grades (PR1535, CA6535, etc.) are recorded in the `grade` field without translation. The `geometry_tags` and `material_fit` carry the application information (ISO group codes P, M, K, N, S, H).
+
+**Tool category mapping (Kyocera-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | PR/CA/PV grades |
+| `MillingInsert`, `IndexableMillingInsert`, `FaceMillingInsert`, `ShoulderMillingInsert` | `milling_insert` | MFH Miracle family |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | MFH Raptor family |
+| `SolidCarbideDrill`, `HSSDrill` | `drill` | MAS/MDS family |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | GBA/GBR family |
+| `ThreadingInsert` | `threading_insert` | |
+| `BoringBar` | `boring_bar` | S-STLCR family |
+| `SpiralTap`, `MachineTap` | `tap` | |
+| `ThreadMill` | `thread_mill` | |
+| `Reamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_kyocera_sample.py
+python tools/parse_kyocera_sample.py --dry-run
+python tools/import_kyocera_adapter_output.py
+python tools/import_kyocera_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/kyocera_sample_records.json` (9 synthetic fixture records: 2 turning inserts, 1 milling insert, 1 high-feed insert, 1 solid carbide drill, 1 endmill, 1 grooving insert, 1 threading insert, 1 boring bar). Imported records go to `tool_data/tooling_search/records/kyocera_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/kyocera_reviewed_tooling_records.json`.
+
+## Sumitomo Electric Adapter (`sumitomo_electric_adapter.py`)
+
+Parses Sumitomo Electric-style structured JSON tooling records into normalized tooling search records. Sumitomo Electric Hardmetal Corporation is a Japanese cutting tool manufacturer. Key product families: AC/WBN/EH-series turning inserts, SEXL/SNEX milling inserts, LNMX high-feed inserts, MDW modular drills (indexable), solid carbide endmills (WEX-H series), GY grooving inserts, and threading inserts.
+
+**MDW modular drill normalization:**
+
+Sumitomo's MDW modular drill system is an indexable drill where the cutting tip is replaceable. This maps to `tool_category = "indexable_drill"`, consistent with how other adapters classify body-plus-replaceable-tip systems.
+
+**Tool category mapping (Sumitomo Electric-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert`, `IndexableTurningInsert` | `turning_insert` | AC/WBN/EH grades |
+| `MillingInsert`, `IndexableMillingInsert`, `FaceMillingInsert`, `ShoulderMillingInsert` | `milling_insert` | SEXL/SNEX family |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | LNMX family |
+| `SolidCarbideDrill`, `HSSDrill` | `drill` | |
+| `IndexableDrill`, `DrillInsert` | `indexable_drill` | MDW modular drills |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | WEX-H family |
+| `GroovingInsert`, `PartingInsert` | `grooving_insert` | GY family |
+| `ThreadingInsert` | `threading_insert` | |
+| `BoringBar` | `boring_bar` | |
+| `SpiralTap`, `MachineTap` | `tap` | |
+| `ThreadMill` | `thread_mill` | |
+| `Reamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_sumitomo_electric_sample.py
+python tools/parse_sumitomo_electric_sample.py --dry-run
+python tools/import_sumitomo_electric_adapter_output.py
+python tools/import_sumitomo_electric_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/sumitomo_electric_sample_records.json` (8 synthetic fixture records: 2 turning inserts, 1 milling insert, 1 high-feed insert, 1 indexable drill, 1 endmill, 1 grooving insert, 1 threading insert). Imported records go to `tool_data/tooling_search/records/sumitomo_electric_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/sumitomo_electric_reviewed_tooling_records.json`.
+
+## YG-1 Adapter (`yg1_adapter.py`)
+
+Parses YG-1-style structured JSON tooling records into normalized tooling search records. YG-1 Tool Company is a Korean cutting tool manufacturer known for round tooling across drills, endmills, taps, thread mills, and reamers. Key product families: Dream Drill solid carbide drills, Dream EMS solid carbide endmills (4-flute general, 3-flute aluminum), Hi-Pro Syn spiral taps and carbide taps, solid carbide thread mills, solid carbide reamers, and indexable inserts.
+
+**Tap variant normalization:**
+
+YG-1 offers multiple tap geometries — spiral-flute (`SpiralTap`), machine tap (`MachineTap`), form tap (`FormTap`), and carbide spiral tap (`CarbideSpiralTap`) — all mapping to `tool_category = "tap"`. The specific tap type is preserved in `geometry_tags` and `designation` for downstream selection without creating distinct categories for each variant.
+
+**Slug → filename mapping note:**
+
+The brand name "YG-1" contains a hyphen. `normalize_tool_query("yg-1")` returns `"yg 1"`, and the reviewed record filename is `yg_1_reviewed_tooling_records.json` (spaces replaced by underscores). The filter `{"brand": "yg-1"}` normalizes to `"yg 1"`, which matches the stored brand `"YG-1"` correctly.
+
+**Tool category mapping (YG-1-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `TurningInsert` | `turning_insert` | |
+| `MillingInsert` | `milling_insert` | |
+| `HighFeedMillingInsert`, `HighFeedInsert` | `high_feed_insert` | |
+| `SolidCarbideDrill`, `HSSDrill`, `HSSCobaltDrill` | `drill` | Dream Drill family |
+| `IndexableDrill` | `indexable_drill` | |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | Dream EMS family |
+| `GroovingInsert` | `grooving_insert` | |
+| `ThreadingInsert` | `threading_insert` | |
+| `BoringBar` | `boring_bar` | |
+| `SpiralTap`, `MachineTap`, `FormTap`, `CarbideSpiralTap` | `tap` | Hi-Pro Syn family |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_yg1_sample.py
+python tools/parse_yg1_sample.py --dry-run
+python tools/import_yg1_adapter_output.py
+python tools/import_yg1_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/yg1_sample_records.json` (9 synthetic fixture records: 1 drill, 2 endmills, 1 tap, 1 thread mill, 1 reamer, 1 countersink, 1 turning insert, 1 grooving insert). Imported records go to `tool_data/tooling_search/records/yg1_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/yg_1_reviewed_tooling_records.json`.
+
+## Helical Solutions Adapter (`helical_solutions_adapter.py`)
+
+Parses Helical Solutions-style structured JSON tooling records into normalized tooling search records. Helical Solutions (part of Harvey Performance Company) is a US solid carbide endmill specialist. Key product families: HEV-5 5-flute general-purpose endmills, HVNI 3-flute aluminum endmills, 5-flute finishing endmills, 7-flute roughers (NF series), 4-flute corner radius endmills, dynamic milling variable-helix endmills, solid carbide drills, and thread mills.
+
+**Endmill-focused portfolio normalization:**
+
+Helical Solutions is primarily an endmill brand. All endmill variants (variable-helix, corner-radius, long-reach, stub-length) map to `tool_category = "endmill"`. Sub-type distinctions (flute count, geometry, application) are preserved in `geometry_tags` (e.g., `five_flute`, `variable_helix`, `corner_radius`) and `operation_fit` (e.g., `dynamic_milling`, `trochoidal_milling`).
+
+**Tool category mapping (Helical Solutions-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | All HEV/HVNI/NF variants |
+| `SolidCarbideDrill`, `SpotDrill` | `drill` | |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+| `TurningInsert` | `turning_insert` | |
+| `MillingInsert` | `milling_insert` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_helical_solutions_sample.py
+python tools/parse_helical_solutions_sample.py --dry-run
+python tools/import_helical_solutions_adapter_output.py
+python tools/import_helical_solutions_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/helical_solutions_sample_records.json` (8 synthetic fixture records: 6 endmills, 1 drill, 1 thread mill). Imported records go to `tool_data/tooling_search/records/helical_solutions_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/helical_solutions_reviewed_tooling_records.json`.
+
+## Harvey Tool Adapter (`harvey_tool_adapter.py`)
+
+Parses Harvey Tool-style structured JSON tooling records into normalized tooling search records. Harvey Tool Company is a US specialty tooling manufacturer. Key product families: miniature ball nose endmills, long-reach endmills, internal and external thread mills, solid carbide reamers, single-flute countersinks, solid carbide drills, and step drills.
+
+**Internal vs. external thread mill normalization:**
+
+Harvey Tool offers both internal thread mills (`InternalThreadMill`) and external thread mills (`ExternalThreadMill`) as distinct product lines. Both map to `tool_category = "thread_mill"`. The internal/external distinction is preserved in `geometry_tags` (e.g., `internal_thread_form`, `external_thread_form`) and `operation_fit` (`internal_thread_milling`, `external_thread_milling`).
+
+**Step drill normalization:**
+
+Harvey Tool step drills (`StepDrill`) produce two diameters in a single pass and map to `tool_category = "step_drill"`. This category is distinct from standard solid carbide drills (`SolidCarbideDrill → drill`) and allows operators to filter specifically for combination hole-making tools.
+
+**Tool category mapping (Harvey Tool-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `SolidCarbideEndmill`, `Endmill`, `BallNoseEndmill` | `endmill` | Ball nose and long-reach variants |
+| `SolidCarbideDrill`, `SpotDrill` | `drill` | |
+| `ThreadMill`, `SolidCarbideThreadMill`, `InternalThreadMill`, `ExternalThreadMill` | `thread_mill` | All thread mill geometries |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `Countersink` | `countersink` | Single-flute countersinks |
+| `StepDrill` | `step_drill` | Combination hole tools |
+| `TurningInsert` | `turning_insert` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_harvey_tool_sample.py
+python tools/parse_harvey_tool_sample.py --dry-run
+python tools/import_harvey_tool_adapter_output.py
+python tools/import_harvey_tool_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/harvey_tool_sample_records.json` (8 synthetic fixture records: 2 endmills, 1 internal thread mill, 1 external thread mill, 1 reamer, 1 countersink, 1 drill, 1 step drill). Imported records go to `tool_data/tooling_search/records/harvey_tool_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/harvey_tool_reviewed_tooling_records.json`.
+
+## Niagara Cutter Adapter (`niagara_cutter_adapter.py`)
+
+Parses Niagara Cutter-style structured JSON tooling records into normalized tooling search records. Niagara Cutter (part of Greenfield Industries) is a US cutting tool manufacturer. Key product families: 4-flute square endmills, aluminum-specific endmills, high-performance 5-flute endmills, roughing endmills, solid carbide drills, reamers, thread mills, and spiral taps.
+
+**Tool category mapping (Niagara Cutter-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | Square and high-performance variants |
+| `SolidCarbideDrill`, `HSSDrill`, `SpotDrill` | `drill` | |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `SpiralTap`, `MachineTap`, `FormTap`, `CarbideSpiralTap` | `tap` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+| `TurningInsert` | `turning_insert` | |
+| `MillingInsert` | `milling_insert` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_niagara_cutter_sample.py
+python tools/parse_niagara_cutter_sample.py --dry-run
+python tools/import_niagara_cutter_adapter_output.py
+python tools/import_niagara_cutter_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/niagara_cutter_sample_records.json` (8 synthetic fixture records: 4 endmills, 1 drill, 1 reamer, 1 thread mill, 1 tap). Imported records go to `tool_data/tooling_search/records/niagara_cutter_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/niagara_cutter_reviewed_tooling_records.json`.
+
+## Garr Tool Adapter (`garr_tool_adapter.py`)
+
+Parses Garr Tool-style structured JSON tooling records into normalized tooling search records. Garr Tool is a US solid carbide cutting tool manufacturer. Key product families: 4-flute square endmills, 2-flute aluminum endmills, ball nose endmills, roughing endmills (corncob style), solid carbide drills, reamers, thread mills, and countersinks.
+
+**Ball nose endmill normalization:**
+
+Garr Tool's `BallNoseEndmill` type maps to `tool_category = "endmill"`, consistent with other adapters. The ball nose geometry is preserved in `geometry_tags` (e.g., `ball_nose`) and `operation_fit` (e.g., `profiling`, `finishing`) for downstream filtering without introducing a separate category.
+
+**Tool category mapping (Garr Tool-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `SolidCarbideEndmill`, `Endmill`, `BallNoseEndmill` | `endmill` | All endmill geometries |
+| `SolidCarbideDrill`, `SpotDrill` | `drill` | |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `Countersink` | `countersink` | |
+| `StepDrill` | `step_drill` | |
+| `TurningInsert` | `turning_insert` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_garr_tool_sample.py
+python tools/parse_garr_tool_sample.py --dry-run
+python tools/import_garr_tool_adapter_output.py
+python tools/import_garr_tool_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/garr_tool_sample_records.json` (8 synthetic fixture records: 4 endmills, 1 drill, 1 reamer, 1 thread mill, 1 countersink). Imported records go to `tool_data/tooling_search/records/garr_tool_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/garr_tool_reviewed_tooling_records.json`.
+
+## Micro 100 Adapter (`micro_100_adapter.py`)
+
+Parses Micro 100-style structured JSON tooling records into normalized tooling search records. Micro 100 Tool Corporation is a US manufacturer specializing in solid carbide boring bars, grooving tools, and threading tools. Key product families: solid carbide boring bars (QB, QSSR series), external grooving inserts (QGE), face grooving tools (QFG), external threading inserts (QXT), thread mills (TMFC), solid carbide endmills (SE series), and countersinks (CSC series).
+
+**Boring bar specialization:**
+
+Unlike most adapter brands that treat boring bars as incidental, Micro 100's portfolio centers on solid carbide boring bars. Both `SolidCarbideBoringBar` and the generic `BoringBar` type map to `tool_category = "boring_bar"`. The QB general-purpose boring bars and QSSR small-diameter (sub-millimeter bore) variants are distinguished by `series` and `geometry_tags`.
+
+**Grooving tool normalization:**
+
+Micro 100 produces both external grooving inserts (`ExternalGroovingInsert`) and face grooving tools (`FaceGroovingTool`). Both map to `tool_category = "grooving_insert"`, with `operation_fit` (`grooving`, `face_grooving`) and `geometry_tags` carrying the application distinction.
+
+**Tool category mapping (Micro 100-specific):**
+
+| tool_type value | schema tool_category | Notes |
+|---|---|---|
+| `BoringBar`, `SolidCarbideBoringBar` | `boring_bar` | QB and QSSR series |
+| `GroovingInsert`, `ExternalGroovingInsert`, `FaceGroovingTool` | `grooving_insert` | QGE and QFG series |
+| `ThreadingInsert`, `ExternalThreadingInsert` | `threading_insert` | QXT series |
+| `ThreadMill`, `SolidCarbideThreadMill` | `thread_mill` | TMFC series |
+| `SolidCarbideEndmill`, `Endmill` | `endmill` | SE series |
+| `Countersink` | `countersink` | CSC series |
+| `SolidCarbideDrill`, `SpotDrill` | `drill` | |
+| `Reamer`, `SolidCarbideReamer` | `reamer` | |
+| `TurningInsert` | `turning_insert` | |
+
+**Field mapping:** identical to the Mitsubishi Materials adapter. Rejection policy and safe defaults are the same.
+
+Running the sample:
+
+```bash
+python tools/parse_micro_100_sample.py
+python tools/parse_micro_100_sample.py --dry-run
+python tools/import_micro_100_adapter_output.py
+python tools/import_micro_100_adapter_output.py --dry-run
+```
+
+Output is written to `tools/tooling_adapters/output/micro_100_sample_records.json` (8 synthetic fixture records: 2 boring bars, 2 grooving inserts, 1 threading insert, 1 thread mill, 1 endmill, 1 countersink). Imported records go to `tool_data/tooling_search/records/micro_100_imported_tools.json`. Reviewed staging records are in `tool_data/tooling_search/records/reviewed/micro_100_reviewed_tooling_records.json`.
 
 ## What Is Never Imported
 
