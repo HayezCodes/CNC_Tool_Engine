@@ -42,6 +42,26 @@ from grade_engine.tooling_search import (
     search_tooling_records,
     suggest_tool_candidates,
 )
+from grade_engine.recommendation_context import (
+    apply_context_to_candidates,
+    build_machine_context,
+    build_production_context,
+    build_recommendation_context,
+    build_setup_context,
+    context_active_notes,
+    context_is_active,
+    MACHINE_TYPES,
+    SPINDLE_TAPERS,
+    MACHINE_RIGIDITY_OPTIONS,
+    MACHINE_SIZE_OPTIONS,
+    STICKOUT_OPTIONS,
+    HOLDER_TYPE_OPTIONS,
+    RIGIDITY_OPTIONS,
+    CHATTER_RISK_OPTIONS,
+    PROTOTYPE_VS_PRODUCTION_OPTIONS,
+    ROUGHING_VS_FINISHING_OPTIONS,
+    PRIORITY_LEVEL_OPTIONS,
+)
 from tool_lookup.cross_reference import cross_reference_tool
 from tool_lookup.index import load_lookup_records
 
@@ -801,6 +821,114 @@ def build_common_inputs() -> dict[str, Any]:
     }
 
 
+def build_context_inputs() -> None:
+    """Render the optional Machine & Setup Context expander and store context in session state."""
+    with st.expander("Machine & Setup Context (optional)", expanded=False):
+        st.caption(
+            "Optional context that adjusts Exact Tool Candidate rankings. "
+            "Leave all fields blank to use default behavior."
+        )
+        mc1, mc2, mc3 = st.columns(3)
+        with mc1:
+            st.markdown("**Machine**")
+            machine_type = st.selectbox(
+                "Machine Type", MACHINE_TYPES, index=0, key="_ctx_machine_type",
+                format_func=lambda x: x.replace("_", " ").title() if x else "—",
+            )
+            spindle_taper = st.selectbox(
+                "Spindle Taper", SPINDLE_TAPERS, index=0, key="_ctx_spindle_taper",
+                format_func=lambda x: x if x else "—",
+            )
+            max_rpm = st.number_input(
+                "Max Spindle RPM", min_value=0, max_value=60000, value=0, step=500,
+                key="_ctx_max_rpm",
+            )
+            machine_rigidity = st.selectbox(
+                "Machine Rigidity", MACHINE_RIGIDITY_OPTIONS, index=0, key="_ctx_machine_rigidity",
+                format_func=lambda x: x.title() if x else "—",
+            )
+            machine_size_class = st.selectbox(
+                "Machine Size", MACHINE_SIZE_OPTIONS, index=0, key="_ctx_machine_size",
+                format_func=lambda x: x.replace("_", " ").title() if x else "—",
+            )
+            tsc_choice = st.selectbox(
+                "Through-Spindle Coolant", ["Unknown", "Yes", "No"], index=0,
+                key="_ctx_tsc",
+            )
+            through_spindle_coolant = None if tsc_choice == "Unknown" else (tsc_choice == "Yes")
+
+        with mc2:
+            st.markdown("**Setup**")
+            stickout_length = st.selectbox(
+                "Tool Stickout", STICKOUT_OPTIONS, index=0, key="_ctx_stickout",
+                format_func=lambda x: x.title() if x else "—",
+            )
+            holder_type = st.selectbox(
+                "Holder Type", HOLDER_TYPE_OPTIONS, index=0, key="_ctx_holder",
+                format_func=lambda x: x.replace("_", " ").title() if x else "—",
+            )
+            setup_rigidity = st.selectbox(
+                "Setup Rigidity", RIGIDITY_OPTIONS, index=0, key="_ctx_setup_rig",
+                format_func=lambda x: x.title() if x else "—",
+            )
+            workholding_rigidity = st.selectbox(
+                "Workholding Rigidity", RIGIDITY_OPTIONS, index=0, key="_ctx_wh_rig",
+                format_func=lambda x: x.title() if x else "—",
+            )
+            chatter_risk = st.selectbox(
+                "Chatter Risk", CHATTER_RISK_OPTIONS, index=0, key="_ctx_chatter",
+                format_func=lambda x: x.title() if x else "—",
+            )
+
+        with mc3:
+            st.markdown("**Production**")
+            prototype_vs_production = st.selectbox(
+                "Run Type", PROTOTYPE_VS_PRODUCTION_OPTIONS, index=0, key="_ctx_pvp",
+                format_func=lambda x: x.replace("_", " ").title() if x else "—",
+            )
+            roughing_vs_finishing = st.selectbox(
+                "Roughing / Finishing", ROUGHING_VS_FINISHING_OPTIONS, index=0, key="_ctx_rf",
+                format_func=lambda x: x.title() if x else "—",
+            )
+            tool_life_priority = st.selectbox(
+                "Tool Life Priority", PRIORITY_LEVEL_OPTIONS, index=0, key="_ctx_tl",
+                format_func=lambda x: x.title() if x else "—",
+            )
+            cycle_time_priority = st.selectbox(
+                "Cycle Time Priority", PRIORITY_LEVEL_OPTIONS, index=0, key="_ctx_ct",
+                format_func=lambda x: x.title() if x else "—",
+            )
+            cost_priority = st.selectbox(
+                "Cost Priority", PRIORITY_LEVEL_OPTIONS, index=0, key="_ctx_cost",
+                format_func=lambda x: x.title() if x else "—",
+            )
+
+        machine = build_machine_context(
+            machine_type=machine_type,
+            spindle_taper=spindle_taper,
+            max_rpm=int(max_rpm),
+            through_spindle_coolant=through_spindle_coolant,
+            machine_rigidity=machine_rigidity,
+            machine_size_class=machine_size_class,
+        )
+        setup = build_setup_context(
+            stickout_length=stickout_length,
+            holder_type=holder_type,
+            setup_rigidity=setup_rigidity,
+            workholding_rigidity=workholding_rigidity,
+            chatter_risk=chatter_risk,
+        )
+        production = build_production_context(
+            prototype_vs_production=prototype_vs_production,
+            roughing_vs_finishing_priority=roughing_vs_finishing,
+            tool_life_priority=tool_life_priority,
+            cycle_time_priority=cycle_time_priority,
+            cost_priority=cost_priority,
+        )
+        ctx = build_recommendation_context(machine=machine, setup=setup, production=production)
+        st.session_state["_recommendation_context"] = ctx
+
+
 def recommend_turning(common: dict[str, Any]) -> None:
     p_steel_shop_note = (
         "Shop preference for P steel: PF for finish/light-to-medium steel turning, "
@@ -1490,6 +1618,9 @@ def _render_exact_tool_candidates_expander(
     operation: str,
     material_group: str,
 ) -> None:
+    ctx = st.session_state.get("_recommendation_context")
+    if ctx and context_is_active(ctx):
+        candidates = apply_context_to_candidates(candidates, ctx)
     with st.expander("Exact Tool Candidates"):
         if not candidates:
             st.caption(
@@ -1503,6 +1634,10 @@ def _render_exact_tool_candidates_expander(
             "Verification status and cutting data status are shown on each card. "
             "These do not replace the recommendation families above."
         )
+        if ctx and context_is_active(ctx):
+            notes = context_active_notes(ctx)
+            if notes:
+                st.caption("Context active: " + " | ".join(notes))
         norm_op = normalize_tool_query(operation).replace(" ", "_")
         mat = str(material_group).strip().upper()
         for record in candidates:
@@ -1716,6 +1851,7 @@ if family in {"BURNISHING", "WORKHOLDING", "TOOL_LOOKUP", "BRAND_INTELLIGENCE"}:
     st.stop()
 
 common = build_common_inputs()
+build_context_inputs()
 with st.expander("Engine Basis", expanded=False):
     behavior = resolve_grade_behavior(common)
     render_engine_basis(common, behavior)
